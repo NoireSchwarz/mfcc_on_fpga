@@ -1,0 +1,27 @@
+# vsim -c -lib C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work tb_power_spectrum -do "run -all; quit" 
+# Start time: 14:14:31 on Jul 02,2026
+# Loading sv_std.std
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.tb_power_spectrum
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.power_spectrum
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.fft512
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.fft2
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.fft256_1024
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.radix2_merge_stage
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.WROM2048
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.fft_merge_kernel
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.complex_twiddle_mul
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.fft256
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.BUFRAM256C
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.RAM2x256C
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.FFT16
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.MPUC707
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.MPUC541
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.MPUC1307
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.MPUC924_383
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.CNORM
+# Loading C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/modelsim_work.ROTATOR64
+# run -all
+# ** Note: $finish    : C:/Users/qwer0/OneDrive/Bachlor_Projekt/Mel_demov1/sim/powerspec_tb.sv(91)
+#    Time: 25275 ns  Iteration: 0  Instance: /tb_power_spectrum
+# End time: 14:14:31 on Jul 02,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

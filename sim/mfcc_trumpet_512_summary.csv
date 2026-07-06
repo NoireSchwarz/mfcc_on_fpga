@@ -1,0 +1,2 @@
+n,stride,sample_count,frames,start_time_ns,end_time_ns,elapsed_ns,result_file
+512,256,117601,459,100.000,15295525.000,15295425.000,sim/mfcc_trumpet_512_result.csv

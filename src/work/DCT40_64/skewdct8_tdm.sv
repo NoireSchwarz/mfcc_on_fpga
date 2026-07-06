@@ -137,7 +137,8 @@ module skewdct8_dctii_tdm_bank #(
 endmodule
 
 module skewdct8_dctii_coeff_rom #(
-    parameter integer COEF_W = 20
+    parameter integer COEF_W = 20,
+    parameter COEFF_FILE = "src/work/DCT40_64/skewdct8_coeff_rom.mem"
 )(
     input  logic [2:0] BLOCK,
     output logic signed [COEF_W-1:0] C [0:7][0:7]
@@ -147,7 +148,7 @@ module skewdct8_dctii_coeff_rom #(
     logic signed [ROM_W-1:0] coeff_mem [0:511];
 
     initial begin
-        $readmemh("work/skewdct8_coeff_rom.mem", coeff_mem);
+        $readmemh(COEFF_FILE, coeff_mem);
     end
 
     function automatic int coeff_addr;

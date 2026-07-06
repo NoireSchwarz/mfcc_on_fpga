@@ -20,7 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module prepare_input #(parameter N=512, parameter STRIDE=64)(
+module prepare_input #(
+    parameter N=512,
+    parameter STRIDE=64,
+    parameter PRE_EMPH_COEFF=16'd0
+)(
     input clk,
     input reset,
     input [15:0] in,
@@ -34,8 +38,8 @@ module prepare_input #(parameter N=512, parameter STRIDE=64)(
     localparam STRIDE_CNT_SIZE = $clog2(STRIDE)-1;
     localparam OUT_CNT_SIZE = $clog2(N);
     
-    // Replplace the value below with the desired pre_amphisis filter a0 multiplied by 2**15
-    logic [15:0] filt = 16'd31785;
+    // Pre-emphasis coefficient a0 multiplied by 2**15. Use 0 to disable.
+    logic [15:0] filt = PRE_EMPH_COEFF;
     
     logic [OUT_CNT_SIZE:0] q_out_counter;             // counts clock cycles to know when to halt output
     logic [OUT_CNT_SIZE:0] d_out_counter;
@@ -57,9 +61,9 @@ module prepare_input #(parameter N=512, parameter STRIDE=64)(
     logic started;                                        // high if the system has started receiving valid input, low after valid frame has been output
     
     assign frame_en = frame_en_in | frame_en_out;
-    assign m_valid = q_valid & frame_en;
+    assign m_valid = q_valid;
     assign out = m_valid ? frame[N-1] : 0;
-    assign d_valid = (q_stride_counter==0 && m_ready && started);
+    assign d_valid = q_valid ? !(m_ready && (q_out_counter == N-1)) : (q_stride_counter==0 && started);
     assign started = q_out_counter < N;
     assign s_ready= !q_valid;
     
@@ -80,7 +84,7 @@ module prepare_input #(parameter N=512, parameter STRIDE=64)(
         
         // OUTPUT        
         if(q_stride_counter == 0) begin
-            if(q_valid) begin
+            if(q_valid && m_ready) begin
                 d_out_counter = q_out_counter + started;
                 frame_en_out = started;
             end

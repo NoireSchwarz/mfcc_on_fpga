@@ -70,7 +70,8 @@ module fft256(
 		.START(rdy1),.DIR(dr1),.DII(di1),
 		.RDY(rdy2),	.DOR(dr2),.	DOI(di2));	
 	
-	logic [1:0] shiftl=	 SHIFT[1:0]; 
+	logic [1:0] shiftl;
+	assign shiftl = SHIFT[1:0];
 	CNORM #(nb) U_NORM1( .CLK(CLK),	.ED(ED),  //1-st normalization unit
 		.START(rdy2),	// overflow detector reset
 		.DR(dr2),	.DI(di2),
@@ -93,7 +94,8 @@ module fft256(
 		.START(rdy5),. DIR(dr5),.DII(di5),
 		.RDY(rdy6), .DOR(dr6),	.DOI(di6));
 	
-	logic [1:0] shifth=	 SHIFT[3:2]; 
+	logic [1:0] shifth;
+	assign shifth = SHIFT[3:2];
 	//2-nd normalization unit
 	CNORM #(nb+2) U_NORM2 ( .CLK(CLK),	.ED(ED),
 		.START(rdy6),	// overflow detector reset

@@ -48,9 +48,9 @@ module power_spectrum #(parameter int N=512)(
     logic [LOG2_N:0] sample_cnt;
     logic [LOG2_N:0] out_cnt;
 
-    logic signed [15:0] fft_real_in [0:511];
-    logic signed [15:0] fft_out_re [0:511];
-    logic signed [15:0] fft_out_im [0:511];
+    logic signed [15:0] fft_real_in [0:N-1];
+    logic signed [15:0] fft_out_re [0:N-1];
+    logic signed [15:0] fft_out_im [0:N-1];
 
     logic fft_in_valid;
     logic fft_in_ready;
@@ -75,7 +75,8 @@ module power_spectrum #(parameter int N=512)(
 
     fft512 #(
         .NB(16),
-        .TW(16)
+        .TW(16),
+        .N(N)
     ) my_fft (
         .clk(clk),
         .fft_reset(reset),
@@ -94,7 +95,7 @@ module power_spectrum #(parameter int N=512)(
             state <= ST_COLLECT;
             sample_cnt <= '0;
             out_cnt <= '0;
-            for(int i=0; i<512; i++) begin
+            for(int i=0; i<N; i++) begin
                 fft_real_in[i] <= '0;
             end
         end
