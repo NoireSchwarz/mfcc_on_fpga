@@ -1,11 +1,19 @@
 # Recursive SkewDCT8 implementation
 
-The active SkewDCT path now factors each eight-point transform into four two-point transforms, two four-point combinations and one eight-point combination. This replaces the dense 8-by-8 dot product inside the shared SkewDCT8 core. FFT processing, the downstream DCT8 core, normalization, C64 post-add processing and all external MFCC ports are unchanged.
+The active SkewDCT path now factors each eight-point transform into four two-point transforms, two four-point combinations and one eight-point combination. The recursive core receives its family selection directly on a three-bit input, replacing the former full matrix coefficient bus, matrix ROM and coefficient-signature decoder. FFT processing, the downstream DCT8 core, normalization, C64 post-add processing and all external MFCC ports are unchanged.
 
 Only two production RTL files change from commit `cb11535681cef1425747728b72b1ddc090927ca3`:
 
 - [`skewdct_8.v`](../src/work/DCT40_64/skewdct_8.v): adds the recursive implementation behind an elaboration-time selection, retaining the original dense implementation.
-- [`skewdct8_tdm.v`](../src/work/DCT40_64/skewdct8_tdm.v): selects the recursive implementation in the existing dynamic wrapper.
+- [`skewdct8_tdm.v`](../src/work/DCT40_64/skewdct8_tdm.v): selects the recursive implementation and connects BLOCK directly, without a matrix ROM or matrix coefficient bus.
+
+## Three-bit family interface update
+
+Compared with the first recursive commit `3a28790`, recursive-mode `c_in` now carries `BLOCK[2:0]` directly. With the production COEF_W=20 setting, the interface shrinks from 1,280 bits to three bits (1,277 fewer declared signal bits). The internal recursive module likewise replaces its matrix port with a three-bit BLOCK port. S0 captures that ID at the same edge as the input vector; the arithmetic and register stages are unchanged.
+
+The TDM wrapper no longer instantiates `skewdct8_dctii_coeff_rom`, and that obsolete module is removed from the production RTL. No production SkewDCT module loads `skewdct8_coeff_rom.mem`. The data file is retained as reference data for the original matrix implementation and independent numerical comparisons; the new MFCC path does not require it at run time.
+
+The narrowed interface was tested against a frozen copy of `3a28790`. Core, bank, DCT64, complete-MFCC and full-audio outputs must match exactly, rather than merely remain within an error tolerance. MFCC cycle counts must also match. The complete-MFCC and audio simulations run without the old Skew matrix ROM file. Declared interface-bit reduction does not establish an equal physical routing-resource reduction: synthesis could already prune unused matrix words in the earlier version.
 
 ## Arithmetic structure
 
@@ -44,7 +52,7 @@ The recursive path has 13 enabled register stages. There is no combinational pat
 
 | Stage | Registered result |
 | --- | --- |
-| S0 | Input capture, eight fractional guard bits, coefficient-family decode |
+| S0 | Input capture, eight fractional guard bits, direct BLOCK capture |
 | S1 | Four leaf sums/differences and four selected factors |
 | S2 | Four leaf products; matching sum delays |
 | S3 | Rounded leaf products and aligned sums |
@@ -64,17 +72,19 @@ The bank still issues eight groups consecutively, then collects completions by `
 
 ## Interface compatibility and coefficient selection
 
-The `skewdct8` port list, signal widths and original parameter declarations are unchanged. `USE_COEFF_PORT` has an additional supported value:
+The `skewdct8` port names and original parameter declarations are retained. The width and meaning of `c_in` depend on `USE_COEFF_PORT`:
 
-| Mode | Coefficients | Implementation / enabled stages |
+| Mode | c_in width / meaning | Implementation / enabled stages |
 | --- | --- | --- |
-| 0 | Arbitrary compile-time C00...C77 parameters | Original dense pipeline / 6 |
-| 1 | Arbitrary run-time matrix on c_in | Original dense pipeline / 6 |
-| 2 | The project's eight original Q14 SkewDCT-II families | Recursive pipeline / 13 |
+| 0 | 64*COEF_W bits; unused because C00...C77 parameters supply coefficients | Original dense pipeline / 6 |
+| 1 | 64*COEF_W bits; arbitrary run-time coefficient matrix | Original dense pipeline / 6 |
+| 2 | 3 bits; unsigned family ID BLOCK=0...7 | Recursive pipeline / 13 |
 
-The existing `skewdct8_dctii_dyn` wrapper selects mode 2. It retains the original packed matrix interface and ROM file. The unique matrix element `C[4,0]` identifies the family; `in_tag` remains transaction metadata and does not select coefficients. The other matrix elements are not used by the recursive hardware. Consequently mode 2 must only receive the eight original matrices, with `COEF_FRAC=14` and `COEF_W>=18` (the production wrapper uses 20). Use mode 0 or 1 for arbitrary matrices. The simulation guard detects unsupported signatures and coefficient-width/fraction settings.
+The existing `skewdct8_dctii_dyn` wrapper selects mode 2 and connects `.c_in(BLOCK)`. `in_tag` remains independent transaction metadata and does not select factors. All eight BLOCK values are valid. Their factor families correspond to `r=(2*BLOCK+1)/16`. No coefficient-signature decoder remains. A simulation guard detects unknown family IDs on accepted inputs.
 
-Mode 2 uses the mathematical structure of these matrices. It does not reproduce their original Q14 quantization at every product. Internal factors use signed 27-bit Q21 coefficients, eight fractional guard bits are retained between levels, and intermediate values use `IW=DATA_W+16` bits. Full products use `IW+27` bits. Rounding is to nearest, with ties away from zero. Output narrowing retains the existing signed wrap convention, rather than adding saturation.
+Mode 2 callers outside the supplied wrapper must also replace their matrix connection with a three-bit family ID. The name `c_in` is retained, but a full matrix is no longer a valid input in that mode. COEF_W, COEF_FRAC, ACC_W and C00...C77 continue to configure the original dense modes; they do not configure the recursive factor table. The recursive arithmetic derives its widths from DATA_W and OUT_W and always uses its internal Q21 factors. Use mode 0 or 1 for arbitrary matrices.
+
+Mode 2 uses the mathematical structure of the original families. It does not reproduce their original Q14 quantization at every product. Internal factors use signed 27-bit Q21 coefficients, eight fractional guard bits are retained between levels, and intermediate values use `IW=DATA_W+16` bits. Full products use `IW+27` bits. Rounding is to nearest, with ties away from zero. Output narrowing retains the existing signed wrap convention, rather than adding saturation.
 
 The original modes remain bit exact. Mode 2 changes rounding order and factor precision, so its results can differ slightly from the dense Q14 path. Internal affine range bounds, including rounding error, were checked for all eight families over the complete signed input domain at DATA_W 12, 16 and 20; internal bounds stayed below 20% of the signed internal range. This does not prevent deliberate wrap if OUT_W is selected too narrow.
 
@@ -84,15 +94,15 @@ Icarus Verilog simulation passed with the tested RTL source hashes pinned to the
 
 | Validation | Coverage / observed result |
 | --- | --- |
-| SkewDCT8 core | Seven parameter configurations; 3,600 presented vectors per configuration; random tags, input gaps, ED pauses, reset flushing and continuous II=1 traffic |
+| SkewDCT8 core | Eight parameter configurations; 3,600 presented vectors per configuration; exact comparison with the preceding wide-interface core; random tags, input gaps, ED pauses, reset flushing and continuous II=1 traffic |
 | Legacy modes 0/1 | Bit exact against the frozen original pipeline, including non-default widths and zero coefficient fractional bits |
 | Recursive mode | Bit exact against a separate fixed-point recursive model; DATA_W 12/16/20 and an output-wrap configuration |
 | Skew TDM bank | 32 frames in each of stalled/unstalled runs; every transposed coefficient matched the numerical model |
-| DCT64 | 64 frames in each of stalled/unstalled runs; all 16 shift settings, reset interruption and held-output checks; maximum dense/recursive difference 22 raw units |
-| Complete MFCC | 20 configurations, covering all FFT lengths 16...2048 with 1- and 64-lane output; stalled and selected unstalled cases; unchanged MatrixDCT control cases |
-| Complete audio | 459 frames / 29,376 coefficients per run at N=512; both 64-lane unstalled and 1-lane stalled output passed and produced identical coefficient streams |
+| DCT64 | 64 frames in each of stalled/unstalled runs; all 16 shift settings, reset interruption and held-output checks; zero coefficient differences from the preceding wide-interface version |
+| Complete MFCC | 20 configurations, covering all FFT lengths 16...2048 with 1- and 64-lane output; stalled and selected unstalled cases; unchanged MatrixDCT controls; exact coefficient and batch-cycle comparison against the preceding version |
+| Complete audio | 459 frames / 29,376 coefficients per run at N=512; both 64-lane unstalled and 1-lane stalled output; exact coefficient comparison against the preceding version, without the old matrix ROM file |
 
-In the N=1024, 64-lane, unstalled four-frame MFCC test, elapsed cycles changed from **39,498 to 39,505**, an increase of seven cycles for the tested batch. Its maximum output difference was two raw integer units. In the complete audio regression, the maximum difference from the frozen dense baseline was four raw integer units; the RMS difference after the existing `256*sqrt(8)` output normalization was `0.00079148`. This is a difference between implementations, not an absolute error against an audio reference model.
+The interface-only update retains **39,505 cycles** for the N=1024, 64-lane, unstalled four-frame MFCC test. The original dense core required 39,498 cycles. The previously measured recursive-versus-dense maximum difference in this test was two raw integer units. In the complete audio regression, the maximum recursive-versus-dense difference was four raw integer units; the RMS difference after the existing `256*sqrt(8)` output normalization was `0.00079148`. Narrowing the interface introduces no additional coefficient differences. These are differences between implementations, not absolute errors against an audio reference model.
 
 An independent floating-point transform check on 28,800 core output coefficients per input width gave the following errors in unscaled output integer units:
 

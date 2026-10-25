@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-// Same ports/parameters: modes 0/1 retain the six-stage dense core; mode 2 uses 13-stage recursive SkewDCT-II.
+// Modes 0/1: full coefficient matrix, six stages. Mode 2: c_in[2:0] is BLOCK, thirteen recursive stages.
 // ED freezes data, tags and validity together; RST flushes validity independently of ED.
 module skewdct8 (
 	CLK, RST, ED, in_valid, in_tag, out_valid, out_tag,
@@ -111,7 +111,24 @@ module skewdct8 (
 	output wire signed [OUT_W - 1:0] y5;
 	output wire signed [OUT_W - 1:0] y6;
 	output wire signed [OUT_W - 1:0] y7;
-	input signed [(64 * COEF_W) - 1:0] c_in;
+	// Recursive mode consumes only the family ID; generic modes retain all 64 coefficients.
+	input signed [((USE_COEFF_PORT == 2) ? 3 : (64 * COEF_W)) - 1:0] c_in;
+    // USE_COEFF_PORT=2 selects the structured project-family implementation.
+    // c_in is now the 3-bit BLOCK ID in mode 2. Generic modes 0/1 retain their original interface.
+    generate if(USE_COEFF_PORT==2) begin:gen_recursive
+        wire signed [8*OUT_W-1:0] values;
+        skewdct8_recursive_pipe #(.DATA_W(DATA_W),.OUT_W(OUT_W)) recursive_i(
+            .CLK(CLK),.RST(RST),.ED(ED),.in_valid(in_valid),.in_tag(in_tag),.out_valid(out_valid),.out_tag(out_tag),
+            .X({x0,x1,x2,x3,x4,x5,x6,x7}),.BLOCK(c_in[2:0]),.Y(values));
+        assign y0=values[7*OUT_W+:OUT_W];
+        assign y1=values[6*OUT_W+:OUT_W];
+        assign y2=values[5*OUT_W+:OUT_W];
+        assign y3=values[4*OUT_W+:OUT_W];
+        assign y4=values[3*OUT_W+:OUT_W];
+        assign y5=values[2*OUT_W+:OUT_W];
+        assign y6=values[1*OUT_W+:OUT_W];
+        assign y7=values[0*OUT_W+:OUT_W];
+    end else begin:gen_dense
 	localparam signed [ACC_W - 1:0] ROUND_BIAS = (COEF_FRAC == 0 ? {ACC_W {1'b0}} : {{ACC_W - 1 {1'b0}}, 1'b1} <<< (COEF_FRAC - 1));
 	wire signed [COEF_W - 1:0] K00 = (USE_COEFF_PORT ? c_in[63 * COEF_W+:COEF_W] : C00);
 	wire signed [COEF_W - 1:0] K01 = (USE_COEFF_PORT ? c_in[62 * COEF_W+:COEF_W] : C01);
@@ -177,24 +194,6 @@ module skewdct8 (
 	wire signed [COEF_W - 1:0] K75 = (USE_COEFF_PORT ? c_in[2 * COEF_W+:COEF_W] : C75);
 	wire signed [COEF_W - 1:0] K76 = (USE_COEFF_PORT ? c_in[COEF_W+:COEF_W] : C76);
 	wire signed [COEF_W - 1:0] K77 = (USE_COEFF_PORT ? c_in[0+:COEF_W] : C77);
-
-
-    // USE_COEFF_PORT=2 selects the structured project-family implementation.
-    // No port or original parameter is added/removed. Modes 0 and 1 are unchanged.
-    generate if(USE_COEFF_PORT==2) begin:gen_recursive
-        wire signed [8*OUT_W-1:0] values;
-        skewdct8_recursive_pipe #(.DATA_W(DATA_W),.COEF_W(COEF_W),.COEF_FRAC(COEF_FRAC),.OUT_W(OUT_W)) recursive_i(
-            .CLK(CLK),.RST(RST),.ED(ED),.in_valid(in_valid),.in_tag(in_tag),.out_valid(out_valid),.out_tag(out_tag),
-            .X({x0,x1,x2,x3,x4,x5,x6,x7}),.C(c_in),.Y(values));
-        assign y0=values[7*OUT_W+:OUT_W];
-        assign y1=values[6*OUT_W+:OUT_W];
-        assign y2=values[5*OUT_W+:OUT_W];
-        assign y3=values[4*OUT_W+:OUT_W];
-        assign y4=values[3*OUT_W+:OUT_W];
-        assign y5=values[2*OUT_W+:OUT_W];
-        assign y6=values[1*OUT_W+:OUT_W];
-        assign y7=values[0*OUT_W+:OUT_W];
-    end else begin:gen_dense
     localparam integer PRODUCT_W = DATA_W + COEF_W;
     localparam integer PIPE_STAGES = 6;
     localparam signed [ACC_W-1:0] NEG_ROUND_BIAS = ROUND_BIAS - 1'b1;
@@ -335,20 +334,21 @@ module skewdct8 (
     end endgenerate
 endmodule
 
-// Recursive SkewDCT-II for the eight matrices in skewdct8_coeff_rom.mem.
+// Recursive SkewDCT-II: BLOCK directly selects one of the eight fixed factor families.
+// No matrix coefficient bus, matrix ROM, or signature decoder is required.
 // Puschel, ICASSP 2003, eqs. (25)-(27): n=8 -> 4 -> 2, k=2.
 // Arithmetic: 12 real multiplications and 29 transform add/sub operations.
 // Fixed-point implementation adds registered rounding; there is no multiply-add
 // combinational stage. II=1 enabled edge; 13 enabled register stages.
 module skewdct8_recursive_pipe #(
-    parameter integer DATA_W=16, COEF_W=20, COEF_FRAC=14, OUT_W=24
+    parameter integer DATA_W=16, OUT_W=24
 )(
     input CLK, RST, ED, in_valid,
     input [2:0] in_tag,
     output out_valid,
     output [2:0] out_tag,
     input signed [8*DATA_W-1:0] X,
-    input signed [64*COEF_W-1:0] C,
+    input [2:0] BLOCK,
     output signed [8*OUT_W-1:0] Y
 );
     localparam integer GUARD_FRAC=8;
@@ -371,34 +371,8 @@ module skewdct8_recursive_pipe #(
     reg signed [FW-1:0] root_factor;
     reg signed [PW-1:0] root_product[0:3];
     reg signed [IW-1:0] result_q[0:7],rounded_q[0:7];
-    wire signed [COEF_W-1:0] signature=C[31*COEF_W+:COEF_W]; // matrix C[4,0], not transaction tag
     integer i;
 
-    function [2:0] decode_block;
-        input signed [COEF_W-1:0] value;
-        begin
-            case(value)
-                20'sd8232: decode_block = 3'd0;
-                20'sd8561: decode_block = 3'd1;
-                20'sd9289: decode_block = 3'd2;
-                20'sd10598: decode_block = 3'd3;
-                20'sd12913: decode_block = 3'd4;
-                20'sd17378: decode_block = 3'd5;
-                20'sd28221: decode_block = 3'd6;
-                20'sd83577: decode_block = 3'd7;
-                default: decode_block=3'd0;
-            endcase
-        end
-    endfunction
-    function valid_signature;
-        input signed [COEF_W-1:0] value;
-        begin
-            case(value)
-                20'sd8232, 20'sd8561, 20'sd9289, 20'sd10598, 20'sd12913, 20'sd17378, 20'sd28221, 20'sd83577: valid_signature=1'b1;
-                default: valid_signature=1'b0;
-            endcase
-        end
-    endfunction
     function signed [FW-1:0] factor;
         input [2:0] block_id,which;
         begin
@@ -491,9 +465,9 @@ module skewdct8_recursive_pipe #(
         end else if(ED) begin
             valid_q<={valid_q[STAGES-2:0],in_valid};
             tag_q[0]<=in_tag;
-            block_q[0]<=decode_block(signature);
+            block_q[0]<=BLOCK;
             for(i=1;i<STAGES;i=i+1) begin tag_q[i]<=tag_q[i-1];block_q[i]<=block_q[i-1];end
-            // S0: input capture, fraction extension and coefficient-family decode.
+            // S0: input capture, fraction extension and direct family-ID capture.
             if(in_valid)
                 for(i=0;i<8;i=i+1) x_q[i]<=lift(X[(7-i)*DATA_W+:DATA_W]);
             // S1: four two-point butterflies; coefficient selection is parallel.
@@ -559,14 +533,10 @@ module skewdct8_recursive_pipe #(
                 for(i=0;i<8;i=i+1) rounded_q[i]<=result_q[i]+(result_q[i][IW-1] ? Y_HALF-1'b1 : Y_HALF);
         end
     end
-    // The structured mode is an explicit extension. Existing dense modes 0/1
-    // continue to accept arbitrary compile-time or run-time coefficient matrices.
+    // All eight BLOCK values are valid. Tags remain independent transaction metadata.
     // synthesis translate_off
-    initial begin
-        if(COEF_FRAC!=14 || COEF_W<18) $fatal(1,"recursive SkewDCT8 requires Q14 family matrices and COEF_W>=18");
-    end
     always @(posedge CLK)
-        if(!RST && ED && in_valid && !valid_signature(signature))
-            $fatal(1,"recursive SkewDCT8 received an unsupported coefficient family");
+        if(!RST && ED && in_valid && ((^BLOCK) === 1'bx))
+            $fatal(1,"recursive SkewDCT8 received an unknown BLOCK family ID");
     // synthesis translate_on
 endmodule

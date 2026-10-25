@@ -2,7 +2,7 @@
 
 ## Recursive SkewDCT8 branch
 
-The shared SkewDCT8 now uses a registered 8-to-4-to-2 factorization for the project's eight coefficient families. Ports and original parameters are retained; generic dense modes remain available. The recursive transform expresses 12 real products and 29 add/subtract operations, with multiplication, rounding and sparse post-adds separated by registers. This arithmetic count is not a measured DSP count.
+The shared SkewDCT8 now uses a registered 8-to-4-to-2 factorization for the project's eight coefficient families. Recursive mode receives a three-bit family ID directly; original parameter declarations and generic dense modes remain available. The recursive transform expresses 12 real products and 29 add/subtract operations, with multiplication, rounding and sparse post-adds separated by registers. This arithmetic count is not a measured DSP count.
 
 See [implementation and validation notes](docs/SkewDCT8_Recursive.md) and the [updated architecture PDF](Architecture/SkewDCT8_Recursive/SkewDCT8_Recursive_Architecture.pdf). The original FFT, ordinary DCT8, MatrixDCT and IP sources are retained. This revision has passed RTL functional simulation; its Vivado utilization and implementation timing results are pending.
 
@@ -19,6 +19,14 @@ Das Design des DCT-Moduls orientiert sich an den folgenden Publikationen [^1] [^
 
 
 ## Upload log
+
+### 2026-10-25 - Narrow SkewDCT8 family interface
+
+- Reduced recursive-mode c_in from 64*COEF_W bits (1,280 bits in the production wrapper) to a three-bit BLOCK family ID.
+- Removed the Skew matrix coefficient ROM, wide coefficient interconnect and signature decoder from the production path. Generic matrix modes retain their original interface widths.
+- Kept the thirteen-stage arithmetic, precision, valid/tag protocol and enabled-edge latency unchanged. Verified exact outputs against the preceding recursive implementation, including complete-MFCC runs without the old matrix ROM file.
+- Updated the core and TDM-bank diagrams and the combined PDF; aligned the output assignments and connected their ports in the bank figure. Physical routing and utilization savings still require Vivado measurement.
+
 
 ### 2026-10-25 - Recursive SkewDCT8 pipeline
 
