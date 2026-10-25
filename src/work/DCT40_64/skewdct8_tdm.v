@@ -185,7 +185,7 @@ module skewdct8_dctii_dyn (
 		.COEF_FRAC(COEF_FRAC),
 		.ACC_W(ACC_W),
 		.OUT_W(OUT_W),
-		.USE_COEFF_PORT(1)
+		.USE_COEFF_PORT(2) // structured Q14 family; ports and valid/tag protocol unchanged
 	) U_SKEWDCT8(
 		.CLK(CLK), .RST(RST), .ED(ED),
 		.in_valid(in_valid), .in_tag(in_tag),
