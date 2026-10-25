@@ -19,4 +19,3 @@ Das Design des DCT-Moduls orientiert sich an den folgenden Publikationen [^1] [^
 - Reorganized FFT intermediate storage and read/write scheduling around synchronous dual-port BRAM, reducing large register arrays and wide selection logic.
 - Refined fixed-point widths, scaling, and rounding to improve numerical precision while retaining 64-dimensional MFCC output.
 - Completed RTL functional simulations for FFT lengths 16/32/64/128/256/512/1024/2048, DCT, and the complete MFCC pipeline. Coefficient comparisons with the corresponding frozen references found no differences.
-- Moved architecture figures to the root `Architecture/` directory and retained the original `src/ip/` folder. Uploaded the original packaged project; supplementary simulation tools and reports remain local.
