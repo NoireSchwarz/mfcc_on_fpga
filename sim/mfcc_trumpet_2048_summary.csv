@@ -1,2 +1,0 @@
-n,stride,sample_count,frames,start_time_ns,end_time_ns,elapsed_ns,result_file
-2048,1024,117601,115,100.000,19585065.000,19584965.000,sim/mfcc_trumpet_2048_result.csv
