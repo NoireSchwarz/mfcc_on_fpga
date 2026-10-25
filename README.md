@@ -26,6 +26,7 @@ Das Design des DCT-Moduls orientiert sich an den folgenden Publikationen [^1] [^
 - Removed the Skew matrix coefficient ROM, wide coefficient interconnect and signature decoder from the production path. Generic matrix modes retain their original interface widths.
 - Kept the thirteen-stage arithmetic, precision, valid/tag protocol and enabled-edge latency unchanged. Verified exact outputs against the preceding recursive implementation, including complete-MFCC runs without the old matrix ROM file.
 - Updated the core and TDM-bank diagrams and the combined PDF; aligned the output assignments and connected their ports in the bank figure. Physical routing and utilization savings still require Vivado measurement.
+- Connected the DCT64 overview's input/output handshake and overflow-status ports, replacing detached labels with routed connections and the existing sticky status registers.
 
 
 ### 2026-10-25 - Recursive SkewDCT8 pipeline
