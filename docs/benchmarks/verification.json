@@ -16,7 +16,14 @@
   "all_primary_links_resolve": true,
   "numeric_workbook_cells_verified": true,
   "archive_sha256_verified": 6,
-  "no_rtl_changes": true,
+  "no_rtl_changes": false,
+  "authorized_rtl_change_scope": [
+    "src/work/DCT64_matrix/dct64_coeff_rom.v",
+    "src/work/DCT64_matrix/dct64_matrix.v",
+    "src/work/DCT64_matrix/dct64_matrix_ctrl.v",
+    "src/work/DCT64_matrix/dct64_matrix_datapath.v",
+    "src/work/DCT64_matrix/dct64_ram64.v"
+  ],
   "latest_150MHz_wns_ns": 0.258,
   "latest_200MHz_status": "NOT_TESTED"
 }

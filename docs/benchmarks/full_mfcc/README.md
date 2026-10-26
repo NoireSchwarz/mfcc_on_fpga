@@ -1,5 +1,7 @@
 # Complete-MFCC benchmarks
 
+MatrixDCT resources and timing are pending after register/LUT replacement. Its 43,622-cycle batch time is a nominal conversion until physical timing is rerun. [Validation](../matrix_register_20261026/README.md).
+
 [Benchmark catalog](../README.md) · [Frequency CSV](MFCC_Frequency.csv) · [FFT-size/output CSV](MFCC_PointSweep.csv) · [Latest setup paths](Timing_Paths.csv)
 
 ## Resources and timing
@@ -11,14 +13,14 @@ N=1024, STRIDE=512, OUT_WIDTH=64, four frames. Only the latest available metric 
 | MFCC / SkewDCT | 50 | 35,601 | 52,870 | 6.5 | 59 |
 | MFCC / SkewDCT | 100 | 35,606 | 52,870 | 6.5 | 59 |
 | MFCC / SkewDCT | 150 | 35,777 | 53,107 | 6.5 | 59 |
-| MFCC / MatrixDCT | 50 | 30,188 | 41,987 | 9 | 19 |
+| MFCC / MatrixDCT | 50 | Pending | Pending | Pending | Pending |
 
 | Project | MHz | WNS ns | WHS ns | Setup failures | Status | Four-frame cycles | Batch us |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | MFCC / SkewDCT | 50 | 7.511 | 0.01 | 0 | PASS | 39,508 | 790.16 |
 | MFCC / SkewDCT | 100 | 0.688 | 0.003 | 0 | PASS | 39,508 | 395.08 |
 | MFCC / SkewDCT | 150 | 0.258 | 0.01 | 0 | PASS | 39,508 | 263.387 |
-| MFCC / MatrixDCT | 50 | 8.254 | 0.01 | 0 | PASS | 43,687 | 873.74 |
+| MFCC / MatrixDCT | 50 | Pending | Pending | Pending | PENDING_REGISTER_IMPLEMENTATION | 43,622 | 872.44 |
 
 The latest SkewDCT batch requires 39,508 cycles: 790.160 us at 50 MHz, 395.080 us at 100 MHz, and 263.387 us at 150 MHz. Resource/timing sources at 50/100 MHz are the latest corresponding frequency reports; the cycle count comes from the newer matching regression. The per-metric source columns preserve this distinction without splitting architecture versions into separate cases.
 

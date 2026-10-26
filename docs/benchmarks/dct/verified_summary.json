@@ -25,7 +25,8 @@
       "snr_db": 16.04862513376996,
       "resource_source": "recursive_skewdct_N1024_20261026/raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt",
       "dct_resource_source": "recursive_skewdct_N1024_20261026/raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt",
-      "runtime_precision_source": "c64_pipeline_N1024_150MHz_20261026/results/rtl_precision_performance.json"
+      "runtime_precision_source": "c64_pipeline_N1024_150MHz_20261026/results/rtl_precision_performance.json",
+      "hardware_status": "MEASURED"
     },
     {
       "backend": "MatrixDCT",
@@ -34,24 +35,25 @@
       "dct_points": 64,
       "out_width": 64,
       "frequency_mhz": 50,
-      "mfcc_LUT": 30188,
-      "mfcc_FF": 41987,
-      "mfcc_BRAM_tile": 9.0,
-      "mfcc_DSP": 19,
-      "dct_LUT": 647,
-      "dct_FF": 1098,
-      "dct_BRAM_tile": 2.5,
-      "dct_DSP": 1,
+      "mfcc_LUT": null,
+      "mfcc_FF": null,
+      "mfcc_BRAM_tile": null,
+      "mfcc_DSP": null,
+      "dct_LUT": null,
+      "dct_FF": null,
+      "dct_BRAM_tile": null,
+      "dct_DSP": null,
       "frames": 4,
-      "cycles": 43687,
-      "batch_us": 873.74,
+      "cycles": 43622,
+      "batch_us": 872.44,
       "mae": 3.4285470932893625,
       "rmse": 12.490109975036425,
       "max_abs_error": 101.60887915401372,
       "snr_db": 16.04966887517948,
-      "resource_source": "recursive_skewdct_N1024_20261026/raw_reports/matrixdct_50MHz/utilization_hierarchical_post_route.rpt",
-      "dct_resource_source": "recursive_skewdct_N1024_20261026/raw_reports/matrixdct_50MHz/utilization_hierarchical_post_route.rpt",
-      "runtime_precision_source": "c64_pipeline_N1024_150MHz_20261026/results/rtl_precision_performance.json"
+      "resource_source": "matrix_register_20261026/verified_results.json",
+      "dct_resource_source": "matrix_register_20261026/verified_results.json",
+      "runtime_precision_source": "matrix_register_20261026/verified_results.json",
+      "hardware_status": "PENDING_REGISTER_IMPLEMENTATION"
     }
   ],
   "source_verification": {

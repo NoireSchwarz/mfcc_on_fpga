@@ -20,6 +20,8 @@ Latest supplied measurements, tested commit **b0db7a0**: N=1024, STRIDE=512, OUT
 
 ### Consolidated benchmarks
 
+The MatrixDCT reference has subsequently been replaced with register/LUT storage. Its current resource and timing fields are **pending reimplementation**; previous BRAM numbers remain historical evidence. The replacement preserves coefficients and takes 43,622 cycles for the N1024 four-frame test. [Implementation and regression results](docs/MatrixDCT_Register_Storage.md).
+
 All six supplied benchmark packages are classified in the [benchmark catalog](docs/benchmarks/README.md): [complete MFCC](docs/benchmarks/full_mfcc/README.md), [FFT/XFFT](docs/benchmarks/fft/README.md), [DCT comparison](docs/benchmarks/dct/README.md) and [memory optimization](docs/benchmarks/memory/README.md).
 
 The [13-sheet Excel workbook](docs/benchmarks/MFCC_Benchmark_Summary.xlsx) and [consolidated JSON](docs/benchmarks/combined_data.json) keep the latest valid metric for each test/configuration. Architecture and pipeline generations are not separate primary result rows. LUT, FF, BRAM and DSP appear first; per-metric source columns retain provenance. Earlier reports remain available as evidence without repeating superseded values in the main tables.
@@ -39,6 +41,13 @@ Das Design des DCT-Moduls orientiert sich an den folgenden Publikationen [^1] [^
 
 
 ## Upload log
+
+### 2026-10-26 - Replace MatrixDCT BRAM storage with FF/LUT storage
+
+- Captured the input frame in parallel FFs, used a LUT coefficient ROM and separate output-register words, and retained the public MatrixDCT interface and numerical parameters.
+- Kept operand selection, multiplication and accumulation in separate register stages. Removed BRAM-only input loading and output-read preparation; standalone completion changes from 4,417 to 4,352 clocks.
+- Passed six unit parameter cases against the original RTL and an independent integer model, plus twenty complete-MFCC configurations with zero coefficient differences. The N1024 unstalled four-frame batch changes from 43,687 to 43,622 clocks.
+- Marked current MatrixDCT resource/timing values pending in the catalog; old BRAM measurements are not assigned to the new implementation. New synthesis, physical RAM mapping and timing remain to be measured.
 
 ### 2026-10-26 - Consolidate benchmark results by test project
 

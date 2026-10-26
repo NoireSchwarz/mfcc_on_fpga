@@ -1,5 +1,7 @@
 # Benchmark catalog — latest results
 
+MatrixDCT now uses register/LUT storage. Its current resource/timing fields are **Pending**; former BRAM measurements are historical. The updated simulation-only four-frame result is 43,622 cycles. [Replacement validation](matrix_register_20261026/README.md).
+
 All six supplied benchmark packages are consolidated here. The primary tables retain the **latest valid result for each test project and configuration**. Architecture, pipeline and version changes do not create separate result rows. Different FFT lengths, clock frequencies, backends being compared, output-lane counts, frame counts and stall conditions remain separate configurations.
 
 Metrics are refreshed independently. A package that only updates 150 MHz implementation does not replace the last measured 50/100 MHz resources. Runtime cycles use the latest matching regression; source columns identify the evidence used for each metric. Earlier reports remain available for traceability without duplicating their values in the primary tables.
@@ -13,7 +15,7 @@ Complete MFCC, N=1024, STRIDE=512, OUT_WIDTH=64:
 | MFCC / SkewDCT | 50 | 35,601 | 52,870 | 6.5 | 59 |
 | MFCC / SkewDCT | 100 | 35,606 | 52,870 | 6.5 | 59 |
 | MFCC / SkewDCT | 150 | 35,777 | 53,107 | 6.5 | 59 |
-| MFCC / MatrixDCT | 50 | 30,188 | 41,987 | 9 | 19 |
+| MFCC / MatrixDCT | 50 | Pending | Pending | Pending | Pending |
 
 Latest 150 MHz MFCC: **35,777 LUT, 53,107 FF, 6.5 BRAM tiles and 59 DSP**, with **WNS +0.258 ns** and zero setup/hold failures. Inclusive child hierarchy counts are already part of whole-MFCC totals. [All resource scopes and standalone FFT/IP figures](overview/Resources.csv).
 
@@ -40,7 +42,7 @@ Latest 150 MHz MFCC: **35,777 LUT, 53,107 FF, 6.5 BRAM tiles and 59 DSP**, with 
 | MFCC / SkewDCT | 50 | 7.511 | 0.01 | 0 | PASS | 39,508 | 790.16 |
 | MFCC / SkewDCT | 100 | 0.688 | 0.003 | 0 | PASS | 39,508 | 395.08 |
 | MFCC / SkewDCT | 150 | 0.258 | 0.01 | 0 | PASS | 39,508 | 263.387 |
-| MFCC / MatrixDCT | 50 | 8.254 | 0.01 | 0 | PASS | 43,687 | 873.74 |
+| MFCC / MatrixDCT | 50 | Pending | Pending | Pending | PENDING_REGISTER_IMPLEMENTATION | 43,622 | 872.44 |
 
 Times are RTL cycle counts divided by MHz, not board/PS/DMA measurements. Four-frame batch averages are not independently measured single-frame latency or steady-state initiation intervals. Floating-reference errors cover the tested complete pipeline or FFT vectors, not recognition accuracy.
 

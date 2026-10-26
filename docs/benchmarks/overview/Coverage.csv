@@ -7,3 +7,4 @@ SkewDCT versus MatrixDCT,64-point DCT inside N1024 MFCC; 50 MHz; four frames,Inc
 Memory optimization,MFCC N512 / stride256 / one lane; 50 MHz OOC synthesis,Included; explicit before/after comparison and 11 paired regressions,memory/README.md
 200 MHz,Latest complete MFCC,Estimate only; latest RTL has no completed 200 MHz implementation,c64_pipeline_N1024_150MHz_20261026/README.md
 Legacy 200 MHz attempt,Earlier MFCC frequency sweep,USER_ABORTED_NOT_COUNTED; not a timing pass or fail,evidence/ver2/04_frequency_runs/mfcc_N1024_200MHz/status.txt
+MatrixDCT register/LUT replacement,Six unit cases; twenty MFCC configurations,Simulation passes; new physical resource/timing mapping pending,matrix_register_20261026/README.md
