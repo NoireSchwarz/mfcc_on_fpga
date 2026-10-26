@@ -1,5 +1,7 @@
 # Recursive SkewDCT8 measurements and 150 MHz timing analysis
 
+Historical measurement of pre-C64-pipeline revision `8f1fd37`. The subsequent C64-pipelined revision `b0db7a0` [passes 150 MHz in the follow-up implementation](../c64_pipeline_N1024_150MHz_20261026/README.md). The reports and failure analysis below remain attached to the earlier tested revision.
+
 Measured revision: `8f1fd371d7a8cf441a2584526f4bac2570d97cfb`. Device: xck26-sfvc784-2LV-c; Vivado 2026.1. Configuration: complete MFCC, N=1024, STRIDE=512, OUT_WIDTH=64, four frames / 256 coefficients. Results are RTL simulation and out-of-context post-route implementation, not board-measured PS/DMA/audio latency. The supplied measurements use one implementation attempt with no retry or additional Explore physical optimization.
 
 ## Resource utilization first

@@ -1,0 +1,16 @@
+TIMING_PASS
+git_commit=b0db7a079ba203eb0b2b88bb8a03c578899d5549
+N=1024
+frequency_mhz=150
+period_ns=6.666666666666667
+WNS_ns=0.258
+WHS_ns=0.010
+setup_failing_paths=0
+hold_failing_paths=0
+synth_seconds=317.923
+opt_seconds=38.989
+place_seconds=476.222
+route_seconds=328.875
+total_vivado_seconds=1288.094
+implementation_retry=disabled
+rtl_modified_by_tester=false

@@ -1,0 +1,1427 @@
+{
+  "status": "VERIFIED_TIMING_PASS",
+  "tested_commit": "b0db7a079ba203eb0b2b88bb8a03c578899d5549",
+  "archive_filename": "KV260_C64_pipeline_N1024_150MHz_PASS_20261026.zip",
+  "archive_sha256": "f69d26eb50311e374bd121320a0cf968945b9bf867a1b72fe52ba4e617321237",
+  "configuration": {
+    "N": 1024,
+    "STRIDE": 512,
+    "OUT_WIDTH": 64,
+    "DCT_USE_MATRIX": 0
+  },
+  "tool": "Vivado 2026.1",
+  "device": "xck26-sfvc784-2LV-c",
+  "source_rtl_sha256": {
+    "c64_8_postadd_serial.v": "9761dd0b6541eccd41b33cfc0d1fedbae4d7093f46d5113fe5d9c5302846bdab",
+    "dct64_serial.v": "2deee9b74b5d266a7ba86f2a7b07858303a7607dbd63ef5116efcd67f0c7fdda",
+    "skewdct8_tdm.v": "d62ba80797407e5b24222b090004b2931a76bb91accbb089ef6389506dd76a43",
+    "skewdct_8.v": "1fde79890fb0b89d5c81842db6f9d6c397286f54cda71b51721f338612425dbd"
+  },
+  "source_list_sha256": "7699465b7359e6fafc71918582ea8d107bf6f77d44cb2f61dabdd55b4c8b1525",
+  "checksums": [
+    {
+      "path": "raw_reports/drc_post_route.rpt",
+      "sha256": "7d8dfdd79a3c3132ac139336a79daf72bb0e99e089d0e36ac6b3f6c691dcbe81"
+    },
+    {
+      "path": "raw_reports/route_status.rpt",
+      "sha256": "d89878eb5d07e98dbc848003250d042defe5eb3c8715607a0e1f6b2f8986eab0"
+    },
+    {
+      "path": "raw_reports/status.txt",
+      "sha256": "3c698f6667e1dca7f8d69ced3fc249d2be48112150df31fe5a5ed68d6024e266"
+    },
+    {
+      "path": "raw_reports/timing_post_route.rpt",
+      "sha256": "4a1b6556bac1d8645bd60a0b5602451fe2d3170dcfce2d026b55b744a2b700a7"
+    },
+    {
+      "path": "raw_reports/timing_synth.rpt",
+      "sha256": "fc0b93f4d641cf58e6ce82715e4a704d02028ce1f4e76310f91d37f26cbe8f93"
+    },
+    {
+      "path": "raw_reports/utilization_hierarchical_post_route.rpt",
+      "sha256": "3539e24906f61e0c5900684a8806ab1824799e658d431883e14c4a8f7109164c"
+    },
+    {
+      "path": "raw_reports/utilization_post_route.rpt",
+      "sha256": "44a91fd974efcb103ee48430aedd8f523d36f4978b4d876b1ce705537d2538b7"
+    },
+    {
+      "path": "report/C64三级流水150MHz复测报告.md",
+      "sha256": "b2888a96c82b91fbcd908f49cc19872ac9000a930faeb4b4a581899b846b1c60"
+    },
+    {
+      "path": "results/rtl_precision_performance.json",
+      "sha256": "cce18512897b24c4920d1eb9dfed726cf08fdf250aebe6313880d2315e5b7a0b"
+    },
+    {
+      "path": "scripts/implement_150mhz.tcl",
+      "sha256": "891930c56d77417cae6e6aa191e9045049669d0986f640586a31f8b1ad1416e0"
+    },
+    {
+      "path": "scripts/run_rtl_compare.py",
+      "sha256": "1dd9b35c2bb9f20ba1215b491897d802902a39b8ff76917f083f09ca3693d1d8"
+    },
+    {
+      "path": "source_core/c64_8_postadd_serial.v",
+      "sha256": "9761dd0b6541eccd41b33cfc0d1fedbae4d7093f46d5113fe5d9c5302846bdab"
+    },
+    {
+      "path": "source_core/C64_Output_Pipeline.md",
+      "sha256": "9b92368e9b5e2678b1b70e9479497061969d7cd7caaf8de559af1c590105633d"
+    },
+    {
+      "path": "source_core/dct64_serial.v",
+      "sha256": "2deee9b74b5d266a7ba86f2a7b07858303a7607dbd63ef5116efcd67f0c7fdda"
+    },
+    {
+      "path": "source_core/skewdct_8.v",
+      "sha256": "1fde79890fb0b89d5c81842db6f9d6c397286f54cda71b51721f338612425dbd"
+    },
+    {
+      "path": "source_core/skewdct8_tdm.v",
+      "sha256": "d62ba80797407e5b24222b090004b2931a76bb91accbb089ef6389506dd76a43"
+    }
+  ],
+  "resource_rows": [
+    {
+      "variant": "Recursive SkewDCT + C64 pipeline",
+      "scope": "Whole MFCC",
+      "frequency_mhz": 150,
+      "N": 1024,
+      "out_width": 64,
+      "stage": "OOC post-route; inclusive hierarchy",
+      "timing_status": "TIMING_PASS",
+      "instance": "mfcc",
+      "module": "(top)",
+      "LUT": 35777,
+      "logic_LUT": 34875,
+      "LUTRAM": 0,
+      "SRL": 902,
+      "FF": 53107,
+      "RAMB36": 3,
+      "RAMB18": 7,
+      "BRAM_tile": 6.5,
+      "DSP": 59,
+      "source": "raw_reports/utilization_hierarchical_post_route.rpt",
+      "LUT_used_percent": 30.55,
+      "FF_used_percent": 22.67,
+      "BRAM_tile_used_percent": 4.51,
+      "DSP_used_percent": 4.73
+    },
+    {
+      "variant": "Recursive SkewDCT + C64 pipeline",
+      "scope": "DCT subsystem",
+      "frequency_mhz": 150,
+      "N": 1024,
+      "out_width": 64,
+      "stage": "OOC post-route; inclusive hierarchy",
+      "timing_status": "TIMING_PASS",
+      "instance": "gen_skew.my_dct",
+      "module": "dct64_serial",
+      "LUT": 6041,
+      "logic_LUT": 6032,
+      "LUTRAM": 0,
+      "SRL": 9,
+      "FF": 12125,
+      "RAMB36": 0,
+      "RAMB18": 0,
+      "BRAM_tile": 0.0,
+      "DSP": 41,
+      "source": "raw_reports/utilization_hierarchical_post_route.rpt",
+      "LUT_used_percent": 5.16,
+      "FF_used_percent": 5.18,
+      "BRAM_tile_used_percent": 0.0,
+      "DSP_used_percent": 3.29
+    },
+    {
+      "variant": "Recursive SkewDCT + C64 pipeline",
+      "scope": "C64 output processing",
+      "frequency_mhz": 150,
+      "N": 1024,
+      "out_width": 64,
+      "stage": "OOC post-route; inclusive hierarchy",
+      "timing_status": "TIMING_PASS",
+      "instance": "U_C64_8",
+      "module": "c64_8_postadd_serial",
+      "LUT": 1107,
+      "logic_LUT": 1107,
+      "LUTRAM": 0,
+      "SRL": 0,
+      "FF": 1706,
+      "RAMB36": 0,
+      "RAMB18": 0,
+      "BRAM_tile": 0.0,
+      "DSP": 1,
+      "source": "raw_reports/utilization_hierarchical_post_route.rpt",
+      "LUT_used_percent": 0.95,
+      "FF_used_percent": 0.73,
+      "BRAM_tile_used_percent": 0.0,
+      "DSP_used_percent": 0.08
+    },
+    {
+      "variant": "Recursive SkewDCT + C64 pipeline",
+      "scope": "Shared SkewDCT8 core",
+      "frequency_mhz": 150,
+      "N": 1024,
+      "out_width": 64,
+      "stage": "OOC post-route; inclusive hierarchy",
+      "timing_status": "TIMING_PASS",
+      "instance": "U_SKEW_DYN",
+      "module": "skewdct8_dctii_dyn",
+      "LUT": 1706,
+      "logic_LUT": 1700,
+      "LUTRAM": 0,
+      "SRL": 6,
+      "FF": 2357,
+      "RAMB36": 0,
+      "RAMB18": 0,
+      "BRAM_tile": 0.0,
+      "DSP": 24,
+      "source": "raw_reports/utilization_hierarchical_post_route.rpt",
+      "LUT_used_percent": 1.46,
+      "FF_used_percent": 1.01,
+      "BRAM_tile_used_percent": 0.0,
+      "DSP_used_percent": 1.92
+    }
+  ],
+  "previous_150MHz_resource_rows": [
+    {
+      "scope": "Whole MFCC",
+      "frequency_mhz": 150,
+      "instance": "mfcc",
+      "module": "(top)",
+      "LUT": 35657,
+      "logic_LUT": 34769,
+      "LUTRAM": 0,
+      "SRL": 888,
+      "FF": 52906,
+      "RAMB36": 3,
+      "RAMB18": 7,
+      "BRAM_tile": 6.5,
+      "DSP": 59,
+      "source": "../recursive_skewdct_N1024_20261026/raw_reports/skewdct_150MHz/utilization_hierarchical_post_route.rpt"
+    },
+    {
+      "scope": "DCT subsystem",
+      "frequency_mhz": 150,
+      "instance": "gen_skew.my_dct",
+      "module": "dct64_serial",
+      "LUT": 5871,
+      "logic_LUT": 5862,
+      "LUTRAM": 0,
+      "SRL": 9,
+      "FF": 11981,
+      "RAMB36": 0,
+      "RAMB18": 0,
+      "BRAM_tile": 0.0,
+      "DSP": 41,
+      "source": "../recursive_skewdct_N1024_20261026/raw_reports/skewdct_150MHz/utilization_hierarchical_post_route.rpt"
+    },
+    {
+      "scope": "C64 output processing",
+      "frequency_mhz": 150,
+      "instance": "U_C64_8",
+      "module": "c64_8_postadd_serial",
+      "LUT": 939,
+      "logic_LUT": 939,
+      "LUTRAM": 0,
+      "SRL": 0,
+      "FF": 1562,
+      "RAMB36": 0,
+      "RAMB18": 0,
+      "BRAM_tile": 0.0,
+      "DSP": 1,
+      "source": "../recursive_skewdct_N1024_20261026/raw_reports/skewdct_150MHz/utilization_hierarchical_post_route.rpt"
+    },
+    {
+      "scope": "Shared SkewDCT8 core",
+      "frequency_mhz": 150,
+      "instance": "U_SKEW_DYN",
+      "module": "skewdct8_dctii_dyn",
+      "LUT": 1706,
+      "logic_LUT": 1700,
+      "LUTRAM": 0,
+      "SRL": 6,
+      "FF": 2357,
+      "RAMB36": 0,
+      "RAMB18": 0,
+      "BRAM_tile": 0.0,
+      "DSP": 24,
+      "source": "../recursive_skewdct_N1024_20261026/raw_reports/skewdct_150MHz/utilization_hierarchical_post_route.rpt"
+    }
+  ],
+  "resource_changes": [
+    {
+      "scope": "Whole MFCC",
+      "resource": "LUT",
+      "before": 35657,
+      "after": 35777,
+      "delta": 120,
+      "percent_change": 0.3365398098550074
+    },
+    {
+      "scope": "Whole MFCC",
+      "resource": "FF",
+      "before": 52906,
+      "after": 53107,
+      "delta": 201,
+      "percent_change": 0.3799191018031981
+    },
+    {
+      "scope": "Whole MFCC",
+      "resource": "BRAM_tile",
+      "before": 6.5,
+      "after": 6.5,
+      "delta": 0.0,
+      "percent_change": 0.0
+    },
+    {
+      "scope": "Whole MFCC",
+      "resource": "DSP",
+      "before": 59,
+      "after": 59,
+      "delta": 0,
+      "percent_change": 0.0
+    },
+    {
+      "scope": "DCT subsystem",
+      "resource": "LUT",
+      "before": 5871,
+      "after": 6041,
+      "delta": 170,
+      "percent_change": 2.8955884857775507
+    },
+    {
+      "scope": "DCT subsystem",
+      "resource": "FF",
+      "before": 11981,
+      "after": 12125,
+      "delta": 144,
+      "percent_change": 1.2019030131040815
+    },
+    {
+      "scope": "DCT subsystem",
+      "resource": "BRAM_tile",
+      "before": 0.0,
+      "after": 0.0,
+      "delta": 0.0,
+      "percent_change": null
+    },
+    {
+      "scope": "DCT subsystem",
+      "resource": "DSP",
+      "before": 41,
+      "after": 41,
+      "delta": 0,
+      "percent_change": 0.0
+    },
+    {
+      "scope": "C64 output processing",
+      "resource": "LUT",
+      "before": 939,
+      "after": 1107,
+      "delta": 168,
+      "percent_change": 17.891373801916934
+    },
+    {
+      "scope": "C64 output processing",
+      "resource": "FF",
+      "before": 1562,
+      "after": 1706,
+      "delta": 144,
+      "percent_change": 9.218950064020486
+    },
+    {
+      "scope": "C64 output processing",
+      "resource": "BRAM_tile",
+      "before": 0.0,
+      "after": 0.0,
+      "delta": 0.0,
+      "percent_change": null
+    },
+    {
+      "scope": "C64 output processing",
+      "resource": "DSP",
+      "before": 1,
+      "after": 1,
+      "delta": 0,
+      "percent_change": 0.0
+    },
+    {
+      "scope": "Shared SkewDCT8 core",
+      "resource": "LUT",
+      "before": 1706,
+      "after": 1706,
+      "delta": 0,
+      "percent_change": 0.0
+    },
+    {
+      "scope": "Shared SkewDCT8 core",
+      "resource": "FF",
+      "before": 2357,
+      "after": 2357,
+      "delta": 0,
+      "percent_change": 0.0
+    },
+    {
+      "scope": "Shared SkewDCT8 core",
+      "resource": "BRAM_tile",
+      "before": 0.0,
+      "after": 0.0,
+      "delta": 0.0,
+      "percent_change": null
+    },
+    {
+      "scope": "Shared SkewDCT8 core",
+      "resource": "DSP",
+      "before": 24,
+      "after": 24,
+      "delta": 0,
+      "percent_change": 0.0
+    }
+  ],
+  "frequency_result": {
+    "frequency_mhz": 150,
+    "timing_status": "TIMING_PASS",
+    "batch_cycles": 39508,
+    "batch_us": 263.38666666666666,
+    "average_frame_us": 65.84666666666666,
+    "implementation_retry": "disabled",
+    "wns": 0.258,
+    "tns": 0.0,
+    "setup_fail": 0,
+    "whs": 0.01,
+    "ths": 0.0,
+    "hold_fail": 0,
+    "LUT": 35777,
+    "FF": 53107,
+    "BRAM_tile": 6.5,
+    "DSP": 59,
+    "source": "raw_reports/timing_post_route.rpt"
+  },
+  "classified_setup_paths": [
+    {
+      "rank": 1,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[31][2]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.258,
+      "data_delay_ns": 6.15,
+      "logic_delay_ns": 0.303,
+      "route_delay_ns": 5.847,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.268,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.777,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.07,
+          "net": "U_CORE/my_filt_bank/energy[31][2]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.408666666666667,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 2,
+      "source": "U_CORE/my_in/output_index_reg[2]_replica/C",
+      "destination": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/storage_reg_bram_0/DINADIN[0]",
+      "category": "Input selection / Hamming multiplication / FFT RAM write",
+      "slack_ns": 0.314,
+      "data_delay_ns": 5.528,
+      "logic_delay_ns": 2.631,
+      "route_delay_ns": 2.897,
+      "logic_levels": 12,
+      "clock_skew_ns": -0.326,
+      "nets": [
+        {
+          "fanout": 72,
+          "delay_ns": 0.784,
+          "net": "U_CORE/my_in/output_index_reg_n_0_[2]_repN"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_119_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.756,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_42_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.017,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_16_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_6_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.545,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_1_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.435,
+          "net": "U_CORE/my_hamming/result/B[2]"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_A_B_DATA.B2_DATA<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_PREADD_DATA.B2B1<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_MULTIPLIER.U<14>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_M_DATA.U_DATA<14>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_ALU.ALU_OUT<14>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.36,
+          "net": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/wr_data[0]"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.352666666666667,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 3,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[51][24]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.321,
+      "data_delay_ns": 6.093,
+      "logic_delay_ns": 0.335,
+      "route_delay_ns": 5.758,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.261,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.662,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.096,
+          "net": "U_CORE/my_filt_bank/energy[51][24]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3456666666666672,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 4,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[30][33]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.326,
+      "data_delay_ns": 6.003,
+      "logic_delay_ns": 0.336,
+      "route_delay_ns": 5.667,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.347,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.6,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.067,
+          "net": "U_CORE/my_filt_bank/energy[30][33]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3406666666666673,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 5,
+      "source": "U_CORE/my_in/output_index_reg[2]_replica/C",
+      "destination": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/storage_reg_bram_0/DINADIN[13]",
+      "category": "Input selection / Hamming multiplication / FFT RAM write",
+      "slack_ns": 0.333,
+      "data_delay_ns": 5.578,
+      "logic_delay_ns": 2.631,
+      "route_delay_ns": 2.947,
+      "logic_levels": 12,
+      "clock_skew_ns": -0.326,
+      "nets": [
+        {
+          "fanout": 72,
+          "delay_ns": 0.784,
+          "net": "U_CORE/my_in/output_index_reg_n_0_[2]_repN"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_119_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.756,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_42_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.017,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_16_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_6_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.545,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_1_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.435,
+          "net": "U_CORE/my_hamming/result/B[2]"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_A_B_DATA.B2_DATA<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_PREADD_DATA.B2B1<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_MULTIPLIER.U<27>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_M_DATA.U_DATA<27>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_ALU.ALU_OUT<27>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.41,
+          "net": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/wr_data[13]"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3336666666666668,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 6,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[10][2]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.337,
+      "data_delay_ns": 6.074,
+      "logic_delay_ns": 0.269,
+      "route_delay_ns": 5.805,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.265,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.725,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.08,
+          "net": "U_CORE/my_filt_bank/energy[10][2]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3296666666666672,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 7,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[24][2]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.342,
+      "data_delay_ns": 6.068,
+      "logic_delay_ns": 0.269,
+      "route_delay_ns": 5.799,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.266,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.719,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.08,
+          "net": "U_CORE/my_filt_bank/energy[24][2]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3246666666666673,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 8,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[3][45]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.343,
+      "data_delay_ns": 5.989,
+      "logic_delay_ns": 0.268,
+      "route_delay_ns": 5.721,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.344,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.651,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.07,
+          "net": "U_CORE/my_filt_bank/energy[3][45]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.323666666666667,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 9,
+      "source": "U_CORE/my_in/output_index_reg[2]_replica/C",
+      "destination": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/storage_reg_bram_0/DINADIN[14]",
+      "category": "Input selection / Hamming multiplication / FFT RAM write",
+      "slack_ns": 0.343,
+      "data_delay_ns": 5.572,
+      "logic_delay_ns": 2.631,
+      "route_delay_ns": 2.941,
+      "logic_levels": 12,
+      "clock_skew_ns": -0.326,
+      "nets": [
+        {
+          "fanout": 72,
+          "delay_ns": 0.784,
+          "net": "U_CORE/my_in/output_index_reg_n_0_[2]_repN"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_119_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.756,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_42_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.017,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_16_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_6_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.545,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_1_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.435,
+          "net": "U_CORE/my_hamming/result/B[2]"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_A_B_DATA.B2_DATA<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_PREADD_DATA.B2B1<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_MULTIPLIER.U<28>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_M_DATA.U_DATA<28>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_ALU.ALU_OUT<28>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.404,
+          "net": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/wr_data[14]"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.323666666666667,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 10,
+      "source": "U_CORE/my_in/output_index_reg[2]_replica/C",
+      "destination": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/storage_reg_bram_0/DINADIN[9]",
+      "category": "Input selection / Hamming multiplication / FFT RAM write",
+      "slack_ns": 0.348,
+      "data_delay_ns": 5.539,
+      "logic_delay_ns": 2.631,
+      "route_delay_ns": 2.908,
+      "logic_levels": 12,
+      "clock_skew_ns": -0.326,
+      "nets": [
+        {
+          "fanout": 72,
+          "delay_ns": 0.784,
+          "net": "U_CORE/my_in/output_index_reg_n_0_[2]_repN"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_119_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.756,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_42_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.017,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_16_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_6_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.545,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_1_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.435,
+          "net": "U_CORE/my_hamming/result/B[2]"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_A_B_DATA.B2_DATA<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_PREADD_DATA.B2B1<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_MULTIPLIER.U<23>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_M_DATA.U_DATA<23>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_ALU.ALU_OUT<23>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.371,
+          "net": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/wr_data[9]"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.318666666666667,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 11,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[2][43]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.352,
+      "data_delay_ns": 5.985,
+      "logic_delay_ns": 0.196,
+      "route_delay_ns": 5.789,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.339,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.72,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.069,
+          "net": "U_CORE/my_filt_bank/energy[2][43]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3146666666666667,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 12,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[12][2]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.353,
+      "data_delay_ns": 6.051,
+      "logic_delay_ns": 0.268,
+      "route_delay_ns": 5.783,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.272,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.713,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.07,
+          "net": "U_CORE/my_filt_bank/energy[12][2]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3136666666666672,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 13,
+      "source": "U_CORE/my_in/output_index_reg[2]_replica/C",
+      "destination": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/storage_reg_bram_0/DINADIN[8]",
+      "category": "Input selection / Hamming multiplication / FFT RAM write",
+      "slack_ns": 0.354,
+      "data_delay_ns": 5.526,
+      "logic_delay_ns": 2.631,
+      "route_delay_ns": 2.895,
+      "logic_levels": 12,
+      "clock_skew_ns": -0.326,
+      "nets": [
+        {
+          "fanout": 72,
+          "delay_ns": 0.784,
+          "net": "U_CORE/my_in/output_index_reg_n_0_[2]_repN"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_119_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.756,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_42_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.017,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_16_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_6_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.545,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_1_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.435,
+          "net": "U_CORE/my_hamming/result/B[2]"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_A_B_DATA.B2_DATA<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_PREADD_DATA.B2B1<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_MULTIPLIER.U<22>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_M_DATA.U_DATA<22>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_ALU.ALU_OUT<22>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.358,
+          "net": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/wr_data[8]"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3126666666666669,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 14,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[51][27]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.356,
+      "data_delay_ns": 6.058,
+      "logic_delay_ns": 0.301,
+      "route_delay_ns": 5.757,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.261,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.662,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.095,
+          "net": "U_CORE/my_filt_bank/energy[51][27]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.310666666666667,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 15,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[17][2]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.357,
+      "data_delay_ns": 6.057,
+      "logic_delay_ns": 0.199,
+      "route_delay_ns": 5.858,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.262,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.778,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.08,
+          "net": "U_CORE/my_filt_bank/energy[17][2]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3096666666666668,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 16,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[15][45]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.362,
+      "data_delay_ns": 5.979,
+      "logic_delay_ns": 0.197,
+      "route_delay_ns": 5.782,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.334,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.701,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.081,
+          "net": "U_CORE/my_filt_bank/energy[15][45]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3046666666666669,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 17,
+      "source": "U_CORE/gen_skew.my_dct/FSM_onehot_state_reg[0]/C",
+      "destination": "U_CORE/my_filt_bank/energy_reg[51][4]/D",
+      "category": "Filter-bank acknowledgement / frame clear",
+      "slack_ns": 0.363,
+      "data_delay_ns": 6.051,
+      "logic_delay_ns": 0.303,
+      "route_delay_ns": 5.748,
+      "logic_levels": 1,
+      "clock_skew_ns": -0.261,
+      "nets": [
+        {
+          "fanout": 4167,
+          "delay_ns": 5.667,
+          "net": "U_CORE/my_filt_bank/m_ready"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.081,
+          "net": "U_CORE/my_filt_bank/energy[51][4]_i_1_n_0"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3036666666666674,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 18,
+      "source": "U_CORE/my_in/output_index_reg[2]_replica/C",
+      "destination": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/storage_reg_bram_0/DINADIN[1]",
+      "category": "Input selection / Hamming multiplication / FFT RAM write",
+      "slack_ns": 0.363,
+      "data_delay_ns": 5.478,
+      "logic_delay_ns": 2.631,
+      "route_delay_ns": 2.847,
+      "logic_levels": 12,
+      "clock_skew_ns": -0.326,
+      "nets": [
+        {
+          "fanout": 72,
+          "delay_ns": 0.784,
+          "net": "U_CORE/my_in/output_index_reg_n_0_[2]_repN"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_119_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.756,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_42_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.017,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_16_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_6_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.545,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_1_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.435,
+          "net": "U_CORE/my_hamming/result/B[2]"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_A_B_DATA.B2_DATA<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_PREADD_DATA.B2B1<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_MULTIPLIER.U<15>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_M_DATA.U_DATA<15>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_ALU.ALU_OUT<15>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.31,
+          "net": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/wr_data[1]"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.3036666666666674,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 19,
+      "source": "U_CORE/my_in/output_index_reg[2]_replica/C",
+      "destination": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/storage_reg_bram_0/DINADIN[10]",
+      "category": "Input selection / Hamming multiplication / FFT RAM write",
+      "slack_ns": 0.372,
+      "data_delay_ns": 5.534,
+      "logic_delay_ns": 2.631,
+      "route_delay_ns": 2.903,
+      "logic_levels": 12,
+      "clock_skew_ns": -0.326,
+      "nets": [
+        {
+          "fanout": 72,
+          "delay_ns": 0.784,
+          "net": "U_CORE/my_in/output_index_reg_n_0_[2]_repN"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_119_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.756,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_42_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.017,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_16_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_6_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.545,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_1_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.435,
+          "net": "U_CORE/my_hamming/result/B[2]"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_A_B_DATA.B2_DATA<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_PREADD_DATA.B2B1<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_MULTIPLIER.U<24>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_M_DATA.U_DATA<24>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_ALU.ALU_OUT<24>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.366,
+          "net": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/wr_data[10]"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.294666666666667,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    },
+    {
+      "rank": 20,
+      "source": "U_CORE/my_in/output_index_reg[2]_replica/C",
+      "destination": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/storage_reg_bram_0/DINADIN[12]",
+      "category": "Input selection / Hamming multiplication / FFT RAM write",
+      "slack_ns": 0.379,
+      "data_delay_ns": 5.546,
+      "logic_delay_ns": 2.631,
+      "route_delay_ns": 2.915,
+      "logic_levels": 12,
+      "clock_skew_ns": -0.326,
+      "nets": [
+        {
+          "fanout": 72,
+          "delay_ns": 0.784,
+          "net": "U_CORE/my_in/output_index_reg_n_0_[2]_repN"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_119_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.756,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_42_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.017,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_16_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_6_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.545,
+          "net": "U_CORE/my_in/out[2]_INST_0_i_1_n_0"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.435,
+          "net": "U_CORE/my_hamming/result/B[2]"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_A_B_DATA.B2_DATA<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_PREADD_DATA.B2B1<2>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_MULTIPLIER.U<26>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_M_DATA.U_DATA<26>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.0,
+          "net": "U_CORE/my_hamming/result/DSP_ALU.ALU_OUT<26>"
+        },
+        {
+          "fanout": 1,
+          "delay_ns": 0.378,
+          "net": "U_CORE/my_pow_spec/my_fft/engine_i/input_ram/wr_data[12]"
+        }
+      ],
+      "frozen_route_slack_200MHz_ns": -1.2876666666666674,
+      "source_report": "raw_reports/timing_post_route.rpt"
+    }
+  ],
+  "assessment_200MHz": {
+    "status": "NOT_TESTED_200MHZ",
+    "period_ns": 5.0,
+    "period_reduction_ns": 1.666666666666667,
+    "frozen_route_wns_ns": -1.408666666666667,
+    "frozen_route_period_limit_ns": 6.408666666666667,
+    "frozen_route_fmax_reference_mhz": 156.03869759700405,
+    "assumption": "Same routed netlist, clock relationships, skew and uncertainty. Not a 200 MHz implementation or a certified Fmax.",
+    "judgement": "A fresh 200 MHz run is feasible as an experiment, but unchanged RTL is unlikely to close based on the current margin. Prioritize acknowledgement fanout and the input-selection/Hamming path.",
+    "reported_setup_path_categories": {
+      "Filter-bank acknowledgement / frame clear": 12,
+      "Input selection / Hamming multiplication / FFT RAM write": 8
+    },
+    "classified_paths_only": true
+  },
+  "precision": [
+    {
+      "variant": "skewdct",
+      "frames": 4,
+      "coefficients": 256,
+      "mae": 3.4286065721184498,
+      "rmse": 12.49161094141159,
+      "max_abs_error": 101.62445254003131,
+      "snr_db": 16.04862513376996,
+      "within_1": 36.328125,
+      "within_2": 65.234375,
+      "output_csv_sha256": "d2d1c0b91c6a6814b01f523af1faa7d3a1802110a2245e6d4f17992fc7f5bdda",
+      "cycles_4frames": 39508
+    },
+    {
+      "variant": "matrixdct",
+      "frames": 4,
+      "coefficients": 256,
+      "mae": 3.4285470932893625,
+      "rmse": 12.490109975036425,
+      "max_abs_error": 101.60887915401372,
+      "snr_db": 16.04966887517948,
+      "within_1": 36.328125,
+      "within_2": 65.234375,
+      "output_csv_sha256": "68a678c1aed797fa0aed98903ca3453623b6490c30c2fc2b1f31671d1d064f16",
+      "cycles_4frames": 43687
+    }
+  ],
+  "drc_warnings": {
+    "DPIP_2": 19,
+    "DPOP_3": 21,
+    "DPOP_4": 55,
+    "RTSTAT_10": 1
+  },
+  "verification": {
+    "status": "PASS",
+    "archive_checksums_verified": 16,
+    "delivered_rtl_snapshots_match": 4,
+    "source_list_hash_matches": true,
+    "raw_reports_crosschecked": true,
+    "same_frequency_resource_comparison": true,
+    "coefficient_csvs_match_supplied_hashes": true,
+    "precision_metrics_recomputed": true,
+    "no_rtl_changes": true,
+    "no_local_vivado_or_board_run": true
+  }
+}

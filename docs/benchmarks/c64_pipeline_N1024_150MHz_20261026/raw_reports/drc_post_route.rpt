@@ -1,0 +1,519 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Mon Oct 26 15:56:01 2026
+| Host         : PCforInitblankStudio running 64-bit major release  (build 9200)
+| Command      : report_drc -file D:/KV260_MFCC/21_skewdct8_recursive_retry_20261026/04_implementation/skewdct_150MHz/drc_post_route.rpt
+| Design       : mfcc
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Partially Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: mfcc
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 96
++-----------+----------+------------------------+--------+
+| Rule      | Severity | Description            | Checks |
++-----------+----------+------------------------+--------+
+| DPIP-2    | Warning  | Input pipelining       | 19     |
+| DPOP-3    | Warning  | PREG Output pipelining | 21     |
+| DPOP-4    | Warning  | MREG Output pipelining | 55     |
+| RTSTAT-10 | Warning  | No routable loads      | 1      |
++-----------+----------+------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP U_CORE/my_hamming/result input U_CORE/my_hamming/result/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP U_CORE/my_hamming/result input U_CORE/my_hamming/result/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP U_CORE/my_in/pre_product input U_CORE/my_in/pre_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/im_square_q0 input U_CORE/my_pow_spec/im_square_q0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/im_square_q0 input U_CORE/my_pow_spec/im_square_q0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2 input U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2 input U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2__0 input U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#9 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2__0 input U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#10 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2 input U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#11 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2 input U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#12 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2__0 input U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#13 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2__0 input U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#14 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ii_reg input U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ii_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#15 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ir_reg input U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ir_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#16 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ri_reg input U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ri_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#17 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_rr_reg input U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_rr_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#18 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/re_square_q0 input U_CORE/my_pow_spec/re_square_q0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#19 Warning
+Input pipelining  
+DSP U_CORE/my_pow_spec/re_square_q0 input U_CORE/my_pow_spec/re_square_q0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__0 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__1 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#4 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__10 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__10/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#5 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__2 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#6 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__3 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#7 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__4 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#8 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__5 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#9 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__6 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#10 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__7 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#11 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__8 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#12 Warning
+PREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__9 output U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#13 Warning
+PREG Output pipelining  
+DSP U_CORE/my_filt_bank/exponent_product_q0 output U_CORE/my_filt_bank/exponent_product_q0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#14 Warning
+PREG Output pipelining  
+DSP U_CORE/my_filt_bank/product_a_q0 output U_CORE/my_filt_bank/product_a_q0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#15 Warning
+PREG Output pipelining  
+DSP U_CORE/my_filt_bank/product_b_q0 output U_CORE/my_filt_bank/product_b_q0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#16 Warning
+PREG Output pipelining  
+DSP U_CORE/my_hamming/result output U_CORE/my_hamming/result/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#17 Warning
+PREG Output pipelining  
+DSP U_CORE/my_in/pre_product output U_CORE/my_in/pre_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#18 Warning
+PREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2 output U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#19 Warning
+PREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2__0 output U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#20 Warning
+PREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2 output U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#21 Warning
+PREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2__0 output U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_C64_8/product_s1_reg multiplier stage U_CORE/gen_skew.my_dct/U_C64_8/product_s1_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[0] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[1] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[2] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#5 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[3] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#6 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[4] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[4]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#7 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[5] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[5]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#8 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[6] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[6]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#9 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[7] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p1_reg[7]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#10 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p2_reg[0] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p2_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#11 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p2_reg[1] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p2_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#12 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p2_reg[2] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p2_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#13 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p2_reg[3] multiplier stage U_CORE/gen_skew.my_dct/U_DCT_TDM/U_DCT8/p2_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#14 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/leaf_product_reg[0] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/leaf_product_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#15 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/leaf_product_reg[1] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/leaf_product_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#16 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/leaf_product_reg[2] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/leaf_product_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#17 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/leaf_product_reg[3] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/leaf_product_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#18 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/mid_product_reg[0] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/mid_product_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#19 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/mid_product_reg[1] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/mid_product_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#20 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/mid_product_reg[2] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/mid_product_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#21 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/mid_product_reg[3] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/mid_product_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#22 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#23 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__0 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#24 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__1 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#25 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__10 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__10/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#26 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__2 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#27 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__3 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#28 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__4 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#29 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__5 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#30 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__6 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#31 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__7 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#32 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__8 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#33 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__9 multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/p_0_out__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#34 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/root_product_reg[0] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/root_product_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#35 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/root_product_reg[1] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/root_product_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#36 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/root_product_reg[2] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/root_product_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#37 Warning
+MREG Output pipelining  
+DSP U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/root_product_reg[3] multiplier stage U_CORE/gen_skew.my_dct/U_SKEW_TDM/U_SKEW_DYN/U_SKEWDCT8/gen_recursive.recursive_i/root_product_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#38 Warning
+MREG Output pipelining  
+DSP U_CORE/my_filt_bank/exponent_product_q0 multiplier stage U_CORE/my_filt_bank/exponent_product_q0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#39 Warning
+MREG Output pipelining  
+DSP U_CORE/my_filt_bank/exponent_product_q0__0 multiplier stage U_CORE/my_filt_bank/exponent_product_q0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#40 Warning
+MREG Output pipelining  
+DSP U_CORE/my_filt_bank/product_a_q0 multiplier stage U_CORE/my_filt_bank/product_a_q0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#41 Warning
+MREG Output pipelining  
+DSP U_CORE/my_filt_bank/product_a_q0__0 multiplier stage U_CORE/my_filt_bank/product_a_q0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#42 Warning
+MREG Output pipelining  
+DSP U_CORE/my_filt_bank/product_b_q0 multiplier stage U_CORE/my_filt_bank/product_b_q0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#43 Warning
+MREG Output pipelining  
+DSP U_CORE/my_filt_bank/product_b_q0__0 multiplier stage U_CORE/my_filt_bank/product_b_q0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#44 Warning
+MREG Output pipelining  
+DSP U_CORE/my_hamming/result multiplier stage U_CORE/my_hamming/result/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#45 Warning
+MREG Output pipelining  
+DSP U_CORE/my_in/pre_product multiplier stage U_CORE/my_in/pre_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#46 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/im_square_q0 multiplier stage U_CORE/my_pow_spec/im_square_q0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#47 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2 multiplier stage U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#48 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2__0 multiplier stage U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_im2__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#49 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2 multiplier stage U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#50 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2__0 multiplier stage U_CORE/my_pow_spec/my_fft/engine_i/gen_root256.root256_i/gen_direct_fft256.fft256_i/U_MPU/complex_twiddle_mul_i/y_re2__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#51 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ii_reg multiplier stage U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ii_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#52 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ir_reg multiplier stage U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ir_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#53 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ri_reg multiplier stage U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_ri_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#54 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_rr_reg multiplier stage U_CORE/my_pow_spec/my_fft/engine_i/kernel_i/product_rr_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#55 Warning
+MREG Output pipelining  
+DSP U_CORE/my_pow_spec/re_square_q0 multiplier stage U_CORE/my_pow_spec/re_square_q0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+1 net(s) have no routable loads. The problem bus(es) and/or net(s) are U_CORE/my_in/s_ready.
+Related violations: <none>
+
+

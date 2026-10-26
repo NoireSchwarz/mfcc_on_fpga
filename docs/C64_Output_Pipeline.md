@@ -49,7 +49,11 @@ No-stall cycle measurements:
 | N=512 MFCC, four-frame batch, 64 lanes | 16,585 | 16,588 |
 | N=1024 MFCC, four-frame batch, 64 lanes | 39,505 | 39,508 |
 
-At 150 MHz, 39,508 cycles would convert to 263.387 us per four-frame batch. This is a nominal conversion only: **post-route timing has not been rerun for the C64-pipelined RTL**. The existing [resource and timing measurements](benchmarks/recursive_skewdct_N1024_20261026/README.md) describe `8f1fd37`, before this C64 change. Their 59 DSP / 35,601 LUT / 52,870 FF totals and -0.196 ns 150 MHz slack must not be presented as measurements of this revision. The remaining MFCC variable-index writeback can still become a timing bottleneck.
+The supplied follow-up implementation of tested commit `b0db7a0` **passes 150 MHz default OOC post-route timing**, with WNS +0.258 ns, WHS +0.010 ns and zero setup/hold failures. Complete MFCC uses **35,777 LUT, 53,107 FF, 6.5 BRAM tiles and 59 DSP**. Against the pre-C64 recursive implementation at the same 150 MHz constraint, the change is +120 LUT / +201 FF, with unchanged DSP and BRAM. The four-frame 39,508-cycle regression converts to 263.387 us at 150 MHz, or a 65.847 us batch average per frame; these are cycle conversions, not board measurements or independently measured single-frame latency.
+
+The 20 reported worst setup paths now comprise 12 filter-bank acknowledgement/frame-clear paths and eight input-selection/Hamming-to-FFT-RAM paths. The worst data delay is 6.150 ns, including 5.847 ns routing, on a 4,167-load m_ready control net. None of those 20 paths traverses C64 arithmetic; other unreported paths still require review before claiming a higher frequency. **200 MHz remains untested**: freezing the present route gives approximately -1.409 ns worst slack at a 5 ns period. See the [raw reports, verified resource comparison and 200 MHz assessment](benchmarks/c64_pipeline_N1024_150MHz_20261026/README.md).
+
+The earlier [pre-C64 measurements](benchmarks/recursive_skewdct_N1024_20261026/README.md) remain pinned to `8f1fd37`. Their 50 MHz resource totals and -0.196 ns 150 MHz slack describe that historical revision.
 
 ## Updated figures
 
