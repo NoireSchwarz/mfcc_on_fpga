@@ -1,0 +1,4 @@
+﻿frequency_mhz,timing_result,wns_ns,whs_ns,cycles_4frames,time_us_4frames,average_us_per_frame,total_vivado_seconds
+50,TIMING_PASS,7.511,0.01,39505,790.1,197.525,1023.265
+100,TIMING_PASS,0.688,0.003,39505,395.05,98.7625,1088.569
+150,TIMING_FAIL,-0.196,0.01,39505,263.3666666666667,65.84166666666667,1828.849

@@ -4,7 +4,17 @@
 
 The shared SkewDCT8 now uses a registered 8-to-4-to-2 factorization for the project's eight coefficient families. Recursive mode receives a three-bit family ID directly; original parameter declarations and generic dense modes remain available. The recursive transform expresses 12 real products and 29 add/subtract operations, with multiplication, rounding and sparse post-adds separated by registers. This arithmetic count is not a measured DSP count.
 
-See [implementation and validation notes](docs/SkewDCT8_Recursive.md) and the [updated architecture PDF](Architecture/SkewDCT8_Recursive/SkewDCT8_Recursive_Architecture.pdf). The original FFT, ordinary DCT8, MatrixDCT and IP sources are retained. This revision has passed RTL functional simulation; its Vivado utilization and implementation timing results are pending.
+Measured complete-MFCC resources at N=1024, STRIDE=512, OUT_WIDTH=64, 50 MHz OOC post-route:
+
+| DCT configuration | LUT | FF | BRAM tiles | DSP |
+| --- | ---: | ---: | ---: | ---: |
+| Dense SkewDCT baseline | 31,943 | 50,689 | 6.5 | 123 |
+| Recursive SkewDCT | **35,601** | **52,870** | **6.5** | **59** |
+| MatrixDCT | 30,188 | 41,987 | 9.0 | 19 |
+
+The recursive implementation reduces complete-MFCC DSP use by **52.03%**, while LUT use increases by 11.45% and FF use by 4.30%. Its inclusive DCT64 hierarchy uses 41 DSPs; the shared SkewDCT8 core uses 24 DSPs. Post-route timing passes at 50 and 100 MHz. **150 MHz fails setup: WNS=-0.196 ns, TNS=-28.937 ns, 444 failing endpoints.** The reported worst paths are in C64 output processing and MFCC writeback. These are OOC implementation measurements and RTL-cycle conversions, not board end-to-end timing.
+
+See the [measured results and timing analysis](docs/benchmarks/recursive_skewdct_N1024_20261026/README.md), [implementation notes](docs/SkewDCT8_Recursive.md) and [architecture PDF](Architecture/SkewDCT8_Recursive/SkewDCT8_Recursive_Architecture.pdf). Measurements are pinned to commit `8f1fd37`; the original FFT, ordinary DCT8, MatrixDCT and IP sources are retained.
 
 ### DCT-Modul
 
@@ -19,6 +29,13 @@ Das Design des DCT-Moduls orientiert sich an den folgenden Publikationen [^1] [^
 
 
 ## Upload log
+
+### 2026-10-26 - Recursive SkewDCT measurements
+
+- Imported the supplied N1024 benchmark package, verified all 35 packaged checksums and checked the included core sources against tested commit 8f1fd37.
+- Added raw post-route reports, verified CSV/JSON results and a resource comparison. Complete-MFCC DSP use falls from 123 to 59; LUT and FF use rise to 35,601 and 52,870 at 50 MHz.
+- Recorded 50/100 MHz timing passes and the 150 MHz setup failure. Classified the 20 reported worst setup paths as C64 selection/multiplication/post-add and MFCC writeback; the former dense 150 MHz signoff used an additional Explore step.
+- Independently recomputed precision metrics from local coefficient CSVs whose hashes match the package. This update changes reports and documentation only.
 
 ### 2026-10-25 - Narrow SkewDCT8 family interface
 

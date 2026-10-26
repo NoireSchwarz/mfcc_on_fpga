@@ -1,0 +1,12 @@
+Variant,Resource scope,MHz,LUT,FF,BRAM tiles,DSP,Timing,Source
+Recursive SkewDCT64,Whole MFCC,50,35601,52870,6.5,59,TIMING_PASS,raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt
+Recursive SkewDCT64,DCT subsystem,50,5875,11981,0.0,41,TIMING_PASS,raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt
+Recursive SkewDCT64,Shared SkewDCT8 dynamic core,50,1706,2357,0.0,24,TIMING_PASS,raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt
+Recursive SkewDCT64,Whole MFCC,100,35606,52870,6.5,59,TIMING_PASS,raw_reports/skewdct_100MHz/utilization_hierarchical_post_route.rpt
+Recursive SkewDCT64,DCT subsystem,100,5873,11981,0.0,41,TIMING_PASS,raw_reports/skewdct_100MHz/utilization_hierarchical_post_route.rpt
+Recursive SkewDCT64,Shared SkewDCT8 dynamic core,100,1706,2357,0.0,24,TIMING_PASS,raw_reports/skewdct_100MHz/utilization_hierarchical_post_route.rpt
+Recursive SkewDCT64,Whole MFCC,150,35657,52906,6.5,59,TIMING_FAIL,raw_reports/skewdct_150MHz/utilization_hierarchical_post_route.rpt
+Recursive SkewDCT64,DCT subsystem,150,5871,11981,0.0,41,TIMING_FAIL,raw_reports/skewdct_150MHz/utilization_hierarchical_post_route.rpt
+Recursive SkewDCT64,Shared SkewDCT8 dynamic core,150,1706,2357,0.0,24,TIMING_FAIL,raw_reports/skewdct_150MHz/utilization_hierarchical_post_route.rpt
+MatrixDCT64,Whole MFCC,50,30188,41987,9.0,19,TIMING_PASS,raw_reports/matrixdct_50MHz/utilization_hierarchical_post_route.rpt
+MatrixDCT64,DCT subsystem,50,647,1098,2.5,1,TIMING_PASS,raw_reports/matrixdct_50MHz/utilization_hierarchical_post_route.rpt

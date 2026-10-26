@@ -20,4 +20,4 @@ R04 connects s_valid/s_ready to the input control and m_valid/m_ready to the out
 
 The corresponding existing figures in `../SKEW_DCT64/` are updated: `SkewDCT8_Pipelined_Architecture.png` = R01, `D01.png` = R04 and `D02.png` = R05. The ordinary DCT8 core figures remain valid and unchanged.
 
-For arithmetic, interface restrictions, simulation results and unmeasured hardware results, see [the implementation notes](../../docs/SkewDCT8_Recursive.md).
+For arithmetic, interface restrictions, simulation results and measured utilization/timing results, see [the implementation notes](../../docs/SkewDCT8_Recursive.md).
