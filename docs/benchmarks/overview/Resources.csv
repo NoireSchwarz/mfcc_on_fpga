@@ -10,7 +10,7 @@ MFCC / SkewDCT,SkewDCT8 core,1024,100,64,1706,1.46,2357,1.01,0.0,0.0,24,1.92,OOC
 MFCC / MatrixDCT,DCT subsystem,1024,50,64,647,0.55,1098,0.47,2.5,1.74,1,0.08,OOC post-route; hierarchy inclusive,20.0,recursive_skewdct_N1024_20261026/raw_reports/matrixdct_50MHz/utilization_hierarchical_post_route.rpt
 MFCC / SkewDCT,DCT subsystem,1024,50,64,5875,5.02,11981,5.11,0.0,0.0,41,3.29,OOC post-route; hierarchy inclusive,20.0,recursive_skewdct_N1024_20261026/raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt
 MFCC / SkewDCT,SkewDCT8 core,1024,50,64,1706,1.46,2357,1.01,0.0,0.0,24,1.92,OOC post-route; hierarchy inclusive,20.0,recursive_skewdct_N1024_20261026/raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt
-MFCC,Whole MFCC,512,50,1,26543,22.66,37822,16.15,5.5,3.82,98,7.85,OOC synthesis estimate,20.0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/new_n512_lanes1/utilization.rpt
+MFCC,Whole MFCC,512,50,1,26543,22.66,37822,16.15,5.5,3.82,98,7.85,OOC synthesis estimate,20.0,evidence/baseline/raw_reports/synthesis/new_n512_lanes1/utilization.rpt
 MFCC / MatrixDCT,Whole MFCC,1024,50,64,30188,25.78,41987,17.92,9.0,6.25,19,1.52,OOC post-route; hierarchy inclusive,20.0,recursive_skewdct_N1024_20261026/raw_reports/matrixdct_50MHz/utilization_hierarchical_post_route.rpt
 Custom FFT,Standalone FFT,16..2048 runtime,50,,10539,9.0,12004,5.12,8.5,5.9,8,0.64,OOC post-route,20,evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/utilization_post_route.rpt
 XFFT,Standalone FFT,1024,50,,1643,1.4,2950,1.26,3.5,2.43,9,0.72,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_1024_utilization.rpt

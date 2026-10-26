@@ -224,7 +224,7 @@
       "DSP": 98,
       "stage": "OOC synthesis estimate",
       "resource_clock_period_ns": 20.0,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/new_n512_lanes1/utilization.rpt",
+      "source": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/utilization.rpt",
       "dataset": "baseline",
       "LUT_used_percent": 22.66,
       "FF_used_percent": 16.15,
@@ -534,7 +534,7 @@
       "cycles": 1226,
       "batch_us": 24.52,
       "average_frame_us": 6.13,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -546,7 +546,7 @@
       "cycles": 1407,
       "batch_us": 28.14,
       "average_frame_us": 7.035,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -558,7 +558,7 @@
       "cycles": 2537,
       "batch_us": 50.74,
       "average_frame_us": 12.685,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -570,7 +570,7 @@
       "cycles": 4304,
       "batch_us": 86.08,
       "average_frame_us": 21.52,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -582,7 +582,7 @@
       "cycles": 6838,
       "batch_us": 136.76,
       "average_frame_us": 34.19,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -594,7 +594,7 @@
       "cycles": 13950,
       "batch_us": 279.0,
       "average_frame_us": 69.75,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -606,7 +606,7 @@
       "cycles": 37307,
       "batch_us": 746.14,
       "average_frame_us": 186.535,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -618,7 +618,7 @@
       "cycles": 65677,
       "batch_us": 1313.54,
       "average_frame_us": 328.385,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -630,7 +630,7 @@
       "cycles": 4233,
       "batch_us": 84.66,
       "average_frame_us": 21.165,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -642,7 +642,7 @@
       "cycles": 51711,
       "batch_us": 1034.22,
       "average_frame_us": 64.63875,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -654,7 +654,7 @@
       "cycles": 51258,
       "batch_us": 1025.16,
       "average_frame_us": 64.0725,
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json",
       "evidence": "Functional regression with the recorded stalls"
     },
     {
@@ -860,7 +860,7 @@
       "source": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.json",
       "custom_first_output_cycles": 68,
       "custom_first_output_us": 1.36,
-      "first_output_source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/runtime_fft_speed_50MHz.csv"
+      "first_output_source": "evidence/baseline/runtime_fft_speed_50MHz.csv"
     },
     {
       "N": 32,
@@ -878,7 +878,7 @@
       "source": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.json",
       "custom_first_output_cycles": 164,
       "custom_first_output_us": 3.28,
-      "first_output_source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/runtime_fft_speed_50MHz.csv"
+      "first_output_source": "evidence/baseline/runtime_fft_speed_50MHz.csv"
     },
     {
       "N": 64,
@@ -896,7 +896,7 @@
       "source": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.json",
       "custom_first_output_cycles": 443,
       "custom_first_output_us": 8.86,
-      "first_output_source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/runtime_fft_speed_50MHz.csv"
+      "first_output_source": "evidence/baseline/runtime_fft_speed_50MHz.csv"
     },
     {
       "N": 128,
@@ -914,7 +914,7 @@
       "source": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.json",
       "custom_first_output_cycles": 827,
       "custom_first_output_us": 16.54,
-      "first_output_source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/runtime_fft_speed_50MHz.csv"
+      "first_output_source": "evidence/baseline/runtime_fft_speed_50MHz.csv"
     },
     {
       "N": 256,
@@ -932,7 +932,7 @@
       "source": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.json",
       "custom_first_output_cycles": 1357,
       "custom_first_output_us": 27.14,
-      "first_output_source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/runtime_fft_speed_50MHz.csv"
+      "first_output_source": "evidence/baseline/runtime_fft_speed_50MHz.csv"
     },
     {
       "N": 512,
@@ -950,7 +950,7 @@
       "source": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.json",
       "custom_first_output_cycles": 2893,
       "custom_first_output_us": 57.86,
-      "first_output_source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/runtime_fft_speed_50MHz.csv"
+      "first_output_source": "evidence/baseline/runtime_fft_speed_50MHz.csv"
     },
     {
       "N": 1024,
@@ -968,7 +968,7 @@
       "source": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.json",
       "custom_first_output_cycles": 8239,
       "custom_first_output_us": 164.78,
-      "first_output_source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/runtime_fft_speed_50MHz.csv"
+      "first_output_source": "evidence/baseline/runtime_fft_speed_50MHz.csv"
     },
     {
       "N": 2048,
@@ -986,7 +986,7 @@
       "source": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.json",
       "custom_first_output_cycles": 14383,
       "custom_first_output_us": 287.66,
-      "first_output_source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/runtime_fft_speed_50MHz.csv"
+      "first_output_source": "evidence/baseline/runtime_fft_speed_50MHz.csv"
     }
   ],
   "fft_accuracy": [
@@ -1326,7 +1326,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 264,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 32,
@@ -1342,7 +1342,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 390,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 64,
@@ -1358,7 +1358,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 221,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 128,
@@ -1374,7 +1374,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 259,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 256,
@@ -1390,7 +1390,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 178,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 512,
@@ -1406,7 +1406,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 232,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 1024,
@@ -1422,7 +1422,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 290,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 2048,
@@ -1438,7 +1438,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 193,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 128,
@@ -1454,7 +1454,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 144,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 512,
@@ -1470,7 +1470,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 387,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     },
     {
       "N": 512,
@@ -1486,7 +1486,7 @@
       "mismatches_to_own_reference": 0,
       "candidate_stall_checks": 0,
       "scope": "2026-10-22 full-MFCC functional regression, standard transform configuration; stalled runs are not isolated module performance",
-      "source": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json"
+      "source": "evidence/baseline/raw_reports/mfcc_integration.json"
     }
   ],
   "latest_setup_paths": [

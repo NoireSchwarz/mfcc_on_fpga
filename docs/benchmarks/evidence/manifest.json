@@ -2,133 +2,133 @@
   "policy": "Original evidence files retained byte-for-byte; source scripts and duplicate RTL are not part of this catalog.",
   "files": [
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/benchmark_summary.json",
+      "path": "evidence/baseline/benchmark_summary.json",
       "bytes": 2909,
       "sha256": "b655cfd54d1fe02f6f7dce613212d90f4c5c3bcd8ce2888ea91f8d6f0970693f",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/runtime_fft_speed_50MHz.csv",
+      "path": "evidence/baseline/runtime_fft_speed_50MHz.csv",
       "bytes": 300,
       "sha256": "9a833f1ee485b5870c987710df38562ac9323fb68ecc36ae09e0343dac9a6b4d",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/source_manifest.json",
+      "path": "evidence/baseline/source_manifest.json",
       "bytes": 144480,
       "sha256": "90525f6a59f9eb9d867ae36d0aec59afc2ece49635cd84609b16710d83aa2476",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/elaborated_hierarchy.json",
+      "path": "evidence/baseline/raw_reports/elaborated_hierarchy.json",
       "bytes": 2042,
       "sha256": "7208ad489265cec9090444b97babc39c4c5ab87c7ad87837495880627c2f066d",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json",
+      "path": "evidence/baseline/raw_reports/mfcc_integration.json",
       "bytes": 18338,
       "sha256": "c60429b568eef76847cada9da15011245e06b2499b0f9492f1ad1878221b1dad",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/verification.json",
+      "path": "evidence/baseline/raw_reports/verification.json",
       "bytes": 23259,
       "sha256": "81ed875cad8ab5cfa63c1a9455514e23ced82c105b952a631fc7c666ee14f759",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/verilog2001_compile.json",
+      "path": "evidence/baseline/raw_reports/verilog2001_compile.json",
       "bytes": 1976,
       "sha256": "dc708ec28256734f9acc0236de613f730c6bbb401c91ce4255583957db1fe6ff",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/baseline_n512_lanes1/drc.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/drc.rpt",
       "bytes": 186693,
       "sha256": "06d71ec9a36927a77dae02860761e25433a7694131d1ea215a0730a5aac77905",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/baseline_n512_lanes1/status.txt",
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/status.txt",
       "bytes": 431,
       "sha256": "8131835efa3037a55aef2280bd80b2b10f48da6ef3458310d4e25a4b2cc4be65",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/baseline_n512_lanes1/timing_synth.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/timing_synth.rpt",
       "bytes": 27545,
       "sha256": "b7f10d509b1ab3bc59e691b90e592a33c99ee672d0216a439bac258e588b8fe2",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/baseline_n512_lanes1/utilization.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/utilization.rpt",
       "bytes": 10129,
       "sha256": "5251d367965c4df783aff47d086b40623f5cbc1b574792f29db472871db99114",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/baseline_n512_lanes1/utilization_hierarchical.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/utilization_hierarchical.rpt",
       "bytes": 9654,
       "sha256": "5eaca73d5eed462a973333796ad17ff890b862831886e5610e0049b5c72aad90",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/new_n512_lanes1/drc.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/drc.rpt",
       "bytes": 186294,
       "sha256": "985f59ed5ba96f902f296184ffe0e993129a5ea5bb10c734ab295071e4c2f6a4",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/new_n512_lanes1/status.txt",
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/status.txt",
       "bytes": 979,
       "sha256": "3fd0948c6acd97292a9b02715f1fa948f10a9d343b4b89a7b38f60b558e8daa4",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/new_n512_lanes1/timing_synth.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/timing_synth.rpt",
       "bytes": 27493,
       "sha256": "6d9284bee71e0f869da04ec3babedadd4258a388ed7f325191bbcfd10d4b70eb",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/new_n512_lanes1/utilization.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/utilization.rpt",
       "bytes": 10114,
       "sha256": "d5662700551ca305acab6b173a3958820fcf2c358db1b958125746b391110b33",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/new_n512_lanes1/utilization_hierarchical.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/utilization_hierarchical.rpt",
       "bytes": 10055,
       "sha256": "e02cd56d267287fbebd4618b1b595f5b2620a19253a98b48d8904b7b26c48109",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/runtime_multipoint/drc.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/drc.rpt",
       "bytes": 17563,
       "sha256": "a44816731c8a4c1fb9346a38e0e1e67f7ec32c950e576e50a280baea2d6f9fe6",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/runtime_multipoint/status.txt",
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/status.txt",
       "bytes": 858,
       "sha256": "e95284a106e66228513a21e8f6e8b06c121be440063c393e073278c60bbffae1",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/runtime_multipoint/timing_synth.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/timing_synth.rpt",
       "bytes": 23318,
       "sha256": "bae2fd14d74c1b7f6c98f4ba26f70a5b53c72d65389fbea398d87fa2b82a5ce5",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/runtime_multipoint/utilization.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/utilization.rpt",
       "bytes": 10124,
       "sha256": "d09b75d32c9129fe6d241540e2e0a36e75585a2b47fbcbc193305410f9566eb2",
       "dataset": "baseline"
     },
     {
-      "path": "evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/synthesis/runtime_multipoint/utilization_hierarchical.rpt",
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/utilization_hierarchical.rpt",
       "bytes": 7637,
       "sha256": "fcbc7ce173806ec6e10d2326f4e2be095039467b15f7c1fc2c43e250846b3804",
       "dataset": "baseline"
