@@ -4,7 +4,9 @@
 
 The shared SkewDCT8 now uses a registered 8-to-4-to-2 factorization for the project's eight coefficient families. Recursive mode receives a three-bit family ID directly; original parameter declarations and generic dense modes remain available. The recursive transform expresses 12 real products and 29 add/subtract operations, with multiplication, rounding and sparse post-adds separated by registers. This arithmetic count is not a measured DSP count.
 
-Measured complete-MFCC resources at N=1024, STRIDE=512, OUT_WIDTH=64, 50 MHz OOC post-route:
+The current RTL also pipelines C64 output processing into registered selection, compensation-product and post-add/output stages. It preserves output coefficients and adds three no-stall clocks. [C64 implementation and validation](docs/C64_Output_Pipeline.md) records the change. **Its post-route timing and utilization still need rerunning.**
+
+Measured baseline **before C64 output pipelining**, commit 8f1fd37: N=1024, STRIDE=512, OUT_WIDTH=64, 50 MHz OOC post-route:
 
 | DCT configuration | LUT | FF | BRAM tiles | DSP |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +14,7 @@ Measured complete-MFCC resources at N=1024, STRIDE=512, OUT_WIDTH=64, 50 MHz OOC
 | Recursive SkewDCT | **35,601** | **52,870** | **6.5** | **59** |
 | MatrixDCT | 30,188 | 41,987 | 9.0 | 19 |
 
-The recursive implementation reduces complete-MFCC DSP use by **52.03%**, while LUT use increases by 11.45% and FF use by 4.30%. Its inclusive DCT64 hierarchy uses 41 DSPs; the shared SkewDCT8 core uses 24 DSPs. Post-route timing passes at 50 and 100 MHz. **150 MHz fails setup: WNS=-0.196 ns, TNS=-28.937 ns, 444 failing endpoints.** The reported worst paths are in C64 output processing and MFCC writeback. These are OOC implementation measurements and RTL-cycle conversions, not board end-to-end timing.
+In that measured baseline, the recursive implementation reduces complete-MFCC DSP use by **52.03%**, while LUT use increases by 11.45% and FF use by 4.30%. Its inclusive DCT64 hierarchy uses 41 DSPs; the shared SkewDCT8 core uses 24 DSPs. Post-route timing passes at 50 and 100 MHz. **The pre-C64-pipeline 150 MHz run fails setup: WNS=-0.196 ns, TNS=-28.937 ns, 444 failing endpoints.** Those reported worst paths motivated the C64 change; they are not timing results for the current RTL. These are OOC implementation measurements and RTL-cycle conversions, not board end-to-end timing.
 
 See the [measured results and timing analysis](docs/benchmarks/recursive_skewdct_N1024_20261026/README.md), [implementation notes](docs/SkewDCT8_Recursive.md) and [architecture PDF](Architecture/SkewDCT8_Recursive/SkewDCT8_Recursive_Architecture.pdf). Measurements are pinned to commit `8f1fd37`; the original FFT, ordinary DCT8, MatrixDCT and IP sources are retained.
 
@@ -29,6 +31,13 @@ Das Design des DCT-Moduls orientiert sich an den folgenden Publikationen [^1] [^
 
 
 ## Upload log
+
+### 2026-10-26 - Pipeline C64 output processing
+
+- Registered indexed operand selection, sqrt(2) compensation and post-add/output in three stages, carrying index, validity and bypass controls with the data.
+- Preserved the original truncating arithmetic and interface. Backpressure and ED hold the complete pipeline; completion follows acceptance of the final output.
+- Passed ten C64 parameter configurations, complete-DCT64 checks, twenty MFCC configurations and two 459-frame audio regressions with zero coefficient differences. The N1024 unstalled four-frame batch changes from 39,505 to 39,508 cycles.
+- Replaced the existing C64 and DCT64 overview figures and updated the combined architecture PDF. New Vivado utilization and 150 MHz timing measurements are pending.
 
 ### 2026-10-26 - Recursive SkewDCT measurements
 

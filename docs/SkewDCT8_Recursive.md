@@ -1,11 +1,12 @@
 # Recursive SkewDCT8 implementation
 
-The active SkewDCT path now factors each eight-point transform into four two-point transforms, two four-point combinations and one eight-point combination. The recursive core receives its family selection directly on a three-bit input, replacing the former full matrix coefficient bus, matrix ROM and coefficient-signature decoder. FFT processing, the downstream DCT8 core, normalization, C64 post-add processing and all external MFCC ports are unchanged.
+The active SkewDCT path factors each eight-point transform into four two-point transforms, two four-point combinations and one eight-point combination. The recursive core receives its family selection directly on a three-bit input, replacing the former full matrix coefficient bus, matrix ROM and coefficient-signature decoder. A subsequent [C64 output pipeline update](C64_Output_Pipeline.md) registers selection, compensation and post-add/output while retaining their numerical operations. FFT processing, the downstream DCT8 core, normalization and all external MFCC ports are unchanged.
 
-Only two production RTL files change from commit `cb11535681cef1425747728b72b1ddc090927ca3`:
+Three production RTL files change from commit `cb11535681cef1425747728b72b1ddc090927ca3`:
 
 - [`skewdct_8.v`](../src/work/DCT40_64/skewdct_8.v): adds the recursive implementation behind an elaboration-time selection, retaining the original dense implementation.
 - [`skewdct8_tdm.v`](../src/work/DCT40_64/skewdct8_tdm.v): selects the recursive implementation and connects BLOCK directly, without a matrix ROM or matrix coefficient bus.
+- [`c64_8_postadd_serial.v`](../src/work/DCT40_64/c64_8_postadd_serial.v): subsequently pipelines indexed selection, compensation and output, preserving its interface and coefficients.
 
 ## Three-bit family interface update
 
@@ -116,12 +117,12 @@ These figures describe the tested vectors; they do not establish an application 
 
 ## Architecture and hardware measurements
 
-See the [five-page architecture PDF](../Architecture/SkewDCT8_Recursive/SkewDCT8_Recursive_Architecture.pdf) and its [page index](../Architecture/SkewDCT8_Recursive/README.md). Figures retain the existing black/blue style and show clock and enable connections on registers. The affected existing SkewDCT8, bank and DCT64 overview PNGs also point to the new implementation.
+See the [six-page architecture PDF](../Architecture/SkewDCT8_Recursive/SkewDCT8_Recursive_Architecture.pdf) and its [page index](../Architecture/SkewDCT8_Recursive/README.md). Figures retain the existing black/blue style and show clock and enable connections on registers. Existing affected PNGs are replaced in place; the D08 page now shows the C64 output pipeline.
 
-The supplied 2026-10-26 measurements are pinned to commit `8f1fd37`. For N=1024, STRIDE=512 and OUT_WIDTH=64, the 50 MHz complete-MFCC post-route implementation uses **35,601 LUTs, 52,870 FFs, 6.5 BRAM tiles and 59 DSPs**. Its inclusive DCT64 hierarchy uses 5,875 LUTs, 11,981 FFs and 41 DSPs, including the shared SkewDCT8 core's 1,706 LUTs, 2,357 FFs and 24 DSPs.
+The supplied 2026-10-26 measurements are pinned to commit `8f1fd37`, **before the subsequent C64 output-pipeline change**. For N=1024, STRIDE=512 and OUT_WIDTH=64, that 50 MHz complete-MFCC post-route implementation uses **35,601 LUTs, 52,870 FFs, 6.5 BRAM tiles and 59 DSPs**. Its inclusive DCT64 hierarchy uses 5,875 LUTs, 11,981 FFs and 41 DSPs, including the shared SkewDCT8 core's 1,706 LUTs, 2,357 FFs and 24 DSPs. The current C64-pipelined RTL has not yet been measured in Vivado; its N1024 four-frame functional test takes 39,508 cycles with identical coefficients.
 
 Relative to the matched dense baseline, complete-MFCC DSP use decreases by 64 (52.03%), while LUTs increase by 3,658 and FFs by 2,181. Hierarchy subtotals are included in the parent totals. Some other hierarchy mappings also change, so the entire LUT delta cannot be attributed to the recursive core.
 
-50 and 100 MHz pass post-route timing. **150 MHz fails setup timing with WNS=-0.196 ns, TNS=-28.937 ns and 444 failing endpoints.** All 20 reported worst setup paths run from C64's out_idx register through selection, compensation multiplication, post-add and MFCC writeback. The original C64 arithmetic remains unchanged. The nominal 150 MHz cycle-to-time conversion is not timing-closed performance, and the prior dense 150 MHz signoff used an additional Explore step absent from this run.
+In that pre-C64-pipeline measurement, 50 and 100 MHz pass post-route timing. **150 MHz fails setup timing with WNS=-0.196 ns, TNS=-28.937 ns and 444 failing endpoints.** All 20 reported worst setup paths run from C64's former out_idx register through selection, compensation multiplication, post-add and MFCC writeback. The subsequent C64 pipeline addresses that path; new implementation timing remains pending. The nominal 150 MHz cycle-to-time conversion is not timing-closed performance, and the prior dense 150 MHz signoff used an additional Explore step absent from the supplied run.
 
 See the [resource tables, raw reports, numerical checks and timing analysis](benchmarks/recursive_skewdct_N1024_20261026/README.md). These supplied results are RTL simulation and OOC implementation evidence, not board-measured end-to-end performance. No RTL or hardware run was changed or rerun while importing these measurements.
