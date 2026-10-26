@@ -1,5 +1,7 @@
 # C64 pipeline: N1024 MFCC passes 150 MHz
 
+[Merged benchmark catalog](../README.md) · [Complete-MFCC category](../full_mfcc/README.md). Per-version evidence remains here; the primary catalog consolidates the latest valid metric for each test/configuration.
+
 Tested revision: `b0db7a079ba203eb0b2b88bb8a03c578899d5549` on xck26-sfvc784-2LV-c with Vivado 2026.1. Configuration: complete MFCC, N=1024, STRIDE=512, OUT_WIDTH=64, recursive SkewDCT. This is a supplied OOC post-route implementation and RTL simulation result. The run used default synthesis/place/route without Explore or an implementation retry; it is not a board measurement.
 
 ## Resource utilization

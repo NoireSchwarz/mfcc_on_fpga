@@ -1,0 +1,14 @@
+MFCC ver.2, N=1024, 150 MHz, post-route Explore
+RTL modified: no
+Original DCP overwritten: no
+
+Before: WNS=-0.031 ns, WHS=+0.010 ns, setup failing paths=6, hold failing paths=0
+After:  WNS=+0.001 ns, WHS=+0.010 ns, setup failing paths=0, hold failing paths=0
+Physical optimization time: 313.429 s
+
+Route status: 70305 fully routed nets, 0 routing errors.
+DRC: warnings only; RTSTAT-10 is one no-routable-load net (U_CORE/my_in/s_ready).
+Result: timing pass, but setup margin is only 1 ps and is not robust engineering margin.
+
+Selected DCP SHA-256:
+4abb5446f9d7536e5705d75e24cb87faa9de589e34ca5afb576cddba1ac609eb

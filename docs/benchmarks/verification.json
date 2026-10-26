@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "archives": 6,
+  "workbook_sheets": 13,
+  "resource_rows": 22,
+  "unique_primary_resource_keys": true,
+  "architecture_not_a_merge_key": true,
+  "superseded_resource_rows": 10,
+  "mfcc_configurations": 12,
+  "fft_sizes": 8,
+  "fft_accuracy_rows": 16,
+  "dct_comparison_rows": 2,
+  "memory_regression_cases": 11,
+  "original_evidence_files": 137,
+  "all_metric_sources_resolve": true,
+  "all_primary_links_resolve": true,
+  "numeric_workbook_cells_verified": true,
+  "archive_sha256_verified": 6,
+  "no_rtl_changes": true,
+  "latest_150MHz_wns_ns": 0.258,
+  "latest_200MHz_status": "NOT_TESTED"
+}

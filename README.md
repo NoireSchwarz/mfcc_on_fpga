@@ -18,17 +18,13 @@ Latest supplied measurements, tested commit **b0db7a0**: N=1024, STRIDE=512, OUT
 
 **200 MHz has not been tested.** The current worst paths are filter-bank acknowledgement/frame-clear fanout and input-selection/Hamming multiplication. Freezing the present route gives an estimated -1.409 ns worst slack at 200 MHz; further optimization and a new implementation are required to assess closure. See the [verified reports, matched resource comparison and 200 MHz assessment](docs/benchmarks/c64_pipeline_N1024_150MHz_20261026/README.md).
 
-Measured baseline **before C64 output pipelining**, commit 8f1fd37: N=1024, STRIDE=512, OUT_WIDTH=64, 50 MHz OOC post-route:
+### Consolidated benchmarks
 
-| DCT configuration | LUT | FF | BRAM tiles | DSP |
-| --- | ---: | ---: | ---: | ---: |
-| Dense SkewDCT baseline | 31,943 | 50,689 | 6.5 | 123 |
-| Recursive SkewDCT | **35,601** | **52,870** | **6.5** | **59** |
-| MatrixDCT | 30,188 | 41,987 | 9.0 | 19 |
+All six supplied benchmark packages are classified in the [benchmark catalog](docs/benchmarks/README.md): [complete MFCC](docs/benchmarks/full_mfcc/README.md), [FFT/XFFT](docs/benchmarks/fft/README.md), [DCT comparison](docs/benchmarks/dct/README.md) and [memory optimization](docs/benchmarks/memory/README.md).
 
-In that measured baseline, the recursive implementation reduces complete-MFCC DSP use by **52.03%**, while LUT use increases by 11.45% and FF use by 4.30%. Its inclusive DCT64 hierarchy uses 41 DSPs; the shared SkewDCT8 core uses 24 DSPs. Post-route timing passes at 50 and 100 MHz. **The pre-C64-pipeline 150 MHz run fails setup: WNS=-0.196 ns, TNS=-28.937 ns, 444 failing endpoints.** Those reported worst paths motivated the C64 change; they are not timing results for the current RTL. These are OOC implementation measurements and RTL-cycle conversions, not board end-to-end timing.
+The [13-sheet Excel workbook](docs/benchmarks/MFCC_Benchmark_Summary.xlsx) and [consolidated JSON](docs/benchmarks/combined_data.json) keep the latest valid metric for each test/configuration. Architecture and pipeline generations are not separate primary result rows. LUT, FF, BRAM and DSP appear first; per-metric source columns retain provenance. Earlier reports remain available as evidence without repeating superseded values in the main tables.
 
-See the [historical pre-C64 results](docs/benchmarks/recursive_skewdct_N1024_20261026/README.md), [implementation notes](docs/SkewDCT8_Recursive.md) and [architecture PDF](Architecture/SkewDCT8_Recursive/SkewDCT8_Recursive_Architecture.pdf). Each measurement set is pinned to its tested revision; the original FFT, ordinary DCT8, MatrixDCT and IP sources are retained.
+See the [implementation notes](docs/SkewDCT8_Recursive.md) and [architecture PDF](Architecture/SkewDCT8_Recursive/SkewDCT8_Recursive_Architecture.pdf) for the current datapath.
 
 ### DCT-Modul
 
@@ -43,6 +39,13 @@ Das Design des DCT-Moduls orientiert sich an den folgenden Publikationen [^1] [^
 
 
 ## Upload log
+
+### 2026-10-26 - Consolidate benchmark results by test project
+
+- Classified all six supplied benchmark packages into complete-MFCC, FFT/XFFT, DCT and memory-optimization results, with a common index, 13-sheet workbook, CSV tables and JSON.
+- Kept the latest valid metric for each test/configuration; architecture and pipeline generations no longer create repeated primary result rows. Different frequencies, point counts and comparison backends remain explicit.
+- Retained per-metric evidence sources, original report bytes and archive hashes. Updated the SkewDCT/MatrixDCT comparison and N1024 runtime to the latest matching results.
+- Preserved the explicit paired memory before/after experiment. The interrupted legacy 200 MHz attempt is not counted as a pass or fail; the latest 200 MHz value remains an estimate. No RTL or hardware test was changed.
 
 ### 2026-10-26 - Verify C64 pipeline at 150 MHz
 

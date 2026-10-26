@@ -1,0 +1,12 @@
+﻿FFT N,Output lanes,Stalls,Frames,Before cycles,After cycles,Before batch us at 50MHz,After batch us at 50MHz,Cycle change %,Mismatches to own reference,Source
+16,1,True,4,1226,1226,24.52,24.52,0.0,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+32,1,True,4,1393,1407,27.86,28.14,1.0050251256281406,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+64,1,True,4,2757,2537,55.14,50.74,-7.979688066739208,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+128,1,True,4,4304,4304,86.08,86.08,0.0,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+256,1,True,4,6853,6838,137.06,136.76,-0.2188822413541515,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+512,1,True,4,12990,13950,259.8,279.0,7.390300230946882,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+1024,1,True,4,41365,37307,827.3,746.14,-9.810226036504291,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+2048,1,True,4,65677,65677,1313.54,1313.54,0.0,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+128,64,True,4,4233,4233,84.66,84.66,0.0,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+512,64,True,16,47658,51711,953.16,1034.22,8.504343447060304,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+512,64,False,16,47210,51258,944.2,1025.16,8.574454564710866,0,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json

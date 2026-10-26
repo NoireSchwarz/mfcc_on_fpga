@@ -1,0 +1,115 @@
+{
+  "compiler": "C:\\msys64\\ucrt64\\bin\\iverilog.EXE",
+  "rtl_files": 48,
+  "configurations": [
+    {
+      "n": 16,
+      "out_width": 1,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 16,
+      "out_width": 64,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 32,
+      "out_width": 1,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 32,
+      "out_width": 64,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 64,
+      "out_width": 1,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 64,
+      "out_width": 64,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 128,
+      "out_width": 1,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 128,
+      "out_width": 64,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 256,
+      "out_width": 1,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 256,
+      "out_width": 64,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 512,
+      "out_width": 1,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 512,
+      "out_width": 64,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 1024,
+      "out_width": 1,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 1024,
+      "out_width": 64,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 2048,
+      "out_width": 1,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "n": 2048,
+      "out_width": 64,
+      "dct": "skew",
+      "compiled": true
+    },
+    {
+      "parameters": [
+        "-Pmfcc.DCT_USE_MATRIX=1"
+      ],
+      "compiled": true
+    },
+    {
+      "parameters": [
+        "-Pmfcc.PRE_EMPH_COEFF=0"
+      ],
+      "compiled": true
+    }
+  ],
+  "testbench_compiled": true
+}

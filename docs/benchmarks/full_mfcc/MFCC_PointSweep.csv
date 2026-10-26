@@ -1,0 +1,13 @@
+﻿FFT N,Output lanes,Stalls,Frames,MHz,Batch cycles,Batch us,Batch average us/frame,Evidence,Source
+16,1,True,4,50,1226,24.52,6.13,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+32,1,True,4,50,1407,28.14,7.035,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+64,1,True,4,50,2537,50.74,12.685,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+128,1,True,4,50,4304,86.08,21.52,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+256,1,True,4,50,6838,136.76,34.19,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+512,1,True,4,50,13950,279.0,69.75,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+1024,1,True,4,50,37307,746.14,186.535,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+2048,1,True,4,50,65677,1313.54,328.385,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+128,64,True,4,50,4233,84.66,21.165,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+512,64,True,16,50,51711,1034.22,64.63875,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+512,64,False,16,50,51258,1025.16,64.0725,Functional regression with the recorded stalls,evidence/baseline/KV260_working_mfcc_fft_bram_tested_20261022/raw_reports/mfcc_integration.json
+1024,64,False,4,50,39508,790.16,197.54,Latest four-frame no-stall MFCC regression,c64_pipeline_N1024_150MHz_20261026/results/rtl_precision_performance.json

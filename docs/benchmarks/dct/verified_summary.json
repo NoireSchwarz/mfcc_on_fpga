@@ -1,0 +1,93 @@
+{
+  "selection_policy": "Latest valid metric for each test project/configuration; architecture/version is not a merge key.",
+  "latest": [
+    {
+      "backend": "SkewDCT",
+      "N": 1024,
+      "stride": 512,
+      "dct_points": 64,
+      "out_width": 64,
+      "frequency_mhz": 50,
+      "mfcc_LUT": 35601,
+      "mfcc_FF": 52870,
+      "mfcc_BRAM_tile": 6.5,
+      "mfcc_DSP": 59,
+      "dct_LUT": 5875,
+      "dct_FF": 11981,
+      "dct_BRAM_tile": 0.0,
+      "dct_DSP": 41,
+      "frames": 4,
+      "cycles": 39508,
+      "batch_us": 790.16,
+      "mae": 3.4286065721184498,
+      "rmse": 12.49161094141159,
+      "max_abs_error": 101.62445254003131,
+      "snr_db": 16.04862513376996,
+      "resource_source": "recursive_skewdct_N1024_20261026/raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt",
+      "dct_resource_source": "recursive_skewdct_N1024_20261026/raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt",
+      "runtime_precision_source": "c64_pipeline_N1024_150MHz_20261026/results/rtl_precision_performance.json"
+    },
+    {
+      "backend": "MatrixDCT",
+      "N": 1024,
+      "stride": 512,
+      "dct_points": 64,
+      "out_width": 64,
+      "frequency_mhz": 50,
+      "mfcc_LUT": 30188,
+      "mfcc_FF": 41987,
+      "mfcc_BRAM_tile": 9.0,
+      "mfcc_DSP": 19,
+      "dct_LUT": 647,
+      "dct_FF": 1098,
+      "dct_BRAM_tile": 2.5,
+      "dct_DSP": 1,
+      "frames": 4,
+      "cycles": 43687,
+      "batch_us": 873.74,
+      "mae": 3.4285470932893625,
+      "rmse": 12.490109975036425,
+      "max_abs_error": 101.60887915401372,
+      "snr_db": 16.04966887517948,
+      "resource_source": "recursive_skewdct_N1024_20261026/raw_reports/matrixdct_50MHz/utilization_hierarchical_post_route.rpt",
+      "dct_resource_source": "recursive_skewdct_N1024_20261026/raw_reports/matrixdct_50MHz/utilization_hierarchical_post_route.rpt",
+      "runtime_precision_source": "c64_pipeline_N1024_150MHz_20261026/results/rtl_precision_performance.json"
+    }
+  ],
+  "source_verification": {
+    "retest": {
+      "flat_and_hierarchical_resources_crosschecked": true,
+      "timing_reports_crosschecked": true,
+      "raw_simulation_cycles_crosschecked": true,
+      "raw_output_sha256_verified": true,
+      "normalization_recomputed": true,
+      "floating_reference_metrics_recomputed": true,
+      "normalized_pairwise_metrics_recomputed": true,
+      "same_input_and_coefficient_files_verified": true
+    },
+    "recursive": {
+      "status": "PASS",
+      "packaged_checksums_verified": 35,
+      "included_rtl_hashes_match": true,
+      "raw_resources_and_timing_crosschecked": true,
+      "matching_local_coefficient_csvs_verified": true,
+      "float_metrics_recomputed": true,
+      "resources_presented_first": true,
+      "failed_frequency_not_certified_as_performance": true,
+      "no_rtl_modified": true,
+      "no_vivado_or_board_rerun": true
+    },
+    "latest": {
+      "status": "PASS",
+      "archive_checksums_verified": 16,
+      "delivered_rtl_snapshots_match": 4,
+      "source_list_hash_matches": true,
+      "raw_reports_crosschecked": true,
+      "same_frequency_resource_comparison": true,
+      "coefficient_csvs_match_supplied_hashes": true,
+      "precision_metrics_recomputed": true,
+      "no_rtl_changes": true,
+      "no_local_vivado_or_board_run": true
+    }
+  }
+}

@@ -1,0 +1,10 @@
+﻿Backend,FFT points,Benchmark MHz,LUT,FF,BRAM tiles,DSP,Stage,Resource clock ns,Source
+Custom FFT,16..2048 runtime,50,10539,12004,8.5,8,OOC post-route,20,evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/utilization_post_route.rpt
+XFFT,1024,50,1643,2950,3.5,9,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_1024_utilization.rpt
+XFFT,128,50,1551,2825,3.5,9,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_128_utilization.rpt
+XFFT,16,50,699,1276,1.5,3,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_16_utilization.rpt
+XFFT,2048,50,1786,3087,3.5,9,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_2048_utilization.rpt
+XFFT,256,50,1563,2855,3.5,9,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_256_utilization.rpt
+XFFT,32,50,718,1307,1.5,3,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_32_utilization.rpt
+XFFT,512,50,1615,2923,3.5,9,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_512_utilization.rpt
+XFFT,64,50,1502,2747,3.5,9,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_64_utilization.rpt
