@@ -7,11 +7,11 @@ MFCC / SkewDCT,DCT subsystem,1024,150,64,6041,5.16,12125,5.18,0.0,0.0,41,3.29,OO
 MFCC / SkewDCT,SkewDCT8 core,1024,150,64,1706,1.46,2357,1.01,0.0,0.0,24,1.92,OOC post-route; inclusive hierarchy,6.666666666666667,c64_pipeline_N1024_150MHz_20261026/raw_reports/utilization_hierarchical_post_route.rpt
 MFCC / SkewDCT,DCT subsystem,1024,100,64,5873,5.01,11981,5.11,0.0,0.0,41,3.29,OOC post-route; hierarchy inclusive,10.0,recursive_skewdct_N1024_20261026/raw_reports/skewdct_100MHz/utilization_hierarchical_post_route.rpt
 MFCC / SkewDCT,SkewDCT8 core,1024,100,64,1706,1.46,2357,1.01,0.0,0.0,24,1.92,OOC post-route; hierarchy inclusive,10.0,recursive_skewdct_N1024_20261026/raw_reports/skewdct_100MHz/utilization_hierarchical_post_route.rpt
-MFCC / MatrixDCT,DCT subsystem,1024,50,64,,,,,,,,,Register/LUT RTL; hardware reimplementation pending,20.0,matrix_register_20261026/verified_results.json
+MFCC / MatrixDCT,DCT subsystem,1024,50,64,1749,1.49,2584,1.1,0,0.0,1,0.08,OOC post-route; user-supplied summary; raw report not supplied,20.0,matrix_register_50MHz_20261027/results.json
 MFCC / SkewDCT,DCT subsystem,1024,50,64,5875,5.02,11981,5.11,0.0,0.0,41,3.29,OOC post-route; hierarchy inclusive,20.0,recursive_skewdct_N1024_20261026/raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt
 MFCC / SkewDCT,SkewDCT8 core,1024,50,64,1706,1.46,2357,1.01,0.0,0.0,24,1.92,OOC post-route; hierarchy inclusive,20.0,recursive_skewdct_N1024_20261026/raw_reports/skewdct_50MHz/utilization_hierarchical_post_route.rpt
 MFCC,Whole MFCC,512,50,1,26543,22.66,37822,16.15,5.5,3.82,98,7.85,OOC synthesis estimate,20.0,evidence/baseline/raw_reports/synthesis/new_n512_lanes1/utilization.rpt
-MFCC / MatrixDCT,Whole MFCC,1024,50,64,,,,,,,,,Register/LUT RTL; hardware reimplementation pending,20.0,matrix_register_20261026/verified_results.json
+MFCC / MatrixDCT,Whole MFCC,1024,50,64,30110,25.71,43473,18.56,6.5,4.51,19,1.52,OOC post-route; user-supplied summary; raw report not supplied,20.0,matrix_register_50MHz_20261027/results.json
 Custom FFT,Standalone FFT,16..2048 runtime,50,,10539,9.0,12004,5.12,8.5,5.9,8,0.64,OOC post-route,20,evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/utilization_post_route.rpt
 XFFT,Standalone FFT,1024,50,,1643,1.4,2950,1.26,3.5,2.43,9,0.72,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_1024_utilization.rpt
 XFFT,Standalone FFT,128,50,,1551,1.32,2825,1.21,3.5,2.43,9,0.72,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_128_utilization.rpt
@@ -21,3 +21,5 @@ XFFT,Standalone FFT,256,50,,1563,1.33,2855,1.22,3.5,2.43,9,0.72,OOC synthesis es
 XFFT,Standalone FFT,32,50,,718,0.61,1307,0.56,1.5,1.04,3,0.24,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_32_utilization.rpt
 XFFT,Standalone FFT,512,50,,1615,1.38,2923,1.25,3.5,2.43,9,0.72,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_512_utilization.rpt
 XFFT,Standalone FFT,64,50,,1502,1.28,2747,1.17,3.5,2.43,9,0.72,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_64_utilization.rpt
+MatrixDCT,Standalone DCT,,50,,1847,1.58,2717,1.16,0,0.0,1,0.08,OOC post-route; user-supplied summary; raw report not supplied,20,matrix_register_50MHz_20261027/results.json
+SkewDCT,Standalone DCT,,50,,5113,4.37,12378,5.28,0,0.0,41,3.29,OOC post-route; user-supplied summary; raw report not supplied,20,matrix_register_50MHz_20261027/results.json

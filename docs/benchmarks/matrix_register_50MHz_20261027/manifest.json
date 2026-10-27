@@ -1,0 +1,25 @@
+{
+  "policy": "Supplied result summaries preserved byte-for-byte.",
+  "files": [
+    {
+      "id": "matrix_register_20261027_json",
+      "project": "Register MatrixDCT and recursive SkewDCT, 50 MHz",
+      "archive": "results.json",
+      "bytes": 2413,
+      "sha256": "193620521ac3fd20b196d5be97bd3ed02b220c8446d9844450d296192b4ed93c",
+      "tested_commit": "0dce6b054028ff37c3158adc0184acc030211d0e",
+      "evidence_root": "matrix_register_50MHz_20261027",
+      "source_kind": "USER_SUPPLIED_RESULT_SUMMARY"
+    },
+    {
+      "id": "matrix_register_20261027_csv",
+      "project": "Register MatrixDCT and recursive SkewDCT, 50 MHz",
+      "archive": "results.csv",
+      "bytes": 766,
+      "sha256": "a98e913348e6c9c73f8827a10f9ad22a301423735e3c70e82f2e09a71315b348",
+      "tested_commit": "0dce6b054028ff37c3158adc0184acc030211d0e",
+      "evidence_root": "matrix_register_50MHz_20261027",
+      "source_kind": "USER_SUPPLIED_RESULT_SUMMARY"
+    }
+  ]
+}

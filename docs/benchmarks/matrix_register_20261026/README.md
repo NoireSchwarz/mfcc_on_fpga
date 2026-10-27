@@ -1,5 +1,7 @@
 # MatrixDCT register/LUT replacement validation
 
+**2026-10-27 follow-up:** [Supplied 50 MHz hardware results](../matrix_register_50MHz_20261027/README.md) now fill the pending hardware fields in the primary catalog. The record below describes the earlier simulation-only validation.
+
 [Benchmark catalog](../README.md) · [Implementation notes](../../MatrixDCT_Register_Storage.md) · [Verified JSON](verified_results.json)
 
 Current MatrixDCT storage uses FF input/output words and a LUT coefficient ROM, replacing the former BRAM implementation. Public ports and numeric parameters are retained. Operand selection, multiplication and accumulation remain registered separately; the arithmetic still uses one multiplier expression.

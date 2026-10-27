@@ -1,5 +1,7 @@
 ﻿Topic,Note
-MatrixDCT storage replacement,"Current MatrixDCT uses register/LUT storage. Its new resource and timing fields are pending, not copied from the obsolete BRAM implementation. Latest verified N1024 batch: 43622 cycles. Original hardware reports remain historical evidence."
+MatrixDCT storage replacement,"Register/LUT MatrixDCT hardware fields now use supplied 2026-10-27 50 MHz OOC post-route summaries. Original BRAM measurements remain historical. New whole-MFCC resources: 30110 LUT, 43473 FF, 6.5 BRAM, 19 DSP; batch 43622 cycles."
+Standalone DCT scope,"Standalone top-level resources and latency are separate from the inclusive MFCC DCT hierarchy. Both standalone DCTs report zero BRAM; MatrixDCT uses one DSP and SkewDCT 41, so arithmetic parallelism remains different."
+Supplied result evidence,CSV and JSON summaries agree; original Vivado reports and coefficient dumps were not supplied. Positive WNS/WHS are user-reported; TNS and setup/hold failure counts remain blank. No new whole-MFCC SkewDCT implementation results were supplied.
 Selection rule,Keep the latest valid value per test project and configuration. Architecture/pipeline/version names are not separate test projects.
 Configuration key,"Project, backend under comparison, N, frequency, output lanes, frame count and stall condition identify a case. Inclusive hierarchy scope is retained."
 Partial updates,Refresh metrics separately: a 150 MHz resource update does not invent new 50/100 MHz resources. Unchanged metrics use the latest available reports. Runtime cycle counts use the latest matching regression and are converted by frequency.

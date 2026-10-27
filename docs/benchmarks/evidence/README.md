@@ -2,7 +2,7 @@
 
 [Benchmark catalog](../README.md) · [File integrity manifest](manifest.json) · [Archive metadata](../source_archives.json)
 
-The current primary tables consolidate six supplied archives. Original report bytes are retained so source columns can be checked, while superseded values are omitted from primary tables. The two previously published report collections remain at their existing paths; the four earlier collections are stored below this directory. Source scripts, RTL duplicates, large checkpoints and executables remain local.
+The current primary tables consolidate six supplied archives plus the [2026-10-27 result summaries](../matrix_register_50MHz_20261027/README.md). Original report bytes are retained so source columns can be checked, while superseded values are omitted from primary tables. The two previously published report collections remain at their existing paths; the four earlier collections are stored below this directory. Source scripts, RTL duplicates, large checkpoints and executables remain local.
 
 | Dataset | Archive | SHA-256 |
 | --- | --- | --- |

@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "source": {
+    "repository": "https://github.com/NoireSchwarz/mfcc_on_fpga",
+    "branch": "optimization/skewdct8-recursive-pipeline",
+    "commit": "0dce6b054028ff37c3158adc0184acc030211d0e",
+    "rtl_modified": false,
+    "device": "xck26-sfvc784-2LV-c",
+    "vivado": "2026.1"
+  },
+  "full_mfcc_N1024_50MHz": {
+    "configuration": {"fft_points": 1024, "stride": 512, "frames": 4, "output_lanes": 64},
+    "register_matrixdct": {
+      "cycles": 43622,
+      "nominal_time_us": 872.44,
+      "nominal_average_us_per_frame": 218.11,
+      "mae_vs_float": 3.428547093289361,
+      "rmse_vs_float": 12.490109975036418,
+      "max_abs_error_vs_float": 101.60887915401383,
+      "snr_db": 16.049668875179485,
+      "within_1_percent": 36.328125,
+      "within_2_percent": 65.234375,
+      "post_route": {"lut": 30110, "ff": 43473, "bram_tiles": 6.5, "dsp": 19, "wns_ns": 8.235, "whs_ns": 0.010}
+    },
+    "recursive_skewdct": {
+      "cycles": 39508,
+      "nominal_time_us": 790.16,
+      "nominal_average_us_per_frame": 197.54,
+      "mae_vs_float": 3.4286065721184498,
+      "rmse_vs_float": 12.491610941411583,
+      "max_abs_error_vs_float": 101.62445254003143,
+      "snr_db": 16.04862513376996,
+      "within_1_percent": 36.328125,
+      "within_2_percent": 65.234375,
+      "post_route": null
+    },
+    "normalized_matrix_vs_recursive": {"mae": 0.004591107980979499, "rmse": 0.005612513725178852, "max_abs_error": 0.015573386017592838},
+    "matrix_cycle_increase_percent": 10.413080895008608
+  },
+  "standalone_dct_50MHz": {
+    "register_matrixdct": {"first_output_cycles": 4289, "final_output_cycles": 4352, "final_time_us": 87.04, "lut": 1847, "ff": 2717, "bram_tiles": 0, "dsp": 1, "wns_ns": 12.740, "whs_ns": 0.067},
+    "recursive_skewdct": {"first_output_cycles": 175, "final_output_cycles": 238, "final_time_us": 4.76, "lut": 5113, "ff": 12378, "bram_tiles": 0, "dsp": 41, "wns_ns": 14.342, "whs_ns": 0.011},
+    "matrix_reduction_percent": {"lut": 63.876393506747506, "ff": 78.0505735983196, "dsp": 97.5609756097561},
+    "matrix_final_latency_ratio": 18.285714285714285
+  },
+  "full_mfcc_matrix_dct_hierarchy": {"lut": 1749, "ff": 2584, "bram_tiles": 0, "dsp": 1},
+  "evidence_boundary": "Fresh RTL simulation plus KV260-device out-of-context post-route implementation. Times are cycle/50 MHz conversions, not PS/DMA/audio or physical-board wall-clock measurements."
+}

@@ -20,11 +20,18 @@ Latest supplied measurements, tested commit **b0db7a0**: N=1024, STRIDE=512, OUT
 
 ### Consolidated benchmarks
 
-The MatrixDCT reference has subsequently been replaced with register/LUT storage. Its current resource and timing fields are **pending reimplementation**; previous BRAM numbers remain historical evidence. The replacement preserves coefficients and takes 43,622 cycles for the N1024 four-frame test. [Implementation and regression results](docs/MatrixDCT_Register_Storage.md).
+The supplied **2026-10-27, 50 MHz** summaries now fill the register-MatrixDCT hardware results. Standalone 64-point DCT resources:
 
-All six supplied benchmark packages are classified in the [benchmark catalog](docs/benchmarks/README.md): [complete MFCC](docs/benchmarks/full_mfcc/README.md), [FFT/XFFT](docs/benchmarks/fft/README.md), [DCT comparison](docs/benchmarks/dct/README.md) and [memory optimization](docs/benchmarks/memory/README.md).
+| Backend | LUT | FF | BRAM tiles | DSP | Final-output cycles |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Register MatrixDCT | **1,847** | **2,717** | **0** | **1** | 4,352 |
+| Recursive SkewDCT | **5,113** | **12,378** | **0** | **41** | 238 |
 
-The [13-sheet Excel workbook](docs/benchmarks/MFCC_Benchmark_Summary.xlsx) and [consolidated JSON](docs/benchmarks/combined_data.json) keep the latest valid metric for each test/configuration. Architecture and pipeline generations are not separate primary result rows. LUT, FF, BRAM and DSP appear first; per-metric source columns retain provenance. Earlier reports remain available as evidence without repeating superseded values in the main tables.
+Whole MFCC with MatrixDCT uses **30,110 LUT, 43,473 FF, 6.5 BRAM tiles and 19 DSP**, with reported WNS **+8.235 ns** at 50 MHz. Its N1024 four-frame test takes 43,622 cycles, versus 39,508 for SkewDCT. Standalone counts are separate from MFCC hierarchy counts. Both standalone DCTs report zero BRAM, while multiplier parallelism remains different. These are supplied OOC post-route summaries; original Vivado reports were not included. [Source, checks and comparison](docs/benchmarks/matrix_register_50MHz_20261027/README.md).
+
+All six supplied benchmark packages and the two latest result summaries are classified in the [benchmark catalog](docs/benchmarks/README.md): [complete MFCC](docs/benchmarks/full_mfcc/README.md), [FFT/XFFT](docs/benchmarks/fft/README.md), [DCT comparison](docs/benchmarks/dct/README.md) and [memory optimization](docs/benchmarks/memory/README.md).
+
+The [14-sheet Excel workbook](docs/benchmarks/MFCC_Benchmark_Summary.xlsx) and [consolidated JSON](docs/benchmarks/combined_data.json) keep the latest valid metric for each test/configuration, including a separate standalone-DCT sheet. Architecture and pipeline generations are not separate primary result rows. LUT, FF, BRAM and DSP appear first; per-metric source columns retain provenance. Earlier reports remain available as evidence without repeating superseded values in the main tables.
 
 See the [implementation notes](docs/SkewDCT8_Recursive.md) and [architecture PDF](Architecture/SkewDCT8_Recursive/SkewDCT8_Recursive_Architecture.pdf) for the current datapath.
 
@@ -41,6 +48,13 @@ Das Design des DCT-Moduls orientiert sich an den folgenden Publikationen [^1] [^
 
 
 ## Upload log
+
+### 2026-10-27 - Import 50 MHz register-MatrixDCT and standalone-DCT results
+
+- Replaced pending MatrixDCT resource/timing fields with the supplied results for commit `0dce6b0`; retained existing SkewDCT whole-MFCC implementation measurements where no new measurement was supplied.
+- Added standalone MatrixDCT/SkewDCT resources and first/final latency in a separate CSV and workbook sheet. Whole-MFCC and inclusive hierarchy counts remain separate scopes.
+- Crosschecked CSV/JSON values, cycle conversions and ratios; retained both original files with SHA-256 hashes. Corrected the derived FF-reduction percentage in analysis using the supplied counts, while preserving the original JSON.
+- Updated resource-first tables, the 14-sheet workbook and consolidated JSON. Hardware values are supplied OOC post-route summaries; original implementation reports were not included. RTL is unchanged.
 
 ### 2026-10-26 - Replace MatrixDCT BRAM storage with FF/LUT storage
 

@@ -52,8 +52,20 @@ The frozen reference is the five MatrixDCT RTL files from commit `a9ceb12ba1f3ee
 
 The [verified summary](benchmarks/matrix_register_20261026/verified_results.json) records the source hashes and per-case results. Detailed simulation logs, baseline source copies and test helpers remain local, outside the published project.
 
-## Hardware measurements pending
+## Supplied hardware results - 2026-10-27
 
-No local Vivado run was available for this replacement. The RTL explicitly requests FF/LUT storage; actual LUT/FF/BRAM/DSP mapping and post-route timing must be confirmed by a new implementation report. The former MatrixDCT figures (647 DCT LUT, 1,098 DCT FF, 2.5 BRAM tiles and one DSP) belong to the previous BRAM implementation and must not be used as measurements of this revision. The current catalog marks MatrixDCT hardware fields pending and retains those original reports as historical evidence.
+The supplied 50 MHz OOC post-route summaries identify unchanged RTL from commit `0dce6b0`. Their register-MatrixDCT resources are now selected in the primary catalog:
+
+| Scope | LUT | FF | BRAM tiles | DSP | WNS ns | WHS ns |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Whole MFCC, N1024 | 30,110 | 43,473 | 6.5 | 19 | +8.235 | +0.010 |
+| DCT hierarchy inside MFCC, included above | 1,749 | 2,584 | 0 | 1 | Not separately supplied | Not separately supplied |
+| Standalone DCT top | 1,847 | 2,717 | 0 | 1 | +12.740 | +0.067 |
+
+The supplied standalone recursive SkewDCT result is 5,113 LUT, 12,378 FF, zero BRAM and 41 DSP, completing at 238 cycles versus MatrixDCT's 4,352. Separate module boundaries produce different counts from MFCC hierarchy measurements; those scopes are not interchangeable.
+
+CSV/JSON values and cycle conversions were crosschecked, and the original files are preserved. Physical metrics are user-reported: original Vivado utilization/timing reports and raw output dumps were not supplied for independent recomputation. TNS and setup/hold failure counts remain unreported. The 50 MHz results do not certify the replacement at 150/200 MHz. [Sources and validation](benchmarks/matrix_register_50MHz_20261027/README.md).
+
+The former MatrixDCT figures (647 DCT LUT, 1,098 DCT FF, 2.5 BRAM tiles and one DSP) belong to the earlier BRAM implementation. Those reports remain historical evidence and are not assigned to the register/LUT implementation.
 
 SkewDCT, ordinary DCT8, the variable-size FFT, coefficient contents and MFCC external ports are unchanged by this replacement.
