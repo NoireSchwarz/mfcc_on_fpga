@@ -1,0 +1,827 @@
+{
+  "policy": "Original evidence files retained byte-for-byte; source scripts and duplicate RTL are not part of this catalog.",
+  "files": [
+    {
+      "path": "evidence/baseline/benchmark_summary.json",
+      "bytes": 2909,
+      "sha256": "b655cfd54d1fe02f6f7dce613212d90f4c5c3bcd8ce2888ea91f8d6f0970693f",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/runtime_fft_speed_50MHz.csv",
+      "bytes": 300,
+      "sha256": "9a833f1ee485b5870c987710df38562ac9323fb68ecc36ae09e0343dac9a6b4d",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/source_manifest.json",
+      "bytes": 144480,
+      "sha256": "90525f6a59f9eb9d867ae36d0aec59afc2ece49635cd84609b16710d83aa2476",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/elaborated_hierarchy.json",
+      "bytes": 2042,
+      "sha256": "7208ad489265cec9090444b97babc39c4c5ab87c7ad87837495880627c2f066d",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/mfcc_integration.json",
+      "bytes": 18338,
+      "sha256": "c60429b568eef76847cada9da15011245e06b2499b0f9492f1ad1878221b1dad",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/verification.json",
+      "bytes": 23259,
+      "sha256": "81ed875cad8ab5cfa63c1a9455514e23ced82c105b952a631fc7c666ee14f759",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/verilog2001_compile.json",
+      "bytes": 1976,
+      "sha256": "dc708ec28256734f9acc0236de613f730c6bbb401c91ce4255583957db1fe6ff",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/drc.rpt",
+      "bytes": 186693,
+      "sha256": "06d71ec9a36927a77dae02860761e25433a7694131d1ea215a0730a5aac77905",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/status.txt",
+      "bytes": 431,
+      "sha256": "8131835efa3037a55aef2280bd80b2b10f48da6ef3458310d4e25a4b2cc4be65",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/timing_synth.rpt",
+      "bytes": 27545,
+      "sha256": "b7f10d509b1ab3bc59e691b90e592a33c99ee672d0216a439bac258e588b8fe2",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/utilization.rpt",
+      "bytes": 10129,
+      "sha256": "5251d367965c4df783aff47d086b40623f5cbc1b574792f29db472871db99114",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/baseline_n512_lanes1/utilization_hierarchical.rpt",
+      "bytes": 9654,
+      "sha256": "5eaca73d5eed462a973333796ad17ff890b862831886e5610e0049b5c72aad90",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/drc.rpt",
+      "bytes": 186294,
+      "sha256": "985f59ed5ba96f902f296184ffe0e993129a5ea5bb10c734ab295071e4c2f6a4",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/status.txt",
+      "bytes": 979,
+      "sha256": "3fd0948c6acd97292a9b02715f1fa948f10a9d343b4b89a7b38f60b558e8daa4",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/timing_synth.rpt",
+      "bytes": 27493,
+      "sha256": "6d9284bee71e0f869da04ec3babedadd4258a388ed7f325191bbcfd10d4b70eb",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/utilization.rpt",
+      "bytes": 10114,
+      "sha256": "d5662700551ca305acab6b173a3958820fcf2c358db1b958125746b391110b33",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/new_n512_lanes1/utilization_hierarchical.rpt",
+      "bytes": 10055,
+      "sha256": "e02cd56d267287fbebd4618b1b595f5b2620a19253a98b48d8904b7b26c48109",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/drc.rpt",
+      "bytes": 17563,
+      "sha256": "a44816731c8a4c1fb9346a38e0e1e67f7ec32c950e576e50a280baea2d6f9fe6",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/status.txt",
+      "bytes": 858,
+      "sha256": "e95284a106e66228513a21e8f6e8b06c121be440063c393e073278c60bbffae1",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/timing_synth.rpt",
+      "bytes": 23318,
+      "sha256": "bae2fd14d74c1b7f6c98f4ba26f70a5b53c72d65389fbea398d87fa2b82a5ce5",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/utilization.rpt",
+      "bytes": 10124,
+      "sha256": "d09b75d32c9129fe6d241540e2e0a36e75585a2b47fbcbc193305410f9566eb2",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/baseline/raw_reports/synthesis/runtime_multipoint/utilization_hierarchical.rpt",
+      "bytes": 7637,
+      "sha256": "fcbc7ce173806ec6e10d2326f4e2be095039467b15f7c1fc2c43e250846b3804",
+      "dataset": "baseline"
+    },
+    {
+      "path": "evidence/ver2/03_verification/combined_mfcc_1024_report.json",
+      "bytes": 2394,
+      "sha256": "5f32a9934943eb1456f528332f885cebdeca5e3cf03c571e74a31a67eb274d36",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/clock.xdc",
+      "bytes": 58,
+      "sha256": "20deae8564e4bfe31ae6982b69de82011a21c997adc8d338e25c14bd130d5dd4",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/clock_utilization.rpt",
+      "bytes": 41121,
+      "sha256": "0679a9a34fe67488d2f991744169e97ab3bd612c00970fb1bb58f13df5b23e86",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/drc_post_route.rpt",
+      "bytes": 52031,
+      "sha256": "f3249f85089aa5cc28f83b2e0c7d85687aa0891d5e2c05cb365f82c030da0849",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/route_status.rpt",
+      "bytes": 777,
+      "sha256": "09ec9f3b6278629be1b398009d72a46a1d4e519ca83a084d2682b8677c4bb4ca",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/status.txt",
+      "bytes": 433,
+      "sha256": "eeaddf164d509e1aa292c2d66dd076c101fbde245f9273e6b05c10185282c431",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/timing_post_route.rpt",
+      "bytes": 277378,
+      "sha256": "1e84563b906e13e2ec6193d39b7e1d6e71283f933cb8c81a7b270aa3d64a9183",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/timing_synth.rpt",
+      "bytes": 23657,
+      "sha256": "d20a7a87561db5c591b7e0080e1ef08b54a2f6d7d909a61a9b8f3e6fac593f02",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/utilization_hierarchical_post_route.rpt",
+      "bytes": 8994,
+      "sha256": "71f57e9d21566a8f2285ec1d6f91f8517cc7dd940dd88cc85257c57d9979820b",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/utilization_post_route.rpt",
+      "bytes": 12362,
+      "sha256": "1c266874e21eaac2eec95c92acf0e69554e6f24303a2095629d150b8c7ed4d8d",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_100MHz/utilization_synth.rpt",
+      "bytes": 10111,
+      "sha256": "d52b4f90a33807bba5e11aecc3bcbe92b77b8db6d531d508dff0b7c7dbe4b370",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/clock.xdc",
+      "bytes": 71,
+      "sha256": "b9238d2842c78b51cb9895c68d4a405681e692fd073457e23f9d610f683c1c64",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/clock_utilization.rpt",
+      "bytes": 35623,
+      "sha256": "57c7373f7b071688140012862fb6f5e13eb94205b6056ff9364a9f66c10ac06d",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/drc_post_route.rpt",
+      "bytes": 53103,
+      "sha256": "292417d2a72990adc840b4d98b585c530c98064debbbddb41ad5145a9459f5b3",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/route_status.rpt",
+      "bytes": 777,
+      "sha256": "df36f7714d9b57250d612c71f6905eea66d3246bd787e77417306421a5c7c09e",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/status.txt",
+      "bytes": 447,
+      "sha256": "882db0520bcd91993d9104867f568099f772ee7d757b1c3bc7e2b118b64a22c8",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/timing_post_route.rpt",
+      "bytes": 273176,
+      "sha256": "1fcb61ba1d91b160f14c726d940aaf04f6972202b2f5dffbb1da9d4ed52515c6",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/timing_synth.rpt",
+      "bytes": 23654,
+      "sha256": "6d8013f2c7ae3f26e7ca8c42d5670ca2af50816ce19712f5508182b4278ba05e",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/utilization_hierarchical_post_route.rpt",
+      "bytes": 8994,
+      "sha256": "d4eb240fab287608d7356b7c039b4829c574cdd8392b72348d8ba64fc9a92470",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/utilization_post_route.rpt",
+      "bytes": 12362,
+      "sha256": "4d680ab0caeb22ea1585c58b2e9bbeac2d7f35d88173a58663668025a81e7d09",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_150MHz/utilization_synth.rpt",
+      "bytes": 10111,
+      "sha256": "7aa845bcf3a6f7ceb03a2a295a765ed2a18f9f75baae7e66444268870d0e1f58",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_200MHz/clock.xdc",
+      "bytes": 57,
+      "sha256": "a65b5e48ac448ae7d189bc90dd1a8a6533b0cb9b728e20cf8e616edf45cdbf80",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_200MHz/status.txt",
+      "bytes": 359,
+      "sha256": "69b5ad47db0ce95b5a93a1dab8e5d7576a2948e5ff8a0e2bdfd793382d17738f",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_200MHz/timing_synth.rpt",
+      "bytes": 23640,
+      "sha256": "e911d777e2a2ae9d0348f7912aa557d11053128bb39499929a207d4ca7359314",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_200MHz/utilization_synth.rpt",
+      "bytes": 10111,
+      "sha256": "769691393509ff1e922d0d61b811b04d39e2136075ae0540b5716dc567c6ae8b",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/clock.xdc",
+      "bytes": 58,
+      "sha256": "7e18cdb2f69964aa639c7417c1fe2eddb093247be849651422944a4a1fa7664f",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/clock_utilization.rpt",
+      "bytes": 39381,
+      "sha256": "b314f3a36921ae668d3da19b33b8fd4b1648547405e9fdeb1ef937e426cf22f2",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/drc_post_route.rpt",
+      "bytes": 52030,
+      "sha256": "3006c3a672e8849953462a7ad9bd6c3304a56ecb278f77ee322983ab4a4691f0",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/route_status.rpt",
+      "bytes": 777,
+      "sha256": "eb702f3dfddf3d1039b86a06c6d90e3487d671604f9a4fdabe5bdd41a00dddf2",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/status.txt",
+      "bytes": 432,
+      "sha256": "1c58ed728ea723484591a3b4418a0370068e0842b93e1aa628e471f2f575897f",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/timing_post_route.rpt",
+      "bytes": 287964,
+      "sha256": "439cf14fab348e0dfe3ac8b34cd52a4a397a5d82d6f040e266b216cab519ff23",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/timing_synth.rpt",
+      "bytes": 23662,
+      "sha256": "3fa8535e6c4adba4cfbd674410f48259a8bb0d787bb52183f126091c48094a2f",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/utilization_hierarchical_post_route.rpt",
+      "bytes": 8991,
+      "sha256": "d0f05ed8a04477637617fd48ee6665b3d080057a949b9b0914404e28f6d9073f",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/utilization_post_route.rpt",
+      "bytes": 12361,
+      "sha256": "0220fbfc8650f5fa3855d39df89187aac83f099e8b4fe169dda30f1fb10c3ccd",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/mfcc_N1024_50MHz/utilization_synth.rpt",
+      "bytes": 10110,
+      "sha256": "8bb5e0e2ee11abb9a21597c4d1219bed0a37a526e0715791a1039589764014c7",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/postroute_Explore_20261025_192145_6860/clocks.rpt",
+      "bytes": 1647,
+      "sha256": "4f6729056e14a66b4c335dab38aa738606d6935c87f713410c9b0dd73cdd8a93",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/postroute_Explore_20261025_192145_6860/comparison.txt",
+      "bytes": 421,
+      "sha256": "93dd9b602ee6fea8eb1c3947d174f742d6f0f990882926251a272578b31ab4c3",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/postroute_Explore_20261025_192145_6860/drc_after.rpt",
+      "bytes": 53153,
+      "sha256": "4fbc0d1d1bb1634d75f7e7a8cdde83d25b1541303e5abe7f5eb6b903e2cf105f",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/postroute_Explore_20261025_192145_6860/route_status_after.rpt",
+      "bytes": 777,
+      "sha256": "328d9b23cd9445ed4b572f651f3e42d899ef97de969a1d0591710c04099add54",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/postroute_Explore_20261025_192145_6860/setup_paths_after.rpt",
+      "bytes": 578455,
+      "sha256": "3066e19a15e6d3e51efc497d194867e2bb9bc47fb3215d45eb491bd0d8a8533c",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/postroute_Explore_20261025_192145_6860/timing_after.rpt",
+      "bytes": 273302,
+      "sha256": "a57347c4b9b65feac3541e79278139fd3a46d1779f419e762767513b62ef8003",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/postroute_Explore_20261025_192145_6860/timing_before.rpt",
+      "bytes": 273227,
+      "sha256": "a9b355b62b0a2b503a34c3816d4cb0789c5c56b9aa43ee3379f9baf7d08997cc",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/signoff_150MHz_Explore/drc_signoff.rpt",
+      "bytes": 53136,
+      "sha256": "277341629ee27634c41c96a3883315f8c23b7a37df7c39c35510320cabd8500b",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/signoff_150MHz_Explore/route_status_signoff.rpt",
+      "bytes": 777,
+      "sha256": "328d9b23cd9445ed4b572f651f3e42d899ef97de969a1d0591710c04099add54",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/signoff_150MHz_Explore/setup_paths_signoff.rpt",
+      "bytes": 578413,
+      "sha256": "fe31d4609cf86fefd36ca5e189435e0201b876a53419ec24e483021513dd43db",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/signoff_150MHz_Explore/status.txt",
+      "bytes": 318,
+      "sha256": "cdfd3459e01f6d4076002571ed02b9c76abcfcfd7f89f6bbe22a9c5c567889c2",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/signoff_150MHz_Explore/timing_signoff.rpt",
+      "bytes": 273260,
+      "sha256": "c08869dc15c550f202fead0e9234ebf450f358cfd7f1e67c6190d6cc2d9187a6",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/04_frequency_runs/signoff_150MHz_Explore/utilization_signoff.rpt",
+      "bytes": 12379,
+      "sha256": "1f5f3fbc3af64b80a7f96e63a1cdf348447b37e9ccb85fe01cd6d776080ddf4c",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/05_reports/frequency_comparison.csv",
+      "bytes": 875,
+      "sha256": "6d537638b2071274b45672913a0be987a7c3f43ad6cb792e81f08745029b415b",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/05_reports/frequency_comparison.json",
+      "bytes": 4004,
+      "sha256": "0f80da3530d60c2f7a2f3c89d935aa8cd5f649dc0df0420a5433f46e7a71635a",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/ver2/05_reports/POSTROUTE_EXPLORE_RESULT.txt",
+      "bytes": 614,
+      "sha256": "5271ceb9e99f3c9f0d3da699dded5e290e0e54ec6d53db4ed77e61c0d998b90c",
+      "dataset": "ver2"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/01_custom/custom_output.csv",
+      "bytes": 60693,
+      "sha256": "93d715694fee67698a49b58a6973a6d353f4e90a47f4d40a83c29967e043eafd",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/01_custom/sim/results/pair_stalls1/simulation.log",
+      "bytes": 886,
+      "sha256": "cfc174de55fc8938cdf7837b828825fbb0450261eeeeb3c8ca41bfcaf4575c91",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/01_custom/sim/results/runtime_stalls0/simulation.log",
+      "bytes": 3119,
+      "sha256": "f5afee5e328799aa293ade14370f9feee3c6ba86d51d4a78b5d7b50a55187a46",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/01_custom/sim/results/runtime_stalls1/simulation.log",
+      "bytes": 3124,
+      "sha256": "b3ffcb050fab2e0b15950678fc61efab7bdb33230a429aac19c9bde0aaf392eb",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/xfft_cmodel_output.csv",
+      "bytes": 66630,
+      "sha256": "774854523af7ae8bd225f3c547b8f8dcaca89971ef8f30668ad7954b0b744979",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/xfft_output.csv",
+      "bytes": 57885,
+      "sha256": "d8c263d2ca826bd1acde03d34972a6d94e347c33cc3a6e2e130b502b92e3fddf",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_1024_timing.rpt",
+      "bytes": 18951,
+      "sha256": "89d9ba3ecbab6960c19bac6883a0b5b39b07785c57cbb831eea61e320e17b944",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_1024_utilization.rpt",
+      "bytes": 9859,
+      "sha256": "c5f7f1e7bafa3f1c109aed45d562fa2b18108e59df4aba3ebaa64196b0d8c2de",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_128_timing.rpt",
+      "bytes": 18558,
+      "sha256": "45dc45c62a61900c35a5573ffaf09b4a5ee29ce3b591ceb4df25477f6aa059df",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_128_utilization.rpt",
+      "bytes": 9855,
+      "sha256": "d09e4a092bae5391649ab295436a9fb769e9d497c93f670923c2223ae6a02815",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_16_timing.rpt",
+      "bytes": 18667,
+      "sha256": "01e855372606db77b30c59944630c1892f59426702cf820f1be1210a299814cb",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_16_utilization.rpt",
+      "bytes": 9851,
+      "sha256": "eed26a0dbc02d4f4feb64197da12bc0cc6a3ff3a9afa001a05f5cf96a144e06f",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_2048_timing.rpt",
+      "bytes": 18562,
+      "sha256": "9b0c8ad944c73f7fbc05487431be4c1ea56d08efc4e588864516808836c588e1",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_2048_utilization.rpt",
+      "bytes": 9859,
+      "sha256": "2d7c6e3be8f58c14d82b8cc7eecf92722aca751e22b3e0a04ac7ab81afbd7d55",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_256_timing.rpt",
+      "bytes": 18558,
+      "sha256": "63f052c876a4d86b7c51f0bc7422a6084c20f745ae1d3120969a304ca3033a27",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_256_utilization.rpt",
+      "bytes": 9855,
+      "sha256": "584b2a14d40deca31049c80c8cec15e1fece770d5e45d7d6e520fbfa7fdfe954",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_32_timing.rpt",
+      "bytes": 18674,
+      "sha256": "2c31b28a6d71b7ff2f1986f15b196f5e52f2b83efc48394d566358755584f1f1",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_32_utilization.rpt",
+      "bytes": 9851,
+      "sha256": "27144e9ffb4140bb51b7e254e4e439c3e967903f6e2cea78165ee19508bfa001",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_512_timing.rpt",
+      "bytes": 18558,
+      "sha256": "0e6fec9858f9f29dbf4594c1d4ed804afa619d8a3a3244d785a125667d48bb85",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_512_utilization.rpt",
+      "bytes": 9855,
+      "sha256": "86112c630a249bdd0d7e1bba68557215f339a1ef093c4035dc12e6aeffea9026",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_64_timing.rpt",
+      "bytes": 18556,
+      "sha256": "5c68095dc0789255f0b97f1bb89e4e2de951ff512376a9970527d7f8c6ac083d",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_64_utilization.rpt",
+      "bytes": 9851,
+      "sha256": "1c87f03d162ea82676b0e87a5a48de1fa1c63106ffc88c54ac284128b675f5bf",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/accuracy_comparison.csv",
+      "bytes": 1387,
+      "sha256": "69312cac55513ebaba749cb107bc3a8987338e4113c0dfd1764b58232d382ee0",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/accuracy_comparison.json",
+      "bytes": 2984,
+      "sha256": "4a800081e83fae3158cbfcdfd600f4a14c93301a6210cf0ab578f635004da9ce",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.csv",
+      "bytes": 1588,
+      "sha256": "eac8e802bc9a900db465cee274b88b04a428e356b9ea9e27c1ca77044ced9cc9",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/fft_vs_xfft_summary.json",
+      "bytes": 4770,
+      "sha256": "fcc045a6603eb13d3409e42c01ef0e336b60cd693c100ac02b1265acc0e87046",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/clock.xdc",
+      "bytes": 60,
+      "sha256": "d1ea0b494a10eb67a0dd9823e05903c802a2fe91d7b3ca35326ca91549ee48a8",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/drc_post_route.rpt",
+      "bytes": 13987,
+      "sha256": "9010eb738c2250db11ad48e4318ffcbd5253a647be94a6159e3beac50f6ddf0c",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/route_status.rpt",
+      "bytes": 714,
+      "sha256": "27df4c9f6476ee00dbf762c1887f1f49149d23f4232de1c1d60a733f3be63b84",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/status.txt",
+      "bytes": 140,
+      "sha256": "a2cbe10767ffb847f972ec4681ccdb79d8e52a94b58c46c6b6047f8f5cc83868",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/timing_post_route.rpt",
+      "bytes": 215311,
+      "sha256": "f8c43051c1480c3c62a62131c319b4363e608510902a19c29e31b010d6dbb9cd",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/timing_synth.rpt",
+      "bytes": 20063,
+      "sha256": "2255c9bec3554c29b44709ce2a1bcab2e92d91378293f50e3342e06260ee647e",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/utilization_post_route.rpt",
+      "bytes": 12216,
+      "sha256": "7703c6bf0d4077f23ca2f8f13dc2ef48d087040d4aa7c9fdd20ece3a84e7c9af",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/fft_vs_xfft_20261025/03_results/custom_runtime_50MHz/utilization_synth.rpt",
+      "bytes": 10002,
+      "sha256": "22f7b11421b3f6d0ec67c889d4dfe7cf50fba1adcfeb4540523cf0d9f086b8e5",
+      "dataset": "fft_vs_xfft_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/02_rtl/matrixdct/mfcc.csv",
+      "bytes": 1260,
+      "sha256": "68a678c1aed797fa0aed98903ca3453623b6490c30c2fc2b1f31671d1d064f16",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/02_rtl/matrixdct/mfcc_normalized.csv",
+      "bytes": 5369,
+      "sha256": "7c6137d6b335849d773e093ba095436ffd4bb27254bbc22ccfe26ad67d339694",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/02_rtl/matrixdct/simulation.log",
+      "bytes": 220,
+      "sha256": "2289daf7cd3e23149d9083c1da0a53ba6885f31a28484d840bb1063f469f1d02",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/02_rtl/skewdct/mfcc.csv",
+      "bytes": 1493,
+      "sha256": "b87bf9db06be5fb7d9f890c7660fffdfe76dc6618e793dc0e5b43e65b01c907b",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/02_rtl/skewdct/mfcc_normalized.csv",
+      "bytes": 5354,
+      "sha256": "525b3199c6f4598edfd97281472241255795cf9e33abcadae2afd33b22737271",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/02_rtl/skewdct/simulation.log",
+      "bytes": 220,
+      "sha256": "014b9ef3a910b7cb0e6bed48fdef48fa1ec361e041caa9978299421ecf4d3472",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/03_results/comparison_summary.csv",
+      "bytes": 410,
+      "sha256": "8bededf300cfce3d78e594e630b4cc232b501141466c8b09090b8edd56e96b7a",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/03_results/comparison_summary.json",
+      "bytes": 4682,
+      "sha256": "12ad40d6d821c5c7350c850262d79850bcf4c2b9cc15e8a8a4bfaf7c27bdd9ca",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/03_results/rtl_precision_performance.csv",
+      "bytes": 369,
+      "sha256": "8a563c55fa268738edc1eda50ef2e7a576723d5d7a08a635646c1e8486e5e359",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/03_results/rtl_precision_performance.json",
+      "bytes": 1718,
+      "sha256": "2cb0140d61bff91274a2e492dd8a4004496f07edb45cb70447ecedab07a2fdf6",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/clock.xdc",
+      "bytes": 60,
+      "sha256": "d1ea0b494a10eb67a0dd9823e05903c802a2fe91d7b3ca35326ca91549ee48a8",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/drc_post_route.rpt",
+      "bytes": 27351,
+      "sha256": "d2050de183f9eb74f55656f93a95ea2e420132386279b7a4e9753db458d9f989",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/route_status.rpt",
+      "bytes": 777,
+      "sha256": "abc24b7f5f480e01938f459690273b56a76fc99b90ab52caeea576a2c130f841",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/status.txt",
+      "bytes": 313,
+      "sha256": "35291109c64d99fae672a60938996092594f2e23ad9e5a75564b7449f27079e2",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/timing_post_route.rpt",
+      "bytes": 170511,
+      "sha256": "be714095a9e7f746c9e0e53ec2a39701d8a7ae2edddf6366198b2f23dd2cba7b",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/timing_synth.rpt",
+      "bytes": 21009,
+      "sha256": "ec456a8e0364029854d17e733eb111eb9b0db33f60e8dad51e24ad5d02e8bf9f",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/utilization_hierarchical_post_route.rpt",
+      "bytes": 7542,
+      "sha256": "e406efe2034544a6210e828b3d367df603024eb6d30ef4a62ef845c01ff6bc28",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/utilization_hierarchical_synth.rpt",
+      "bytes": 7413,
+      "sha256": "66dc1b6c11b20e6eb34e86c83f7c0eb5bf330e13523a7ee07df4840b7f608861",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/utilization_post_route.rpt",
+      "bytes": 12411,
+      "sha256": "d5e7366051e17ff95c61265cc4200650fb1e0354e2f5fe64952a4bcfe764f4fd",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/matrixdct/utilization_synth.rpt",
+      "bytes": 10156,
+      "sha256": "b52256ba293b743aaab38e17b18995f067daa8701b14fa81d36f73b3a339f206",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/clock.xdc",
+      "bytes": 60,
+      "sha256": "d1ea0b494a10eb67a0dd9823e05903c802a2fe91d7b3ca35326ca91549ee48a8",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/drc_post_route.rpt",
+      "bytes": 52031,
+      "sha256": "dc58303bcb1320748f7768f352c5f07d8ec6c754eb92b372bf6a78d3aa66dc56",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/route_status.rpt",
+      "bytes": 777,
+      "sha256": "eb702f3dfddf3d1039b86a06c6d90e3487d671604f9a4fdabe5bdd41a00dddf2",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/status.txt",
+      "bytes": 311,
+      "sha256": "bd7e5c2e3b77f990829cc9d96211006261608993234815abfdde8954931ae7b6",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/timing_post_route.rpt",
+      "bytes": 287967,
+      "sha256": "b6e4223ef3885fd0cad52eb9e15282cd2cc5f71f5e1fed42a46021a694c1a9c2",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/timing_synth.rpt",
+      "bytes": 23663,
+      "sha256": "3af03831e738c357a5484916f5ea8a17f5cfe0f5e50a4ed7ecfce9e8504ab6cf",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/utilization_hierarchical_post_route.rpt",
+      "bytes": 8994,
+      "sha256": "348016672914af720b408fe562e89d9d49efb57a881d9592006bcbcf08db147e",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/utilization_hierarchical_synth.rpt",
+      "bytes": 8865,
+      "sha256": "cbb2d2ce6a2425d7e10265aae6787fd8b3d6076022ecc4f77da1317bf57e3030",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/utilization_post_route.rpt",
+      "bytes": 12362,
+      "sha256": "7b4c6c652658965c59e2ab606d81515d1d36855b6c1a7a5ec31fbb1606a3e319",
+      "dataset": "dct_retest_20261025"
+    },
+    {
+      "path": "evidence/dct_retest_20261025/04_implementation/skewdct/utilization_synth.rpt",
+      "bytes": 10111,
+      "sha256": "fe7aba8cb321b8e39dee1dd1c227f8e55ba7b5a8bb35a0d7a2e1dd2197688118",
+      "dataset": "dct_retest_20261025"
+    }
+  ]
+}

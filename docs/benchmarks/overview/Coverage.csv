@@ -1,0 +1,11 @@
+﻿Project,Configuration,Status,Evidence
+Complete MFCC,"N1024 / stride512 / 64 lanes; 50,100,150 MHz",Included; latest valid metric per frequency,full_mfcc/README.md
+MFCC point/output sweep,16..2048 points; 1/64 lanes; recorded stalls and frame counts,Included; 12 distinct configurations,full_mfcc/MFCC_PointSweep.csv
+Standalone FFT,"16,32,64,128,256,512,1024,2048; 50 MHz","Included; latest complete-frame values, latest available first-output values",fft/README.md
+FFT versus XFFT,"Eight sizes; resource, latency and numerical comparisons",Included; backend and measurement stage retained,fft/README.md
+SkewDCT versus MatrixDCT,64-point DCT inside N1024 MFCC; 50 MHz; four frames,Included; latest resources/runtime/precision; no version rows,dct/README.md
+Memory optimization,MFCC N512 / stride256 / one lane; 50 MHz OOC synthesis,Included; explicit before/after comparison and 11 paired regressions,memory/README.md
+200 MHz,Latest complete MFCC,Estimate only; latest RTL has no completed 200 MHz implementation,c64_pipeline_N1024_150MHz_20261026/README.md
+Legacy 200 MHz attempt,Earlier MFCC frequency sweep,USER_ABORTED_NOT_COUNTED; not a timing pass or fail,evidence/ver2/04_frequency_runs/mfcc_N1024_200MHz/status.txt
+MatrixDCT register/LUT replacement,Six unit cases; twenty MFCC configurations; supplied 50 MHz OOC result,Local regression passes; latest hardware fields supplied in result summaries,matrix_register_50MHz_20261027/README.md
+Standalone DCT comparison,64-point register MatrixDCT versus recursive SkewDCT; 50 MHz,"Included; resources, first/final latency and WNS/WHS; supplied summaries",dct/DCT_Standalone.csv

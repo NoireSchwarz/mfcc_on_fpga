@@ -1,0 +1,213 @@
+{
+  "status": "PARTIAL",
+  "configuration": {
+    "n": 1024,
+    "stride": 512,
+    "frames": 4,
+    "frequency_mhz": 50,
+    "out_width": 64
+  },
+  "git_commit": "8f1fd371d7a8cf441a2584526f4bac2570d97cfb",
+  "variants_50mhz": {
+    "skewdct": {
+      "name": "skewdct",
+      "matrix": 0,
+      "frames": 4,
+      "coefficients": 256,
+      "cycles_4frames": 39505,
+      "time_us_4frames_50mhz": 790.1,
+      "average_us_per_frame_50mhz": 197.525,
+      "compile_wall_seconds": 0.188,
+      "simulation_wall_seconds": 6.185,
+      "raw_csv_sha256": "d2d1c0b91c6a6814b01f523af1faa7d3a1802110a2245e6d4f17992fc7f5bdda",
+      "accuracy_vs_float_orthonormal_dct": {
+        "mae": 3.4286065721184498,
+        "rmse": 12.491610941411583,
+        "max_abs_error": 101.62445254003143,
+        "snr_db": 16.04862513376996,
+        "within_1": 36.328125,
+        "within_2": 65.234375
+      },
+      "implementation_50mhz": {
+        "timing_result": "TIMING_PASS",
+        "git_commit": "8f1fd371d7a8cf441a2584526f4bac2570d97cfb",
+        "variant": "skewdct",
+        "DCT_USE_MATRIX": "0",
+        "N": "1024",
+        "STRIDE": "512",
+        "OUT_WIDTH": "64",
+        "frequency_mhz": "50",
+        "period_ns": "20.0",
+        "WNS_ns": "7.511",
+        "WHS_ns": "0.010",
+        "synth_seconds": "316.884",
+        "opt_seconds": "37.739",
+        "place_seconds": "305.061",
+        "route_seconds": "248.779",
+        "total_vivado_seconds": "1023.265",
+        "implementation_retry": "disabled",
+        "rtl_modified": "0"
+      },
+      "mfcc_resources": {
+        "instance": "mfcc",
+        "module": "(top)",
+        "lut": 35601,
+        "logic_lut": 34699,
+        "lutram": 0,
+        "srl": 902,
+        "ff": 52870,
+        "ramb36": 3,
+        "ramb18": 7,
+        "bram36eq": 6.5,
+        "uram": 0,
+        "dsp": 59
+      },
+      "dct_resources": {
+        "instance": "gen_skew.my_dct",
+        "module": "dct64_serial",
+        "lut": 5875,
+        "logic_lut": 5866,
+        "lutram": 0,
+        "srl": 9,
+        "ff": 11981,
+        "ramb36": 0,
+        "ramb18": 0,
+        "bram36eq": 0.0,
+        "uram": 0,
+        "dsp": 41
+      }
+    },
+    "matrixdct": {
+      "name": "matrixdct",
+      "matrix": 1,
+      "frames": 4,
+      "coefficients": 256,
+      "cycles_4frames": 43687,
+      "time_us_4frames_50mhz": 873.74,
+      "average_us_per_frame_50mhz": 218.435,
+      "compile_wall_seconds": 0.147,
+      "simulation_wall_seconds": 5.916,
+      "raw_csv_sha256": "68a678c1aed797fa0aed98903ca3453623b6490c30c2fc2b1f31671d1d064f16",
+      "accuracy_vs_float_orthonormal_dct": {
+        "mae": 3.428547093289361,
+        "rmse": 12.490109975036418,
+        "max_abs_error": 101.60887915401383,
+        "snr_db": 16.049668875179485,
+        "within_1": 36.328125,
+        "within_2": 65.234375
+      },
+      "implementation_50mhz": {
+        "timing_result": "TIMING_PASS",
+        "git_commit": "8f1fd371d7a8cf441a2584526f4bac2570d97cfb",
+        "variant": "matrixdct",
+        "DCT_USE_MATRIX": "1",
+        "N": "1024",
+        "STRIDE": "512",
+        "OUT_WIDTH": "64",
+        "frequency_mhz": "50",
+        "period_ns": "20.0",
+        "WNS_ns": "8.254",
+        "WHS_ns": "0.010",
+        "synth_seconds": "328.979",
+        "opt_seconds": "31.188",
+        "place_seconds": "247.919",
+        "route_seconds": "184.013",
+        "total_vivado_seconds": "887.326",
+        "implementation_retry": "disabled",
+        "rtl_modified": "0"
+      },
+      "mfcc_resources": {
+        "instance": "mfcc",
+        "module": "(top)",
+        "lut": 30188,
+        "logic_lut": 29243,
+        "lutram": 52,
+        "srl": 893,
+        "ff": 41987,
+        "ramb36": 5,
+        "ramb18": 8,
+        "bram36eq": 9.0,
+        "uram": 0,
+        "dsp": 19
+      },
+      "dct_resources": {
+        "instance": "gen_matrix_reference.my_dct",
+        "module": "dct64_matrix",
+        "lut": 647,
+        "logic_lut": 595,
+        "lutram": 52,
+        "srl": 0,
+        "ff": 1098,
+        "ramb36": 2,
+        "ramb18": 1,
+        "bram36eq": 2.5,
+        "uram": 0,
+        "dsp": 1
+      }
+    }
+  },
+  "frequency_runs": [
+    {
+      "frequency_mhz": 50,
+      "timing_result": "TIMING_PASS",
+      "wns_ns": 7.511,
+      "whs_ns": 0.01,
+      "cycles_4frames": 39505,
+      "time_us_4frames": 790.1,
+      "average_us_per_frame": 197.525,
+      "total_vivado_seconds": 1023.265
+    },
+    {
+      "frequency_mhz": 100,
+      "timing_result": "TIMING_PASS",
+      "wns_ns": 0.688,
+      "whs_ns": 0.003,
+      "cycles_4frames": 39505,
+      "time_us_4frames": 395.05,
+      "average_us_per_frame": 98.7625,
+      "total_vivado_seconds": 1088.569
+    },
+    {
+      "frequency_mhz": 150,
+      "timing_result": "TIMING_FAIL",
+      "wns_ns": -0.196,
+      "whs_ns": 0.01,
+      "cycles_4frames": 39505,
+      "time_us_4frames": 263.3666666666667,
+      "average_us_per_frame": 65.84166666666667,
+      "total_vivado_seconds": 1828.849
+    }
+  ],
+  "precision": {
+    "matrix_minus_new_skew_normalized": {
+      "mae": 0.004591107980979499,
+      "rmse": 0.005612513725178852,
+      "max_abs_error": 0.015573386017592838,
+      "identical_percent": 0.390625
+    },
+    "old_dense_skew_minus_new_recursive_skew_normalized": {
+      "mae": 0.0005826380338146001,
+      "rmse": 0.000984162322790326,
+      "max_abs_error": 0.0027621358640104177,
+      "identical_percent": 62.109375
+    }
+  },
+  "speed": {
+    "new_skew_faster_than_matrix_percent": 10.586001771927611,
+    "new_recursive_minus_old_dense_cycles": 7
+  },
+  "resource_change_new_recursive_vs_old_dense": {
+    "mfcc": {
+      "lut": 3658,
+      "ff": 2181,
+      "bram36eq": 0.0,
+      "dsp": -64
+    },
+    "dct": {
+      "lut": 1286,
+      "ff": 2164,
+      "bram36eq": 0.0,
+      "dsp": -64
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "configuration": {
+    "n": 1024,
+    "stride": 512,
+    "out_width": 64,
+    "dct_use_matrix": 0,
+    "stalls": 0,
+    "frames": 4
+  },
+  "baseline_rtl_sha256": {
+    "src/work/filter_bank.v": "c80e1399e0cfd3795a60e18bfb100300712628023f1c3aa1f99e9c6fd061e2fd",
+    "src/work/power_spectrum.v": "f21cc8168c91e8596827420e4f4528fa4c10b1d1aec41ac41978571e9dc8b8c5",
+    "src/work/DCT40_64/DCT/dct8.v": "15557e067379275817c9cb79fbc69568c6a65491f88c999f248d1c417dd7d974",
+    "src/work/DCT40_64/dct8_tdm_bank.v": "a65d74935e7fe0122d13b8d6a8b97269d1bbb6d86624eb14e7bbab013abd9c5e",
+    "src/work/DCT40_64/skewdct8_tdm.v": "7a991348ebefe7adcd93882516a4332f3c8f8bc08e599dae1e035b7a585992b7",
+    "src/work/DCT40_64/skewdct_8.v": "477ded916cd3bc98bb7fc227edede5abbf631a0a1aa313cf6db857d0e969788f",
+    "src/work/FFT512/radix2_4_core/fft_merge_kernel.v": "171262d476bf26d2ac14363b0f1b57cd6b836e3999ad46b905988b7f737ad9f7"
+  },
+  "candidate_rtl_sha256": {
+    "src/work/filter_bank.v": "c14459e119ad89e95d80107682fce99a8b874196e71c3f521e65fca7b4b8acb4",
+    "src/work/power_spectrum.v": "885ff46689db7a7085cb2c7b29bde3976bfaf297e5a7ee0de758ba59009bda35",
+    "src/work/DCT40_64/DCT/dct8.v": "293eae6ef4f8281286e330d64297907b601b4eda1b4f30b57cd5132815159a2e",
+    "src/work/DCT40_64/dct8_tdm_bank.v": "50b6f579989d6335bc5519a5c872fd9d2080dcbc1b29362b716b19f89c3f4931",
+    "src/work/DCT40_64/skewdct8_tdm.v": "8d3b2bcd60fcbea1d23b2e6f6057683d29100cac04726f7fd7fb1cd91d62b10d",
+    "src/work/DCT40_64/skewdct_8.v": "619538ee736f90c00e3a146baeca622965bd39a96d0a1bccbf272f21deba24fb",
+    "src/work/FFT512/radix2_4_core/fft_merge_kernel.v": "605933cea198ed3ada020532041835776321e4560b4cdd07352d37f69b36fa38"
+  },
+  "baseline": {
+    "label": "baseline",
+    "cycles": 36402,
+    "coefficients": 256,
+    "stall_checks": 0,
+    "compile_wall_seconds": 0.18,
+    "simulation_wall_seconds": 5.273,
+    "csv_sha256": "b87bf9db06be5fb7d9f890c7660fffdfe76dc6618e793dc0e5b43e65b01c907b"
+  },
+  "combined": {
+    "label": "combined",
+    "cycles": 39498,
+    "coefficients": 256,
+    "stall_checks": 0,
+    "compile_wall_seconds": 0.169,
+    "simulation_wall_seconds": 6.147,
+    "csv_sha256": "b87bf9db06be5fb7d9f890c7660fffdfe76dc6618e793dc0e5b43e65b01c907b"
+  },
+  "mismatches": 0,
+  "first_differences": [],
+  "total_wall_seconds": 11.826
+}

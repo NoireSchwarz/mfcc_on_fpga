@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-// Six registered stages: input/coefficient selection, products, three adder levels, rounding.
+// Modes 0/1: full coefficient matrix, six stages. Mode 2: c_in[2:0] is BLOCK, thirteen recursive stages.
 // ED freezes data, tags and validity together; RST flushes validity independently of ED.
 module skewdct8 (
 	CLK, RST, ED, in_valid, in_tag, out_valid, out_tag,
@@ -111,7 +111,24 @@ module skewdct8 (
 	output wire signed [OUT_W - 1:0] y5;
 	output wire signed [OUT_W - 1:0] y6;
 	output wire signed [OUT_W - 1:0] y7;
-	input signed [(64 * COEF_W) - 1:0] c_in;
+	// Recursive mode consumes only the family ID; generic modes retain all 64 coefficients.
+	input signed [((USE_COEFF_PORT == 2) ? 3 : (64 * COEF_W)) - 1:0] c_in;
+    // USE_COEFF_PORT=2 selects the structured project-family implementation.
+    // c_in is now the 3-bit BLOCK ID in mode 2. Generic modes 0/1 retain their original interface.
+    generate if(USE_COEFF_PORT==2) begin:gen_recursive
+        wire signed [8*OUT_W-1:0] values;
+        skewdct8_recursive_pipe #(.DATA_W(DATA_W),.OUT_W(OUT_W)) recursive_i(
+            .CLK(CLK),.RST(RST),.ED(ED),.in_valid(in_valid),.in_tag(in_tag),.out_valid(out_valid),.out_tag(out_tag),
+            .X({x0,x1,x2,x3,x4,x5,x6,x7}),.BLOCK(c_in[2:0]),.Y(values));
+        assign y0=values[7*OUT_W+:OUT_W];
+        assign y1=values[6*OUT_W+:OUT_W];
+        assign y2=values[5*OUT_W+:OUT_W];
+        assign y3=values[4*OUT_W+:OUT_W];
+        assign y4=values[3*OUT_W+:OUT_W];
+        assign y5=values[2*OUT_W+:OUT_W];
+        assign y6=values[1*OUT_W+:OUT_W];
+        assign y7=values[0*OUT_W+:OUT_W];
+    end else begin:gen_dense
 	localparam signed [ACC_W - 1:0] ROUND_BIAS = (COEF_FRAC == 0 ? {ACC_W {1'b0}} : {{ACC_W - 1 {1'b0}}, 1'b1} <<< (COEF_FRAC - 1));
 	wire signed [COEF_W - 1:0] K00 = (USE_COEFF_PORT ? c_in[63 * COEF_W+:COEF_W] : C00);
 	wire signed [COEF_W - 1:0] K01 = (USE_COEFF_PORT ? c_in[62 * COEF_W+:COEF_W] : C01);
@@ -177,7 +194,6 @@ module skewdct8 (
 	wire signed [COEF_W - 1:0] K75 = (USE_COEFF_PORT ? c_in[2 * COEF_W+:COEF_W] : C75);
 	wire signed [COEF_W - 1:0] K76 = (USE_COEFF_PORT ? c_in[COEF_W+:COEF_W] : C76);
 	wire signed [COEF_W - 1:0] K77 = (USE_COEFF_PORT ? c_in[0+:COEF_W] : C77);
-
     localparam integer PRODUCT_W = DATA_W + COEF_W;
     localparam integer PIPE_STAGES = 6;
     localparam signed [ACC_W-1:0] NEG_ROUND_BIAS = ROUND_BIAS - 1'b1;
@@ -315,4 +331,212 @@ module skewdct8 (
                 end
         end
     end
+    end endgenerate
+endmodule
+
+// Recursive SkewDCT-II: BLOCK directly selects one of the eight fixed factor families.
+// No matrix coefficient bus, matrix ROM, or signature decoder is required.
+// Puschel, ICASSP 2003, eqs. (25)-(27): n=8 -> 4 -> 2, k=2.
+// Arithmetic: 12 real multiplications and 29 transform add/sub operations.
+// Fixed-point implementation adds registered rounding; there is no multiply-add
+// combinational stage. II=1 enabled edge; 13 enabled register stages.
+module skewdct8_recursive_pipe #(
+    parameter integer DATA_W=16, OUT_W=24
+)(
+    input CLK, RST, ED, in_valid,
+    input [2:0] in_tag,
+    output out_valid,
+    output [2:0] out_tag,
+    input signed [8*DATA_W-1:0] X,
+    input [2:0] BLOCK,
+    output signed [8*OUT_W-1:0] Y
+);
+    localparam integer GUARD_FRAC=8;
+    localparam integer IW=DATA_W+16; // eight fractional + eight integer guard bits
+    localparam integer FW=27, FF=21, PW=IW+FW, STAGES=13;
+    localparam signed [PW-1:0] P_HALF={{PW-1{1'b0}},1'b1} <<< (FF-1);
+    localparam signed [IW-1:0] Y_HALF={{IW-1{1'b0}},1'b1} <<< (GUARD_FRAC-1);
+    reg [STAGES-1:0] valid_q;
+    reg [2:0] tag_q[0:STAGES-1], block_q[0:STAGES-1];
+    reg signed [IW-1:0] x_q[0:7];
+    reg signed [IW-1:0] leaf_sum[0:3],leaf_diff[0:3],leaf_sum_d[0:3];
+    reg signed [FW-1:0] leaf_factor[0:3];
+    reg signed [PW-1:0] leaf_product[0:3];
+    reg signed [IW-1:0] leaf_result[0:7];
+    reg signed [IW-1:0] mid_sum[0:3],mid_diff[0:3],mid_sum_d[0:3],mid_sum_r[0:3],mid_scaled[0:3];
+    reg signed [FW-1:0] mid_factor[0:1];
+    reg signed [PW-1:0] mid_product[0:3];
+    reg signed [IW-1:0] mid_result[0:7];
+    reg signed [IW-1:0] root_sum[0:3],root_diff[0:3],root_sum_d[0:3],root_sum_r[0:3],root_scaled[0:3];
+    reg signed [FW-1:0] root_factor;
+    reg signed [PW-1:0] root_product[0:3];
+    reg signed [IW-1:0] result_q[0:7],rounded_q[0:7];
+    integer i;
+
+    function signed [FW-1:0] factor;
+        input [2:0] block_id,which;
+        begin
+            case({which,block_id})
+                6'd0: factor = 27'sd1048892;
+                6'd1: factor = 27'sd1051425;
+                6'd2: factor = 27'sd1056522;
+                6'd3: factor = 27'sd1064244;
+                6'd4: factor = 27'sd1074689;
+                6'd5: factor = 27'sd1087987;
+                6'd6: factor = 27'sd1104313;
+                6'd7: factor = 27'sd1123884;
+                6'd8: factor = 27'sd42727119;
+                6'd9: factor = 27'sd14253819;
+                6'd10: factor = 27'sd8566050;
+                6'd11: factor = 27'sd6133390;
+                6'd12: factor = 27'sd4785806;
+                6'd13: factor = 27'sd3931480;
+                6'd14: factor = 27'sd3342802;
+                6'd15: factor = 27'sd2913561;
+                6'd16: factor = 27'sd1447815;
+                6'd17: factor = 27'sd1384791;
+                6'd18: factor = 27'sd1330095;
+                6'd19: factor = 27'sd1282529;
+                6'd20: factor = 27'sd1241133;
+                6'd21: factor = 27'sd1205139;
+                6'd22: factor = 27'sd1173922;
+                6'd23: factor = 27'sd1146975;
+                6'd24: factor = 27'sd1520688;
+                6'd25: factor = 27'sd1605358;
+                6'd26: factor = 27'sd1704360;
+                6'd27: factor = 27'sd1821051;
+                6'd28: factor = 27'sd1959964;
+                6'd29: factor = 27'sd2127368;
+                6'd30: factor = 27'sd2332183;
+                6'd31: factor = 27'sd2587535;
+                6'd32: factor = 27'sd1049841;
+                6'd33: factor = 27'sd1060049;
+                6'd34: factor = 27'sd1080971;
+                6'd35: factor = 27'sd1113677;
+                6'd36: factor = 27'sd1159943;
+                6'd37: factor = 27'sd1222503;
+                6'd38: factor = 27'sd1305486;
+                6'd39: factor = 27'sd1415176;
+                6'd40: factor = 27'sd21369996;
+                6'd41: factor = 27'sd7146273;
+                6'd42: factor = 27'sd4315480;
+                6'd43: factor = 27'sd3112519;
+                6'd44: factor = 27'sd2452493;
+                6'd45: factor = 27'sd2039623;
+                6'd46: factor = 27'sd1760244;
+                6'd47: factor = 27'sd1561406;
+                6'd48: factor = 27'sd1053650;
+                6'd49: factor = 27'sd1095759;
+                6'd50: factor = 27'sd1188968;
+                6'd51: factor = 27'sd1356484;
+                6'd52: factor = 27'sd1652880;
+                6'd53: factor = 27'sd2224402;
+                6'd54: factor = 27'sd3612233;
+                6'd55: factor = 27'sd10697884;
+                default: factor=27'sd0;
+            endcase
+        end
+    endfunction
+    function signed [IW-1:0] lift;
+        input signed [DATA_W-1:0] value;
+        reg signed [IW-1:0] extended;
+        begin extended=value; lift=extended <<< GUARD_FRAC; end
+    endfunction
+    function signed [IW-1:0] round_product;
+        input signed [PW-1:0] value;
+        reg signed [PW-1:0] biased;
+        begin
+            biased=value+(value[PW-1] ? P_HALF-1'b1 : P_HALF);
+            round_product=biased >>> FF;
+        end
+    endfunction
+
+    assign out_valid=valid_q[STAGES-1];
+    assign out_tag=tag_q[STAGES-1];
+    genvar g;
+    generate for(g=0;g<8;g=g+1) begin:OUTPUTS
+        assign Y[(7-g)*OUT_W+:OUT_W]=rounded_q[g] >>> GUARD_FRAC;
+    end endgenerate
+
+    always @(posedge CLK) begin
+        if(RST) begin
+            valid_q<=0;
+            for(i=0;i<STAGES;i=i+1) begin tag_q[i]<=0;block_q[i]<=0;end
+        end else if(ED) begin
+            valid_q<={valid_q[STAGES-2:0],in_valid};
+            tag_q[0]<=in_tag;
+            block_q[0]<=BLOCK;
+            for(i=1;i<STAGES;i=i+1) begin tag_q[i]<=tag_q[i-1];block_q[i]<=block_q[i-1];end
+            // S0: input capture, fraction extension and direct family-ID capture.
+            if(in_valid)
+                for(i=0;i<8;i=i+1) x_q[i]<=lift(X[(7-i)*DATA_W+:DATA_W]);
+            // S1: four two-point butterflies; coefficient selection is parallel.
+            if(valid_q[0]) begin
+                leaf_sum[0]<=x_q[0]+x_q[7];leaf_diff[0]<=x_q[0]-x_q[7];
+                leaf_sum[1]<=x_q[3]+x_q[4];leaf_diff[1]<=x_q[3]-x_q[4];
+                leaf_sum[2]<=x_q[1]+x_q[6];leaf_diff[2]<=x_q[1]-x_q[6];
+                leaf_sum[3]<=x_q[2]+x_q[5];leaf_diff[3]<=x_q[2]-x_q[5];
+                for(i=0;i<4;i=i+1) leaf_factor[i]<=factor(block_q[0],i);
+            end
+            // S2: leaf products only; sums follow an equal-length delay.
+            if(valid_q[1])
+                for(i=0;i<4;i=i+1) begin
+                    leaf_product[i]<=leaf_diff[i]*leaf_factor[i];leaf_sum_d[i]<=leaf_sum[i];
+                end
+            // S3: registered product rounding, with eight fractional guard bits.
+            if(valid_q[2])
+                for(i=0;i<4;i=i+1) begin
+                    leaf_result[2*i]<=leaf_sum_d[i];leaf_result[2*i+1]<=round_product(leaf_product[i]);
+                end
+            // S4: the two four-point transforms' sum/difference stage.
+            if(valid_q[3]) begin
+                for(i=0;i<4;i=i+1) begin
+                    mid_sum[i]<=leaf_result[4*(i/2)+(i%2)]+leaf_result[4*(i/2)+2+(i%2)];
+                    mid_diff[i]<=leaf_result[4*(i/2)+(i%2)]-leaf_result[4*(i/2)+2+(i%2)];
+                end
+                mid_factor[0]<=factor(block_q[3],3'd4);mid_factor[1]<=factor(block_q[3],3'd5);
+            end
+            // S5: four midpoint products, with no following accumulation.
+            if(valid_q[4])
+                for(i=0;i<4;i=i+1) begin
+                    mid_product[i]<=mid_diff[i]*mid_factor[i/2];mid_sum_d[i]<=mid_sum[i];
+                end
+            // S6: midpoint product rounding.
+            if(valid_q[5])
+                for(i=0;i<4;i=i+1) begin mid_scaled[i]<=round_product(mid_product[i]);mid_sum_r[i]<=mid_sum_d[i];end
+            // S7: C4 sparse post-add, exactly one adder per affected output.
+            if(valid_q[6]) begin
+                mid_result[0]<=mid_sum_r[0];mid_result[1]<=mid_sum_r[1]+mid_scaled[1];
+                mid_result[2]<=mid_scaled[0];mid_result[3]<=mid_scaled[1];
+                mid_result[4]<=mid_sum_r[2];mid_result[5]<=mid_sum_r[3]+mid_scaled[3];
+                mid_result[6]<=mid_scaled[2];mid_result[7]<=mid_scaled[3];
+            end
+            // S8: top-level butterflies, plus separately registered root factor.
+            if(valid_q[7]) begin
+                for(i=0;i<4;i=i+1) begin root_sum[i]<=mid_result[i]+mid_result[i+4];root_diff[i]<=mid_result[i]-mid_result[i+4];end
+                root_factor<=factor(block_q[7],3'd6);
+            end
+            // S9: four top-level products only.
+            if(valid_q[8])
+                for(i=0;i<4;i=i+1) begin root_product[i]<=root_diff[i]*root_factor;root_sum_d[i]<=root_sum[i];end
+            // S10: root product rounding.
+            if(valid_q[9])
+                for(i=0;i<4;i=i+1) begin root_scaled[i]<=round_product(root_product[i]);root_sum_r[i]<=root_sum_d[i];end
+            // S11: C8 sparse post-add; no serial post-add cascade.
+            if(valid_q[10]) begin
+                result_q[0]<=root_sum_r[0];result_q[1]<=root_sum_r[1]+root_scaled[3];
+                result_q[2]<=root_sum_r[2]+root_scaled[2];result_q[3]<=root_sum_r[3]+root_scaled[1];
+                for(i=0;i<4;i=i+1) result_q[i+4]<=root_scaled[i];
+            end
+            // S12: final sign-dependent round-to-nearest, ties away from zero.
+            if(valid_q[11])
+                for(i=0;i<8;i=i+1) rounded_q[i]<=result_q[i]+(result_q[i][IW-1] ? Y_HALF-1'b1 : Y_HALF);
+        end
+    end
+    // All eight BLOCK values are valid. Tags remain independent transaction metadata.
+    // synthesis translate_off
+    always @(posedge CLK)
+        if(!RST && ED && in_valid && ((^BLOCK) === 1'bx))
+            $fatal(1,"recursive SkewDCT8 received an unknown BLOCK family ID");
+    // synthesis translate_on
 endmodule

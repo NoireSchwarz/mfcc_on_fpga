@@ -1,0 +1,16 @@
+﻿Topic,Note
+MatrixDCT storage replacement,"Register/LUT MatrixDCT hardware fields now use supplied 2026-10-27 50 MHz OOC post-route summaries. Original BRAM measurements remain historical. New whole-MFCC resources: 30110 LUT, 43473 FF, 6.5 BRAM, 19 DSP; batch 43622 cycles."
+Standalone DCT scope,"Standalone top-level resources and latency are separate from the inclusive MFCC DCT hierarchy. Both standalone DCTs report zero BRAM; MatrixDCT uses one DSP and SkewDCT 41, so arithmetic parallelism remains different."
+Supplied result evidence,CSV and JSON summaries agree; original Vivado reports and coefficient dumps were not supplied. Positive WNS/WHS are user-reported; TNS and setup/hold failure counts remain blank. No new whole-MFCC SkewDCT implementation results were supplied.
+Selection rule,Keep the latest valid value per test project and configuration. Architecture/pipeline/version names are not separate test projects.
+Configuration key,"Project, backend under comparison, N, frequency, output lanes, frame count and stall condition identify a case. Inclusive hierarchy scope is retained."
+Partial updates,Refresh metrics separately: a 150 MHz resource update does not invent new 50/100 MHz resources. Unchanged metrics use the latest available reports. Runtime cycle counts use the latest matching regression and are converted by frequency.
+Sources,Source paths in tables and JSON are relative to docs/benchmarks/. Per-metric source columns identify the original evidence; different metric groups can come from different packages.
+Resource priority,"LUT, FF, BRAM and DSP appear first. DCT/C64/SkewDCT8 hierarchy rows are already included in parent totals."
+BRAM unit,One BRAM tile is a 36 Kb equivalent; each RAMB18 counts as 0.5 tile.
+FFT evidence,"XFFT resource reports use fixed-size cores and a 10 ns synthesis clock; custom FFT resources use a shared runtime core after routing at 20 ns. The 64..2048 XFFT latency numbers use runtime_2048. These attributes remain source metadata, not version-specific result rows."
+FFT 16-point counting,Latest reported custom complete-frame latency is 82 cycles; its accompanying regression records 83. The primary table retains the latest reported value and marks this counting discrepancy.
+FFT first output,First-output cycles are taken from the latest package reporting that metric (2026-10-22); complete-frame comparisons are updated by the 2026-10-25 package.
+Timing/accuracy scope,"Times are RTL cycles divided by MHz, not board/PS/DMA measurements. Four-frame averages are not independently measured single-frame latency or steady-state II. MFCC reference errors do not isolate DCT error or recognition accuracy."
+History,"Superseded values remain in immutable original reports for traceability, outside primary tables. The explicit paired memory before/after experiment retains both required comparison sides."
+200 MHz status,Not measured for the latest RTL. Frozen-route estimate is approximately -1.409 ns. The old 200 MHz run was interrupted during placement and is not a pass/fail result.

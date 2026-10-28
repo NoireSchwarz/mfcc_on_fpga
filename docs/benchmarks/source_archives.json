@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ver2",
+    "project": "MFCC frequency sweep",
+    "archive": "KV260_MFCC_ver2_N1024_50_100_150MHz_20261025(1).zip",
+    "bytes": 231411948,
+    "sha256": "46c02e8ec1ebd72c03bd31d84834e17ad02abbb635da1f53f94490ec22012997",
+    "tested_commit": "Not recorded in the supplied package",
+    "evidence_root": "evidence/ver2"
+  },
+  {
+    "id": "baseline",
+    "project": "FFT point sweep and matched BRAM comparison",
+    "archive": "KV260_working_mfcc_fft_bram_tested_20261022.zip",
+    "bytes": 6022774,
+    "sha256": "0d6dc18306233a02c603156a6210c11cb37e73d4ff321c659f30b6ea576413b0",
+    "tested_commit": "Not recorded in the supplied package",
+    "evidence_root": "evidence/baseline"
+  },
+  {
+    "id": "fft_vs_xfft_20261025",
+    "project": "Custom FFT versus XFFT",
+    "archive": "KV260_FFT_vs_XFFT_16_2048_50MHz_20261025.zip",
+    "bytes": 48523938,
+    "sha256": "9f02b4355d6d74dc4d57d6372036e74b2296c0723cd6e25ac4360c52cf3eb741",
+    "tested_commit": "Not recorded in the supplied package",
+    "evidence_root": "evidence/fft_vs_xfft_20261025"
+  },
+  {
+    "id": "dct_retest_20261025",
+    "project": "SkewDCT versus MatrixDCT retest",
+    "archive": "KV260_MFCC_N1024_50MHz_SkewDCT_vs_MatrixDCT_20261025.zip",
+    "bytes": 249577,
+    "sha256": "2862d49914fd4088d21fa0f58609f495ace22a0431f0a4ef58dda1a1f8bfb9d2",
+    "tested_commit": "Not recorded in the supplied package",
+    "evidence_root": "evidence/dct_retest_20261025"
+  },
+  {
+    "id": "recursive_skewdct_20261026",
+    "project": "Updated SkewDCT measurements",
+    "archive": "KV260_recursive_skewdct_N1024_20261026.zip",
+    "bytes": 181634,
+    "sha256": "cf0ed70767ac8a9c877f5faa2552efd7052fdd336a2b95f22745d91dcf0ad2fe",
+    "tested_commit": "8f1fd371d7a8cf441a2584526f4bac2570d97cfb",
+    "evidence_root": "recursive_skewdct_N1024_20261026"
+  },
+  {
+    "id": "c64_pipeline_20261026",
+    "project": "Latest N1024 150 MHz MFCC result",
+    "archive": "KV260_C64_pipeline_N1024_150MHz_PASS_20261026.zip",
+    "bytes": 45331,
+    "sha256": "f69d26eb50311e374bd121320a0cf968945b9bf867a1b72fe52ba4e617321237",
+    "tested_commit": "b0db7a079ba203eb0b2b88bb8a03c578899d5549",
+    "evidence_root": "c64_pipeline_N1024_150MHz_20261026"
+  }
+]
