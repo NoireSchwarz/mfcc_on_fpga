@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "date": "2026-11-20",
+  "upstream_commit": "0148cd8f4927b6a125a5869b8aa16796e065ab27",
+  "source_commit": "5ecd9f6deb4fe015f0a65183b809a80ae9dc9e57",
+  "functional_groups": 26,
+  "rtl_files": 48,
+  "source_bundle_files": 64,
+  "all_source_hashes_verified": true,
+  "original_xfft_fixed_512_and_ip_instances_verified": true,
+  "vendor_fft_and_multiplier_ip_not_instantiated_in_production": true,
+  "workbook_csv_json_cells_match": true,
+  "processing_category_first_and_notes_last": true,
+  "n1024_bundle_simulation": {
+    "status": "PASS",
+    "frames": 4,
+    "coefficients": 256,
+    "cycles": 39508,
+    "output_matches_final_waveform_regression": true,
+    "output_sha256": "d2d1c0b91c6a6814b01f523af1faa7d3a1802110a2245e6d4f17992fc7f5bdda"
+  },
+  "production_rtl_changed": false,
+  "existing_ip_and_architecture_unchanged": true
+}
