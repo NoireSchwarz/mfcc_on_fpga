@@ -2,7 +2,7 @@
 
 ## Recursive SkewDCT8 branch
 
-The [module-by-module comparison with the original Mel Filter Bank](docs/contributions/Module_Comparison.md) lists the final branch's 26 functional groups across pre-processing, power spectrum, Mel/log, DCT and output. It identifies original IP cores, custom RTL additions, adapted upstream stages and the optional MatrixDCT reference. [Excel table](docs/contributions/Module_Comparison.xlsx) and [final RTL source bundle](docs/contributions/MFCC_SkewDCT_Final_Source.zip).
+The [module-by-module comparison with the original Mel Filter Bank](docs/contributions/Module_Comparison.md) lists the final branch's 12 major algorithm/processing blocks across pre-processing, power spectrum, Mel/log, DCT and output. It identifies original IP cores, custom RTL additions, adapted upstream stages while folding wrappers, memory and control into their parent processing blocks. [Excel table](docs/contributions/Module_Comparison.xlsx) and [final RTL source bundle](docs/contributions/MFCC_SkewDCT_Final_Source.zip).
 
 The shared SkewDCT8 now uses a registered 8-to-4-to-2 factorization for the project's eight coefficient families. Recursive mode receives a three-bit family ID directly; original parameter declarations and generic dense modes remain available. The recursive transform expresses 12 real products and 29 add/subtract operations, with multiplication, rounding and sparse post-adds separated by registers. This arithmetic count is not a measured DSP count.
 
@@ -53,7 +53,7 @@ Das Design des DCT-Moduls orientiert sich an den folgenden Publikationen [^1] [^
 
 ### 2026-11-20 - Document module contributions and publish the final RTL snapshot
 
-- Compared the final SkewDCT branch with the original `lxschwalb/fpga_mel_filter_bank` commit `0148cd8`, using 26 functional groups and five processing stages. Kept remarks in the rightmost column and explicitly identified vendor IP, rewritten stages and integrated/adapted arithmetic.
+- Compared the final SkewDCT branch with the original `lxschwalb/fpga_mel_filter_bank` commit `0148cd8`, using 12 major algorithm/processing blocks and five processing stages. Wrappers, memories, control and the optional MatrixDCT reference are not counted separately. Kept remarks in the rightmost column and explicitly identified vendor IP, rewritten stages and integrated/adapted arithmetic.
 - Documented the eight FFT lengths, including 16/32, with the AMD Radix-4-specific size restriction stated accurately. Recorded the sparse 64-band Mel lookup, wide energy accumulation and fractional logarithm pipeline changes.
 - Added an English Markdown/CSV/Excel table, complete RTL/coefficient hash inventory and a deterministic final source bundle. Retained the upstream MIT notice. Production RTL and the existing vendor IP directory are unchanged.
 

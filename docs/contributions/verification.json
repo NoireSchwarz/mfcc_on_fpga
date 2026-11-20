@@ -3,7 +3,7 @@
   "date": "2026-11-20",
   "upstream_commit": "0148cd8f4927b6a125a5869b8aa16796e065ab27",
   "source_commit": "5ecd9f6deb4fe015f0a65183b809a80ae9dc9e57",
-  "functional_groups": 26,
+  "functional_groups": 12,
   "rtl_files": 48,
   "source_bundle_files": 64,
   "all_source_hashes_verified": true,
@@ -20,5 +20,17 @@
     "output_sha256": "d2d1c0b91c6a6814b01f523af1faa7d3a1802110a2245e6d4f17992fc7f5bdda"
   },
   "production_rtl_changed": false,
-  "existing_ip_and_architecture_unchanged": true
+  "existing_ip_and_architecture_unchanged": true,
+  "stage_counts": {
+    "Pre-processing": 2,
+    "Power Spectrum": 4,
+    "Mel Filtering and Logarithm": 2,
+    "DCT": 3,
+    "Output": 1
+  },
+  "counted_wrapper_memory_controller_rows": 0,
+  "optional_matrix_backend_counted": false,
+  "comparison_granularity": "FFT16 / FFT256 / FFT2x / SkewDCT8 / DCT8 TDM and major processing stages",
+  "previous_verified_source_bundle_unchanged": true,
+  "unchanged_rtl_simulation_result_reused": true
 }
