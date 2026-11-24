@@ -2,6 +2,12 @@
 
 [Benchmark catalog](../README.md) · [Resources](FFT_Resources.csv) · [Latency](FFT_Latency.csv) · [Numerical error](FFT_Accuracy.csv) · [Verified source summary](verified_summary.json)
 
+## 2048-point board test at 150 MHz
+
+The final shared FFT at commit `9be89af` passes the supplied fixed-N2048, full-spectrum KV260 board test: **9,001 LUT, 8,505 FF, 8.5 BRAM tiles, 8 DSP**, setup WNS **+0.731 ns**, hold WHS **+0.011 ns**. Nine datasets cover 15 frames / 30,720 matching words. One board-counted frame takes 25,390 cycles (169.267 us at nominal 150 MHz). The complete JTAG design uses 11,009 LUT / 11,450 FF / 27 BRAM / 8 DSP; FFT2x is included in the algorithm total. [Source-verified reports, resources and scope](../fft2048_150MHz_board_20261124/README.md).
+
+This fixed-size in-system result is separate from the 50 MHz runtime-instance/XFFT comparison below. It does not certify runtime switching or complete MFCC at N2048.
+
 ## Resources
 
 | Backend | Points | LUT | FF | BRAM tiles | DSP | Stage | Resource clock ns |

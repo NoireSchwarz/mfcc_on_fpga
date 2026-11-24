@@ -820,5 +820,172 @@
       "03_results/custom_runtime_50MHz/utilization_synth.rpt",
       "04_reports/FFT_vs_XFFT_16_2048_50MHz_report.md"
     ]
+  },
+  "board_2048_150MHz": {
+    "evidence": "fft2048_150MHz_board_20261124/README.md",
+    "tested_commit": "9be89af18ca9cf42e6f47990d7d1b781afb47615",
+    "resources": {
+      "whole_board_design": {
+        "instance": "kv260_bench_top",
+        "module": "(top)",
+        "LUT": 11009,
+        "FF": 11450,
+        "RAMB36": 23,
+        "RAMB18": 8,
+        "DSP": 8,
+        "BRAM_tile": 27.0
+      },
+      "algorithm": {
+        "instance": "algorithm",
+        "module": "bench_system_algorithm_0",
+        "LUT": 9001,
+        "FF": 8505,
+        "RAMB36": 5,
+        "RAMB18": 7,
+        "DSP": 8,
+        "BRAM_tile": 8.5
+      },
+      "fft2x": {
+        "instance": "fft2x_i",
+        "module": "bench_system_algorithm_0_fft2",
+        "LUT": 345,
+        "FF": 88,
+        "RAMB36": 4,
+        "RAMB18": 0,
+        "DSP": 0,
+        "BRAM_tile": 4.0
+      }
+    },
+    "cases": [
+      {
+        "case": "original",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "e53159cbd17bdd20ce822bf85fbbec8086bd439b1504d2a771ff351c87af1c5a"
+      },
+      {
+        "case": "zero",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "a66d50515ebc0d3b50c5a9ed3a0cecc2ffe052bc93c908ed74e05471a8c51baf"
+      },
+      {
+        "case": "impulse",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "5799e2512f64e7f50cf0f79db773c8bea431ac7a113e574f2311e0e38b5d78d5"
+      },
+      {
+        "case": "dc",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "848fd41f604f63d086ce5ebdb7219729eadc03a736f1be3ac663cf5af1bdb43e"
+      },
+      {
+        "case": "alternating",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "9cd8732d24db8f0c9a01ab41a4b62f09fcabb6ce64257ac129c274d877b48cb4"
+      },
+      {
+        "case": "random_low",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "8a025bc5067d8c461dfc4a476a1a69aa38721bf751964086551a890095dd18b8"
+      },
+      {
+        "case": "random_full",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "115a56b7d11fd1b36c74b21a470ec156fda03657cfde40098d28be073812c246"
+      },
+      {
+        "case": "original_4frames",
+        "frames": 4,
+        "input_samples": 8192,
+        "output_words": 8192,
+        "cycles": 101545,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 676.9666666666667,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "016da2182546155d8d230c4b55fcc9ca67dc7b4f054cc9c4d451bcaba022ad1a"
+      },
+      {
+        "case": "mixed_4frames",
+        "frames": 4,
+        "input_samples": 8192,
+        "output_words": 8192,
+        "cycles": 101545,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 676.9666666666667,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "beaa0f70e6a40bcf77a31580879701a474c1a333ba2b8f59d00ee18d2be24dba"
+      }
+    ],
+    "WNS_ns": 0.731,
+    "WHS_ns": 0.011,
+    "scope": "Standalone fixed N=2048 real-input FFT, full complex spectrum, nominal 150 MHz on KV260."
   }
 }

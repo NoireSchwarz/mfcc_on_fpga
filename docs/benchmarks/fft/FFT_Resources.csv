@@ -8,3 +8,6 @@ XFFT,256,50,1563,2855,3.5,9,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_202
 XFFT,32,50,718,1307,1.5,3,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_32_utilization.rpt
 XFFT,512,50,1615,2923,3.5,9,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_512_utilization.rpt
 XFFT,64,50,1502,2747,3.5,9,OOC synthesis estimate,10.0,evidence/fft_vs_xfft_20261025/02_xfft/fixed_core_reports/xfft_fixed_64_utilization.rpt
+Custom FFT / FFT algorithm (inclusive),2048,150,9001,8505,8.5,8,In-system post-route; fixed N2048; inclusive hierarchy,6.666666666666667,fft2048_150MHz_board_20261124/supplied/02_implementation/utilization_hierarchical_post_route.rpt
+Custom FFT / Whole JTAG board-test design,2048,150,11009,11450,27.0,8,In-system post-route; fixed N2048; inclusive hierarchy,6.666666666666667,fft2048_150MHz_board_20261124/supplied/02_implementation/utilization_hierarchical_post_route.rpt
+Custom FFT / FFT2x hierarchy (included in algorithm),2048,150,345,88,4.0,0,In-system post-route; fixed N2048; inclusive hierarchy,6.666666666666667,fft2048_150MHz_board_20261124/supplied/02_implementation/utilization_hierarchical_post_route.rpt

@@ -1,8 +1,10 @@
 # Benchmark catalog — latest results
 
+Latest **2048-point standalone FFT board test at 150 MHz**: **9,001 LUT, 8,505 FF, 8.5 BRAM tiles, 8 DSP**, WNS **+0.731 ns**, WHS **+0.011 ns**; 9 datasets / 15 frames / 30,720 words match. Source snapshots match final shared-architecture commit `9be89af`. [Verified board evidence](fft2048_150MHz_board_20261124/README.md).
+
 Latest supplied 50 MHz results replace the pending register-MatrixDCT hardware fields. **Whole MFCC: 30,110 LUT, 43,473 FF, 6.5 BRAM tiles, 19 DSP. Standalone MatrixDCT: 1,847 LUT, 2,717 FF, zero BRAM, one DSP.** Hardware values are user-reported OOC post-route summaries; original Vivado reports were not supplied. [Source and checks](matrix_register_50MHz_20261027/README.md).
 
-All six supplied benchmark packages and the two 2026-10-27 result summaries are consolidated here. The primary tables retain the **latest valid result for each test project and configuration**. Architecture, pipeline and version changes do not create separate result rows. Different FFT lengths, clock frequencies, backends being compared, output-lane counts, frame counts and stall conditions remain separate configurations.
+All seven accepted benchmark packages and the two 2026-10-27 result summaries are consolidated here. The primary tables retain the **latest valid result for each test project and configuration**. Architecture, pipeline and version changes do not create separate result rows. Different FFT lengths, clock frequencies, backends being compared, output-lane counts, frame counts and stall conditions remain separate configurations.
 
 Metrics are refreshed independently. A package that only updates 150 MHz implementation does not replace the last measured 50/100 MHz resources. Runtime cycles use the latest matching regression; source columns identify the evidence used for each metric. Earlier reports remain available for traceability without duplicating their values in the primary tables.
 
@@ -30,10 +32,10 @@ Latest 150 MHz MFCC: **35,777 LUT, 53,107 FF, 6.5 BRAM tiles and 59 DSP**, with 
 
 ## Complete downloads
 
-- [Excel workbook — 14 classified sheets](MFCC_Benchmark_Summary.xlsx), with resources first.
+- [Excel workbook — 15 classified sheets](MFCC_Benchmark_Summary.xlsx), with resources first.
 - [Consolidated JSON](combined_data.json), [coverage](overview/Coverage.csv) and [source archives with SHA-256](source_archives.json).
 - [Resource CSV](overview/Resources.csv), [source catalog CSV](overview/Sources.csv) and [selection/evidence notes](overview/Readme.csv).
-- [Original evidence manifest](evidence/manifest.json). Source files retained in this collection are byte-identical to their supplied reports. Scripts, duplicate production RTL, checkpoints and executables are not copied into the benchmark catalog.
+- [Original evidence manifest](evidence/manifest.json). Source files retained in this collection are byte-identical to their supplied reports. Earlier evidence collections omit scripts and duplicate RTL. The new board evidence includes a frozen FFT source snapshot and supplied scripts; bitstream/checkpoint hashes are recorded without copying those binaries.
 - [Additional supplied summaries and SHA-256](source_supplements.json), including the [50 MHz MatrixDCT/SkewDCT follow-up](matrix_register_50MHz_20261027/README.md).
 
 ## Timing and evidence scope
@@ -49,7 +51,7 @@ Times are RTL cycle counts divided by MHz, not board/PS/DMA measurements. Four-f
 
 `PASS_REPORTED_WNS_WHS` records positive margins in supplied summaries. TNS and setup/hold failure counts were not supplied and remain blank; no zero-failure count is inferred.
 
-**200 MHz has no completed implementation result for the latest RTL.** The frozen-route estimate is approximately -1.409 ns; it remains an estimate. The earlier frequency-sweep archive also contains an interrupted 200 MHz attempt (`USER_ABORTED_NOT_COUNTED`), which is excluded from pass/fail results. [Current path analysis](c64_pipeline_N1024_150MHz_20261026/README.md).
+**150 MHz is the current operating target.** Earlier 200 MHz estimates and interrupted runs remain historical records; they are not an additional operating point. The N2048 board result above is standalone FFT evidence and does not replace the N1024 whole-MFCC result.
 
 ## Original evidence collections
 

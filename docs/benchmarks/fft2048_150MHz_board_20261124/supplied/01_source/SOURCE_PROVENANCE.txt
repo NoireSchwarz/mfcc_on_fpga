@@ -1,0 +1,10 @@
+Repository: https://github.com/NoireSchwarz/mfcc_on_fpga
+Branch: optimization/skewdct8-recursive-pipeline
+Commit: 9be89af18ca9cf42e6f47990d7d1b781afb47615
+Working tree at source lock: clean
+Algorithm architecture: fft512 -> fft_tree_bram_engine -> fft2x
+Algorithm RTL modifications for this run: none
+Test-only wrapper: bench_transform_latest.v, instantiating fft512 with N=2048 and HALF_SPECTRUM=0
+Clock hardware ratio: PL1 100 MHz * 12 / 8 = 150 MHz
+Vivado: 2026.1
+Device: AMD Kria K26, xck26-sfvc784-2LV-c

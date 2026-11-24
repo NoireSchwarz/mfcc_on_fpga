@@ -52,5 +52,15 @@
     "sha256": "f69d26eb50311e374bd121320a0cf968945b9bf867a1b72fe52ba4e617321237",
     "tested_commit": "b0db7a079ba203eb0b2b88bb8a03c578899d5549",
     "evidence_root": "c64_pipeline_N1024_150MHz_20261026"
+  },
+  {
+    "id": "fft2048_board_latest_20261124",
+    "project": "Latest shared FFT2048 board test at 150 MHz",
+    "archive": "KV260_FFT2048_latest_150MHz_20261124.zip",
+    "received_filename": "1-KV260_FFT2048_latest_150MHz_20261124.zip",
+    "bytes": 10993464,
+    "sha256": "d625913959aeddf2b03b7b7d931b618dbe2cbd0ed1a8e833be205d914c0f2721",
+    "tested_commit": "9be89af18ca9cf42e6f47990d7d1b781afb47615",
+    "evidence_root": "fft2048_150MHz_board_20261124"
   }
 ]

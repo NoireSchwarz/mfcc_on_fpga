@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Tue Nov 24 00:51:53 2026
+# Process ID         : 27668
+# Current directory  : D:/Documents/ChatGPT/MFCC
+# Command line       : vivado.exe -mode batch -source D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build_latest_exact150.tcl -log D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build.log -journal D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build.jou
+# Log file           : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build.log
+# Journal file       : D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build.jou
+# Running On         : PCforInitblankStudio
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34221 MB
+# Swap memory        : 15486 MB
+# Total Virtual      : 49708 MB
+# Available Virtual  : 7710 MB
+#-----------------------------------------------------------
+source {D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build_latest_exact150.tcl}

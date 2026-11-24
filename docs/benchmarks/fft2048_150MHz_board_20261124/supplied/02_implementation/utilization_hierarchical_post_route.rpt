@@ -1,0 +1,128 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Tue Nov 24 01:23:02 2026
+| Host         : PCforInitblankStudio running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/utilization_hierarchical_post_route.rpt
+| Design       : kv260_bench_top
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------------------------------------+----------------------------------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+|                        Instance                       |                                   Module                                   | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | URAM | DSP Blocks |
++-------------------------------------------------------+----------------------------------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+| kv260_bench_top                                       |                                                                      (top) |      11009 |      10518 |     380 |  111 | 11450 |     23 |      8 |    0 |          8 |
+|   (kv260_bench_top)                                   |                                                                      (top) |          1 |          0 |       0 |    1 |     2 |      0 |      0 |    0 |          0 |
+|   dbg_hub                                             |                                                                    dbg_hub |        429 |        409 |      20 |    0 |   741 |      0 |      0 |    0 |          0 |
+|     inst                                              |                                                 dbg_hub_xsdbm_v3_0_6_xsdbm |        429 |        409 |      20 |    0 |   741 |      0 |      0 |    0 |          0 |
+|       BSCANID.u_xsdbm_id                              |                                              dbg_hub_xsdbm_v3_0_6_xsdbm_id |        429 |        409 |      20 |    0 |   741 |      0 |      0 |    0 |          0 |
+|         SWITCH_N_EXT_BSCAN.bscan_switch               |                                          dbg_hub_xsdbm_v3_0_6_bscan_switch |        121 |        121 |       0 |    0 |   125 |      0 |      0 |    0 |          0 |
+|         CORE_XSDB.UUT_MASTER                          |                                             dbg_hub_xsdbm_v3_0_6_icon2xsdb |        259 |        239 |      20 |    0 |   554 |      0 |      0 |    0 |          0 |
+|           U_ICON_INTERFACE                            |                                                    dbg_hub_xsdbm_v3_0_6_if |        155 |        135 |      20 |    0 |   450 |      0 |      0 |    0 |          0 |
+|             U_CMD6_WR                                 |                                                 dbg_hub_xsdbm_v3_0_6_wrreg |         40 |         30 |      10 |    0 |   110 |      0 |      0 |    0 |          0 |
+|               U_WR_FIFO                               |                                                dbg_hub_xsdbm_v3_0_6_wrfifo |         38 |         28 |      10 |    0 |    90 |      0 |      0 |    0 |          0 |
+|                 SUBCORE_FIFO.xsdbm_v3_0_6_wrfifo_inst |                                             dbg_hub_fifo_generator_v13_1_6 |         37 |         27 |      10 |    0 |    90 |      0 |      0 |    0 |          0 |
+|                   inst_fifo_gen                       |                                       dbg_hub_fifo_generator_v13_1_6_synth |         37 |         27 |      10 |    0 |    90 |      0 |      0 |    0 |          0 |
+|                     gconvfifo.rf                      |                                                 dbg_hub_fifo_generator_top |         37 |         27 |      10 |    0 |    90 |      0 |      0 |    0 |          0 |
+|                       grf.rf                          |                                             dbg_hub_fifo_generator_ramfifo |         37 |         27 |      10 |    0 |    90 |      0 |      0 |    0 |          0 |
+|             U_CMD4                                    |                               dbg_hub_xsdbm_v3_0_6_ctl_reg__parameterized0 |         11 |         11 |       0 |    0 |    62 |      0 |      0 |    0 |          0 |
+|             U_CMD6_RD                                 |                                                 dbg_hub_xsdbm_v3_0_6_rdreg |         62 |         52 |      10 |    0 |   134 |      0 |      0 |    0 |          0 |
+|               U_RD_FIFO                               |                                                dbg_hub_xsdbm_v3_0_6_rdfifo |         60 |         50 |      10 |    0 |   114 |      0 |      0 |    0 |          0 |
+|                 SUBCORE_FIFO.xsdbm_v3_0_6_rdfifo_inst |                             dbg_hub_fifo_generator_v13_1_6__parameterized0 |         42 |         32 |      10 |    0 |   114 |      0 |      0 |    0 |          0 |
+|                   inst_fifo_gen                       |                       dbg_hub_fifo_generator_v13_1_6_synth__parameterized0 |         42 |         32 |      10 |    0 |   114 |      0 |      0 |    0 |          0 |
+|                     gconvfifo.rf                      |                                 dbg_hub_fifo_generator_top__parameterized0 |         42 |         32 |      10 |    0 |   114 |      0 |      0 |    0 |          0 |
+|                       grf.rf                          |                             dbg_hub_fifo_generator_ramfifo__parameterized0 |         42 |         32 |      10 |    0 |   114 |      0 |      0 |    0 |          0 |
+|           U_XSDB_BUS_CONTROLLER                       |                                               dbg_hub_xsdbm_v3_0_6_bus_ctl |         66 |         66 |       0 |    0 |    48 |      0 |      0 |    0 |          0 |
+|   engine_i                                            |                                                               bench_engine |        341 |        341 |       0 |    0 |   319 |      0 |      0 |    0 |          0 |
+|   shared_memory                                       |                                                          xpm_memory_tdpram |         52 |         52 |       0 |    0 |     0 |     16 |      0 |    0 |          0 |
+|     xpm_memory_base_inst                              |                                                            xpm_memory_base |         52 |         52 |       0 |    0 |     0 |     16 |      0 |    0 |          0 |
+|   system_i                                            |                                                       bench_system_wrapper |      10186 |       9716 |     360 |  110 | 10388 |      7 |      8 |    0 |          8 |
+|     bench_system_i                                    |                                                               bench_system |      10180 |       9710 |     360 |  110 | 10388 |      7 |      8 |    0 |          8 |
+|       usb_master                                      |                                                  bench_system_usb_master_0 |        674 |        505 |     160 |    9 |  1684 |      2 |      1 |    0 |          0 |
+|         inst                                          |                        bench_system_usb_master_0_jtag_axi_v1_2_24_jtag_axi |        674 |        505 |     160 |    9 |  1684 |      2 |      1 |    0 |          0 |
+|           jtag_axi_engine_u                           |                 bench_system_usb_master_0_jtag_axi_v1_2_24_jtag_axi_engine |        616 |        447 |     160 |    9 |  1513 |      2 |      1 |    0 |          0 |
+|             (jtag_axi_engine_u)                       |                 bench_system_usb_master_0_jtag_axi_v1_2_24_jtag_axi_engine |         44 |         44 |       0 |    0 |   280 |      0 |      0 |    0 |          0 |
+|             U_XSDB_SLAVE                              |                               bench_system_usb_master_0_xsdbs_v1_0_6_xsdbs |         76 |         76 |       0 |    0 |   161 |      0 |      0 |    0 |          0 |
+|             rd_cmd_fifo_i                             |          bench_system_usb_master_0_fifo_generator_v13_2_15__parameterized1 |         39 |         36 |       0 |    3 |   126 |      1 |      0 |    0 |          0 |
+|               inst_fifo_gen                           | bench_system_usb_master_0_fifo_generator_v13_2_15_synth__parameterized1_12 |         39 |         36 |       0 |    3 |   126 |      1 |      0 |    0 |          0 |
+|                 gconvfifo.rf                          |            bench_system_usb_master_0_fifo_generator_top__parameterized1_13 |         39 |         36 |       0 |    3 |   126 |      1 |      0 |    0 |          0 |
+|                   grf.rf                              |        bench_system_usb_master_0_fifo_generator_ramfifo__parameterized1_14 |         39 |         36 |       0 |    3 |   126 |      1 |      0 |    0 |          0 |
+|                     (gntv_or_sync_fifo.mem)           |                        bench_system_usb_master_0_memory__parameterized1_18 |          1 |          1 |       0 |    0 |    54 |      0 |      0 |    0 |          0 |
+|             rx_fifo_i                                 |          bench_system_usb_master_0_fifo_generator_v13_2_15__parameterized0 |         67 |         64 |       0 |    3 |   156 |      0 |      1 |    0 |          0 |
+|               inst_fifo_gen                           |    bench_system_usb_master_0_fifo_generator_v13_2_15_synth__parameterized0 |         67 |         64 |       0 |    3 |   156 |      0 |      1 |    0 |          0 |
+|                 gconvfifo.rf                          |               bench_system_usb_master_0_fifo_generator_top__parameterized0 |         67 |         64 |       0 |    3 |   156 |      0 |      1 |    0 |          0 |
+|                   grf.rf                              |           bench_system_usb_master_0_fifo_generator_ramfifo__parameterized0 |         67 |         64 |       0 |    3 |   156 |      0 |      1 |    0 |          0 |
+|                     gntv_or_sync_fifo.gcx.clkx        |                                    bench_system_usb_master_0_clk_x_pntrs_4 |         24 |         24 |       0 |    0 |    64 |      0 |      0 |    0 |          0 |
+|             tx_fifo_i                                 |                          bench_system_usb_master_0_fifo_generator_v13_2_15 |        252 |         92 |     160 |    0 |   180 |      0 |      0 |    0 |          0 |
+|               inst_fifo_gen                           |                    bench_system_usb_master_0_fifo_generator_v13_2_15_synth |        252 |         92 |     160 |    0 |   180 |      0 |      0 |    0 |          0 |
+|                 gconvfifo.rf                          |                               bench_system_usb_master_0_fifo_generator_top |        252 |         92 |     160 |    0 |   180 |      0 |      0 |    0 |          0 |
+|                   grf.rf                              |                           bench_system_usb_master_0_fifo_generator_ramfifo |        252 |         92 |     160 |    0 |   180 |      0 |      0 |    0 |          0 |
+|                     gntv_or_sync_fifo.gcx.clkx        |                                      bench_system_usb_master_0_clk_x_pntrs |         33 |         33 |       0 |    0 |    64 |      0 |      0 |    0 |          0 |
+|                     gntv_or_sync_fifo.mem             |                                           bench_system_usb_master_0_memory |        192 |         32 |     160 |    0 |    64 |      0 |      0 |    0 |          0 |
+|                       gdm.dm_gen.dm                   |                                             bench_system_usb_master_0_dmem |        192 |         32 |     160 |    0 |    32 |      0 |      0 |    0 |          0 |
+|             u_xsdb_fifo_interface                     |             bench_system_usb_master_0_jtag_axi_v1_2_24_xsdb_fifo_interface |         88 |         88 |       0 |    0 |   474 |      0 |      0 |    0 |          0 |
+|               (u_xsdb_fifo_interface)                 |             bench_system_usb_master_0_jtag_axi_v1_2_24_xsdb_fifo_interface |         44 |         44 |       0 |    0 |    51 |      0 |      0 |    0 |          0 |
+|               rxfifo2xsdb_i                           |                     bench_system_usb_master_0_jtag_axi_v1_2_24_rxfifo2xsdb |         28 |         28 |       0 |    0 |    86 |      0 |      0 |    0 |          0 |
+|               xsdb2read_cmdfifo                       |     bench_system_usb_master_0_jtag_axi_v1_2_24_xsdb2txfifo__parameterized0 |          5 |          5 |       0 |    0 |   134 |      0 |      0 |    0 |          0 |
+|               xsdb2txfifo_i                           |                     bench_system_usb_master_0_jtag_axi_v1_2_24_xsdb2txfifo |          6 |          6 |       0 |    0 |    69 |      0 |      0 |    0 |          0 |
+|               xsdb2write_cmdfifo                      |   bench_system_usb_master_0_jtag_axi_v1_2_24_xsdb2txfifo__parameterized0_2 |          5 |          5 |       0 |    0 |   134 |      0 |      0 |    0 |          0 |
+|             wr_cmd_fifo_i                             |        bench_system_usb_master_0_fifo_generator_v13_2_15__parameterized1_1 |         38 |         35 |       0 |    3 |   126 |      1 |      0 |    0 |          0 |
+|               inst_fifo_gen                           |    bench_system_usb_master_0_fifo_generator_v13_2_15_synth__parameterized1 |         38 |         35 |       0 |    3 |   126 |      1 |      0 |    0 |          0 |
+|                 gconvfifo.rf                          |               bench_system_usb_master_0_fifo_generator_top__parameterized1 |         38 |         35 |       0 |    3 |   126 |      1 |      0 |    0 |          0 |
+|                   grf.rf                              |           bench_system_usb_master_0_fifo_generator_ramfifo__parameterized1 |         38 |         35 |       0 |    3 |   126 |      1 |      0 |    0 |          0 |
+|                     (gntv_or_sync_fifo.mem)           |                           bench_system_usb_master_0_memory__parameterized1 |          0 |          0 |       0 |    0 |    54 |      0 |      0 |    0 |          0 |
+|           axi_bridge_u                                |                      bench_system_usb_master_0_jtag_axi_v1_2_24_axi_bridge |         59 |         59 |       0 |    0 |   171 |      0 |      0 |    0 |          0 |
+|             read_axi_full_u                           |                        bench_system_usb_master_0_jtag_axi_v1_2_24_read_axi |         12 |         12 |       0 |    0 |    92 |      0 |      0 |    0 |          0 |
+|             write_axi_full_u                          |                       bench_system_usb_master_0_jtag_axi_v1_2_24_write_axi |         47 |         47 |       0 |    0 |    79 |      0 |      0 |    0 |          0 |
+|       algorithm                                       |                                                   bench_system_algorithm_0 |       9001 |       8901 |       0 |  100 |  8505 |      5 |      7 |    0 |          8 |
+|         inst                                          |                                   bench_system_algorithm_0_bench_transform |       9001 |       8901 |       0 |  100 |  8505 |      5 |      7 |    0 |          8 |
+|           dut                                         |                                            bench_system_algorithm_0_fft512 |       9001 |       8901 |       0 |  100 |  8505 |      5 |      7 |    0 |          8 |
+|             engine_i                                  |                              bench_system_algorithm_0_fft_tree_bram_engine |       9001 |       8901 |       0 |  100 |  8505 |      5 |      7 |    0 |          8 |
+|               (engine_i)                              |                              bench_system_algorithm_0_fft_tree_bram_engine |        109 |        109 |       0 |    0 |    69 |      0 |      0 |    0 |          0 |
+|               fft2x_i                                 |                                              bench_system_algorithm_0_fft2 |        345 |        345 |       0 |    0 |    88 |      4 |      0 |    0 |          0 |
+|                 (fft2x_i)                             |                                              bench_system_algorithm_0_fft2 |        176 |        176 |       0 |    0 |    88 |      0 |      0 |    0 |          0 |
+|                 cache_a                               |                                   bench_system_algorithm_0_fft_bram_1w1r_5 |         92 |         92 |       0 |    0 |     0 |      1 |      0 |    0 |          0 |
+|               gen_root256.root256_i                   |                                       bench_system_algorithm_0_fft256_1024 |       4473 |       4373 |       0 |  100 |  7217 |      0 |      3 |    0 |          4 |
+|                 gen_direct_fft256.fft256_i            |                                            bench_system_algorithm_0_fft256 |       4473 |       4373 |       0 |  100 |  7217 |      0 |      3 |    0 |          4 |
+|                   U_FFT1                              |                                             bench_system_algorithm_0_FFT16 |       2035 |       1989 |       0 |   46 |  3321 |      0 |      0 |    0 |          0 |
+|                     (U_FFT1)                          |                                             bench_system_algorithm_0_FFT16 |       1236 |       1198 |       0 |   38 |  2754 |      0 |      0 |    0 |          0 |
+|                     UM1307                            |                                          bench_system_algorithm_0_MPUC1307 |        154 |        152 |       0 |    2 |   149 |      0 |      0 |    0 |          0 |
+|                     UM383                             |                                       bench_system_algorithm_0_MPUC924_383 |        219 |        217 |       0 |    2 |   153 |      0 |      0 |    0 |          0 |
+|                     UM541                             |                                           bench_system_algorithm_0_MPUC541 |        122 |        120 |       0 |    2 |   132 |      0 |      0 |    0 |          0 |
+|                     UM707                             |                                           bench_system_algorithm_0_MPUC707 |        312 |        310 |       0 |    2 |   133 |      0 |      0 |    0 |          0 |
+|                   U_FFT2                              |                             bench_system_algorithm_0_FFT16__parameterized0 |       2211 |       2157 |       0 |   54 |  3656 |      0 |      0 |    0 |          0 |
+|                     (U_FFT2)                          |                             bench_system_algorithm_0_FFT16__parameterized0 |       1375 |       1329 |       0 |   46 |  3050 |      0 |      0 |    0 |          0 |
+|                     UM1307                            |                          bench_system_algorithm_0_MPUC1307__parameterized0 |        124 |        122 |       0 |    2 |   165 |      0 |      0 |    0 |          0 |
+|                     UM383                             |                       bench_system_algorithm_0_MPUC924_383__parameterized0 |        243 |        241 |       0 |    2 |   169 |      0 |      0 |    0 |          0 |
+|                     UM541                             |                           bench_system_algorithm_0_MPUC541__parameterized0 |        133 |        131 |       0 |    2 |   125 |      0 |      0 |    0 |          0 |
+|                     UM707                             |                           bench_system_algorithm_0_MPUC707__parameterized0 |        342 |        340 |       0 |    2 |   147 |      0 |      0 |    0 |          0 |
+|                   U_MPU                               |                                         bench_system_algorithm_0_ROTATOR64 |        139 |        139 |       0 |    0 |   119 |      0 |      0 |    0 |          4 |
+|                     (U_MPU)                           |                                         bench_system_algorithm_0_ROTATOR64 |          7 |          7 |       0 |    0 |    83 |      0 |      0 |    0 |          0 |
+|                     complex_twiddle_mul_i             |                               bench_system_algorithm_0_complex_twiddle_mul |        132 |        132 |       0 |    0 |    36 |      0 |      0 |    0 |          4 |
+|               kernel_i                                |                                  bench_system_algorithm_0_fft_merge_kernel |       1863 |       1863 |       0 |    0 |  1131 |      0 |      0 |    0 |          4 |
+|               tw1_i                                   |                          bench_system_algorithm_0_WROM2048__parameterized0 |        876 |        876 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|               tw2_i                                   |                        bench_system_algorithm_0_WROM2048__parameterized0_3 |        450 |        450 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|               tw3_i                                   |                        bench_system_algorithm_0_WROM2048__parameterized0_4 |        799 |        799 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|       memory_controller                               |                                           bench_system_memory_controller_0 |        506 |        305 |     200 |    1 |   199 |      0 |      0 |    0 |          0 |
+|         U0                                            |                             bench_system_memory_controller_0_axi_bram_ctrl |        506 |        305 |     200 |    1 |   199 |      0 |      0 |    0 |          0 |
+|           gext_inst.abcv4_0_ext_inst                  |                         bench_system_memory_controller_0_axi_bram_ctrl_top |        506 |        305 |     200 |    1 |   199 |      0 |      0 |    0 |          0 |
+|             GEN_AXI4.I_FULL_AXI                       |                                  bench_system_memory_controller_0_full_axi |        506 |        305 |     200 |    1 |   199 |      0 |      0 |    0 |          0 |
+|               I_WR_CHNL                               |                                   bench_system_memory_controller_0_wr_chnl |         45 |         44 |       0 |    1 |    74 |      0 |      0 |    0 |          0 |
+|                 (I_WR_CHNL)                           |                                   bench_system_memory_controller_0_wr_chnl |         16 |         16 |       0 |    0 |    53 |      0 |      0 |    0 |          0 |
+|               I_RD_CHNL                               |                                   bench_system_memory_controller_0_rd_chnl |        439 |        239 |     200 |    0 |   104 |      0 |      0 |    0 |          0 |
+|                 (I_RD_CHNL)                           |                                   bench_system_memory_controller_0_rd_chnl |        397 |        197 |     200 |    0 |    88 |      0 |      0 |    0 |          0 |
++-------------------------------------------------------+----------------------------------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

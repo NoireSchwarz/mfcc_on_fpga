@@ -9,3 +9,4 @@ Memory optimization,MFCC N512 / stride256 / one lane; 50 MHz OOC synthesis,Inclu
 Legacy 200 MHz attempt,Earlier MFCC frequency sweep,USER_ABORTED_NOT_COUNTED; not a timing pass or fail,evidence/ver2/04_frequency_runs/mfcc_N1024_200MHz/status.txt
 MatrixDCT register/LUT replacement,Six unit cases; twenty MFCC configurations; supplied 50 MHz OOC result,Local regression passes; latest hardware fields supplied in result summaries,matrix_register_50MHz_20261027/README.md
 Standalone DCT comparison,64-point register MatrixDCT versus recursive SkewDCT; 50 MHz,"Included; resources, first/final latency and WNS/WHS; supplied summaries",dct/DCT_Standalone.csv
+Standalone custom FFT board,Fixed N2048; full spectrum; nominal 150 MHz; commit 9be89af,PASS; 9 datasets / 15 frames / 30720 output words; not whole MFCC,fft2048_150MHz_board_20261124/README.md

@@ -1,0 +1,795 @@
+{
+  "schema": "fft2048-board-verification-v1",
+  "verification_date": "2026-11-24",
+  "tested_commit": "9be89af18ca9cf42e6f47990d7d1b781afb47615",
+  "branch": "optimization/skewdct8-recursive-pipeline",
+  "source_archive": "1-KV260_FFT2048_latest_150MHz_20261124.zip",
+  "source_archive_sha256": "d625913959aeddf2b03b7b7d931b618dbe2cbd0ed1a8e833be205d914c0f2721",
+  "supplied_checksum_count": 6,
+  "supplied_checksums_pass": true,
+  "source_files": [
+    {
+      "path": "src/work/FFT512/fft256_1024.v",
+      "supplied_sha256": "3f4c7f806419a81c93d42dc456dd541b0000b548f1f574b37a0ada8d53ce206b",
+      "git_blob_sha256": "3f4c7f806419a81c93d42dc456dd541b0000b548f1f574b37a0ada8d53ce206b",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/fft2x.v",
+      "supplied_sha256": "5c9b168fcbe5c4c888c4507161b7ec9ab246a2432c5cc4f7698567f7218611f0",
+      "git_blob_sha256": "b41c1aa02eb438ff2064634be872edaa37948d7def34fd1766a95e77b00ced53",
+      "byte_identical": false,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/fft512.v",
+      "supplied_sha256": "2775004ab03680ff46571104c1d8d17094b1fee484195eea6c97891a9f93ab73",
+      "git_blob_sha256": "1d090d191e98966518ace40ae111eddb86f0f28fc1a9fecca61805cffb59808b",
+      "byte_identical": false,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/fft64_bram_legacy.v",
+      "supplied_sha256": "724b6f2bfb0a115ee04bc9f049c54260c179a3257b776f431dfc23bc449283b9",
+      "git_blob_sha256": "945f7bb7b559940e51d6c2211d9d0633dcd807cd6b47c91d5a84d87cbc84b692",
+      "byte_identical": false,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/fft_16_64.v",
+      "supplied_sha256": "783db9af117ee7f7199e0d3505a9c27a7b3dbf9083be1870549f64084c4f292f",
+      "git_blob_sha256": "783db9af117ee7f7199e0d3505a9c27a7b3dbf9083be1870549f64084c4f292f",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/fft_bram_1w1r.v",
+      "supplied_sha256": "853d3221e2a6363e821bff73a56bc80605008825c61a1c9e110d442924a0d418",
+      "git_blob_sha256": "8d61a712997ddf6ea28b8a938ffcd89f96a4d8c0e47090974c5e55a471303d88",
+      "byte_identical": false,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/fft_tree_bram_engine.v",
+      "supplied_sha256": "772afd7e00e7e9066d5755e1501b7ee13c755e2be5e6db784161fb8fcb81e486",
+      "git_blob_sha256": "0fd8a47f2a0d3f87efe9ce40df439df872e3e8484f80f3437cc0365aebb380b3",
+      "byte_identical": false,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/fft_tree_runtime_bram.v",
+      "supplied_sha256": "414e8d99dd2e6a47fbb5caef20df01d2a94bf1603cb0cce23f80477272950e29",
+      "git_blob_sha256": "a5df538718e998eb9d185415a09550088abfce24600611a2200b944637ea6c9c",
+      "byte_identical": false,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix2_4_core/complex_twiddle_mul.v",
+      "supplied_sha256": "520861f2c5b2f9966382813becb0f4c361e8af04642d1229af4b311abd392d95",
+      "git_blob_sha256": "520861f2c5b2f9966382813becb0f4c361e8af04642d1229af4b311abd392d95",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix2_4_core/fft_merge_kernel.v",
+      "supplied_sha256": "605933cea198ed3ada020532041835776321e4560b4cdd07352d37f69b36fa38",
+      "git_blob_sha256": "605933cea198ed3ada020532041835776321e4560b4cdd07352d37f69b36fa38",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix2_4_core/radix2_merge_stage.v",
+      "supplied_sha256": "6cffa9f26bc0fc8253ea32a09e4a550471ae39acc735b020e7010f7a8dbfca73",
+      "git_blob_sha256": "6cffa9f26bc0fc8253ea32a09e4a550471ae39acc735b020e7010f7a8dbfca73",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix2_4_core/radix4_merge_stage.v",
+      "supplied_sha256": "7a9a3d555b90eb7c5bfeb4af51324dc0bc9d8949e5664b4e55315ec33ae43bbe",
+      "git_blob_sha256": "7a9a3d555b90eb7c5bfeb4af51324dc0bc9d8949e5664b4e55315ec33ae43bbe",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_256_core/bufram256c.v",
+      "supplied_sha256": "c95cdb9cf174d95bf1a3296dbfdb748733bf307b4101f8e5dd4a76ceee6e0645",
+      "git_blob_sha256": "c95cdb9cf174d95bf1a3296dbfdb748733bf307b4101f8e5dd4a76ceee6e0645",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_256_core/cnorm.v",
+      "supplied_sha256": "638f72e98c7f0f23d395e74dbb0e1aed82cdf46dccaa102f1865f9da6b6b7d97",
+      "git_blob_sha256": "638f72e98c7f0f23d395e74dbb0e1aed82cdf46dccaa102f1865f9da6b6b7d97",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_256_core/fft256.v",
+      "supplied_sha256": "669f257f2494c421b0c76166da89a3a723321883f07672469f9d99a273b6706a",
+      "git_blob_sha256": "669f257f2494c421b0c76166da89a3a723321883f07672469f9d99a273b6706a",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_256_core/fft256_config.v",
+      "supplied_sha256": "1a9e717633077561d268dd6e12cf3674f87ecaeac19fba5845a738e86e92b557",
+      "git_blob_sha256": "1a9e717633077561d268dd6e12cf3674f87ecaeac19fba5845a738e86e92b557",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_256_core/ram256.v",
+      "supplied_sha256": "89c09a65b54d0b1431c0a8ab51dad43dcabd465d5e3604a7a9da7929ced8846e",
+      "git_blob_sha256": "89c09a65b54d0b1431c0a8ab51dad43dcabd465d5e3604a7a9da7929ced8846e",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_256_core/ram2x256.v",
+      "supplied_sha256": "32627cfe698f1e1e83f34f87ee9d2bef6540a2c62d6afb039acf3e13e53e1b22",
+      "git_blob_sha256": "32627cfe698f1e1e83f34f87ee9d2bef6540a2c62d6afb039acf3e13e53e1b22",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_256_core/rotator256_v.v",
+      "supplied_sha256": "c4ca55e4d673a7f59172ceb3b0926d612a1e366b6b9d9c465617cef47c6e2fb5",
+      "git_blob_sha256": "c4ca55e4d673a7f59172ceb3b0926d612a1e366b6b9d9c465617cef47c6e2fb5",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_core/fft16.v",
+      "supplied_sha256": "fb1db3082e9c25c4f97645d948d332c8d1e170b739503a1849fc58942eca21df",
+      "git_blob_sha256": "fb1db3082e9c25c4f97645d948d332c8d1e170b739503a1849fc58942eca21df",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_core/mpuc1307.v",
+      "supplied_sha256": "c391c3ee6c33b2cf6a2ae06cf63203416b6b6b0992aff346c2f16b71974b8c67",
+      "git_blob_sha256": "c391c3ee6c33b2cf6a2ae06cf63203416b6b6b0992aff346c2f16b71974b8c67",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_core/mpuc541.v",
+      "supplied_sha256": "0188c9bb8d4771358936e031d7e35b903deb7412f8a8954c4ff9a2e9ec278088",
+      "git_blob_sha256": "0188c9bb8d4771358936e031d7e35b903deb7412f8a8954c4ff9a2e9ec278088",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_core/mpuc707.v",
+      "supplied_sha256": "4885f46567bd79ff425b59fa4b82fe0ff6552d7c8af6825a50684526c87a088d",
+      "git_blob_sha256": "4885f46567bd79ff425b59fa4b82fe0ff6552d7c8af6825a50684526c87a088d",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/radix_16_core/mpuc924_383.v",
+      "supplied_sha256": "30e1250ede16cb305a77fd7ef1f6947631cf9206aaa102f5b16358df79e91019",
+      "git_blob_sha256": "30e1250ede16cb305a77fd7ef1f6947631cf9206aaa102f5b16358df79e91019",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    },
+    {
+      "path": "src/work/FFT512/WROM2048.v",
+      "supplied_sha256": "07b3c42ff0bffa3be1c604d6dd99f8de95a944ba8c229f347ad0ed64368b1720",
+      "git_blob_sha256": "07b3c42ff0bffa3be1c604d6dd99f8de95a944ba8c229f347ad0ed64368b1720",
+      "byte_identical": true,
+      "equal_after_crlf_normalization": true
+    }
+  ],
+  "source_text_matches_git": true,
+  "cases": [
+    {
+      "case": "original",
+      "frames": 1,
+      "input_samples": 2048,
+      "output_words": 2048,
+      "cycles": 25390,
+      "first_output_cycle": 23343,
+      "frequency_hz": 150000000,
+      "total_time_us": 169.26666666666668,
+      "first_output_time_us": 155.62,
+      "mismatches": 0,
+      "reported_error_word": "00000000",
+      "raw_sha256": "e53159cbd17bdd20ce822bf85fbbec8086bd439b1504d2a771ff351c87af1c5a"
+    },
+    {
+      "case": "zero",
+      "frames": 1,
+      "input_samples": 2048,
+      "output_words": 2048,
+      "cycles": 25390,
+      "first_output_cycle": 23343,
+      "frequency_hz": 150000000,
+      "total_time_us": 169.26666666666668,
+      "first_output_time_us": 155.62,
+      "mismatches": 0,
+      "reported_error_word": "00000000",
+      "raw_sha256": "a66d50515ebc0d3b50c5a9ed3a0cecc2ffe052bc93c908ed74e05471a8c51baf"
+    },
+    {
+      "case": "impulse",
+      "frames": 1,
+      "input_samples": 2048,
+      "output_words": 2048,
+      "cycles": 25390,
+      "first_output_cycle": 23343,
+      "frequency_hz": 150000000,
+      "total_time_us": 169.26666666666668,
+      "first_output_time_us": 155.62,
+      "mismatches": 0,
+      "reported_error_word": "00000000",
+      "raw_sha256": "5799e2512f64e7f50cf0f79db773c8bea431ac7a113e574f2311e0e38b5d78d5"
+    },
+    {
+      "case": "dc",
+      "frames": 1,
+      "input_samples": 2048,
+      "output_words": 2048,
+      "cycles": 25390,
+      "first_output_cycle": 23343,
+      "frequency_hz": 150000000,
+      "total_time_us": 169.26666666666668,
+      "first_output_time_us": 155.62,
+      "mismatches": 0,
+      "reported_error_word": "00000000",
+      "raw_sha256": "848fd41f604f63d086ce5ebdb7219729eadc03a736f1be3ac663cf5af1bdb43e"
+    },
+    {
+      "case": "alternating",
+      "frames": 1,
+      "input_samples": 2048,
+      "output_words": 2048,
+      "cycles": 25390,
+      "first_output_cycle": 23343,
+      "frequency_hz": 150000000,
+      "total_time_us": 169.26666666666668,
+      "first_output_time_us": 155.62,
+      "mismatches": 0,
+      "reported_error_word": "00000000",
+      "raw_sha256": "9cd8732d24db8f0c9a01ab41a4b62f09fcabb6ce64257ac129c274d877b48cb4"
+    },
+    {
+      "case": "random_low",
+      "frames": 1,
+      "input_samples": 2048,
+      "output_words": 2048,
+      "cycles": 25390,
+      "first_output_cycle": 23343,
+      "frequency_hz": 150000000,
+      "total_time_us": 169.26666666666668,
+      "first_output_time_us": 155.62,
+      "mismatches": 0,
+      "reported_error_word": "00000000",
+      "raw_sha256": "8a025bc5067d8c461dfc4a476a1a69aa38721bf751964086551a890095dd18b8"
+    },
+    {
+      "case": "random_full",
+      "frames": 1,
+      "input_samples": 2048,
+      "output_words": 2048,
+      "cycles": 25390,
+      "first_output_cycle": 23343,
+      "frequency_hz": 150000000,
+      "total_time_us": 169.26666666666668,
+      "first_output_time_us": 155.62,
+      "mismatches": 0,
+      "reported_error_word": "00000000",
+      "raw_sha256": "115a56b7d11fd1b36c74b21a470ec156fda03657cfde40098d28be073812c246"
+    },
+    {
+      "case": "original_4frames",
+      "frames": 4,
+      "input_samples": 8192,
+      "output_words": 8192,
+      "cycles": 101545,
+      "first_output_cycle": 23343,
+      "frequency_hz": 150000000,
+      "total_time_us": 676.9666666666667,
+      "first_output_time_us": 155.62,
+      "mismatches": 0,
+      "reported_error_word": "00000000",
+      "raw_sha256": "016da2182546155d8d230c4b55fcc9ca67dc7b4f054cc9c4d451bcaba022ad1a"
+    },
+    {
+      "case": "mixed_4frames",
+      "frames": 4,
+      "input_samples": 8192,
+      "output_words": 8192,
+      "cycles": 101545,
+      "first_output_cycle": 23343,
+      "frequency_hz": 150000000,
+      "total_time_us": 676.9666666666667,
+      "first_output_time_us": 155.62,
+      "mismatches": 0,
+      "reported_error_word": "00000000",
+      "raw_sha256": "beaa0f70e6a40bcf77a31580879701a474c1a333ba2b8f59d00ee18d2be24dba"
+    }
+  ],
+  "frames_checked": 15,
+  "output_words_checked": 30720,
+  "total_mismatches": 0,
+  "source_rtl_modified": false,
+  "resources": {
+    "whole_board_design": {
+      "instance": "kv260_bench_top",
+      "module": "(top)",
+      "LUT": 11009,
+      "FF": 11450,
+      "RAMB36": 23,
+      "RAMB18": 8,
+      "DSP": 8,
+      "BRAM_tile": 27.0
+    },
+    "algorithm": {
+      "instance": "algorithm",
+      "module": "bench_system_algorithm_0",
+      "LUT": 9001,
+      "FF": 8505,
+      "RAMB36": 5,
+      "RAMB18": 7,
+      "DSP": 8,
+      "BRAM_tile": 8.5
+    },
+    "fft2x": {
+      "instance": "fft2x_i",
+      "module": "bench_system_algorithm_0_fft2",
+      "LUT": 345,
+      "FF": 88,
+      "RAMB36": 4,
+      "RAMB18": 0,
+      "DSP": 0,
+      "BRAM_tile": 4.0
+    }
+  },
+  "timing": {
+    "WNS_ns": 0.731,
+    "TNS_ns": 0,
+    "WHS_ns": 0.011,
+    "THS_ns": 0,
+    "setup_failing_endpoints": 0,
+    "hold_failing_endpoints": 0,
+    "pulse_width_failing_endpoints": 0,
+    "check_timing_counts": {
+      "no_clock": 0,
+      "constant_clock": 0,
+      "pulse_width_clock": 0,
+      "unconstrained_internal_endpoints": 0,
+      "no_input_delay": 0,
+      "no_output_delay": 0,
+      "multiple_clock": 0,
+      "generated_clocks": 0,
+      "loops": 0,
+      "partial_input_delay": 0,
+      "partial_output_delay": 0,
+      "latch_loops": 0
+    },
+    "reported_period_ns": 6.667,
+    "nominal_board_frequency_hz": 150000000,
+    "clock_path": "PS PL1 -> BUFG_PS -> MMCM 12/8 -> BUFGCE -> engine",
+    "reported_worst_50_setup_paths": [
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[11]",
+        "slack_ns": 0.731,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[11]",
+        "slack_ns": 0.785,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[4]",
+        "slack_ns": 0.969,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[4]",
+        "slack_ns": 1.026,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[11]",
+        "slack_ns": 1.051,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[11]",
+        "slack_ns": 1.059,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[10]",
+        "slack_ns": 1.063,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[9]",
+        "slack_ns": 1.065,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[10]",
+        "slack_ns": 1.077,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[9]",
+        "slack_ns": 1.096,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[8]",
+        "slack_ns": 1.109,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[2]",
+        "slack_ns": 1.12,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[9]",
+        "slack_ns": 1.121,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[9]",
+        "slack_ns": 1.161,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[2]",
+        "slack_ns": 1.166,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[0]",
+        "slack_ns": 1.183,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[8]",
+        "slack_ns": 1.195,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[12]",
+        "slack_ns": 1.215,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[1]",
+        "slack_ns": 1.22,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[1]",
+        "slack_ns": 1.223,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[0]",
+        "slack_ns": 1.223,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[0]",
+        "slack_ns": 1.239,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[6]",
+        "slack_ns": 1.27,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[6]",
+        "slack_ns": 1.273,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[12]",
+        "slack_ns": 1.279,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[2]",
+        "slack_ns": 1.287,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[5]",
+        "slack_ns": 1.287,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[14]",
+        "slack_ns": 1.294,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[7]",
+        "slack_ns": 1.298,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[5]",
+        "slack_ns": 1.3,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[7]",
+        "slack_ns": 1.311,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[3]",
+        "slack_ns": 1.322,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[1]",
+        "slack_ns": 1.324,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[0]",
+        "slack_ns": 1.33,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[6]",
+        "slack_ns": 1.342,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[1]",
+        "slack_ns": 1.345,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[13]",
+        "slack_ns": 1.352,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[3]",
+        "slack_ns": 1.357,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[4]",
+        "slack_ns": 1.362,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[12]",
+        "slack_ns": 1.371,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[14]",
+        "slack_ns": 1.371,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[10]",
+        "slack_ns": 1.417,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[3]",
+        "slack_ns": 1.417,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[3]",
+        "slack_ns": 1.427,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[2]",
+        "slack_ns": 1.431,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[12]",
+        "slack_ns": 1.432,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[13]",
+        "slack_ns": 1.435,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[6]",
+        "slack_ns": 1.448,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[5]",
+        "slack_ns": 1.484,
+        "includes_fft2x": true
+      },
+      {
+        "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/size_active_reg[2]/C",
+        "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[15]",
+        "slack_ns": 1.488,
+        "includes_fft2x": true
+      }
+    ],
+    "mmcm_parameters_verified_from_dcp_hwdef": {
+      "MMCM_CLKFBOUT_MULT_F": "12.000",
+      "MMCM_CLKOUT0_DIVIDE_F": "8.000",
+      "MMCM_DIVCLK_DIVIDE": "1",
+      "PRIM_IN_FREQ": "99.999001"
+    },
+    "routable_nets": 19275,
+    "fully_routed_nets": 19275,
+    "routing_errors": 0
+  },
+  "drc": {
+    "warnings": 19,
+    "errors": 0,
+    "rules": [
+      {
+        "rule": "DPOP-3",
+        "severity": "Warning",
+        "description": "PREG Output pipelining",
+        "checks": 4
+      },
+      {
+        "rule": "DPOP-4",
+        "severity": "Warning",
+        "description": "MREG Output pipelining",
+        "checks": 8
+      },
+      {
+        "rule": "PDCN-1569",
+        "severity": "Warning",
+        "description": "LUT equation term check",
+        "checks": 3
+      },
+      {
+        "rule": "REQP-1857",
+        "severity": "Warning",
+        "description": "RAMB18E2_writefirst_collision_advisory",
+        "checks": 1
+      },
+      {
+        "rule": "REQP-1858",
+        "severity": "Warning",
+        "description": "RAMB36E2_writefirst_collision_advisory",
+        "checks": 2
+      },
+      {
+        "rule": "RTSTAT-10",
+        "severity": "Warning",
+        "description": "No routable loads",
+        "checks": 1
+      }
+    ]
+  },
+  "dcp_crc_pass": true,
+  "dcp_entries": [
+    "dcp.xml",
+    "kv260_bench_top.clkdb",
+    "kv260_bench_top.devns",
+    "kv260_bench_top.dfxdb",
+    "kv260_bench_top.edf",
+    "kv260_bench_top.hwdef",
+    "kv260_bench_top.incr",
+    "kv260_bench_top.mvs",
+    "kv260_bench_top.nnlns",
+    "kv260_bench_top.pdb",
+    "kv260_bench_top.plstore",
+    "kv260_bench_top.rda",
+    "kv260_bench_top.rdb",
+    "kv260_bench_top.shape",
+    "kv260_bench_top.sta",
+    "kv260_bench_top.xbdc",
+    "kv260_bench_top.xdc",
+    "kv260_bench_top.xn",
+    "kv260_bench_top_board.xdc",
+    "kv260_bench_top_early.xdc",
+    "kv260_bench_top_iPhysOpt.replay",
+    "kv260_bench_top_late.xdc",
+    "kv260_bench_top_param.xml",
+    "kv260_bench_top_rda.json",
+    "kv260_bench_top_stub.v",
+    "kv260_bench_top_stub.vhdl"
+  ],
+  "limitations": [
+    "Standalone fixed N=2048 full-spectrum FFT test; not complete MFCC, runtime-size switching or all-length 150 MHz certification.",
+    "Wrapper ties error_flags to zero; zero error words are not independent internal-overflow coverage.",
+    "Nominal 150 MHz is inferred from clock configuration/readback and implemented clock path; no oscilloscope measurement supplied.",
+    "Board harness bench_engine.v and kv260_bench_top.v and explicit coefficient ROM snapshots are not included; original build script references external paths.",
+    "Supplied DCP/bitstream and reports were inspected; Vivado implementation and board execution were not rerun here."
+  ],
+  "local_rtl_regression": {
+    "tool": "Icarus Verilog",
+    "note": "Independent local RTL regression, not physical timing or a new board execution.",
+    "supplied_wrapper_used": true,
+    "n": 2048,
+    "full_spectrum": true,
+    "tests": [
+      {
+        "stalls": false,
+        "frames": 15,
+        "words": 30720,
+        "result": "PASS",
+        "log": "result_0.log",
+        "log_sha256": "c0d83f74a088e8ca59b9d7b2c029b977b37b5b0754cd8881c08b918fa0ab6127"
+      },
+      {
+        "stalls": true,
+        "frames": 15,
+        "words": 30720,
+        "result": "PASS",
+        "log": "result_1.log",
+        "log_sha256": "f4217c5e8044561734602e62b00e30165f03fcd9a7046cd54743b148e03d8df8"
+      }
+    ]
+  },
+  "status": "PASS_FOR_TESTED_FIXED_N2048_CONFIGURATION",
+  "reported_error_flags_instrumented": false,
+  "scope": "Standalone fixed N=2048 real-input FFT, full complex spectrum, nominal 150 MHz on KV260."
+}

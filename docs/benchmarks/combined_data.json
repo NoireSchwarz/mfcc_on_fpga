@@ -1,6 +1,6 @@
 {
   "schema": "mfcc-benchmarks-latest-v1",
-  "updated": "2026-10-27",
+  "updated": "2026-11-24",
   "selection_policy": "Latest valid metric for each test project/configuration; architecture/version is not a merge key.",
   "resource_overview": [
     {
@@ -486,6 +486,63 @@
       "dataset": "matrix_register_20261027",
       "hardware_status": "REPORTED_POST_ROUTE",
       "tested_commit": "0dce6b054028ff37c3158adc0184acc030211d0e"
+    },
+    {
+      "project": "Custom FFT",
+      "scope": "FFT algorithm (inclusive)",
+      "N": 2048,
+      "frequency_mhz": 150,
+      "out_width": 1,
+      "LUT": 9001,
+      "FF": 8505,
+      "BRAM_tile": 8.5,
+      "DSP": 8,
+      "stage": "In-system post-route; fixed N2048; inclusive hierarchy",
+      "resource_clock_period_ns": 6.666666666666667,
+      "source": "fft2048_150MHz_board_20261124/supplied/02_implementation/utilization_hierarchical_post_route.rpt",
+      "dataset": "fft2048_board_latest_20261124",
+      "LUT_used_percent": 7.69,
+      "FF_used_percent": 3.63,
+      "BRAM_tile_used_percent": 5.9,
+      "DSP_used_percent": 0.64
+    },
+    {
+      "project": "Custom FFT",
+      "scope": "Whole JTAG board-test design",
+      "N": 2048,
+      "frequency_mhz": 150,
+      "out_width": 1,
+      "LUT": 11009,
+      "FF": 11450,
+      "BRAM_tile": 27.0,
+      "DSP": 8,
+      "stage": "In-system post-route; fixed N2048; inclusive hierarchy",
+      "resource_clock_period_ns": 6.666666666666667,
+      "source": "fft2048_150MHz_board_20261124/supplied/02_implementation/utilization_hierarchical_post_route.rpt",
+      "dataset": "fft2048_board_latest_20261124",
+      "LUT_used_percent": 9.4,
+      "FF_used_percent": 4.89,
+      "BRAM_tile_used_percent": 18.75,
+      "DSP_used_percent": 0.64
+    },
+    {
+      "project": "Custom FFT",
+      "scope": "FFT2x hierarchy (included in algorithm)",
+      "N": 2048,
+      "frequency_mhz": 150,
+      "out_width": 1,
+      "LUT": 345,
+      "FF": 88,
+      "BRAM_tile": 4.0,
+      "DSP": 0,
+      "stage": "In-system post-route; fixed N2048; inclusive hierarchy",
+      "resource_clock_period_ns": 6.666666666666667,
+      "source": "fft2048_150MHz_board_20261124/supplied/02_implementation/utilization_hierarchical_post_route.rpt",
+      "dataset": "fft2048_board_latest_20261124",
+      "LUT_used_percent": 0.29,
+      "FF_used_percent": 0.04,
+      "BRAM_tile_used_percent": 2.78,
+      "DSP_used_percent": 0.0
     }
   ],
   "mfcc_frequency": [
@@ -2593,6 +2650,16 @@
       "sha256": "f69d26eb50311e374bd121320a0cf968945b9bf867a1b72fe52ba4e617321237",
       "tested_commit": "b0db7a079ba203eb0b2b88bb8a03c578899d5549",
       "evidence_root": "c64_pipeline_N1024_150MHz_20261026"
+    },
+    {
+      "id": "fft2048_board_latest_20261124",
+      "project": "Latest shared FFT2048 board test at 150 MHz",
+      "archive": "KV260_FFT2048_latest_150MHz_20261124.zip",
+      "received_filename": "1-KV260_FFT2048_latest_150MHz_20261124.zip",
+      "bytes": 10993464,
+      "sha256": "d625913959aeddf2b03b7b7d931b618dbe2cbd0ed1a8e833be205d914c0f2721",
+      "tested_commit": "9be89af18ca9cf42e6f47990d7d1b781afb47615",
+      "evidence_root": "fft2048_150MHz_board_20261124"
     }
   ],
   "legacy_200MHz_status": "USER_ABORTED_NOT_COUNTED; placement interrupted; not a pass/fail result",
@@ -3242,6 +3309,12 @@
       "configuration": "64-point register MatrixDCT versus recursive SkewDCT; 50 MHz",
       "status": "Included; resources, first/final latency and WNS/WHS; supplied summaries",
       "evidence": "dct/DCT_Standalone.csv"
+    },
+    {
+      "Project": "Standalone custom FFT board",
+      "Configuration": "Fixed N2048; full spectrum; nominal 150 MHz; commit 9be89af",
+      "Status": "PASS; 9 datasets / 15 frames / 30720 output words; not whole MFCC",
+      "Evidence": "fft2048_150MHz_board_20261124/README.md"
     }
   ],
   "notes": [
@@ -3304,6 +3377,589 @@
     {
       "topic": "200 MHz status",
       "note": "Not measured for the latest RTL. Frozen-route estimate is approximately -1.409 ns. The old 200 MHz run was interrupted during placement and is not a pass/fail result."
-    }
-  ]
+    },
+    "Verified final shared FFT at 9be89af: algorithm 9001 LUT / 8505 FF / 8.5 BRAM / 8 DSP; WNS +0.731 ns / WHS +0.011 ns; 9 board datasets match. Fixed N2048 only; zero error word is hardwired. Rejected dedicated-core data is excluded."
+  ],
+  "fft2048_150MHz_board": {
+    "status": "PASS_FOR_TESTED_FIXED_N2048_CONFIGURATION",
+    "scope": "Standalone fixed N=2048 real-input FFT, full complex spectrum, nominal 150 MHz on KV260.",
+    "tested_commit": "9be89af18ca9cf42e6f47990d7d1b781afb47615",
+    "source_archive_sha256": "d625913959aeddf2b03b7b7d931b618dbe2cbd0ed1a8e833be205d914c0f2721",
+    "frames_checked": 15,
+    "output_words_checked": 30720,
+    "total_mismatches": 0,
+    "reported_error_flags_instrumented": false,
+    "resources": {
+      "whole_board_design": {
+        "instance": "kv260_bench_top",
+        "module": "(top)",
+        "LUT": 11009,
+        "FF": 11450,
+        "RAMB36": 23,
+        "RAMB18": 8,
+        "DSP": 8,
+        "BRAM_tile": 27.0
+      },
+      "algorithm": {
+        "instance": "algorithm",
+        "module": "bench_system_algorithm_0",
+        "LUT": 9001,
+        "FF": 8505,
+        "RAMB36": 5,
+        "RAMB18": 7,
+        "DSP": 8,
+        "BRAM_tile": 8.5
+      },
+      "fft2x": {
+        "instance": "fft2x_i",
+        "module": "bench_system_algorithm_0_fft2",
+        "LUT": 345,
+        "FF": 88,
+        "RAMB36": 4,
+        "RAMB18": 0,
+        "DSP": 0,
+        "BRAM_tile": 4.0
+      }
+    },
+    "timing": {
+      "WNS_ns": 0.731,
+      "TNS_ns": 0,
+      "WHS_ns": 0.011,
+      "THS_ns": 0,
+      "setup_failing_endpoints": 0,
+      "hold_failing_endpoints": 0,
+      "pulse_width_failing_endpoints": 0,
+      "check_timing_counts": {
+        "no_clock": 0,
+        "constant_clock": 0,
+        "pulse_width_clock": 0,
+        "unconstrained_internal_endpoints": 0,
+        "no_input_delay": 0,
+        "no_output_delay": 0,
+        "multiple_clock": 0,
+        "generated_clocks": 0,
+        "loops": 0,
+        "partial_input_delay": 0,
+        "partial_output_delay": 0,
+        "latch_loops": 0
+      },
+      "reported_period_ns": 6.667,
+      "nominal_board_frequency_hz": 150000000,
+      "clock_path": "PS PL1 -> BUFG_PS -> MMCM 12/8 -> BUFGCE -> engine",
+      "reported_worst_50_setup_paths": [
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[11]",
+          "slack_ns": 0.731,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[11]",
+          "slack_ns": 0.785,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[4]",
+          "slack_ns": 0.969,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[4]",
+          "slack_ns": 1.026,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[11]",
+          "slack_ns": 1.051,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[11]",
+          "slack_ns": 1.059,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[10]",
+          "slack_ns": 1.063,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[9]",
+          "slack_ns": 1.065,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[10]",
+          "slack_ns": 1.077,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[9]",
+          "slack_ns": 1.096,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[8]",
+          "slack_ns": 1.109,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[2]",
+          "slack_ns": 1.12,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[9]",
+          "slack_ns": 1.121,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[9]",
+          "slack_ns": 1.161,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[2]",
+          "slack_ns": 1.166,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[0]",
+          "slack_ns": 1.183,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[8]",
+          "slack_ns": 1.195,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[12]",
+          "slack_ns": 1.215,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[1]",
+          "slack_ns": 1.22,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[1]",
+          "slack_ns": 1.223,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[0]",
+          "slack_ns": 1.223,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[0]",
+          "slack_ns": 1.239,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[6]",
+          "slack_ns": 1.27,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[6]",
+          "slack_ns": 1.273,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[12]",
+          "slack_ns": 1.279,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[2]",
+          "slack_ns": 1.287,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[5]",
+          "slack_ns": 1.287,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[14]",
+          "slack_ns": 1.294,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[7]",
+          "slack_ns": 1.298,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[5]",
+          "slack_ns": 1.3,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[7]",
+          "slack_ns": 1.311,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[3]",
+          "slack_ns": 1.322,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[1]",
+          "slack_ns": 1.324,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[0]",
+          "slack_ns": 1.33,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[6]",
+          "slack_ns": 1.342,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[1]",
+          "slack_ns": 1.345,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[13]",
+          "slack_ns": 1.352,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[3]",
+          "slack_ns": 1.357,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[4]",
+          "slack_ns": 1.362,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[12]",
+          "slack_ns": 1.371,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[14]",
+          "slack_ns": 1.371,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[10]",
+          "slack_ns": 1.417,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ii_reg/DSP_A_B_DATA_INST/B[3]",
+          "slack_ns": 1.417,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[3]",
+          "slack_ns": 1.427,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[2]",
+          "slack_ns": 1.431,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[12]",
+          "slack_ns": 1.432,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[13]",
+          "slack_ns": 1.435,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ir_reg/DSP_A_B_DATA_INST/B[6]",
+          "slack_ns": 1.448,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/FSM_onehot_state_reg[4]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_rr_reg/DSP_A_B_DATA_INST/B[5]",
+          "slack_ns": 1.484,
+          "includes_fft2x": true
+        },
+        {
+          "source": "system_i/bench_system_i/algorithm/inst/dut/engine_i/size_active_reg[2]/C",
+          "destination": "system_i/bench_system_i/algorithm/inst/dut/engine_i/kernel_i/product_ri_reg/DSP_A_B_DATA_INST/B[15]",
+          "slack_ns": 1.488,
+          "includes_fft2x": true
+        }
+      ],
+      "mmcm_parameters_verified_from_dcp_hwdef": {
+        "MMCM_CLKFBOUT_MULT_F": "12.000",
+        "MMCM_CLKOUT0_DIVIDE_F": "8.000",
+        "MMCM_DIVCLK_DIVIDE": "1",
+        "PRIM_IN_FREQ": "99.999001"
+      },
+      "routable_nets": 19275,
+      "fully_routed_nets": 19275,
+      "routing_errors": 0
+    },
+    "drc": {
+      "warnings": 19,
+      "errors": 0,
+      "rules": [
+        {
+          "rule": "DPOP-3",
+          "severity": "Warning",
+          "description": "PREG Output pipelining",
+          "checks": 4
+        },
+        {
+          "rule": "DPOP-4",
+          "severity": "Warning",
+          "description": "MREG Output pipelining",
+          "checks": 8
+        },
+        {
+          "rule": "PDCN-1569",
+          "severity": "Warning",
+          "description": "LUT equation term check",
+          "checks": 3
+        },
+        {
+          "rule": "REQP-1857",
+          "severity": "Warning",
+          "description": "RAMB18E2_writefirst_collision_advisory",
+          "checks": 1
+        },
+        {
+          "rule": "REQP-1858",
+          "severity": "Warning",
+          "description": "RAMB36E2_writefirst_collision_advisory",
+          "checks": 2
+        },
+        {
+          "rule": "RTSTAT-10",
+          "severity": "Warning",
+          "description": "No routable loads",
+          "checks": 1
+        }
+      ]
+    },
+    "limitations": [
+      "Standalone fixed N=2048 full-spectrum FFT test; not complete MFCC, runtime-size switching or all-length 150 MHz certification.",
+      "Wrapper ties error_flags to zero; zero error words are not independent internal-overflow coverage.",
+      "Nominal 150 MHz is inferred from clock configuration/readback and implemented clock path; no oscilloscope measurement supplied.",
+      "Board harness bench_engine.v and kv260_bench_top.v and explicit coefficient ROM snapshots are not included; original build script references external paths.",
+      "Supplied DCP/bitstream and reports were inspected; Vivado implementation and board execution were not rerun here."
+    ],
+    "local_rtl_regression": {
+      "tool": "Icarus Verilog",
+      "note": "Independent local RTL regression, not physical timing or a new board execution.",
+      "supplied_wrapper_used": true,
+      "n": 2048,
+      "full_spectrum": true,
+      "tests": [
+        {
+          "stalls": false,
+          "frames": 15,
+          "words": 30720,
+          "result": "PASS",
+          "log": "result_0.log",
+          "log_sha256": "c0d83f74a088e8ca59b9d7b2c029b977b37b5b0754cd8881c08b918fa0ab6127"
+        },
+        {
+          "stalls": true,
+          "frames": 15,
+          "words": 30720,
+          "result": "PASS",
+          "log": "result_1.log",
+          "log_sha256": "f4217c5e8044561734602e62b00e30165f03fcd9a7046cd54743b148e03d8df8"
+        }
+      ]
+    },
+    "cases": [
+      {
+        "case": "original",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "e53159cbd17bdd20ce822bf85fbbec8086bd439b1504d2a771ff351c87af1c5a"
+      },
+      {
+        "case": "zero",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "a66d50515ebc0d3b50c5a9ed3a0cecc2ffe052bc93c908ed74e05471a8c51baf"
+      },
+      {
+        "case": "impulse",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "5799e2512f64e7f50cf0f79db773c8bea431ac7a113e574f2311e0e38b5d78d5"
+      },
+      {
+        "case": "dc",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "848fd41f604f63d086ce5ebdb7219729eadc03a736f1be3ac663cf5af1bdb43e"
+      },
+      {
+        "case": "alternating",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "9cd8732d24db8f0c9a01ab41a4b62f09fcabb6ce64257ac129c274d877b48cb4"
+      },
+      {
+        "case": "random_low",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "8a025bc5067d8c461dfc4a476a1a69aa38721bf751964086551a890095dd18b8"
+      },
+      {
+        "case": "random_full",
+        "frames": 1,
+        "input_samples": 2048,
+        "output_words": 2048,
+        "cycles": 25390,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 169.26666666666668,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "115a56b7d11fd1b36c74b21a470ec156fda03657cfde40098d28be073812c246"
+      },
+      {
+        "case": "original_4frames",
+        "frames": 4,
+        "input_samples": 8192,
+        "output_words": 8192,
+        "cycles": 101545,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 676.9666666666667,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "016da2182546155d8d230c4b55fcc9ca67dc7b4f054cc9c4d451bcaba022ad1a"
+      },
+      {
+        "case": "mixed_4frames",
+        "frames": 4,
+        "input_samples": 8192,
+        "output_words": 8192,
+        "cycles": 101545,
+        "first_output_cycle": 23343,
+        "frequency_hz": 150000000,
+        "total_time_us": 676.9666666666667,
+        "first_output_time_us": 155.62,
+        "mismatches": 0,
+        "reported_error_word": "00000000",
+        "raw_sha256": "beaa0f70e6a40bcf77a31580879701a474c1a333ba2b8f59d00ee18d2be24dba"
+      }
+    ],
+    "evidence_root": "fft2048_150MHz_board_20261124"
+  }
 }
