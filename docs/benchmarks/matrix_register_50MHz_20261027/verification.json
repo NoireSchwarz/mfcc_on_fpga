@@ -1,0 +1,25 @@
+{
+  "status": "PASS_WITH_DERIVED_CORRECTION",
+  "date": "2026-10-27",
+  "supplied_csv_rows": 4,
+  "csv_json_metrics_crosschecked": true,
+  "cycle_time_conversions_verified": true,
+  "ratios_recomputed": true,
+  "derived_discrepancies": [
+    {
+      "metric": "ff_reduction_percent",
+      "reported": 78.0505735983196,
+      "recomputed": 78.04976571336242,
+      "policy": "Retain raw summary; use recomputed ratio in analysis"
+    }
+  ],
+  "local_regression_runtime_precision_match": true,
+  "supplied_file_hashes_verified": true,
+  "local_matrix_rtl_matches_tested_commit": true,
+  "raw_vivado_reports_provided": false,
+  "raw_coefficient_outputs_provided": false,
+  "hardware_metrics_independently_recomputed": false,
+  "failure_counts_and_tns_not_provided": true,
+  "no_rtl_changes": true,
+  "evidence_scope": "Fresh RTL simulation plus KV260-device out-of-context post-route implementation. Times are cycle/50 MHz conversions, not PS/DMA/audio or physical-board wall-clock measurements."
+}

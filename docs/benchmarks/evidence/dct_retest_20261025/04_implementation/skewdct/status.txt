@@ -1,0 +1,17 @@
+TIMING_PASS
+variant=skewdct
+DCT_USE_MATRIX=0
+N=1024
+STRIDE=512
+OUT_WIDTH=64
+frequency_mhz=50
+period_ns=20.000
+WNS_ns=9.282
+WHS_ns=0.010
+synth_seconds=438.797
+opt_seconds=42.731
+place_seconds=340.036
+route_seconds=291.46
+total_vivado_seconds=1234.84
+implementation_retry=disabled
+rtl_modified=0

@@ -1,0 +1,127 @@
+{
+  "target": "xck26-sfvc784-2LV-c",
+  "clock_period_ns": 20,
+  "scope": "complete MFCC N=512 OUT_WIDTH=1 OOC synthesis",
+  "baseline": {
+    "clb_luts": 65158,
+    "clb_registers": 90827,
+    "dsp": 98,
+    "ramb18": 3,
+    "bram_tiles": 1.5,
+    "wns_ns": 9.23
+  },
+  "candidate": {
+    "clb_luts": 26543,
+    "clb_registers": 37822,
+    "dsp": 98,
+    "ramb18": 11,
+    "bram_tiles": 5.5,
+    "wns_ns": 9.23
+  },
+  "delta": {
+    "clb_luts": -38615,
+    "clb_luts_percent": -59.26,
+    "clb_registers": -53005,
+    "clb_registers_percent": -58.36,
+    "dsp": 0,
+    "ramb18": 8,
+    "bram_tiles": 4
+  },
+  "simulation": {
+    "fft_status": "PASS",
+    "fft_elapsed_seconds": 54.83,
+    "mfcc_status": "PASS",
+    "mfcc_elapsed_seconds": 259.16,
+    "full_audio": {
+      "n": 512,
+      "samples": 117601,
+      "frames": 459,
+      "coefficients": 29376,
+      "reference": "working_fft_parameterized/sim/reference/skew_512.csv",
+      "mismatches": 0
+    }
+  },
+  "runtime_fft_speed_50MHz": [
+    {
+      "points": 16,
+      "first_output_cycles": 68,
+      "total_cycles": 83,
+      "latency_us_at_50MHz": 1.66,
+      "frames_per_s_at_50MHz": 602409.64
+    },
+    {
+      "points": 32,
+      "first_output_cycles": 164,
+      "total_cycles": 195,
+      "latency_us_at_50MHz": 3.9,
+      "frames_per_s_at_50MHz": 256410.26
+    },
+    {
+      "points": 64,
+      "first_output_cycles": 443,
+      "total_cycles": 506,
+      "latency_us_at_50MHz": 10.12,
+      "frames_per_s_at_50MHz": 98814.23
+    },
+    {
+      "points": 128,
+      "first_output_cycles": 827,
+      "total_cycles": 954,
+      "latency_us_at_50MHz": 19.08,
+      "frames_per_s_at_50MHz": 52410.9
+    },
+    {
+      "points": 256,
+      "first_output_cycles": 1357,
+      "total_cycles": 1612,
+      "latency_us_at_50MHz": 32.24,
+      "frames_per_s_at_50MHz": 31017.37
+    },
+    {
+      "points": 512,
+      "first_output_cycles": 2893,
+      "total_cycles": 3404,
+      "latency_us_at_50MHz": 68.08,
+      "frames_per_s_at_50MHz": 14688.6
+    },
+    {
+      "points": 1024,
+      "first_output_cycles": 8239,
+      "total_cycles": 9262,
+      "latency_us_at_50MHz": 185.24,
+      "frames_per_s_at_50MHz": 5398.4
+    },
+    {
+      "points": 2048,
+      "first_output_cycles": 14383,
+      "total_cycles": 16430,
+      "latency_us_at_50MHz": 328.6,
+      "frames_per_s_at_50MHz": 3043.21
+    }
+  ],
+  "note": "OOC synthesis estimate; not routed implementation or board measurement",
+  "runtime_multipoint_ooc": {
+    "top": "fft_tree_runtime_bram",
+    "supported_points": [
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "runtime_size_sel_width": 3,
+    "clb_luts": 10860,
+    "clb_registers": 11219,
+    "bram18": 7,
+    "bram36": 5,
+    "bram_tiles": 8.5,
+    "dsp": 8,
+    "clock_period_ns": 20,
+    "wns_ns": 14.27,
+    "synthesis_status": "PASS",
+    "critical_warnings": 0
+  }
+}

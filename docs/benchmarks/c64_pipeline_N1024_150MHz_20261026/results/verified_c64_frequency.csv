@@ -1,0 +1,2 @@
+MHz,LUT,FF,BRAM tiles,DSP,WNS ns,TNS ns,Setup failures,WHS ns,Hold failures,Batch cycles,Batch us,Batch average us/frame,Status,Report
+150,35777,53107,6.5,59,0.258,0.0,0,0.01,0,39508,263.38666666666666,65.84666666666666,TIMING_PASS,raw_reports/timing_post_route.rpt

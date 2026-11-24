@@ -1,0 +1,11 @@
+SYNTHESIS_PASS
+variant=baseline
+N=512
+STRIDE=256
+OUT_WIDTH=1
+period_ns=20.0
+RAMB18=3
+RAMB36=0
+FFT_BRAM=U_CORE/my_pow_spec/my_fft/fft2_i/gen_fft256.fft256_i/gen_direct_fft256.fft256_i/U_BUF1/URAM/ram_reg
+FFT_BRAM=U_CORE/my_pow_spec/my_fft/fft2_i/gen_fft256.fft256_i/gen_direct_fft256.fft256_i/U_BUF2/URAM/ram_reg
+FFT_BRAM=U_CORE/my_pow_spec/my_fft/fft2_i/gen_fft256.fft256_i/gen_direct_fft256.fft256_i/Ubuf3/URAM/ram_reg

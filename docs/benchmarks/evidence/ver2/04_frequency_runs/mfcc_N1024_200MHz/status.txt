@@ -1,0 +1,15 @@
+USER_ABORTED_NOT_COUNTED
+reason=user_requested_150MHz_instead
+completed_stage=synthesis,opt;place_interrupted
+design=mfcc_on_fpga_ver2
+top=mfcc
+N=1024
+STRIDE=512
+OUT_WIDTH=64
+DCT_USE_MATRIX=0
+frequency_mhz=200
+period_ns=5.0
+flow=synth,opt,place,route
+flatten_hierarchy=none
+implementation_retry=disabled
+rtl_optimization_after_failure=disabled

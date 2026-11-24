@@ -1,0 +1,17 @@
+Scope,Resource,Before at 150 MHz,After at 150 MHz,Delta,Change %
+Whole MFCC,LUT,35657,35777,120,0.3365398098550074
+Whole MFCC,FF,52906,53107,201,0.3799191018031981
+Whole MFCC,BRAM_tile,6.5,6.5,0.0,0.0
+Whole MFCC,DSP,59,59,0,0.0
+DCT subsystem,LUT,5871,6041,170,2.8955884857775507
+DCT subsystem,FF,11981,12125,144,1.2019030131040815
+DCT subsystem,BRAM_tile,0.0,0.0,0.0,
+DCT subsystem,DSP,41,41,0,0.0
+C64 output processing,LUT,939,1107,168,17.891373801916934
+C64 output processing,FF,1562,1706,144,9.218950064020486
+C64 output processing,BRAM_tile,0.0,0.0,0.0,
+C64 output processing,DSP,1,1,0,0.0
+Shared SkewDCT8 core,LUT,1706,1706,0,0.0
+Shared SkewDCT8 core,FF,2357,2357,0,0.0
+Shared SkewDCT8 core,BRAM_tile,0.0,0.0,0.0,
+Shared SkewDCT8 core,DSP,24,24,0,0.0

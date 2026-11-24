@@ -1,0 +1,18 @@
+RUNTIME frame=0 N=64 first=506 cycles=591
+RUNTIME frame=1 N=128 first=1100 cycles=1266
+RUNTIME frame=2 N=128 first=1113 cycles=1297
+RUNTIME frame=3 N=64 first=511 cycles=606
+RUNTIME frame=4 N=64 first=517 cycles=600
+RUNTIME frame=5 N=128 first=1100 cycles=1292
+RUNTIME frame=6 N=128 first=1113 cycles=1291
+RUNTIME frame=7 N=64 first=513 cycles=604
+RUNTIME frame=8 N=64 first=512 cycles=591
+RUNTIME frame=9 N=128 first=1103 cycles=1271
+RUNTIME frame=10 N=128 first=1111 cycles=1262
+RUNTIME frame=11 N=64 first=518 cycles=608
+RUNTIME frame=12 N=64 first=511 cycles=599
+RUNTIME frame=13 N=128 first=1109 cycles=1277
+RUNTIME frame=14 N=128 first=1103 cycles=1261
+RUNTIME frame=15 N=64 first=510 cycles=596
+PASS words=1536 stall_checks=542 latch_checks=14992
+D:\KV260_MFCC\18_fft_vs_xfft_ver2_20261025\01_custom\sim\runtime_tree_tb.v:120: $finish called at 156320000 (1ps)

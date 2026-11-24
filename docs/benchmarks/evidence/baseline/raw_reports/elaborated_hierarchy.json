@@ -1,0 +1,74 @@
+[
+  {
+    "n": 16,
+    "active_fft2x_instances": 1,
+    "shared_merge_kernels": 1,
+    "fft256_instances": 0,
+    "fft16_instances_including_fft256_internals": 1,
+    "upper_half_output_ram_elaborated": false,
+    "ram_template_instances": 8
+  },
+  {
+    "n": 32,
+    "active_fft2x_instances": 1,
+    "shared_merge_kernels": 1,
+    "fft256_instances": 0,
+    "fft16_instances_including_fft256_internals": 1,
+    "upper_half_output_ram_elaborated": false,
+    "ram_template_instances": 8
+  },
+  {
+    "n": 64,
+    "active_fft2x_instances": 1,
+    "shared_merge_kernels": 1,
+    "fft256_instances": 0,
+    "fft16_instances_including_fft256_internals": 1,
+    "upper_half_output_ram_elaborated": false,
+    "ram_template_instances": 8
+  },
+  {
+    "n": 128,
+    "active_fft2x_instances": 1,
+    "shared_merge_kernels": 1,
+    "fft256_instances": 0,
+    "fft16_instances_including_fft256_internals": 1,
+    "upper_half_output_ram_elaborated": false,
+    "ram_template_instances": 8
+  },
+  {
+    "n": 256,
+    "active_fft2x_instances": 1,
+    "shared_merge_kernels": 1,
+    "fft256_instances": 1,
+    "fft16_instances_including_fft256_internals": 2,
+    "upper_half_output_ram_elaborated": false,
+    "ram_template_instances": 8
+  },
+  {
+    "n": 512,
+    "active_fft2x_instances": 1,
+    "shared_merge_kernels": 1,
+    "fft256_instances": 1,
+    "fft16_instances_including_fft256_internals": 2,
+    "upper_half_output_ram_elaborated": false,
+    "ram_template_instances": 8
+  },
+  {
+    "n": 1024,
+    "active_fft2x_instances": 1,
+    "shared_merge_kernels": 1,
+    "fft256_instances": 1,
+    "fft16_instances_including_fft256_internals": 2,
+    "upper_half_output_ram_elaborated": false,
+    "ram_template_instances": 8
+  },
+  {
+    "n": 2048,
+    "active_fft2x_instances": 1,
+    "shared_merge_kernels": 1,
+    "fft256_instances": 1,
+    "fft16_instances_including_fft256_internals": 2,
+    "upper_half_output_ram_elaborated": false,
+    "ram_template_instances": 8
+  }
+]

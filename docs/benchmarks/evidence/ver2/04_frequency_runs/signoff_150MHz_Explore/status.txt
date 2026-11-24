@@ -1,0 +1,10 @@
+SIGNOFF_PASS
+frequency_mhz=150
+period_ns=6.666666666666667
+WNS_ns=0.001
+WHS_ns=0.010
+setup_failing_paths=0
+hold_failing_paths=0
+selected_dcp=D:/KV260_MFCC/17_mfcc_ver2_20261025/04_frequency_runs/postroute_Explore_20261025_192145_6860/mfcc_N1024_150MHz_physopt.dcp
+rtl_modified=false
+additional_physopt=false

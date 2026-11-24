@@ -1,0 +1,4 @@
+﻿frequency_mhz,status,period_ns,WNS_ns,WHS_ns,clb_luts,clb_luts_percent,clb_registers,clb_registers_percent,bram_tiles,bram_tiles_percent,dsps,dsps_percent,synth_seconds,opt_seconds,place_seconds,route_seconds,total_vivado_seconds,postroute_physopt_seconds,selected_flow_total_seconds,setup_failing_paths,hold_failing_paths,rtl_batch_cycles_4_frames,estimated_batch_us_4_frames,estimated_average_us_per_frame
+50,TIMING_PASS,20.0,9.282,0.01,31943.0,27.27,50689.0,21.64,6.5,4.51,123.0,9.86,439.963,46.259,349.691,294.299,1266.247,,,,,39498,789.96,197.49
+100,TIMING_PASS,10.0,1.576,0.01,31945.0,27.28,50689.0,21.64,6.5,4.51,123.0,9.86,442.629,46.161,385.064,279.412,1286.236,,,,,39498,394.98,98.745
+150,TIMING_PASS,6.666666666666667,0.001,0.01,32022.0,27.34,50773.0,21.68,6.5,4.51,123.0,9.86,440.694,42.301,623.852,710.517,1923.199,313.429,2236.628,0,0,39498,263.32,65.83

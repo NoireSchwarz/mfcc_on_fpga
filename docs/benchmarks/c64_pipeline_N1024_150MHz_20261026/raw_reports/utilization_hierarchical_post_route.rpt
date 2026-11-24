@@ -1,0 +1,72 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Mon Oct 26 15:55:13 2026
+| Host         : PCforInitblankStudio running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file D:/KV260_MFCC/21_skewdct8_recursive_retry_20261026/04_implementation/skewdct_150MHz/utilization_hierarchical_post_route.rpt
+| Design       : mfcc
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------------------+-----------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+|                Instance                |            Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | URAM | DSP Blocks |
++----------------------------------------+-----------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+| mfcc                                   |                       (top) |      35777 |      34875 |       0 |  902 | 53107 |      3 |      7 |    0 |         59 |
+|   U_CORE                               |                   mfcc_core |      35777 |      34875 |       0 |  902 | 53107 |      3 |      7 |    0 |         59 |
+|     (U_CORE)                           |                   mfcc_core |       2760 |       2760 |       0 |    0 |  1665 |      0 |      0 |    0 |          0 |
+|     gen_skew.my_dct                    |                dct64_serial |       6041 |       6032 |       0 |    9 | 12125 |      0 |      0 |    0 |         41 |
+|       (gen_skew.my_dct)                |                dct64_serial |       1160 |       1160 |       0 |    0 |  2596 |      0 |      0 |    0 |          0 |
+|       U_C64_8                          |        c64_8_postadd_serial |       1107 |       1107 |       0 |    0 |  1706 |      0 |      0 |    0 |          1 |
+|       U_DCT_TDM                        |               dct8_tdm_bank |       1407 |       1404 |       0 |    3 |  3988 |      0 |      0 |    0 |         16 |
+|         (U_DCT_TDM)                    |               dct8_tdm_bank |        903 |        903 |       0 |    0 |  2973 |      0 |      0 |    0 |          0 |
+|         U_DCT8                         |               dct8_parallel |        504 |        501 |       0 |    3 |  1015 |      0 |      0 |    0 |         16 |
+|       U_SKEW_TDM                       |     skewdct8_dctii_tdm_bank |       2365 |       2359 |       0 |    6 |  3789 |      0 |      0 |    0 |         24 |
+|         (U_SKEW_TDM)                   |     skewdct8_dctii_tdm_bank |        659 |        659 |       0 |    0 |  1432 |      0 |      0 |    0 |          0 |
+|         U_SKEW_DYN                     |          skewdct8_dctii_dyn |       1706 |       1700 |       0 |    6 |  2357 |      0 |      0 |    0 |         24 |
+|           U_SKEWDCT8                   |                    skewdct8 |       1706 |       1700 |       0 |    6 |  2357 |      0 |      0 |    0 |         24 |
+|             gen_recursive.recursive_i  |     skewdct8_recursive_pipe |       1706 |       1700 |       0 |    6 |  2357 |      0 |      0 |    0 |         24 |
+|     my_filt_bank                       |                 filter_bank |      12673 |      12673 |       0 |    0 |  5650 |      0 |      0 |    0 |          6 |
+|     my_hamming                         |                     hamming |       1110 |        317 |       0 |  793 |  8334 |      0 |      0 |    0 |          1 |
+|     my_in                              |               prepare_input |       4574 |       4574 |       0 |    0 | 16571 |      0 |      0 |    0 |          1 |
+|     my_pow_spec                        |              power_spectrum |       8624 |       8524 |       0 |  100 |  8762 |      3 |      7 |    0 |         10 |
+|       my_fft                           |                      fft512 |       8588 |       8488 |       0 |  100 |  8728 |      3 |      7 |    0 |          8 |
+|         engine_i                       |        fft_tree_bram_engine |       8588 |       8488 |       0 |  100 |  8728 |      3 |      7 |    0 |          8 |
+|           (engine_i)                   |        fft_tree_bram_engine |        245 |        245 |       0 |    0 |    84 |      0 |      0 |    0 |          0 |
+|           fft2x_i                      |                        fft2 |        161 |        161 |       0 |    0 |    88 |      2 |      0 |    0 |          0 |
+|             (fft2x_i)                  |                        fft2 |        161 |        161 |       0 |    0 |    88 |      0 |      0 |    0 |          0 |
+|           gen_root256.root256_i        |                 fft256_1024 |       4255 |       4155 |       0 |  100 |  7359 |      0 |      3 |    0 |          4 |
+|             gen_direct_fft256.fft256_i |                      fft256 |       4255 |       4155 |       0 |  100 |  7359 |      0 |      3 |    0 |          4 |
+|               U_FFT1                   |                       FFT16 |       1920 |       1874 |       0 |   46 |  3353 |      0 |      0 |    0 |          0 |
+|                 (U_FFT1)               |                       FFT16 |       1430 |       1392 |       0 |   38 |  2786 |      0 |      0 |    0 |          0 |
+|                 UM1307                 |                    MPUC1307 |        112 |        110 |       0 |    2 |   149 |      0 |      0 |    0 |          0 |
+|                 UM383                  |                 MPUC924_383 |        174 |        172 |       0 |    2 |   153 |      0 |      0 |    0 |          0 |
+|                 UM541                  |                     MPUC541 |         93 |         91 |       0 |    2 |   132 |      0 |      0 |    0 |          0 |
+|                 UM707                  |                     MPUC707 |        111 |        109 |       0 |    2 |   133 |      0 |      0 |    0 |          0 |
+|               U_FFT2                   |       FFT16__parameterized0 |       2123 |       2069 |       0 |   54 |  3710 |      0 |      0 |    0 |          0 |
+|                 (U_FFT2)               |       FFT16__parameterized0 |       1585 |       1539 |       0 |   46 |  3083 |      0 |      0 |    0 |          0 |
+|                 UM1307                 |    MPUC1307__parameterized0 |        122 |        120 |       0 |    2 |   165 |      0 |      0 |    0 |          0 |
+|                 UM383                  | MPUC924_383__parameterized0 |        191 |        189 |       0 |    2 |   169 |      0 |      0 |    0 |          0 |
+|                 UM541                  |     MPUC541__parameterized0 |        103 |        101 |       0 |    2 |   146 |      0 |      0 |    0 |          0 |
+|                 UM707                  |     MPUC707__parameterized0 |        122 |        120 |       0 |    2 |   147 |      0 |      0 |    0 |          0 |
+|               U_MPU                    |                   ROTATOR64 |        142 |        142 |       0 |    0 |   139 |      0 |      0 |    0 |          4 |
+|                 (U_MPU)                |                   ROTATOR64 |         28 |         28 |       0 |    0 |   139 |      0 |      0 |    0 |          0 |
+|                 UROM                   |                    WROM2048 |         76 |         76 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|           kernel_i                     |            fft_merge_kernel |       1837 |       1837 |       0 |    0 |  1197 |      0 |      0 |    0 |          4 |
+|           tw1_i                        |    WROM2048__parameterized0 |        821 |        821 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|           tw2_i                        | WROM2048__parameterized0__2 |        448 |        448 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|           tw3_i                        | WROM2048__parameterized0__1 |        821 |        821 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
++----------------------------------------+-----------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

@@ -1,0 +1,5 @@
+scope,variant,fft_points,frequency_mhz,cycles,time_us,total_lut,total_ff,bram_tiles,dsp,wns_ns,whs_ns,rmse_vs_float,snr_db,notes
+full_mfcc,register_matrixdct,1024,50,43622,872.44,30110,43473,6.5,19,8.235,0.010,12.4901099750,16.0496688752,"4 frames; 64 output lanes; nominal cycle conversion; OOC post-route"
+full_mfcc,recursive_skewdct,1024,50,39508,790.16,,,,,,,12.4916109414,16.0486251338,"4 frames; 64 output lanes; fresh RTL simulation only in this task"
+standalone_dct,register_matrixdct,,50,4352,87.04,1847,2717,0,1,12.740,0.067,,,"accepted 64-word frame to accepted final output; OOC post-route resources"
+standalone_dct,recursive_skewdct,,50,238,4.76,5113,12378,0,41,14.342,0.011,,,"accepted 64-word frame to accepted final output; OOC post-route resources"

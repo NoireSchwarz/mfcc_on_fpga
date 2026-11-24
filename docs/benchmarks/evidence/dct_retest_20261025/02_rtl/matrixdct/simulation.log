@@ -1,0 +1,2 @@
+PASS MFCC N=1024 matrix=1 lanes=64 frames=4 coefficients=256 stalls=0 cycles=43687
+D:\KV260_MFCC\17_mfcc_ver2_20261025\02_working_candidate\mfcc_on_fpga--_ver.2\sim\mfcc_bram_tb.v:65: $finish called at 436970000 (1ps)

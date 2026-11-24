@@ -119,43 +119,6 @@ module skewdct8_dctii_tdm_bank (
 		end
 	initial _sv2v_0 = 0;
 endmodule
-module skewdct8_dctii_coeff_rom (
-	BLOCK,
-	C
-);
-	reg _sv2v_0;
-	parameter integer COEF_W = 20;
-	parameter COEFF_FILE = "skewdct8_coeff_rom.mem";
-	input wire [2:0] BLOCK;
-	output reg signed [(64 * COEF_W) - 1:0] C;
-	localparam integer ROM_W = 20;
-	reg signed [ROM_W - 1:0] coeff_mem [0:511];
-	initial $readmemh(COEFF_FILE, coeff_mem);
-	function automatic signed [31:0] sv2v_cast_32_signed;
-		input reg signed [31:0] inp;
-		sv2v_cast_32_signed = inp;
-	endfunction
-	function automatic signed [31:0] coeff_addr;
-		input reg [2:0] block;
-		input reg signed [31:0] row;
-		input reg signed [31:0] col;
-		coeff_addr = ((sv2v_cast_32_signed(block) * 64) + (row * 8)) + col;
-	endfunction
-	always @(*) begin
-		if (_sv2v_0)
-			;
-		begin : sv2v_autoblock_1
-			reg signed [31:0] row;
-			for (row = 0; row < 8; row = row + 1)
-				begin : sv2v_autoblock_2
-					reg signed [31:0] col;
-					for (col = 0; col < 8; col = col + 1)
-						C[(((7 - row) * 8) + (7 - col)) * COEF_W+:COEF_W] = coeff_mem[coeff_addr(BLOCK, row, col)];
-				end
-		end
-	end
-	initial _sv2v_0 = 0;
-endmodule
 module skewdct8_dctii_dyn (
 	CLK, RST, ED, in_valid, in_tag, out_valid, out_tag,
 	BLOCK,
@@ -174,18 +137,14 @@ module skewdct8_dctii_dyn (
 	input wire [2:0] BLOCK;
 	input wire signed [(8 * DATA_W) - 1:0] X;
 	output wire signed [(8 * OUT_W) - 1:0] Y;
-	wire signed [(64 * COEF_W) - 1:0] coeff;
-	skewdct8_dctii_coeff_rom #(.COEF_W(COEF_W)) U_COEFF_ROM(
-		.BLOCK(BLOCK),
-		.C(coeff)
-	);
+	// Pass the family ID directly; the recursive core owns its Q21 factor lookup.
 	skewdct8 #(
 		.DATA_W(DATA_W),
 		.COEF_W(COEF_W),
 		.COEF_FRAC(COEF_FRAC),
 		.ACC_W(ACC_W),
 		.OUT_W(OUT_W),
-		.USE_COEFF_PORT(1)
+		.USE_COEFF_PORT(2) // 3-bit family-ID input; thirteen-stage arithmetic is unchanged
 	) U_SKEWDCT8(
 		.CLK(CLK), .RST(RST), .ED(ED),
 		.in_valid(in_valid), .in_tag(in_tag),
@@ -206,6 +165,6 @@ module skewdct8_dctii_dyn (
 		.y5(Y[2 * OUT_W+:OUT_W]),
 		.y6(Y[OUT_W+:OUT_W]),
 		.y7(Y[0+:OUT_W]),
-		.c_in(coeff)
+		.c_in(BLOCK)
 	);
 endmodule

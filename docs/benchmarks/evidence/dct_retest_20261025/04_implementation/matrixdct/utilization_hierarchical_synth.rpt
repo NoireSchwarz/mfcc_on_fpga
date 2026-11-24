@@ -1,0 +1,62 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Sun Oct 25 21:32:15 2026
+| Host         : PCforInitblankStudio running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file D:/KV260_MFCC/19_skew_vs_matrix_mfcc_20261025/04_implementation/matrixdct/utilization_hierarchical_synth.rpt
+| Design       : mfcc
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------------------+-----------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+|                Instance                |            Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | URAM | DSP Blocks |
++----------------------------------------+-----------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+| mfcc                                   |                       (top) |      30472 |      29463 |      52 |  957 | 41987 |      5 |      8 |    0 |         19 |
+|   U_CORE                               |                   mfcc_core |      30472 |      29463 |      52 |  957 | 41987 |      5 |      8 |    0 |         19 |
+|     (U_CORE)                           |                   mfcc_core |       2593 |       2593 |       0 |    0 |  1665 |      0 |      0 |    0 |          0 |
+|     gen_matrix_reference.my_dct        |                dct64_matrix |        650 |        598 |      52 |    0 |  1098 |      2 |      1 |    0 |          1 |
+|       U_DATAPATH                       |       dct64_matrix_datapath |        557 |        557 |       0 |    0 |  1024 |      0 |      0 |    0 |          1 |
+|     my_filt_bank                       |                 filter_bank |      12763 |      12763 |       0 |    0 |  5641 |      0 |      0 |    0 |          6 |
+|     my_hamming                         |                     hamming |       1110 |        317 |       0 |  793 |  8334 |      0 |      0 |    0 |          1 |
+|     my_in                              |               prepare_input |       4575 |       4575 |       0 |    0 | 16551 |      0 |      0 |    0 |          1 |
+|     my_pow_spec                        |              power_spectrum |       8781 |       8617 |       0 |  164 |  8698 |      3 |      7 |    0 |         10 |
+|       my_fft                           |                      fft512 |       8746 |       8582 |       0 |  164 |  8664 |      3 |      7 |    0 |          8 |
+|         engine_i                       |        fft_tree_bram_engine |       8745 |       8581 |       0 |  164 |  8664 |      3 |      7 |    0 |          8 |
+|           (engine_i)                   |        fft_tree_bram_engine |        247 |        247 |       0 |    0 |    84 |      0 |      0 |    0 |          0 |
+|           fft2x_i                      |                        fft2 |        163 |        163 |       0 |    0 |    88 |      2 |      0 |    0 |          0 |
+|             (fft2x_i)                  |                        fft2 |        163 |        163 |       0 |    0 |    88 |      0 |      0 |    0 |          0 |
+|           gen_root256.root256_i        |                 fft256_1024 |       4399 |       4235 |       0 |  164 |  7359 |      0 |      3 |    0 |          4 |
+|             gen_direct_fft256.fft256_i |                      fft256 |       4399 |       4235 |       0 |  164 |  7359 |      0 |      3 |    0 |          4 |
+|               U_MPU                    |                   ROTATOR64 |        142 |        142 |       0 |    0 |   139 |      0 |      0 |    0 |          4 |
+|                 (U_MPU)                |                   ROTATOR64 |         28 |         28 |       0 |    0 |   139 |      0 |      0 |    0 |          0 |
+|                 UROM                   |                    WROM2048 |         76 |         76 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|               U_FFT1                   |                       FFT16 |       1990 |       1912 |       0 |   78 |  3353 |      0 |      0 |    0 |          0 |
+|                 (U_FFT1)               |                       FFT16 |       1499 |       1429 |       0 |   70 |  2786 |      0 |      0 |    0 |          0 |
+|                 UM1307                 |                    MPUC1307 |        112 |        110 |       0 |    2 |   149 |      0 |      0 |    0 |          0 |
+|                 UM383                  |                 MPUC924_383 |        174 |        172 |       0 |    2 |   153 |      0 |      0 |    0 |          0 |
+|                 UM541                  |                     MPUC541 |         94 |         92 |       0 |    2 |   132 |      0 |      0 |    0 |          0 |
+|                 UM707                  |                     MPUC707 |        111 |        109 |       0 |    2 |   133 |      0 |      0 |    0 |          0 |
+|               U_FFT2                   |       FFT16__parameterized0 |       2194 |       2108 |       0 |   86 |  3710 |      0 |      0 |    0 |          0 |
+|                 (U_FFT2)               |       FFT16__parameterized0 |       1655 |       1577 |       0 |   78 |  3083 |      0 |      0 |    0 |          0 |
+|                 UM1307                 |    MPUC1307__parameterized0 |        122 |        120 |       0 |    2 |   165 |      0 |      0 |    0 |          0 |
+|                 UM383                  | MPUC924_383__parameterized0 |        191 |        189 |       0 |    2 |   169 |      0 |      0 |    0 |          0 |
+|                 UM541                  |     MPUC541__parameterized0 |        104 |        102 |       0 |    2 |   146 |      0 |      0 |    0 |          0 |
+|                 UM707                  |     MPUC707__parameterized0 |        122 |        120 |       0 |    2 |   147 |      0 |      0 |    0 |          0 |
+|           kernel_i                     |            fft_merge_kernel |       1846 |       1846 |       0 |    0 |  1133 |      0 |      0 |    0 |          4 |
+|           tw1_i                        |    WROM2048__parameterized0 |        821 |        821 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|           tw2_i                        | WROM2048__parameterized0__2 |        448 |        448 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|           tw3_i                        | WROM2048__parameterized0__1 |        821 |        821 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
++----------------------------------------+-----------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+
+

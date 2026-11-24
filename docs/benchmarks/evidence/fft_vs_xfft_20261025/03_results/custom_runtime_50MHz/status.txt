@@ -1,0 +1,6 @@
+TIMING_PASS
+WNS_ns=12.786
+WHS_ns=0.055
+frequency_mhz=50
+supported_points=16,32,64,128,256,512,1024,2048
+multipoint_selector=preserved

@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "configuration": {
+    "n": 1024,
+    "stride": 512,
+    "frames": 4,
+    "frequency_mhz": 50,
+    "out_width": 64
+  },
+  "source": "D:\\KV260_MFCC\\21_skewdct8_recursive_retry_20261026\\00_source\\mfcc_on_fpga",
+  "source_rtl_list_sha256": "7699465b7359e6fafc71918582ea8d107bf6f77d44cb2f61dabdd55b4c8b1525",
+  "variants": [
+    {
+      "name": "skewdct",
+      "matrix": 0,
+      "frames": 4,
+      "coefficients": 256,
+      "cycles_4frames": 39508,
+      "time_us_4frames_50mhz": 790.16,
+      "average_us_per_frame_50mhz": 197.54,
+      "compile_wall_seconds": 0.223,
+      "simulation_wall_seconds": 6.436,
+      "raw_csv_sha256": "d2d1c0b91c6a6814b01f523af1faa7d3a1802110a2245e6d4f17992fc7f5bdda",
+      "accuracy_vs_float_orthonormal_dct": {
+        "mae": 3.4286065721184498,
+        "rmse": 12.491610941411583,
+        "max_abs_error": 101.62445254003143,
+        "snr_db": 16.04862513376996,
+        "within_1": 36.328125,
+        "within_2": 65.234375
+      }
+    },
+    {
+      "name": "matrixdct",
+      "matrix": 1,
+      "frames": 4,
+      "coefficients": 256,
+      "cycles_4frames": 43687,
+      "time_us_4frames_50mhz": 873.74,
+      "average_us_per_frame_50mhz": 218.435,
+      "compile_wall_seconds": 0.153,
+      "simulation_wall_seconds": 5.955,
+      "raw_csv_sha256": "68a678c1aed797fa0aed98903ca3453623b6490c30c2fc2b1f31671d1d064f16",
+      "accuracy_vs_float_orthonormal_dct": {
+        "mae": 3.428547093289361,
+        "rmse": 12.490109975036418,
+        "max_abs_error": 101.60887915401383,
+        "snr_db": 16.049668875179485,
+        "within_1": 36.328125,
+        "within_2": 65.234375
+      }
+    }
+  ]
+}

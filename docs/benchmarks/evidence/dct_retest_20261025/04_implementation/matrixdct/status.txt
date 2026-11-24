@@ -1,0 +1,17 @@
+TIMING_PASS
+variant=matrixdct
+DCT_USE_MATRIX=1
+N=1024
+STRIDE=512
+OUT_WIDTH=64
+frequency_mhz=50
+period_ns=20.000
+WNS_ns=8.254
+WHS_ns=0.010
+synth_seconds=332.664
+opt_seconds=31.69
+place_seconds=253.294
+route_seconds=190.209
+total_vivado_seconds=904.918
+implementation_retry=disabled
+rtl_modified=0

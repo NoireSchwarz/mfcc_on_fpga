@@ -1,0 +1,5 @@
+Scope,MHz,LUT,FF,BRAM tiles,DSP,Timing,Report
+Whole MFCC,150,35777,53107,6.5,59,TIMING_PASS,raw_reports/utilization_hierarchical_post_route.rpt
+DCT subsystem,150,6041,12125,0.0,41,TIMING_PASS,raw_reports/utilization_hierarchical_post_route.rpt
+C64 output processing,150,1107,1706,0.0,1,TIMING_PASS,raw_reports/utilization_hierarchical_post_route.rpt
+Shared SkewDCT8 core,150,1706,2357,0.0,24,TIMING_PASS,raw_reports/utilization_hierarchical_post_route.rpt

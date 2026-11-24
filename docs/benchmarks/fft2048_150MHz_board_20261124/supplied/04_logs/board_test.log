@@ -1,0 +1,70 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 15-oct-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Tue Nov 24 01:26:27 2026
+# Process ID         : 160928
+# Current directory  : D:/Documents/ChatGPT/MFCC
+# Command line       : vivado.exe -mode batch -source D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\test_board_latest_exact150.tcl -log D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\board_test.log -journal D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\board_test.jou
+# Log file           : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/board_test.log
+# Journal file       : D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\board_test.jou
+# Running On         : PCforInitblankStudio
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34221 MB
+# Swap memory        : 15486 MB
+# Total Virtual      : 49708 MB
+# Available Virtual  : 12799 MB
+#-----------------------------------------------------------
+source {D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\test_board_latest_exact150.tcl}
+# set latest_root D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124
+# set legacy_bench D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260
+# set legacy_script [file join $legacy_bench test_board_150mhz.tcl]
+# set f [open $legacy_script r]
+# set script [read $f]
+# close $f
+# set script [string map [list \
+#     {set bench [file normalize [file dirname [info script]]]} [format {set bench %s} $legacy_bench] \
+#     {set evidence_root D:/KV260_MFCC/32_fft2048_150mhz_board_20261123} [format {set evidence_root %s} $latest_root] \
+#     {set out [file join $evidence_root board_results_exact150 fft_2048]} {set out [file join $evidence_root board_results_latest_exact150 fft_2048]} \
+#     {set bitstream [file join $evidence_root implementation_150mhz kv260_fft2048_exact150.bit]} {set bitstream [file join $evidence_root kv260_fft2048_latest_exact150.bit]} \
+# ] $script]
+# eval $script
+open_hw_manager: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 619.031 ; gain = 271.625
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:45678
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx cs_server v2026.1
+  **** Build Info : #60 | 2026-06-15 19:15 UTC | a9691a9
+    ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:28 . Memory (MB): peak = 626.230 ; gain = 7.199
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:45678/xilinx_tcf/Xilinx/XFL1GVXDXK2FA
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:45678/xilinx_tcf/Xilinx/XFL1GVXDXK2FA
+PL1_REF_CTRL_before=0x01010a00 PL1_REF_CTRL_after=0x01010a00 IOPLL_CTRL=0x00013c00 IOPLL_FRAC_CFG=0x00000000 PL1_Hz=100000000 MMCM_MULT=12 MMCM_DIV=8 fabric_Hz=150000000 pending=0x00000000
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:45678/xilinx_tcf/Xilinx/XFL1GVXDXK2FA
+INFO: [Labtools 27-2302] Device xck26 (JTAG device index = 0) is programmed with a design that has 1 JTAG AXI core(s).
+BOARD fft_2048 original: inputs=2048 outputs=2048 cycles=25390 mismatches=0 errors=00000000
+BOARD fft_2048 zero: inputs=2048 outputs=2048 cycles=25390 mismatches=0 errors=00000000
+BOARD fft_2048 impulse: inputs=2048 outputs=2048 cycles=25390 mismatches=0 errors=00000000
+BOARD fft_2048 dc: inputs=2048 outputs=2048 cycles=25390 mismatches=0 errors=00000000
+BOARD fft_2048 alternating: inputs=2048 outputs=2048 cycles=25390 mismatches=0 errors=00000000
+BOARD fft_2048 random_low: inputs=2048 outputs=2048 cycles=25390 mismatches=0 errors=00000000
+BOARD fft_2048 random_full: inputs=2048 outputs=2048 cycles=25390 mismatches=0 errors=00000000
+BOARD fft_2048 original_4frames: inputs=8192 outputs=8192 cycles=101545 mismatches=0 errors=00000000
+BOARD fft_2048 mixed_4frames: inputs=8192 outputs=8192 cycles=101545 mismatches=0 errors=00000000
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:45678/xilinx_tcf/Xilinx/XFL1GVXDXK2FA
+EXACT150_BOARD_TEST_COMPLETE output=D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/board_results_latest_exact150/fft_2048
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 24 01:28:27 2026...

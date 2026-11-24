@@ -1,0 +1,1689 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 15-oct-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Tue Nov 24 00:51:53 2026
+# Process ID         : 27668
+# Current directory  : D:/Documents/ChatGPT/MFCC
+# Command line       : vivado.exe -mode batch -source D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build_latest_exact150.tcl -log D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build.log -journal D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build.jou
+# Log file           : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build.log
+# Journal file       : D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build.jou
+# Running On         : PCforInitblankStudio
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34221 MB
+# Swap memory        : 15486 MB
+# Total Virtual      : 49708 MB
+# Available Virtual  : 7710 MB
+#-----------------------------------------------------------
+source {D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build_latest_exact150.tcl}
+# set evidence D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124
+# set repo D:/Documents/ChatGPT/MFCC/mfcc_on_fpga_latest
+# set expected_commit 9be89af18ca9cf42e6f47990d7d1b781afb47615
+# set actual_commit [string trim [exec git -C $repo rev-parse HEAD]]
+# if {$actual_commit ne $expected_commit} {error "Git commit mismatch: $actual_commit"}
+# if {[string trim [exec git -C $repo status --porcelain]] ne ""} {error "Git working tree is not clean"}
+# file mkdir [file join $evidence temp]
+# set ::env(TEMP) [file join $evidence temp]
+# set ::env(TMP) $::env(TEMP)
+# set_param general.maxThreads 1
+# create_project package_latest [file join $evidence build package_latest] -part xck26-sfvc784-2LV-c -force
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 614.637 ; gain = 268.223
+# set fft_files [list \
+#     [file join $repo src work FFT512 WROM2048.v] \
+#     [file join $repo src work FFT512 fft_bram_1w1r.v] \
+#     [file join $repo src work FFT512 radix2_4_core complex_twiddle_mul.v] \
+#     [file join $repo src work FFT512 radix2_4_core fft_merge_kernel.v] \
+#     [file join $repo src work FFT512 radix2_4_core radix2_merge_stage.v] \
+#     [file join $repo src work FFT512 radix2_4_core radix4_merge_stage.v] \
+#     [file join $repo src work FFT512 radix_16_core mpuc541.v] \
+#     [file join $repo src work FFT512 radix_16_core mpuc1307.v] \
+#     [file join $repo src work FFT512 radix_16_core mpuc707.v] \
+#     [file join $repo src work FFT512 radix_16_core mpuc924_383.v] \
+#     [file join $repo src work FFT512 radix_16_core fft16.v] \
+#     [file join $repo src work FFT512 radix_16_256_core bufram256c.v] \
+#     [file join $repo src work FFT512 radix_16_256_core cnorm.v] \
+#     [file join $repo src work FFT512 radix_16_256_core ram256.v] \
+#     [file join $repo src work FFT512 radix_16_256_core ram2x256.v] \
+#     [file join $repo src work FFT512 radix_16_256_core rotator256_v.v] \
+#     [file join $repo src work FFT512 radix_16_256_core fft256_config.v] \
+#     [file join $repo src work FFT512 radix_16_256_core fft256.v] \
+#     [file join $repo src work FFT512 fft_16_64.v] \
+#     [file join $repo src work FFT512 fft256_1024.v] \
+#     [file join $repo src work FFT512 fft2x.v] \
+#     [file join $repo src work FFT512 fft_tree_bram_engine.v] \
+#     [file join $repo src work FFT512 fft512.v] \
+#     [file join $evidence src bench_transform_latest.v]]
+# add_files $fft_files
+# add_files [list [file join $repo WROM2048_cos.mem] [file join $repo WROM2048_sin.mem]]
+# set_property top bench_transform [current_fileset]
+# set ip_repo [file join $evidence packaged_ip]
+# ipx::package_project -root_dir $ip_repo -vendor kv260.local -library benchmark -taxonomy /UserIP -import_files -set_current true
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/Documents/ChatGPT/MFCC/mfcc_on_fpga_latest/src/work/FFT512/radix2_4_core/radix2_merge_stage.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/Documents/ChatGPT/MFCC/mfcc_on_fpga_latest/src/work/FFT512/radix_16_256_core/ram256.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/Documents/ChatGPT/MFCC/mfcc_on_fpga_latest/src/work/FFT512/radix_16_256_core/fft256_config.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/Documents/ChatGPT/MFCC/mfcc_on_fpga_latest/src/work/FFT512/fft_16_64.v'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/2026.1/Vivado/data/ip'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'FREQ_HZ' with value '150000000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-11888] Component Definition 'kv260.local:benchmark:bench_transform:1.0 (bench_transform_v1_0)': IP description "bench_transform_v1_0" is not meaningful: same as name or display name
+INFO: [IP_Flow 19-7067] Note that bus interface 'clk' has a fixed FREQ_HZ of '150000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment is not required for this core.
+WARNING: [IP_Flow 19-2187] The Product Guide file is missing.
+# set core [ipx::current_core]
+# set_property name transform_fft2048_latest $core
+# set_property display_name "FFT2048 latest Git 9be89af" $core
+# set_property version 1.0 $core
+# foreach {parameter value} [list KIND 0 N 2048] {
+#     set p [ipx::get_user_parameters $parameter -of_objects $core]
+#     if {[llength $p]} {set_property value $value $p}
+#     set p [ipx::get_hdl_parameters $parameter -of_objects $core]
+#     if {[llength $p]} {set_property value $value $p}
+# }
+# ipx::associate_bus_interfaces -busif S_AXIS -clock clk $core
+# ipx::associate_bus_interfaces -busif M_AXIS -clock clk $core
+# set freq [ipx::get_bus_parameters FREQ_HZ -of_objects [ipx::get_bus_interfaces clk -of_objects $core]]
+# set_property value 149998501 $freq
+# ipx::check_integrity -quiet $core
+# ipx::save_core $core
+# close_project
+# create_project latest_fft2048 [file join $evidence build latest_fft2048] -part xck26-sfvc784-2LV-c -force
+# set_property board_part xilinx.com:kv260_som:part0:1.4 [current_project]
+# set_property ip_repo_paths $ip_repo [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/packaged_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/2026.1/Vivado/data/ip'.
+# add_files [list \
+#     D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/bench_engine.v \
+#     D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/kv260_bench_top.v]
+# set_property verilog_define [list "BENCH_SIGNATURE=32'h26000800" BENCH_LARGE BENCH_2048] [current_fileset]
+# create_bd_design bench_system
+Wrote  : <D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build\latest_fft2048\latest_fft2048.srcs\sources_1\bd\bench_system\bench_system.bd> 
+create_bd_cell: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 826.840 ; gain = 174.453
+# set ps [create_bd_cell -type ip -vlnv [lindex [get_ipdefs -all xilinx.com:ip:zynq_ultra_ps_e:*] end] ps]
+# apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1"} $ps
+# set_property -dict [list CONFIG.PSU__USE__M_AXI_GP0 0 CONFIG.PSU__USE__M_AXI_GP1 0 CONFIG.PSU__USE__M_AXI_GP2 0 \
+#     CONFIG.PSU__FPGA_PL1_ENABLE 1 CONFIG.PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ 100] $ps
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+create_bd_cell: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1896.496 ; gain = 1069.656
+# set clkgen [create_bd_cell -type ip -vlnv [lindex [get_ipdefs -all xilinx.com:ip:clk_wiz:*] end] clkgen]
+# set_property -dict [list CONFIG.PRIM_IN_FREQ 99.999001 CONFIG.CLKOUT1_REQUESTED_OUT_FREQ 149.998501 \
+#     CONFIG.USE_RESET false CONFIG.OVERRIDE_MMCM true CONFIG.MMCM_DIVCLK_DIVIDE 1 \
+#     CONFIG.MMCM_CLKFBOUT_MULT_F 12.000 CONFIG.MMCM_CLKOUT0_DIVIDE_F 8.000] $clkgen
+# connect_bd_net [get_bd_pins ps/pl_clk1] [get_bd_pins clkgen/clk_in1]
+# set master [create_bd_cell -type ip -vlnv [lindex [get_ipdefs -all xilinx.com:ip:jtag_axi:*] end] usb_master]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] bench_system_memory_controller_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] bench_system_memory_controller_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+# set memory [create_bd_cell -type ip -vlnv [lindex [get_ipdefs -all xilinx.com:ip:axi_bram_ctrl:*] end] memory_controller]
+# set_property -dict [list CONFIG.DATA_WIDTH 32 CONFIG.SINGLE_PORT_BRAM 1 CONFIG.PROTOCOL AXI4 CONFIG.READ_LATENCY 2] $memory
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] bench_system_memory_controller_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] bench_system_memory_controller_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+# set algorithm [create_bd_cell -type ip -vlnv kv260.local:benchmark:transform_fft2048_latest:1.0 algorithm]
+# set_property -dict [list CONFIG.KIND 0 CONFIG.N 2048] $algorithm
+# set bus_reset [create_bd_port -dir I -type rst bus_resetn]
+# set_property CONFIG.POLARITY ACTIVE_LOW $bus_reset
+# set core_reset [create_bd_port -dir I -type rst core_resetn]
+# set_property CONFIG.POLARITY ACTIVE_LOW $core_reset
+# connect_bd_net [get_bd_pins clkgen/clk_out1] [get_bd_pins usb_master/aclk] [get_bd_pins memory_controller/s_axi_aclk] [get_bd_pins algorithm/clk]
+# connect_bd_net $bus_reset [get_bd_pins usb_master/aresetn] [get_bd_pins memory_controller/s_axi_aresetn]
+# connect_bd_net $core_reset [get_bd_pins algorithm/resetn]
+# connect_bd_intf_net [get_bd_intf_pins usb_master/M_AXI] [get_bd_intf_pins memory_controller/S_AXI]
+# set ext [create_bd_port -dir O -type clk fabric_clk]
+# set_property -dict [list CONFIG.FREQ_HZ 149998501 CONFIG.ASSOCIATED_BUSIF S_AXIS_0:M_AXIS_0 CONFIG.ASSOCIATED_RESET bus_resetn:core_resetn] $ext
+WARNING: [BD 41-1287] Associated interface by name S_AXIS_0 not found for clock port /fabric_clk
+WARNING: [BD 41-1287] Associated interface by name M_AXIS_0 not found for clock port /fabric_clk
+WARNING: [BD 41-1287] Associated interface by name S_AXIS_0 not found for clock port /fabric_clk
+WARNING: [BD 41-1287] Associated interface by name M_AXIS_0 not found for clock port /fabric_clk
+# connect_bd_net $ext [get_bd_pins clkgen/clk_out1]
+# set ext [create_bd_port -dir O -from 31 -to 0 error_flags]
+# connect_bd_net $ext [get_bd_pins algorithm/error_flags]
+# set ext [create_bd_intf_port -mode Master -vlnv xilinx.com:interface:bram_rtl:1.0 memory]
+# set_property -dict [list CONFIG.MASTER_TYPE BRAM_CTRL CONFIG.READ_WRITE_MODE READ_WRITE] $ext
+# connect_bd_intf_net $ext [get_bd_intf_pins memory_controller/BRAM_PORTA]
+# set ext [create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_0]
+# set_property -dict [list CONFIG.TDATA_NUM_BYTES 2 CONFIG.HAS_TREADY 1 CONFIG.HAS_TLAST 0 CONFIG.FREQ_HZ 149998501] $ext
+# connect_bd_intf_net $ext [get_bd_intf_pins algorithm/S_AXIS]
+# set ext [create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M_AXIS_0]
+# set_property CONFIG.FREQ_HZ 149998501 $ext
+# connect_bd_intf_net $ext [get_bd_intf_pins algorithm/M_AXIS]
+# assign_bd_address -target_address_space [get_bd_addr_spaces usb_master/Data] -offset 0x00000000 -range 0x00010000 [get_bd_addr_segs memory_controller/S_AXI/Mem0]
+Slave segment '/memory_controller/S_AXI/Mem0' is being assigned into address space '/usb_master/Data' at <0x0000_0000 [ 64K ]>.
+# validate_bd_design
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clkgen clk_wiz propagate
+# save_bd_design
+Wrote  : <D:\KV260_MFCC\33_fft2048_latest_9be89af_150mhz_20261124\build\latest_fft2048\latest_fft2048.srcs\sources_1\bd\bench_system\bench_system.bd> 
+# generate_target all [get_files bench_system.bd]
+INFO: [BD 41-1662] The design 'bench_system.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v
+Verilog Output written to : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/sim/bench_system.v
+Verilog Output written to : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/hdl/bench_system_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.5-0] bench_system_ps_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Amd's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Amd's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clkgen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block usb_master .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block memory_controller .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block algorithm .
+Exporting to file D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/hw_handoff/bench_system.hwh
+Generated Hardware Definition File D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.hwdef
+INFO: [BD 41-3262] Generated VHDL Instantiation Template file d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/bench_system.vho
+INFO: [BD 41-3262] Generated Verilog Instantiation Template file d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/bench_system.veo
+INFO: [BD 41-3262] Generated System Verilog Instantiation Template file d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/bench_system_sv.sveo
+generate_target: Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1896.496 ; gain = 0.000
+# set wrappers [make_wrapper -files [get_files bench_system.bd] -top]
+# add_files $wrappers
+# set_property top kv260_bench_top [current_fileset]
+# update_compile_order -fileset sources_1
+# launch_runs synth_1 -jobs 1
+[Tue Nov 24 00:53:20 2026] Launched bench_system_memory_controller_0_synth_1, bench_system_ps_0_synth_1, bench_system_clkgen_0_synth_1, bench_system_algorithm_0_synth_1, bench_system_usb_master_0_synth_1...
+Run output will be captured here:
+bench_system_memory_controller_0_synth_1: D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/bench_system_memory_controller_0_synth_1/runme.log
+bench_system_ps_0_synth_1: D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/bench_system_ps_0_synth_1/runme.log
+bench_system_clkgen_0_synth_1: D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/bench_system_clkgen_0_synth_1/runme.log
+bench_system_algorithm_0_synth_1: D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/bench_system_algorithm_0_synth_1/runme.log
+bench_system_usb_master_0_synth_1: D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/bench_system_usb_master_0_synth_1/runme.log
+[Tue Nov 24 00:53:20 2026] Launched synth_1...
+Run output will be captured here: D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/runme.log
+# wait_on_run synth_1
+[Tue Nov 24 00:53:20 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log kv260_bench_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kv260_bench_top.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 15-oct-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Tue Nov 24 01:05:40 2026
+# Process ID         : 29804
+# Current directory  : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1
+# Command line       : vivado.exe -log kv260_bench_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kv260_bench_top.tcl
+# Log file           : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/kv260_bench_top.vds
+# Journal file       : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1\vivado.jou
+# Running On         : PCforInitblankStudio
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34221 MB
+# Swap memory        : 15486 MB
+# Total Virtual      : 49708 MB
+# Available Virtual  : 11212 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Tue Nov 24 01:05:40 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source kv260_bench_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 616.422 ; gain = 269.355
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/packaged_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/2026.1/Vivado/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.cache/ip 
+Command: synth_design -top kv260_bench_top -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17152
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1974.355 ; gain = 234.371
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'kv260_bench_top' [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/kv260_bench_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bench_system_wrapper' [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/hdl/bench_system_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'bench_system' [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:13]
+INFO: [Synth 8-6157] synthesizing module 'bench_system_algorithm_0' [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_algorithm_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bench_system_algorithm_0' (0#1) [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_algorithm_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bench_system_clkgen_0' [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_clkgen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bench_system_clkgen_0' (0#1) [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_clkgen_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'locked' of module 'bench_system_clkgen_0' is unconnected for instance 'clkgen' [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:118]
+WARNING: [Synth 8-7023] instance 'clkgen' of module 'bench_system_clkgen_0' has 3 connections declared, but only 2 given [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:118]
+INFO: [Synth 8-6157] synthesizing module 'bench_system_memory_controller_0' [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_memory_controller_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bench_system_memory_controller_0' (0#1) [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_memory_controller_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bench_system_ps_0' [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_ps_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bench_system_ps_0' (0#1) [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_ps_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'pl_resetn0' of module 'bench_system_ps_0' is unconnected for instance 'ps' [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:166]
+WARNING: [Synth 8-7071] port 'pl_clk0' of module 'bench_system_ps_0' is unconnected for instance 'ps' [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:166]
+WARNING: [Synth 8-7023] instance 'ps' of module 'bench_system_ps_0' has 4 connections declared, but only 2 given [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:166]
+INFO: [Synth 8-6157] synthesizing module 'bench_system_usb_master_0' [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_usb_master_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bench_system_usb_master_0' (0#1) [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/.Xil/Vivado-29804-PCforInitblankStudio/realtime/bench_system_usb_master_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awqos' of module 'bench_system_usb_master_0' is unconnected for instance 'usb_master' [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:169]
+WARNING: [Synth 8-7071] port 'm_axi_arqos' of module 'bench_system_usb_master_0' is unconnected for instance 'usb_master' [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:169]
+WARNING: [Synth 8-7023] instance 'usb_master' of module 'bench_system_usb_master_0' has 39 connections declared, but only 37 given [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'bench_system' (0#1) [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/synth/bench_system.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'bench_system_wrapper' (0#1) [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/hdl/bench_system_wrapper.v:13]
+WARNING: [Synth 8-689] width (32) of port connection 'memory_addr' does not match port width (16) of module 'bench_system_wrapper' [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/kv260_bench_top.v:21]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9505]
+	Parameter MEMORY_SIZE bound to: 524288 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 17 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: no_change - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 17 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: no_change - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:536]
+WARNING: [Synth 8-6060] Synth Warning: [XPM_MEMORY 30-16] MEMORY_SIZE (524288), WRITE_DATA_WIDTH_A (32), and ADDR_WIDTH_A (17) together imply that the addressable range exceeds the memory size for this configuration which uses port A write operations.   [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:575]
+WARNING: [Synth 8-6060] Synth Warning: [XPM_MEMORY 30-17] MEMORY_SIZE (524288), READ_DATA_WIDTH_A (32), and ADDR_WIDTH_A (17) together imply that the addressable range exceeds the memory size for this configuration which uses port A read operations.   [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:577]
+WARNING: [Synth 8-6060] Synth Warning: [XPM_MEMORY 30-18] MEMORY_SIZE (524288), WRITE_DATA_WIDTH_B (32), and ADDR_WIDTH_B (17) together imply that the addressable range exceeds the memory size for this configuration which uses port B write operations.   [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:579]
+WARNING: [Synth 8-6060] Synth Warning: [XPM_MEMORY 30-19] MEMORY_SIZE (524288), READ_DATA_WIDTH_B (32), and ADDR_WIDTH_B (17) together imply that the addressable range exceeds the memory size for this configuration which uses port B read operations.   [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:581]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (0#1) [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9505]
+WARNING: [Synth 8-7071] port 'sbiterra' of module 'xpm_memory_tdpram' is unconnected for instance 'shared_memory' [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/kv260_bench_top.v:54]
+WARNING: [Synth 8-7071] port 'dbiterra' of module 'xpm_memory_tdpram' is unconnected for instance 'shared_memory' [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/kv260_bench_top.v:54]
+WARNING: [Synth 8-7071] port 'sbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'shared_memory' [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/kv260_bench_top.v:54]
+WARNING: [Synth 8-7071] port 'dbiterrb' of module 'xpm_memory_tdpram' is unconnected for instance 'shared_memory' [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/kv260_bench_top.v:54]
+WARNING: [Synth 8-7023] instance 'shared_memory' of module 'xpm_memory_tdpram' has 25 connections declared, but only 21 given [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/kv260_bench_top.v:54]
+INFO: [Synth 8-6157] synthesizing module 'bench_engine' [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/bench_engine.v:7]
+	Parameter OUTPUT_BASE bound to: 8192 - type: integer 
+	Parameter SIGNATURE bound to: 637536256 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/bench_engine.v:43]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/bench_engine.v:80]
+INFO: [Synth 8-6155] done synthesizing module 'bench_engine' (0#1) [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/bench_engine.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'kv260_bench_top' (0#1) [D:/KV260_MFCC/32_fft2048_150mhz_board_20261123/project/bench_kv260/rtl/kv260_bench_top.v:1]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_a.gen_douta_pipe.ena_pipe_reg[0] was removed.  [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2412]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3102]
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addra[16] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addra[15] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addra[14] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[16] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[15] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[14] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2137.094 ; gain = 397.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2137.094 ; gain = 397.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2137.094 ; gain = 397.109
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2137.094 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_ps_0/bench_system_ps_0/bench_system_ps_0_in_context.xdc] for cell 'system_i/bench_system_i/ps'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2217.078 ; gain = 23.613
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_ps_0/bench_system_ps_0/bench_system_ps_0_in_context.xdc] for cell 'system_i/bench_system_i/ps'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0/bench_system_clkgen_0_in_context.xdc] for cell 'system_i/bench_system_i/clkgen'
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0/bench_system_clkgen_0_in_context.xdc] for cell 'system_i/bench_system_i/clkgen'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/bench_system_usb_master_0/bench_system_usb_master_0_in_context.xdc] for cell 'system_i/bench_system_i/usb_master'
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/bench_system_usb_master_0/bench_system_usb_master_0_in_context.xdc] for cell 'system_i/bench_system_i/usb_master'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_memory_controller_0/bench_system_memory_controller_0/bench_system_memory_controller_0_in_context.xdc] for cell 'system_i/bench_system_i/memory_controller'
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_memory_controller_0/bench_system_memory_controller_0/bench_system_memory_controller_0_in_context.xdc] for cell 'system_i/bench_system_i/memory_controller'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_algorithm_0/bench_system_algorithm_0/bench_system_algorithm_0_in_context.xdc] for cell 'system_i/bench_system_i/algorithm'
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_algorithm_0/bench_system_algorithm_0/bench_system_algorithm_0_in_context.xdc] for cell 'system_i/bench_system_i/algorithm'
+Parsing XDC File [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/2026.1/Vivado/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/kv260_bench_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/kv260_bench_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2217.188 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2218.949 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2218.949 ; gain = 478.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2218.949 ; gain = 478.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2218.949 ; gain = 478.965
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6841] Block RAM (gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (14) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+INFO: [Synth 8-3971] The signal "xpm_memory_base:/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2218.949 ; gain = 478.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   17 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 13    
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	             512K Bit	(16384 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 25    
+	  16 Input   32 Bit        Muxes := 4     
+	   7 Input   32 Bit        Muxes := 2     
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 3     
+	  16 Input   17 Bit        Muxes := 1     
+	   7 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   3 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	  16 Input    5 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	  16 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 26    
+	  16 Input    1 Bit        Muxes := 14    
+	   8 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port addra[16] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addra[15] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addra[14] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[16] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[15] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[14] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-6841] Block RAM (gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (14) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+INFO: [Synth 8-3971] The signal "shared_memory/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2218.949 ; gain = 478.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                        | RTL Object                                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++-----------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|shared_memory/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 16 K x 32(NO_CHANGE)   | W | R | 16 K x 32(NO_CHANGE)   | W | R | Port A and B     | 0      | 16     | 4,4,4,4         | 
++-----------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2881.836 ; gain = 1141.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5556] The block RAM "shared_memory/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" may be mapped as a cascade chain, because it is not timing critical.
+WARNING: [Synth 8-6841] Block RAM (gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (14) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+INFO: [Synth 8-3971] The signal "shared_memory/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 2943.934 ; gain = 1203.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                        | RTL Object                                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++-----------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|shared_memory/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 16 K x 32(NO_CHANGE)   | W | R | 16 K x 32(NO_CHANGE)   | W | R | Port A and B     | 0      | 16     | 4,4,4,4         | 
++-----------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2943.934 ; gain = 1203.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 3191.621 ; gain = 1451.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 3191.621 ; gain = 1451.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 3191.621 ; gain = 1451.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 3191.621 ; gain = 1451.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 3191.621 ; gain = 1451.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 3191.621 ; gain = 1451.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|kv260_bench_top | startup_reg[7] | 8      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++----------------+----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------------------+----------+
+|      |BlackBox name                    |Instances |
++------+---------------------------------+----------+
+|1     |bench_system_algorithm_0         |         1|
+|2     |bench_system_clkgen_0            |         1|
+|3     |bench_system_memory_controller_0 |         1|
+|4     |bench_system_ps_0                |         1|
+|5     |bench_system_usb_master_0        |         1|
++------+---------------------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------------+------+
+|      |Cell                           |Count |
++------+-------------------------------+------+
+|1     |bench_system_algorithm         |     1|
+|2     |bench_system_clkgen            |     1|
+|3     |bench_system_memory_controller |     1|
+|4     |bench_system_ps                |     1|
+|5     |bench_system_usb_master        |     1|
+|6     |CARRY8                         |    20|
+|7     |LUT1                           |     7|
+|8     |LUT2                           |   148|
+|9     |LUT3                           |   128|
+|10    |LUT4                           |    47|
+|11    |LUT5                           |   101|
+|12    |LUT6                           |   141|
+|13    |MUXF7                          |     3|
+|14    |RAMB36E2                       |    16|
+|17    |SRL16E                         |     1|
+|18    |FDRE                           |   318|
+|19    |FDSE                           |     2|
++------+-------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 3191.621 ; gain = 1451.637
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 3191.621 ; gain = 1369.781
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3191.621 ; gain = 1451.637
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 3191.621 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3191.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 94fbc434
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+50 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:01 . Memory (MB): peak = 3191.621 ; gain = 2514.633
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3191.621 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/synth_1/kv260_bench_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file kv260_bench_top_utilization_synth.rpt -pb kv260_bench_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 24 01:07:40 2026...
+[Tue Nov 24 01:07:42 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:14:22 . Memory (MB): peak = 1896.496 ; gain = 0.000
+# set synth_status [get_property STATUS [get_runs synth_1]]
+# if {[get_property PROGRESS [get_runs synth_1]] ne "100%"} {error "Synthesis failed: $synth_status"}
+# open_run synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xck26-sfvc784-2LV-c
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_algorithm_0/bench_system_algorithm_0.dcp' for cell 'system_i/bench_system_i/algorithm'
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.dcp' for cell 'system_i/bench_system_i/clkgen'
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_memory_controller_0/bench_system_memory_controller_0.dcp' for cell 'system_i/bench_system_i/memory_controller'
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_ps_0/bench_system_ps_0.dcp' for cell 'system_i/bench_system_i/ps'
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/bench_system_usb_master_0.dcp' for cell 'system_i/bench_system_i/usb_master'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.133 . Memory (MB): peak = 1896.496 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1781 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. system_i/bench_system_i/clkgen/inst/clkin1_ibuf 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'system_i/bench_system_i/clkgen/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+INFO: [Chipscope 16-324] Core: system_i/bench_system_i/usb_master UUID: ef53f7bf-ce88-5bf7-8ffc-700ad0bb9466 
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_ps_0/bench_system_ps_0.xdc] for cell 'system_i/bench_system_i/ps/inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2223.809 ; gain = 37.320
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_ps_0/bench_system_ps_0.xdc] for cell 'system_i/bench_system_i/ps/inst'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0_board.xdc] for cell 'system_i/bench_system_i/clkgen/inst'
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0_board.xdc] for cell 'system_i/bench_system_i/clkgen/inst'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.xdc] for cell 'system_i/bench_system_i/clkgen/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.xdc:54]
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2605.246 ; gain = 381.438
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.xdc] for cell 'system_i/bench_system_i/clkgen/inst'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/constraints/jtag_axi.xdc] for cell 'system_i/bench_system_i/usb_master/inst'
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/constraints/jtag_axi.xdc] for cell 'system_i/bench_system_i/usb_master/inst'
+INFO: [Project 1-1714] 9 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2605.246 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 53 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 8 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 45 instances
+
+open_run: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2605.246 ; gain = 708.750
+# report_utilization -file [file join $evidence synthesis_utilization.rpt]
+# report_utilization -hierarchical -file [file join $evidence synthesis_hierarchical.rpt]
+# report_timing_summary -file [file join $evidence synthesis_timing.rpt]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2LV, Temperature grade: C, Delay Type: min_max.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3774.520 ; gain = 1169.273
+# close_design
+# launch_runs impl_1 -to_step route_design -jobs 1
+[Tue Nov 24 01:08:32 2026] Launched impl_1...
+Run output will be captured here: D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1/runme.log
+# wait_on_run impl_1
+[Tue Nov 24 01:08:32 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log kv260_bench_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source kv260_bench_top.tcl -notrace
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 15-oct-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Tue Nov 24 01:08:40 2026
+# Process ID         : 59396
+# Current directory  : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1
+# Command line       : vivado.exe -log kv260_bench_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source kv260_bench_top.tcl -notrace
+# Log file           : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1/kv260_bench_top.vdi
+# Journal file       : D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1\vivado.jou
+# Running On         : PCforInitblankStudio
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34221 MB
+# Swap memory        : 15486 MB
+# Total Virtual      : 49708 MB
+# Available Virtual  : 9463 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Tue Nov 24 01:08:40 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source kv260_bench_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 616.535 ; gain = 269.801
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/packaged_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/2026.1/Vivado/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.cache/ip 
+Command: link_design -top kv260_bench_top -part xck26-sfvc784-2LV-c
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_algorithm_0/bench_system_algorithm_0.dcp' for cell 'system_i/bench_system_i/algorithm'
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.dcp' for cell 'system_i/bench_system_i/clkgen'
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_memory_controller_0/bench_system_memory_controller_0.dcp' for cell 'system_i/bench_system_i/memory_controller'
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_ps_0/bench_system_ps_0.dcp' for cell 'system_i/bench_system_i/ps'
+INFO: [Project 1-454] Reading design checkpoint 'd:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/bench_system_usb_master_0.dcp' for cell 'system_i/bench_system_i/usb_master'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 1743.676 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1781 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. system_i/bench_system_i/clkgen/inst/clkin1_ibuf 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'system_i/bench_system_i/clkgen/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+INFO: [Chipscope 16-324] Core: system_i/bench_system_i/usb_master UUID: ef53f7bf-ce88-5bf7-8ffc-700ad0bb9466 
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_ps_0/bench_system_ps_0.xdc] for cell 'system_i/bench_system_i/ps/inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2107.660 ; gain = 37.246
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_ps_0/bench_system_ps_0.xdc] for cell 'system_i/bench_system_i/ps/inst'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0_board.xdc] for cell 'system_i/bench_system_i/clkgen/inst'
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0_board.xdc] for cell 'system_i/bench_system_i/clkgen/inst'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.xdc] for cell 'system_i/bench_system_i/clkgen/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.xdc:54]
+get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2490.496 ; gain = 382.836
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_clkgen_0/bench_system_clkgen_0.xdc] for cell 'system_i/bench_system_i/clkgen/inst'
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/constraints/jtag_axi.xdc] for cell 'system_i/bench_system_i/usb_master/inst'
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/constraints/jtag_axi.xdc] for cell 'system_i/bench_system_i/usb_master/inst'
+INFO: [Project 1-1714] 9 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2490.496 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 53 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 8 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 45 instances
+
+20 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 2490.496 ; gain = 1812.137
+Command: opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xck26'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.607 . Memory (MB): peak = 2490.496 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1b384996b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2490.496 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+
+Phase 1.1.1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2993.516 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2993.516 ; gain = 0.000
+Phase 1.1.1 Generate And Synthesize Debug Cores | Checksum: 1e460a6a7
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:04:07 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Phase 1.1 Core Generation And Design Setup | Checksum: 1e460a6a7
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:04:07 . Memory (MB): peak = 2993.516 ; gain = 22.281
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1e460a6a7
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:04:07 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Phase 1 Initialization | Checksum: 1e460a6a7
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:04:07 . Memory (MB): peak = 2993.516 ; gain = 22.281
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 1e460a6a7
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:04:07 . Memory (MB): peak = 2993.516 ; gain = 22.281
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 1e460a6a7
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:04:08 . Memory (MB): peak = 2993.516 ; gain = 22.281
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 1e460a6a7
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:04:08 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Phase 2 Timer Update And Timing Data Collection | Checksum: 1e460a6a7
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:04:08 . Memory (MB): peak = 2993.516 ; gain = 22.281
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 6 inverters resulting in an inversion of 172 pins
+INFO: [Opt 31-138] Pushed 6 inverter(s) to 398 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/bench_system_i/usb_master/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/bench_system_i/usb_master/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/bench_system_i/usb_master/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 2c26e7b3e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:04:09 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Retarget | Checksum: 2c26e7b3e
+INFO: [Opt 31-389] Phase Retarget created 45 cells and removed 334 cells
+INFO: [Opt 31-1021] In phase Retarget, 46 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 22f3e1879
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:04:09 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Constant propagation | Checksum: 22f3e1879
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 46 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2993.516 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2993.516 ; gain = 0.000
+Phase 5 Sweep | Checksum: 2617c9524
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:04:09 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Sweep | Checksum: 2617c9524
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 47 cells
+INFO: [Opt 31-1021] In phase Sweep, 912 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 6 BUFG optimization | Checksum: 2617c9524
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:04:10 . Memory (MB): peak = 2993.516 ; gain = 22.281
+BUFG optimization | Checksum: 2617c9524
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 2430c61bd
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:04:10 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Shift Register Optimization | Checksum: 2430c61bd
+INFO: [Opt 31-389] Phase Shift Register Optimization created 1 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 2430c61bd
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:04:10 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Post Processing Netlist | Checksum: 2430c61bd
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 72 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 20b786434
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:04:11 . Memory (MB): peak = 2993.516 ; gain = 22.281
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2993.516 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 20b786434
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:04:11 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Phase 9 Finalization | Checksum: 20b786434
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:04:11 . Memory (MB): peak = 2993.516 ; gain = 22.281
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              45  |             334  |                                             46  |
+|  Constant propagation         |               0  |               0  |                                             46  |
+|  Sweep                        |               0  |              47  |                                            912  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               1  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             72  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 20b786434
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:04:11 . Memory (MB): peak = 2993.516 ; gain = 22.281
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 31 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 5 WE to EN ports
+Number of BRAM Ports augmented: 1 newly gated: 11 Total Ports: 62
+Ending PowerOpt Patch Enables Task | Checksum: 1ca6143cb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.276 . Memory (MB): peak = 3043.691 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1ca6143cb
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3043.691 ; gain = 50.176
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1ca6143cb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3043.691 ; gain = 0.000
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/constraints/bench_system_usb_master_0_impl.xdc] from IP D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.srcs/sources_1/bd/bench_system/ip/bench_system_usb_master_0/bench_system_usb_master_0.xci
+Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/constraints/bench_system_usb_master_0_impl.xdc] for cell 'system_i/bench_system_i/usb_master/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/constraints/bench_system_usb_master_0_impl.xdc:69]
+Finished Parsing XDC File [d:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.gen/sources_1/bd/bench_system/ip/bench_system_usb_master_0/constraints/bench_system_usb_master_0_impl.xdc] for cell 'system_i/bench_system_i/usb_master/inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 3043.691 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+61 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:29 ; elapsed = 00:04:36 . Memory (MB): peak = 3043.691 ; gain = 553.195
+INFO: [Vivado 12-24828] Executing command : report_drc -file kv260_bench_top_drc_opted.rpt -pb kv260_bench_top_drc_opted.pb -rpx kv260_bench_top_drc_opted.rpx
+Command: report_drc -file kv260_bench_top_drc_opted.rpt -pb kv260_bench_top_drc_opted.pb -rpx kv260_bench_top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1/kv260_bench_top_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3644.305 ; gain = 600.613
+generate_parallel_reports: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3644.305 ; gain = 600.613
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1/kv260_bench_top_opt.dcp' has been generated.
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xck26'
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+Running DRC as a precondition to command place_design
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 17099a046
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 26e9449c7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 352e192fa
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 352e192fa
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 352e192fa
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 32f31e6e5
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+INFO: [Place 30-3162] Check ILP status : ILP-based clock placer completed successfully.
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 35979e472
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 35979e472
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 2c72fcc94
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 2c72fcc94
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 2.1.1 Partition Driven Placement | Checksum: 2c72fcc94
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 2.1 Floorplanning | Checksum: 3155c9e17
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 3155c9e17
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 3155c9e17
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 39b70f2ff
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 39b70f2ff
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 642 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 180 nets or LUTs. Breaked 0 LUT, combined 180 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-670] No setup violation found.  Equivalent Driver Rewiring was not performed.
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            180  |                   180  |           0  |           1  |  00:00:01  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            180  |                   180  |           0  |           4  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 2b851b469
+
+Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 3089d4f5c
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:02:01 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 3089d4f5c
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:02:01 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 29d1c0beb
+
+Time (s): cpu = 00:02:11 ; elapsed = 00:02:13 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ac9fa2f3
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:02:18 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 1fa6d8f0d
+
+Time (s): cpu = 00:02:38 ; elapsed = 00:02:41 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 3.3.2 Slice Area Swap
+
+Phase 3.3.2.1 Slice Area Swap Initial
+Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 1780be8a8
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:54 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 3.3.2 Slice Area Swap | Checksum: 1780be8a8
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 3.3 Small Shape DP | Checksum: 229a8a7b8
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:03:20 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 20236bbf4
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:03:22 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 1da648090
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:03:22 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1da648090
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:03:22 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1c5a5f070
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 1 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.576 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 11c9a9d5e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.918 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1247eea02
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1c5a5f070
+
+Time (s): cpu = 00:03:45 ; elapsed = 00:03:48 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.576. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 16f4a883f
+
+Time (s): cpu = 00:03:45 ; elapsed = 00:03:49 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Time (s): cpu = 00:03:45 ; elapsed = 00:03:49 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 16d64f6aa
+
+Time (s): cpu = 00:03:45 ; elapsed = 00:03:49 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 14d432693
+
+Time (s): cpu = 00:03:58 ; elapsed = 00:04:02 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                4x4|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 14d432693
+
+Time (s): cpu = 00:03:58 ; elapsed = 00:04:02 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 14d432693
+
+Time (s): cpu = 00:03:58 ; elapsed = 00:04:02 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.012 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Time (s): cpu = 00:03:59 ; elapsed = 00:04:02 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1c9dbd9b6
+
+Time (s): cpu = 00:03:59 ; elapsed = 00:04:02 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Ending Placer Task | Checksum: 1553408e8
+
+Time (s): cpu = 00:03:59 ; elapsed = 00:04:02 . Memory (MB): peak = 3644.305 ; gain = 0.000
+92 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:04:01 ; elapsed = 00:04:05 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_io -file kv260_bench_top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.148 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file kv260_bench_top_utilization_placed.rpt -pb kv260_bench_top_utilization_placed.pb
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file kv260_bench_top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.523 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.696 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1/kv260_bench_top_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xck26'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 0.578 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+102 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.534 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.711 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1/kv260_bench_top_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xck26'
+
+
+Starting Routing Task
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: aea6dc2 ConstDB: 0 ShapeSum: a453e4f1 RouteDB: a5f5b635
+Nodegraph reading from file.  Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.736 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Post Restoration Checksum: NetGraph: e438b8ee | NumContArr: 6fe60c2b | Constraints: cd356991 | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2e3fd2947
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 2e3fd2947
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 2e3fd2947
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 2bb97547b
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 16aaae708
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.984  | TNS=0.000  | WHS=-0.068 | THS=-8.635 |
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 1a8ac15f7
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.984  | TNS=0.000  | WHS=-0.121 | THS=-2.625 |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 205954e01
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 2.6 Soft Constraint Pins - Fast Budgeting
+Phase 2.6 Soft Constraint Pins - Fast Budgeting | Checksum: 205954e01
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00128045 %
+  Global Horizontal Routing Utilization  = 0.00084957 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 19269
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 15704
+  Number of Partially Routed Nets     = 3565
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 1b4c6fddd
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 1b4c6fddd
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 2903b41b6
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 4 Initial Routing | Checksum: 21820977d
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 3803
+ Number of Nodes with overlaps = 224
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.712  | TNS=0.000  | WHS=-0.038 | THS=-0.494 |
+
+Phase 5.1 Global Iteration 0 | Checksum: 1ce51fa68
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:01:15 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.712  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 3231a5fd0
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 5 Rip-up And Reroute | Checksum: 3231a5fd0
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+Phase 6.1 Delay CleanUp | Checksum: 3231a5fd0
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 3231a5fd0
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 6 Delay and Skew Optimization | Checksum: 3231a5fd0
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.712  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 3378a49ba
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Phase 7 Post Hold Fix | Checksum: 3378a49ba
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.81268 %
+  Global Horizontal Routing Utilization  = 2.09032 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 3378a49ba
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 3378a49ba
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:01:22 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 3378a49ba
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 11 Resolve XTalk
+Phase 11 Resolve XTalk | Checksum: 3378a49ba
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 12 Post Process Routing
+Phase 12 Post Process Routing | Checksum: 3378a49ba
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Phase 13 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.712  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 13 Post Router Timing | Checksum: 3378a49ba
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Total Elapsed time in route_design: 85.269 secs
+
+Phase 14 Post-Route Event Processing
+Phase 14 Post-Route Event Processing | Checksum: 1e334e7d1
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 1e334e7d1
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:25 . Memory (MB): peak = 3644.305 ; gain = 0.000
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+114 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:26 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_drc -file kv260_bench_top_drc_routed.rpt -pb kv260_bench_top_drc_routed.pb -rpx kv260_bench_top_drc_routed.rpx
+Command: report_drc -file kv260_bench_top_drc_routed.rpt -pb kv260_bench_top_drc_routed.pb -rpx kv260_bench_top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1/kv260_bench_top_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_methodology -file kv260_bench_top_methodology_drc_routed.rpt -pb kv260_bench_top_methodology_drc_routed.pb -rpx kv260_bench_top_methodology_drc_routed.rpx
+Command: report_methodology -file kv260_bench_top_methodology_drc_routed.rpt -pb kv260_bench_top_methodology_drc_routed.pb -rpx kv260_bench_top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1/kv260_bench_top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file kv260_bench_top_timing_summary_routed.rpt -pb kv260_bench_top_timing_summary_routed.pb -rpx kv260_bench_top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2LV, Temperature grade: C, Delay Type: min_max.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_route_status -file kv260_bench_top_route_status.rpt -pb kv260_bench_top_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file kv260_bench_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_power -file kv260_bench_top_power_routed.rpt -pb kv260_bench_top_power_summary_routed.pb -rpx kv260_bench_top_power_routed.rpx
+Command: report_power -file kv260_bench_top_power_routed.rpt -pb kv260_bench_top_power_summary_routed.pb -rpx kv260_bench_top_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+127 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file kv260_bench_top_clock_utilization_routed.rpt
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file kv260_bench_top_bus_skew_routed.rpt -pb kv260_bench_top_bus_skew_routed.pb -rpx kv260_bench_top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2LV, Temperature grade: C, Delay Type: min_max.
+generate_parallel_reports: Time (s): cpu = 00:00:52 ; elapsed = 00:00:52 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.310 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.553 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.028 . Memory (MB): peak = 3644.305 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.976 . Memory (MB): peak = 3644.305 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/build/latest_fft2048/latest_fft2048.runs/impl_1/kv260_bench_top_routed.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 24 01:22:40 2026...
+[Tue Nov 24 01:22:42 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:14:10 . Memory (MB): peak = 3774.520 ; gain = 0.000
+# set impl_status [get_property STATUS [get_runs impl_1]]
+# if {[get_property PROGRESS [get_runs impl_1]] ne "100%"} {error "Implementation failed: $impl_status"}
+# open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.142 . Memory (MB): peak = 3774.520 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1793 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'system_i/bench_system_i/clkgen/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 3774.520 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.383 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 3774.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 59 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 8 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 45 instances
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3774.520 ; gain = 0.000
+# report_utilization -file [file join $evidence utilization_post_route.rpt]
+# report_utilization -hierarchical -file [file join $evidence utilization_hierarchical_post_route.rpt]
+# report_timing_summary -delay_type min_max -max_paths 20 -file [file join $evidence timing_post_route.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2LV, Temperature grade: C, Delay Type: min_max.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3774.520 ; gain = 0.000
+# report_timing -delay_type max -max_paths 50 -path_type full_clock_expanded -input_pins -file [file join $evidence setup_paths_post_route.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2LV, Temperature grade: C, Delay Type: max.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 50 -nworst 1 -delay_type max -sort_by slack.
+# report_route_status -file [file join $evidence route_status.rpt]
+# report_drc -file [file join $evidence drc_post_route.rpt]
+Command: report_drc -file D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/drc_post_route.rpt
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/drc_post_route.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3774.520 ; gain = 0.000
+# write_checkpoint -force [file join $evidence fft2048_latest_exact150_routed.dcp]
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.336 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.570 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3774.520 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/fft2048_latest_exact150_routed.dcp' has been generated.
+# set setup [get_timing_paths -delay_type max -max_paths 1]
+# set hold [get_timing_paths -delay_type min -max_paths 1]
+# set wns [get_property SLACK $setup]
+# set whs [get_property SLACK $hold]
+# set f [open [file join $evidence result.txt] w]
+# puts $f "git_commit=$actual_commit"
+# puts $f "architecture=fft512_to_fft_tree_bram_engine_to_fft2x"
+# puts $f "frequency_hz=150000000"
+# puts $f "WNS_ns=$wns"
+# puts $f "WHS_ns=$whs"
+# puts $f "synthesis_status=$synth_status"
+# puts $f "implementation_status=$impl_status"
+# close $f
+# if {$wns < 0 || $whs < 0} {error "Latest architecture timing failed: WNS=$wns WHS=$whs"}
+# write_bitstream -force [file join $evidence kv260_fft2048_latest_exact150.bit]
+Command: write_bitstream -force D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/kv260_fft2048_latest_exact150.bit
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xck26'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+Initializing bitstream generation complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3774.520 ; gain = 0.000
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream D:/KV260_MFCC/33_fft2048_latest_9be89af_150mhz_20261124/kv260_fft2048_latest_exact150.bit...
+Generate Bitstream complete. Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3774.520 ; gain = 0.000
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:26 ; elapsed = 00:00:52 . Memory (MB): peak = 3774.520 ; gain = 0.000
+# puts "LATEST_ARCHITECTURE_EXACT150_PASS WNS=$wns WHS=$whs"
+LATEST_ARCHITECTURE_EXACT150_PASS WNS=0.731 WHS=0.011
+# exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 24 01:25:54 2026...

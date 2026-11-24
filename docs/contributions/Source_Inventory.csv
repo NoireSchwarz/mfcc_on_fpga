@@ -1,0 +1,49 @@
+﻿RTL file,Processing blocks,Role,SHA-256,Notes
+src/work/DCT40_64/DCT/butterfly.v,,Retained compatibility/helper,52f3b2dbe0d4de94c21dd63bd6ac01f765bd053a0b75e481a847c47e250a6a9b,Retained helper from the earlier ordinary-DCT implementation.
+src/work/DCT40_64/DCT/dct8.v,B10,SkewDCT production implementation,293eae6ef4f8281286e330d64297907b601b4eda1b4f30b57cd5132815159a2e,
+src/work/DCT40_64/DCT/signed_mult.v,,Retained compatibility/helper,3483c2b917f289d92751cd189c48d55a2ccc3b9ee2775540b09df158600e5bf8,Retained helper; active pipelined dct8_parallel uses registered RTL products.
+src/work/DCT40_64/c64_8_postadd_serial.v,B11,SkewDCT production implementation,9761dd0b6541eccd41b33cfc0d1fedbae4d7093f46d5113fe5d9c5302846bdab,
+src/work/DCT40_64/dct64_serial.v,"B09, B10, B11",SkewDCT production implementation,2deee9b74b5d266a7ba86f2a7b07858303a7607dbd63ef5116efcd67f0c7fdda,
+src/work/DCT40_64/dct8_tdm_bank.v,B10,SkewDCT production implementation,50b6f579989d6335bc5519a5c872fd9d2080dcbc1b29362b716b19f89c3f4931,
+src/work/DCT40_64/norm.v,"B09, B10",SkewDCT production implementation,179649afa96923e7555ec8e904b1858bb25d7fbb2767d3a5ffb245d0df877948,
+src/work/DCT40_64/skew_paraller_bufram64.v,B09,SkewDCT production implementation,aace51a43bddc50e21c66eab98a0034a83f652a9cc8c61656dcea5a49fdba3e3,
+src/work/DCT40_64/skewdct8_tdm.v,B09,SkewDCT production implementation,d62ba80797407e5b24222b090004b2931a76bb91accbb089ef6389506dd76a43,
+src/work/DCT40_64/skewdct_8.v,B09,SkewDCT production implementation,1fde79890fb0b89d5c81842db6f9d6c397286f54cda71b51721f338612425dbd,
+src/work/DCT64_matrix/dct64_coeff_rom.v,,Optional MatrixDCT reference,665beb8abc75865702cbb988cbf3927bbdcf4f839fa1c706fa8cc6e3a6deed7b,
+src/work/DCT64_matrix/dct64_matrix.v,,Optional MatrixDCT reference,d47450c6b2252389084ad1f528ff5ba9bf9556bd9b78abc93e6eaf83f58b4e7e,
+src/work/DCT64_matrix/dct64_matrix_ctrl.v,,Optional MatrixDCT reference,e3e9b048c9c96135d46eccd8605f8fb57eaa46ebcd7e45a5fa5a8d0e95724ed4,
+src/work/DCT64_matrix/dct64_matrix_datapath.v,,Optional MatrixDCT reference,a904204aba7a37f22feec34541d42213f2638c018e624e2fd656027b3f83f1a0,
+src/work/DCT64_matrix/dct64_ram64.v,,Optional MatrixDCT reference,1edb6f7e6558e017b81f5cb67613675c8cf96b228290bfdcf0e911b5327a3e5c,
+src/work/FFT512/WROM2048.v,"B03, B04, B05",SkewDCT production implementation,07b3c42ff0bffa3be1c604d6dd99f8de95a944ba8c229f347ad0ed64368b1720,
+src/work/FFT512/fft256_1024.v,B04,SkewDCT production implementation,3f4c7f806419a81c93d42dc456dd541b0000b548f1f574b37a0ada8d53ce206b,
+src/work/FFT512/fft2x.v,B05,SkewDCT production implementation,b41c1aa02eb438ff2064634be872edaa37948d7def34fd1766a95e77b00ced53,
+src/work/FFT512/fft512.v,"B03, B04, B05",SkewDCT production implementation,1d090d191e98966518ace40ae111eddb86f0f28fc1a9fecca61805cffb59808b,
+src/work/FFT512/fft64_bram_legacy.v,,Retained compatibility/helper,945f7bb7b559940e51d6c2211d9d0633dcd807cd6b47c91d5a84d87cbc84b692,Retained legacy standalone wrapper; not the final MFCC backend.
+src/work/FFT512/fft_16_64.v,,Retained compatibility/helper,783db9af117ee7f7199e0d3505a9c27a7b3dbf9083be1870549f64084c4f292f,Retained standalone/compatibility FFT wrapper; final MFCC uses fft_tree_bram_engine.
+src/work/FFT512/fft_bram_1w1r.v,"B03, B04, B05",SkewDCT production implementation,8d61a712997ddf6ea28b8a938ffcd89f96a4d8c0e47090974c5e55a471303d88,
+src/work/FFT512/fft_tree_bram_engine.v,"B03, B04, B05",SkewDCT production implementation,0fd8a47f2a0d3f87efe9ce40df439df872e3e8484f80f3437cc0365aebb380b3,
+src/work/FFT512/fft_tree_runtime_bram.v,"B03, B04, B05",Runtime/standalone interface,a5df538718e998eb9d185415a09550088abfce24600611a2200b944637ea6c9c,
+src/work/FFT512/radix2_4_core/complex_twiddle_mul.v,,Retained compatibility/helper,520861f2c5b2f9966382813becb0f4c361e8af04642d1229af4b311abd392d95,Retained arithmetic helper for standalone merge-stage wrappers.
+src/work/FFT512/radix2_4_core/fft_merge_kernel.v,"B03, B04, B05",SkewDCT production implementation,605933cea198ed3ada020532041835776321e4560b4cdd07352d37f69b36fa38,
+src/work/FFT512/radix2_4_core/radix2_merge_stage.v,,Retained compatibility/helper,6cffa9f26bc0fc8253ea32a09e4a550471ae39acc735b020e7010f7a8dbfca73,Retained standalone stage wrapper; active engine uses the shared merge kernel.
+src/work/FFT512/radix2_4_core/radix4_merge_stage.v,,Retained compatibility/helper,7a9a3d555b90eb7c5bfeb4af51324dc0bc9d8949e5664b4e55315ec33ae43bbe,Retained standalone stage wrapper; the engine directly schedules the shared kernel.
+src/work/FFT512/radix_16_256_core/bufram256c.v,B04,SkewDCT production implementation,c95cdb9cf174d95bf1a3296dbfdb748733bf307b4101f8e5dd4a76ceee6e0645,
+src/work/FFT512/radix_16_256_core/cnorm.v,B04,SkewDCT production implementation,638f72e98c7f0f23d395e74dbb0e1aed82cdf46dccaa102f1865f9da6b6b7d97,
+src/work/FFT512/radix_16_256_core/fft256.v,B04,SkewDCT production implementation,669f257f2494c421b0c76166da89a3a723321883f07672469f9d99a273b6706a,
+src/work/FFT512/radix_16_256_core/fft256_config.v,B04,SkewDCT production implementation,1a9e717633077561d268dd6e12cf3674f87ecaeac19fba5845a738e86e92b557,
+src/work/FFT512/radix_16_256_core/ram256.v,B04,SkewDCT production implementation,89c09a65b54d0b1431c0a8ab51dad43dcabd465d5e3604a7a9da7929ced8846e,
+src/work/FFT512/radix_16_256_core/ram2x256.v,B04,SkewDCT production implementation,32627cfe698f1e1e83f34f87ee9d2bef6540a2c62d6afb039acf3e13e53e1b22,
+src/work/FFT512/radix_16_256_core/rotator256_v.v,"B03, B04, B05",SkewDCT production implementation,c4ca55e4d673a7f59172ceb3b0926d612a1e366b6b9d9c465617cef47c6e2fb5,
+src/work/FFT512/radix_16_core/fft16.v,B03,SkewDCT production implementation,fb1db3082e9c25c4f97645d948d332c8d1e170b739503a1849fc58942eca21df,
+src/work/FFT512/radix_16_core/mpuc1307.v,B03,SkewDCT production implementation,c391c3ee6c33b2cf6a2ae06cf63203416b6b6b0992aff346c2f16b71974b8c67,
+src/work/FFT512/radix_16_core/mpuc541.v,B03,SkewDCT production implementation,0188c9bb8d4771358936e031d7e35b903deb7412f8a8954c4ff9a2e9ec278088,
+src/work/FFT512/radix_16_core/mpuc707.v,B03,SkewDCT production implementation,4885f46567bd79ff425b59fa4b82fe0ff6552d7c8af6825a50684526c87a088d,
+src/work/FFT512/radix_16_core/mpuc924_383.v,B03,SkewDCT production implementation,30e1250ede16cb305a77fd7ef1f6947631cf9206aaa102f5b16358df79e91019,
+src/work/dB_LUT.v,,Retained compatibility/helper,f84aa8bf6a1fae8e6d9adaaec59dd36115835ad160af2494e13d3fb7e3f8cdde,Retained legacy integer-log LUT; not instantiated by the active filter_bank.
+src/work/filter_bank.v,"B07, B08",SkewDCT production implementation,c14459e119ad89e95d80107682fce99a8b874196e71c3f521e65fca7b4b8acb4,
+src/work/hamming.v,B02,SkewDCT production implementation,c9ef7f75c5fdd9ba8f4e7f97234829a78ed41f0aa1798484c14068ce69f5e138,
+src/work/mfcc.v,B12,SkewDCT production implementation,0d653e8a83cfbe3da9a0270cfb10d739c93926e4f30007a72eb4af2cbfd181de,
+src/work/mfcc_core.v,B12,SkewDCT production implementation,3c7a6059603295a92b906b90f06264603c37ee3f102c04b000703d437f9d735b,
+src/work/power_spectrum.v,B06,SkewDCT production implementation,885ff46689db7a7085cb2c7b29bde3976bfaf297e5a7ee0de758ba59009bda35,
+src/work/prepare_input.v,B01,SkewDCT production implementation,fcc0ebd08b266d8e6cad007c35100c4091ead4bcf8585fd61a1bdce7cd716857,
+src/work/reshape_output.v,B12,SkewDCT production implementation,d0a4608958c1d534cc5430b7dcf13ea58cb2f897436644301ee00b039d4bf6fc,

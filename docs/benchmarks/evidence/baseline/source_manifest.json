@@ -1,0 +1,3334 @@
+{
+  "source": "F:\\xwechat_files\\wxid_rwfknuaux3wc22_1a86\\msg\\file\\2026-10\\working_mfcc_fft_bram(1).zip",
+  "copied_archive": "D:\\KV260_MFCC\\13_working_mfcc_fft_bram_20261022\\00_source_archive\\working_mfcc_fft_bram_original.zip",
+  "source_sha256": "04caa707cecb44e5f8b6a45ebdeae3729a3f150a5b77bf09c347b5b2018de71c",
+  "archive_bytes": 6367269,
+  "file_count": 665,
+  "files": [
+    {
+      "path": "working_mfcc_fft_bram/.gitignore",
+      "bytes": 90,
+      "sha256": "c85d6f64f7c37788744be38d4c2f26f993950ed57ac3be5b3a2465b9adcb8dfc"
+    },
+    {
+      "path": "working_mfcc_fft_bram/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/docs/FFT_INTERFACES.md",
+      "bytes": 4126,
+      "sha256": "b3ce11f8e90eb3e0a196de27f39e1c70ee01c6ed7f29a4542456ed01a0233efd"
+    },
+    {
+      "path": "working_mfcc_fft_bram/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/README.md",
+      "bytes": 8764,
+      "sha256": "ac8ff400cf9b6a9dbd3880c99e0b40d0c173d131bb048e08665a2c520bedb9f9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/cache_refactor.patch",
+      "bytes": 43119,
+      "sha256": "f36ef7df0411a342cddd70bd309e3afa02c8b51b4ec8b57cb91ce31651b6d1dc"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/delivery_summary.json",
+      "bytes": 706,
+      "sha256": "e7d46692fe0c0108d48f1037a71476ea6b4b17f4ddbe9a34bc6e107501dddf8e"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/elaborated_hierarchy.json",
+      "bytes": 2042,
+      "sha256": "7208ad489265cec9090444b97babc39c4c5ab87c7ad87837495880627c2f066d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/fft2x_smoke.json",
+      "bytes": 1760,
+      "sha256": "ef720cd098f1bfb99b76be576b783e140e0c4be0e55a5a66127a0b9c9a78d2ec"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/integration_smoke.json",
+      "bytes": 7403,
+      "sha256": "e6440f3e339f2d7d77c495627de7510a7a3c129c2c4b5c1869efac98e41b36d6"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/mfcc_integration.json",
+      "bytes": 18273,
+      "sha256": "a0f05de02b720bc6c6146404e155d77becaf9f77bb6438ff8d87526576d246bb"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/original_hashes.json",
+      "bytes": 36705,
+      "sha256": "093076f1693dae527cfb6b1b762338b4a0c24d437573c27d7eee0b1b5193a6a2"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/synthesis_status.json",
+      "bytes": 315,
+      "sha256": "f00b229fdc8e055bda5eb4812324bf775076b7ff16091782c02991e6f1d4c385"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/verification.json",
+      "bytes": 20919,
+      "sha256": "e1566117079ba9e3ad0070fc20776c45d87ed6cee2e0d6b17fdce3fdb92a8453"
+    },
+    {
+      "path": "working_mfcc_fft_bram/reports/verilog2001_compile.json",
+      "bytes": 1970,
+      "sha256": "fe50b5bd3738f19b5a640ee161a99ccb8d3c0457d5d8a5ca7640a838e15ae880"
+    },
+    {
+      "path": "working_mfcc_fft_bram/scripts/__pycache__/verify_fft_tree.cpython-310.pyc",
+      "bytes": 9125,
+      "sha256": "bc5efe5142a6bf7648dba9fa181d7ad75384bd029ab81e06796b36e5dcd748c0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/scripts/__pycache__/verify_mfcc_integration.cpython-310.pyc",
+      "bytes": 9170,
+      "sha256": "0295a69864eed07f72688cdd80ae32808d2456da41e0dfad8477127c630d67f2"
+    },
+    {
+      "path": "working_mfcc_fft_bram/scripts/create_vivado_project.tcl",
+      "bytes": 2105,
+      "sha256": "612fc72bbd79045e28459ddecbcf2e124b1c5b310d8bf44352f7fb816bbfb0dc"
+    },
+    {
+      "path": "working_mfcc_fft_bram/scripts/synth_ooc.tcl",
+      "bytes": 2746,
+      "sha256": "db2f8eb2050fe3c131a57547ea72506ef12120eabb2737eb2ecc3611ff69b924"
+    },
+    {
+      "path": "working_mfcc_fft_bram/scripts/verify_fft_tree.py",
+      "bytes": 8266,
+      "sha256": "02ad41293a66b81a63632cf4fe595e545bf2329d64ae84dfbb8bea78b72bff46"
+    },
+    {
+      "path": "working_mfcc_fft_bram/scripts/verify_mfcc_integration.py",
+      "bytes": 7376,
+      "sha256": "15cf6e77c5fde1df514e026b2297a6c054fabadb91fe17544e608630d4b11790"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/__pycache__/check_verilog.cpython-310.pyc",
+      "bytes": 2187,
+      "sha256": "844d8c4158d3fb7b38e7bac45ed3669ae005ca2134181674eb9b3df956c5a714"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/check_verilog.py",
+      "bytes": 2325,
+      "sha256": "7df523c9760d674115f1b8b35188edda0060e3a51d3e9616be1abe3668190cc3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/fixed_pipeline_tb.v",
+      "bytes": 2981,
+      "sha256": "a074779d539ed96bc7300430fee5b0e706bac328eb9006ba487f8fb2e0229afd"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/legacy_reference_tb.v",
+      "bytes": 1694,
+      "sha256": "e6e42c1eb39a03cfa9bc8a12215765f0564c7d63bc48b03fa5207784969161bd"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/mfcc_bram_tb.v",
+      "bytes": 3365,
+      "sha256": "454b0722a1b4bc745eaa55b0fa8fe5bf7cd0343319277ad9e5fa633be712da91"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/mfcc_numeric_contract.json",
+      "bytes": 10043,
+      "sha256": "0296ebee900c7ba555969281f8be6a101b68fb42897dea0e6ba052a5b82f7319"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/mfcc_trumpet_tb.v",
+      "bytes": 5061,
+      "sha256": "bdb71b997c6016dc61dce3912473aab98fd9264d4265816d7b7b85133d2d321b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/mult_gen_1_model.v",
+      "bytes": 319,
+      "sha256": "6c1f3827c0a1b945ac1b27799b4ec3fd417995b786a029dbb5cc70cdb96ee199"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_continuous/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_continuous/runtime_expected.mem",
+      "bytes": 61440,
+      "sha256": "91bf54f503167baf2b3822c1d43a5b6624452becd239a10f88abacb8baf61bc9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_continuous/runtime_input.mem",
+      "bytes": 36864,
+      "sha256": "2ebefb029b415f7be8bb8f59675c817210ef906f9642a6103fd55908d95d8f4b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_continuous/runtime_sizes.mem",
+      "bytes": 12,
+      "sha256": "c25f92f7146b7600d8823b64c5a70f10ce06ffa624ab698f3de80ea317b58b50"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_continuous/sim.vvp",
+      "bytes": 472127,
+      "sha256": "de6c21a4ec6bb537e446947f1b1e7dcea466bdf69da12fa4999418657379aba8"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_continuous/simulation.log",
+      "bytes": 406,
+      "sha256": "e2e6b3bb8a8f4a3e2ac77a1b1898799e81a07912ea72bf878fc2929d178ab96c"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_continuous/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_continuous/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_stalls/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_stalls/runtime_expected.mem",
+      "bytes": 61440,
+      "sha256": "91bf54f503167baf2b3822c1d43a5b6624452becd239a10f88abacb8baf61bc9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_stalls/runtime_input.mem",
+      "bytes": 36864,
+      "sha256": "2ebefb029b415f7be8bb8f59675c817210ef906f9642a6103fd55908d95d8f4b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_stalls/runtime_sizes.mem",
+      "bytes": 12,
+      "sha256": "c25f92f7146b7600d8823b64c5a70f10ce06ffa624ab698f3de80ea317b58b50"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_stalls/sim.vvp",
+      "bytes": 472127,
+      "sha256": "998852e69fa823cc3fb0ae86d530740ed7235f97afa6be3c1f4806734e9095f2"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_stalls/simulation.log",
+      "bytes": 409,
+      "sha256": "3f2a6d26f36257cf9ebc6c28ce2f1ac662628b934430d3e32988a79eb9aef703"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_stalls/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/archive_stalls/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_1024/legacy.hex",
+      "bytes": 81920,
+      "sha256": "0276cabbdec84a84c427d2810e0b1836d949c40b33b19a315f9fdccd0d984863"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_1024/simulation.log",
+      "bytes": 446,
+      "sha256": "fbd2f5abc2af94d81f9876b830c2d846789027d949efcca6cb10245ad8f43461"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_128/legacy.hex",
+      "bytes": 10240,
+      "sha256": "32e152ca46851828bd08d9859964426d1b9700150d2fda018a3460271603273d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_128/simulation.log",
+      "bytes": 429,
+      "sha256": "a0a2214e636bf0dae0b56d073904f5331216eeeeee9a4ac38e236e1eaedadefc"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_16/legacy.hex",
+      "bytes": 1280,
+      "sha256": "4d68c5fe81a43ada10af323616ed2105c8e3a81a0b17549c3b9a62d43da5b914"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_16/simulation.log",
+      "bytes": 412,
+      "sha256": "5f9d2af8f3f4f1167c9f1bdaedfe750348534f627ad8a0543af7c5775733e170"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_2048/legacy.hex",
+      "bytes": 163840,
+      "sha256": "e513b1466919b43e4cfd15dc4a6e5b3aaa4ce2a67c67bcaa4bb2079c88fe5bec"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_2048/simulation.log",
+      "bytes": 454,
+      "sha256": "cf5105f249e3bb110899960622cbeafeade2ad9fb30c61f6b84d4b013225244c"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_256/legacy.hex",
+      "bytes": 20480,
+      "sha256": "92d6abeaa9b8d88cceba6eb870bbeb8a4d5fde90dd42bcce93af0f5f071fb4f9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_256/simulation.log",
+      "bytes": 437,
+      "sha256": "bbdddb4f06f2466748b8cdb77378f3be59de21f5cf96beae82d35b53c333d60b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_32/legacy.hex",
+      "bytes": 2560,
+      "sha256": "5f4b1d60ce7b48d0faa4d844cd4d0af0991457722a55f733edf3b7c335a86d80"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_32/simulation.log",
+      "bytes": 420,
+      "sha256": "c4cd9f6b5b045ccf375385a4dc0e2329ff3965ea4fcaa6c45625000ff8e56417"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_512/legacy.hex",
+      "bytes": 40960,
+      "sha256": "718019ee5abacb63c5d33a9b1e5e338901e60f79a885f714021749f275e5510f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_512/simulation.log",
+      "bytes": 438,
+      "sha256": "8ee10018b7afa052258e5ba638099e72758981b7e2ba49df99f472e994233b07"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_64/legacy.hex",
+      "bytes": 5120,
+      "sha256": "a74873088b75f70f013a4df4334d9bbe34a42643c481a15ae52ad9a047734b58"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/baseline_64/simulation.log",
+      "bytes": 421,
+      "sha256": "f9ac19225638e34b11a80ff7c246174a98a3a3f968aa3ca2c05b80cac238b0f1"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/expected.mem",
+      "bytes": 81920,
+      "sha256": "0276cabbdec84a84c427d2810e0b1836d949c40b33b19a315f9fdccd0d984863"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/input.mem",
+      "bytes": 49152,
+      "sha256": "dd94a9e7bf1971b671e85d0f434cee13c76138889b41f1f44087b5f08e6f5083"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/sim.vvp",
+      "bytes": 370744,
+      "sha256": "637dc18eb2de45f08e21fb2f569c363f252bcbd54534bf38c61e14ddec21578d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/simulation.log",
+      "bytes": 221,
+      "sha256": "7472d5d796b30081ed1315a4b2262c7e6d4a867224d789a17b7629eb3bc770fa"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power0/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/expected.mem",
+      "bytes": 40960,
+      "sha256": "c8987215a47fb3ac62da89f59e52c1bde52fef82a6a1da9262a5b0c32a975027"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/input.mem",
+      "bytes": 49152,
+      "sha256": "dd94a9e7bf1971b671e85d0f434cee13c76138889b41f1f44087b5f08e6f5083"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/sim.vvp",
+      "bytes": 373318,
+      "sha256": "2996d4c7b3f6aa17403bd25cfd2b7e950badd95fd9844f438324bc21eb6a7a01"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/simulation.log",
+      "bytes": 221,
+      "sha256": "487d0d15c54bffaec3286f56b4683c9927f4a98b50fc5ed76a1fb1a57d3a605a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_1024_power1/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/expected.mem",
+      "bytes": 10240,
+      "sha256": "32e152ca46851828bd08d9859964426d1b9700150d2fda018a3460271603273d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/input.mem",
+      "bytes": 6144,
+      "sha256": "488ef8770183f6d9264d85ba670001a1cea68e6609ca7bdf421005a89a40a5d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/sim.vvp",
+      "bytes": 220895,
+      "sha256": "da85638443bec007f67ffa023181492e53402e497d1d7e460286119609a8a942"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/simulation.log",
+      "bytes": 217,
+      "sha256": "2a6041d9a34732b3d174284a4ed43faa5cdafd18f8167e5a9a06c5e447e887e9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power0/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/expected.mem",
+      "bytes": 5120,
+      "sha256": "94606e8b4183ae4a31fd7f6fdd1d415ec384250a169267fc0f8e38313d2af5ab"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/input.mem",
+      "bytes": 6144,
+      "sha256": "488ef8770183f6d9264d85ba670001a1cea68e6609ca7bdf421005a89a40a5d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/sim.vvp",
+      "bytes": 223467,
+      "sha256": "76341be484343e32c3a09373e2047c2672f35278d9ad78abb02108ac41cce457"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/simulation.log",
+      "bytes": 216,
+      "sha256": "ed041bd705433503cccd912b2ae8883bc92b568b3df8b990cb9711a833617f91"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_128_power1/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/expected.mem",
+      "bytes": 1280,
+      "sha256": "4d68c5fe81a43ada10af323616ed2105c8e3a81a0b17549c3b9a62d43da5b914"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/input.mem",
+      "bytes": 768,
+      "sha256": "d47751dd3073e3e5491cc7297050b6d209ac7066bcc80564ef976ca50c49d8e1"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/sim.vvp",
+      "bytes": 221237,
+      "sha256": "94cf842688eeb7d00c5e7ae9502852cfa08dc253687ecb9d69e45c7fa93297c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/simulation.log",
+      "bytes": 212,
+      "sha256": "3a1abb100fae6eb192178b7ffdca80de5ee36e2e31a0c5c7c0b14a87d0e63fc0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power0/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/expected.mem",
+      "bytes": 640,
+      "sha256": "33b9242d42191aa99d7d9398fd7f43f6d2ce45b61f293b799878efedcdf02ed7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/input.mem",
+      "bytes": 768,
+      "sha256": "d47751dd3073e3e5491cc7297050b6d209ac7066bcc80564ef976ca50c49d8e1"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/sim.vvp",
+      "bytes": 223810,
+      "sha256": "1d0b65a2e5c5560645d6061a2db0b6f47cf263153d86e13c326418a36893697a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/simulation.log",
+      "bytes": 211,
+      "sha256": "e64b51b551d9cdba37e32da3cd36fd7e033bccf89955954918abee621342e054"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_16_power1/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/expected.mem",
+      "bytes": 163840,
+      "sha256": "e513b1466919b43e4cfd15dc4a6e5b3aaa4ce2a67c67bcaa4bb2079c88fe5bec"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/input.mem",
+      "bytes": 98304,
+      "sha256": "30287516fe8c1f852c1cc5c9846f585352d2dafa5bcb1aad3b5ae5f3fd51f411"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/sim.vvp",
+      "bytes": 370746,
+      "sha256": "736bec425865d8794b6cd77a4520f4a782b0740cf93cd9d5833b1cee92e79a57"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/simulation.log",
+      "bytes": 224,
+      "sha256": "b0f8760f988f88cec944e28afdecd6bd0952ff81c1528ef5178d30e5648c08f5"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power0/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/expected.mem",
+      "bytes": 81920,
+      "sha256": "7aae706ca12aefa109adadfcb517a994413a94816ae9c5288a2260c7cef07983"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/input.mem",
+      "bytes": 98304,
+      "sha256": "30287516fe8c1f852c1cc5c9846f585352d2dafa5bcb1aad3b5ae5f3fd51f411"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/sim.vvp",
+      "bytes": 373323,
+      "sha256": "4b6ec235ac96fa89baa8d94ce43dba0bd1604f3abc347b41dc69d71e01dbe427"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/simulation.log",
+      "bytes": 223,
+      "sha256": "1d604a1a7687d1eebef8aee7aaaf9551a9ca3bb6b94b98fb642389b28f969d23"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_2048_power1/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/expected.mem",
+      "bytes": 20480,
+      "sha256": "92d6abeaa9b8d88cceba6eb870bbeb8a4d5fde90dd42bcce93af0f5f071fb4f9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/input.mem",
+      "bytes": 12288,
+      "sha256": "59ffcbe8e6a34002d5078d29f98811dbfaac2e785c312eaf8dbbe0ada6c2ea44"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/sim.vvp",
+      "bytes": 371122,
+      "sha256": "2b39c7c34bbd81efee054d54d7c43d9b22fa6db3b42075851fd82a29118b8bd4"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/simulation.log",
+      "bytes": 219,
+      "sha256": "0892fbdcfd1196d3838a81f9665451a39c5f0ba1553534136d89c389fc9fa37e"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power0/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/expected.mem",
+      "bytes": 10240,
+      "sha256": "b9102724cc6fe80b1f99be3f66959890380c65dc31a72efd40aa39025ec34493"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/input.mem",
+      "bytes": 12288,
+      "sha256": "59ffcbe8e6a34002d5078d29f98811dbfaac2e785c312eaf8dbbe0ada6c2ea44"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/sim.vvp",
+      "bytes": 373703,
+      "sha256": "c02f802cb0cb35efa25b01bb17e30273e2196533ac7490dfd8a14237303c16f6"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/simulation.log",
+      "bytes": 219,
+      "sha256": "c9ba71cc8106af651adbe3418dd40d9eeef7dffa44d1c160d883a9ce84247070"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_256_power1/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/expected.mem",
+      "bytes": 2560,
+      "sha256": "5f4b1d60ce7b48d0faa4d844cd4d0af0991457722a55f733edf3b7c335a86d80"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/input.mem",
+      "bytes": 1536,
+      "sha256": "1574e963ac9464266b40604f9af3d21be2e3aed8ffdbb7b2f6a5afc7f93b1769"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/sim.vvp",
+      "bytes": 221237,
+      "sha256": "f66c1c419230787c5651eb9b1aef5a50e5ceb8cdfed4060a3fc8d96c2c217d78"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/simulation.log",
+      "bytes": 214,
+      "sha256": "d51d9b63b099d5774697dc56793e0a9312f6a1e9bbd31a846eda34a80d31bcd7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power0/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/expected.mem",
+      "bytes": 1280,
+      "sha256": "e6d100310845f9a9a7ddf23bb779b9ef89eecceaa28431e095ead4529ae494e2"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/input.mem",
+      "bytes": 1536,
+      "sha256": "1574e963ac9464266b40604f9af3d21be2e3aed8ffdbb7b2f6a5afc7f93b1769"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/sim.vvp",
+      "bytes": 223815,
+      "sha256": "be47fc5c736962cf4f86432f461b41e3be697270edfc52b01cab8e2bc3267644"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/simulation.log",
+      "bytes": 213,
+      "sha256": "299db26f787fe2f88900afd02aad20a358e955ee3136276074156174626888d2"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_32_power1/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/expected.mem",
+      "bytes": 40960,
+      "sha256": "718019ee5abacb63c5d33a9b1e5e338901e60f79a885f714021749f275e5510f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/input.mem",
+      "bytes": 24576,
+      "sha256": "613c6f941f526fd7c69f228a5c3834944a7d8361338e5fa55f8a49a4abac3216"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/sim.vvp",
+      "bytes": 371122,
+      "sha256": "fbeec6bfec76c7f9e72dc8caaa0ee15c60622000fbbaa49c0a7d1e96e42d1ca2"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/simulation.log",
+      "bytes": 220,
+      "sha256": "269f17e08ed865d405bcbd26bd27f4915f03a758b80af934cf09e0f7c853bed4"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power0/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/expected.mem",
+      "bytes": 20480,
+      "sha256": "fb2eb4ed12221651592dc080a01ddca2b4952f03ad11fc4ff33f41aeadcd76b9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/input.mem",
+      "bytes": 24576,
+      "sha256": "613c6f941f526fd7c69f228a5c3834944a7d8361338e5fa55f8a49a4abac3216"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/sim.vvp",
+      "bytes": 373703,
+      "sha256": "1868fba83dd5db96044e15ad786de7930261758ae87067d0e2f8ec4e519a1fc5"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/simulation.log",
+      "bytes": 219,
+      "sha256": "d73329421b80863c0ef3e13ef983da3535e5f43a2f957d12b0246c132d41637c"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_512_power1/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/expected.mem",
+      "bytes": 5120,
+      "sha256": "a74873088b75f70f013a4df4334d9bbe34a42643c481a15ae52ad9a047734b58"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/input.mem",
+      "bytes": 3072,
+      "sha256": "8ae3754d188b2229166ba2ffae246fbb2a22b92d49c909c0988e141478a00f04"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/sim.vvp",
+      "bytes": 220885,
+      "sha256": "5388b89de77812544cd94814b97248ade4526b1eeae98f9527b44935d73f48f6"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/simulation.log",
+      "bytes": 215,
+      "sha256": "28bc713e2ec3a8bc1a9d43d35fc0193c2ce5703f97c93f89b40c684c885ceaa3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power0/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/expected.mem",
+      "bytes": 2560,
+      "sha256": "198dbed048b8326448b10fbfefb0d516c94239289215e11c20b3e14a39861cbd"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/input.mem",
+      "bytes": 3072,
+      "sha256": "8ae3754d188b2229166ba2ffae246fbb2a22b92d49c909c0988e141478a00f04"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/sim.vvp",
+      "bytes": 223462,
+      "sha256": "77452aae170b10b8b64243a5ea2f9815bb1037724295e76e10bd72ec55a4dcd3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/simulation.log",
+      "bytes": 215,
+      "sha256": "ff603b98ca5f836c2557ba27838311baaad5a3ff3465515998a37bb19c5f283a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/fixed_64_power1/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/mfcc.csv",
+      "bytes": 142691,
+      "sha256": "7a20c80d8f85f3021643161f0d26485cc6a7910022a6bbde29ead410d9543b80"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/sim.vvp",
+      "bytes": 953425,
+      "sha256": "80a7b5da9628ff298729890e40c92c5ecfa66a82c474a07665713fddd51a6161"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/simulation.log",
+      "bytes": 233,
+      "sha256": "6f847a15db492b5051c5a6e6ead6925531e6cf981a1ce91fa691c458cd579dad"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_full_audio_512/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/input.mem",
+      "bytes": 12288,
+      "sha256": "cde75aa5bba95988bca4fb1f87f4d145e48712bc8ee7d2c63cb09195925687fb"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 1493,
+      "sha256": "b87bf9db06be5fb7d9f890c7660fffdfe76dc6618e793dc0e5b43e65b01c907b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 1149539,
+      "sha256": "59593a23fdeb14b86632808c3cc834ff69c48074075f899c6c9362b00c0af586"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 244,
+      "sha256": "01ad93a1e77340bdb7ac152086ad321afb1687617ba1a623f74a585b289d0022"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/input.mem",
+      "bytes": 12288,
+      "sha256": "cde75aa5bba95988bca4fb1f87f4d145e48712bc8ee7d2c63cb09195925687fb"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 1493,
+      "sha256": "b87bf9db06be5fb7d9f890c7660fffdfe76dc6618e793dc0e5b43e65b01c907b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 870366,
+      "sha256": "e8e84e27e79e4abad60d3bbb7d6b87349ca9520a65e463a3ee6add5a2fc83b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 244,
+      "sha256": "f3eb934d56780aef6071f818571bc1e68083fda239dfb90d31078991d9b1338f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n1024_lanes1_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/input.mem",
+      "bytes": 1536,
+      "sha256": "decd3bb957b9b61460f0602d08953ee20d39a90ec07a138bf6e95328f9e4dcb7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 1483,
+      "sha256": "1bb9da75324725fda81a92f6f923444fc4788ae5b14133a66dc660bd7028113a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 784170,
+      "sha256": "d8ebc4f0a55072b5c22991bc6199e045e4170b7b018cc97dd8be814739127b2d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 241,
+      "sha256": "a26837a12f009a236cc06f3a65e5b2428d851c0a8f5d5a757745763393b82550"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/input.mem",
+      "bytes": 1536,
+      "sha256": "decd3bb957b9b61460f0602d08953ee20d39a90ec07a138bf6e95328f9e4dcb7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 1483,
+      "sha256": "1bb9da75324725fda81a92f6f923444fc4788ae5b14133a66dc660bd7028113a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 720083,
+      "sha256": "428ecd1e687554350c1a82351512cc6e536881ab77934153b5cb9dcf42d9f691"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 241,
+      "sha256": "f73031332379b30bbe3018733deb2e87318b17ba6aafc255d79d5623da3aaa11"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes1_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/input.mem",
+      "bytes": 1536,
+      "sha256": "decd3bb957b9b61460f0602d08953ee20d39a90ec07a138bf6e95328f9e4dcb7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 1483,
+      "sha256": "1bb9da75324725fda81a92f6f923444fc4788ae5b14133a66dc660bd7028113a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 798158,
+      "sha256": "318ec0e8bc2b8dce0643ee911e0b243fe941404efa9663ca17ee7c5cdc40a8c5"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 242,
+      "sha256": "7d8ddf998b32b7e50b6333840ff496188230898afb24ac260723ffb07ed40003"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/input.mem",
+      "bytes": 1536,
+      "sha256": "decd3bb957b9b61460f0602d08953ee20d39a90ec07a138bf6e95328f9e4dcb7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 1483,
+      "sha256": "1bb9da75324725fda81a92f6f923444fc4788ae5b14133a66dc660bd7028113a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 734079,
+      "sha256": "d32600156bd437892161edd0c492298cd1d28bb2a7b338a4c241b0b769a93005"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 242,
+      "sha256": "53a8e7d1817c0babc2ded3997fbccb11f8f542009f8b95d987d9305f0a4e2c88"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n128_lanes64_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/input.mem",
+      "bytes": 192,
+      "sha256": "ed4a17f0467ea876a7baeb20b4d91bf62a08b4303a418a51775910f9e8a84621"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 750,
+      "sha256": "01a056f3d25ac409bce29ad63a83516584d89ccf5188498998cda44cb819fe9b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 653730,
+      "sha256": "68c26a1fc58b32a50e6cca45e2bdb4fc0671b15332d0455a2c7e94559d4f34c1"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 240,
+      "sha256": "34d7f5c87bc4af888e359b18c17978a44a60cbc29d7b7eb94d279f43c9fc91c7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/input.mem",
+      "bytes": 192,
+      "sha256": "ed4a17f0467ea876a7baeb20b4d91bf62a08b4303a418a51775910f9e8a84621"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 750,
+      "sha256": "01a056f3d25ac409bce29ad63a83516584d89ccf5188498998cda44cb819fe9b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 720421,
+      "sha256": "e9c8f3743347d5504cd009dce000006161fafb4f2168cd7b0cf1202f8dbe8cd6"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 240,
+      "sha256": "469c8a9e5437a9d073f98bd8ac971e988860c20bb17553763b7d3b3d529b524d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n16_lanes1_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/input.mem",
+      "bytes": 24576,
+      "sha256": "8b680bfd32c0c0e8f80e30ce782b3c670a7f7fbb1fb056d8b3fac03db1ebcf7a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 1498,
+      "sha256": "9c2a2f8718ae17b7b680ef4552e8db6d4b6747cdc00b2360d216a5eaab997ece"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 1416784,
+      "sha256": "9a33689926419424e73b9d2178e0c4a6473f168f40622471d0936a632a15d650"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 244,
+      "sha256": "28c2aa581d3c6c4be7a4d1bb3f222d7baab471085f774780989297c20df2b6e8"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/input.mem",
+      "bytes": 24576,
+      "sha256": "8b680bfd32c0c0e8f80e30ce782b3c670a7f7fbb1fb056d8b3fac03db1ebcf7a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 1498,
+      "sha256": "9c2a2f8718ae17b7b680ef4552e8db6d4b6747cdc00b2360d216a5eaab997ece"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 870370,
+      "sha256": "2766bbb7665f7ef32c425d70ceeb4be53d361e7018a9d69d718d8030ad533f02"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 244,
+      "sha256": "0fc6d0e6951a8fe7ae4955b77ce485d1d60d4c0cc04fc9ddd67645d3cbda76dc"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes1_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/input.mem",
+      "bytes": 24576,
+      "sha256": "8b680bfd32c0c0e8f80e30ce782b3c670a7f7fbb1fb056d8b3fac03db1ebcf7a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/mfcc.csv",
+      "bytes": 1275,
+      "sha256": "00c4157aae06b701c7b35147520ee0fe1ebe6cfabc3b25d6d6e898d8ce488277"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/sim.vvp",
+      "bytes": 1200475,
+      "sha256": "95c12787bce28e127b501fdc169c31c06b100942b17bfd421cb629ca26337da7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/simulation.log",
+      "bytes": 245,
+      "sha256": "bf268b770e16d16ab153285e56f81c2f72a122fb0420529d2e469f6a119d287c"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/input.mem",
+      "bytes": 24576,
+      "sha256": "8b680bfd32c0c0e8f80e30ce782b3c670a7f7fbb1fb056d8b3fac03db1ebcf7a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/mfcc.csv",
+      "bytes": 1275,
+      "sha256": "00c4157aae06b701c7b35147520ee0fe1ebe6cfabc3b25d6d6e898d8ce488277"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/sim.vvp",
+      "bytes": 654219,
+      "sha256": "4f745455dc01b4ad8ee2d1ed383a65c5cd55d688e52fa4fdebd8f44515dd5c0f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/simulation.log",
+      "bytes": 245,
+      "sha256": "a5ef01b7280a9d36f9cb8b84d1bad5b17ca672c7c67b25dfe55f8f1e2ebe6150"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n2048_lanes64_matrix1_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/input.mem",
+      "bytes": 3072,
+      "sha256": "5a9a41afbf49bbc2f5fe9d491b9273a2c5d730c521e7a67d921e4dc8c10fa3f9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 1358,
+      "sha256": "9e7764aa2184f25d07db30acc0021e57928b256165cb6ccaf2f997b666c59cef"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 868547,
+      "sha256": "cf2bc47f1e41a7ceadce3194f55bd86a79e708bb1be47e3b7ad19a80648cc722"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 241,
+      "sha256": "b627f3200d5c6ce427abfff29004d400075f7d8597da819bcbf98e208ce34b99"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/input.mem",
+      "bytes": 3072,
+      "sha256": "5a9a41afbf49bbc2f5fe9d491b9273a2c5d730c521e7a67d921e4dc8c10fa3f9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 1358,
+      "sha256": "9e7764aa2184f25d07db30acc0021e57928b256165cb6ccaf2f997b666c59cef"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 870735,
+      "sha256": "37e4ef2037700a4ac30322da569e4abed8e616340ede18bed3ed40aec05f46dd"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 241,
+      "sha256": "a6ffca94827074252795a0dd037cd2c0ed09b9a5a78187e80ee4f2be59a0902e"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n256_lanes1_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/input.mem",
+      "bytes": 384,
+      "sha256": "7b3a8426e6aa5ff00b0d49779015a9d6f297d697c6be6388b4524caa07cac6dd"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 1191,
+      "sha256": "de031b2cb0a5a7a7c3ddad503a72cdbe70a32fb00b57f02bd210ea05292fa3c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 697986,
+      "sha256": "3a11f2565fd8533b4e3827bfe01442cc4a8614be842f9d422e373337c604ed57"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 240,
+      "sha256": "26c547b237f196e149ec58bbcf9c150e13b94b420eb57d2fd3f3b427970c9995"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/input.mem",
+      "bytes": 384,
+      "sha256": "7b3a8426e6aa5ff00b0d49779015a9d6f297d697c6be6388b4524caa07cac6dd"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 1191,
+      "sha256": "de031b2cb0a5a7a7c3ddad503a72cdbe70a32fb00b57f02bd210ea05292fa3c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 720428,
+      "sha256": "c68d6591666f201c910e944468b6b1fbedc35d0d7825a34966ded6cb33efba21"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 240,
+      "sha256": "d570dfcdc8e057496f0c06254477985367ea74493adef1e106338da569b82f3d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n32_lanes1_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/input.mem",
+      "bytes": 6144,
+      "sha256": "ec23688b461d862f862683acc9e607aa3b8d9073ba6330bf4ff7f0372fe1b6d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 1457,
+      "sha256": "9c4f94f617a02b207c0b3d645edbe1330455fe4b0135bff30d2a39b14bf48d2c"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 965260,
+      "sha256": "cb3105db636529a5a068089257b1c14fd20bd30c95425ff61eac7afe5fcf2e95"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 243,
+      "sha256": "ea14d62cc755abd6e79d98dea9c0c225b98d22d057f067363b8becd430dcd809"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/input.mem",
+      "bytes": 6144,
+      "sha256": "ec23688b461d862f862683acc9e607aa3b8d9073ba6330bf4ff7f0372fe1b6d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 1457,
+      "sha256": "9c4f94f617a02b207c0b3d645edbe1330455fe4b0135bff30d2a39b14bf48d2c"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 870745,
+      "sha256": "a97eea8a2537cf4621ed83f47a7c695392b51ee821ab27bf4126682c3e6f0b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 243,
+      "sha256": "656493cecc3fddc41f3c5d78da883c7db429c21fbf16b6ca43ea40d59ef847fb"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/input.mem",
+      "bytes": 6144,
+      "sha256": "ec23688b461d862f862683acc9e607aa3b8d9073ba6330bf4ff7f0372fe1b6d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/mfcc.csv",
+      "bytes": 1226,
+      "sha256": "98ac78bd0c014bd098c37af5ad12c267733214b46938fc95e5c934c24a64270a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/sim.vvp",
+      "bytes": 735158,
+      "sha256": "3e9df3b7a7a8ce66af5ecd9b62e51793b22aef11c89ef845a450386b04d357ab"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/simulation.log",
+      "bytes": 243,
+      "sha256": "845d46847e1b027843f6197436014cd00946c6a9662c946e0e0f3e216c3dbff7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/input.mem",
+      "bytes": 6144,
+      "sha256": "ec23688b461d862f862683acc9e607aa3b8d9073ba6330bf4ff7f0372fe1b6d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/mfcc.csv",
+      "bytes": 1226,
+      "sha256": "98ac78bd0c014bd098c37af5ad12c267733214b46938fc95e5c934c24a64270a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/sim.vvp",
+      "bytes": 640666,
+      "sha256": "f060518a6ca5a6d66b929058b6346f1f6a6294e2e74ecc60b25487bf7e56dbbf"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/simulation.log",
+      "bytes": 243,
+      "sha256": "3a5e762deae93530f73fc194c8a799dafffb065c67876cdc7f457cb806400ff3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes1_matrix1_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/input.mem",
+      "bytes": 24576,
+      "sha256": "8b680bfd32c0c0e8f80e30ce782b3c670a7f7fbb1fb056d8b3fac03db1ebcf7a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/mfcc.csv",
+      "bytes": 6070,
+      "sha256": "8abd41b2560905ca042e17ac3a73c594118fa853873245f6cd6caa5b8ac084b5"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/sim.vvp",
+      "bytes": 978917,
+      "sha256": "7dd7a0ec4e5bcc584b812d8440776da0dfdd5a4b6d910e4273102706351db7a4"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/simulation.log",
+      "bytes": 244,
+      "sha256": "2c9a7be97bf3d531ae15bbf38cf35262a35d0f5171e7f73d694758ca97aea51b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/input.mem",
+      "bytes": 24576,
+      "sha256": "8b680bfd32c0c0e8f80e30ce782b3c670a7f7fbb1fb056d8b3fac03db1ebcf7a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/mfcc.csv",
+      "bytes": 6070,
+      "sha256": "8abd41b2560905ca042e17ac3a73c594118fa853873245f6cd6caa5b8ac084b5"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/sim.vvp",
+      "bytes": 884463,
+      "sha256": "642000ca0c6a13d7b1f2faf7e35602b8cdc3d516a63673d7cc48a4f499083634"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/simulation.log",
+      "bytes": 244,
+      "sha256": "1836012ceec34c2aaee628e7e6144e3ab8b16ef52a333aebb94720ef0c245b41"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls0_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/input.mem",
+      "bytes": 24576,
+      "sha256": "8b680bfd32c0c0e8f80e30ce782b3c670a7f7fbb1fb056d8b3fac03db1ebcf7a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 6070,
+      "sha256": "8abd41b2560905ca042e17ac3a73c594118fa853873245f6cd6caa5b8ac084b5"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 979181,
+      "sha256": "cece8c912ea49a28a99304806ac46414d34a09b4044fc3f34320c9a0f3b4f794"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 247,
+      "sha256": "a3fb0d358c57ed2234ffd5fac0cbbc70d2376cafb26d4575e374dccde71ca05e"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/input.mem",
+      "bytes": 24576,
+      "sha256": "8b680bfd32c0c0e8f80e30ce782b3c670a7f7fbb1fb056d8b3fac03db1ebcf7a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 6070,
+      "sha256": "8abd41b2560905ca042e17ac3a73c594118fa853873245f6cd6caa5b8ac084b5"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 884727,
+      "sha256": "c8ac9503dc8d938ebdbd8e30d631a88025621364ec6dccb4e24930e115c5495d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 246,
+      "sha256": "cd433ce6fd535be134e7887b5962a102a815536b35161cf231d20dfe72f74b96"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n512_lanes64_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/input.mem",
+      "bytes": 768,
+      "sha256": "0fad4c141e5dab9107ed9c33ba5e9d1c9f4f64ddea46c232fd71d20b0a37e2f0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/mfcc.csv",
+      "bytes": 1397,
+      "sha256": "657dcf327cebb07375bef35f22a93578ee89c9909e2b3e5ce95a9d4c21bac5d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/sim.vvp",
+      "bytes": 729930,
+      "sha256": "f91e664f45fb726a6c48f3d3a7261b3b55881d93bba01ce58097579813d2cf10"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/simulation.log",
+      "bytes": 240,
+      "sha256": "d0f0030e70b2df4362e2917648b074bbdf34a4029158a58c6444a136d840afc6"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_baseline/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/dct64_coeff_q14.mem",
+      "bytes": 28672,
+      "sha256": "d4e69820611337535290c4fbb25704ff95e0777f98f19f5bb8dd1b08b6abf80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/hamming_coeff_rom.mem",
+      "bytes": 81928,
+      "sha256": "46a6d0ad93c2f7ae532f4af6f2f4688a369beae098a83ba7a414701531bf88c9"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/input.mem",
+      "bytes": 768,
+      "sha256": "0fad4c141e5dab9107ed9c33ba5e9d1c9f4f64ddea46c232fd71d20b0a37e2f0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/log20_mantissa_q20.mem",
+      "bytes": 8192,
+      "sha256": "01539921bcc9228f9b26e9ed5268d04c9afe280b206ffb17cc81713c7bddcf5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/mel_sparse_q15.mem",
+      "bytes": 114688,
+      "sha256": "b3a07435738edc041bd3cc4a617a768ed9fb08acb2c39ba81659d5daee0b4c76"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/mfcc.csv",
+      "bytes": 1397,
+      "sha256": "657dcf327cebb07375bef35f22a93578ee89c9909e2b3e5ce95a9d4c21bac5d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/sim.vvp",
+      "bytes": 720077,
+      "sha256": "dd1429605f37eab3773e241539da32c3e9b394536b774ed08e3772fc69a61e11"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/simulation.log",
+      "bytes": 240,
+      "sha256": "4d1ca0ffd27deef8c3d3ca45df11304acd4524cca7aedc15a08512be4ab16fdb"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/mfcc_n64_lanes1_matrix0_stalls1_candidate/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_continuous/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_continuous/runtime_expected.mem",
+      "bytes": 15360,
+      "sha256": "cc436d4352e15f71fccc3908e3668a27dae3e0489262be238d263e43c24a55b8"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_continuous/runtime_input.mem",
+      "bytes": 9216,
+      "sha256": "28e6d4e95382063fd2f86cf922082d9fcef7ac7cd0fb4ed517f19ab6d84090a1"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_continuous/runtime_sizes.mem",
+      "bytes": 48,
+      "sha256": "7a3e91f37b54e11f6512741aa5275892a47e6398f78ef9a1dde05a642a7d68f6"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_continuous/sim.vvp",
+      "bytes": 227809,
+      "sha256": "3764782fabd1b036091f37235c663411588604710dc2a0a3c1423482e3ceaec4"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_continuous/simulation.log",
+      "bytes": 916,
+      "sha256": "66f92d09c6538e6dcedbd29a3af911149cee6e5b6b398d08ece8e276dcb1f453"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_continuous/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_continuous/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_stalls/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_stalls/runtime_expected.mem",
+      "bytes": 15360,
+      "sha256": "cc436d4352e15f71fccc3908e3668a27dae3e0489262be238d263e43c24a55b8"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_stalls/runtime_input.mem",
+      "bytes": 9216,
+      "sha256": "28e6d4e95382063fd2f86cf922082d9fcef7ac7cd0fb4ed517f19ab6d84090a1"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_stalls/runtime_sizes.mem",
+      "bytes": 48,
+      "sha256": "7a3e91f37b54e11f6512741aa5275892a47e6398f78ef9a1dde05a642a7d68f6"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_stalls/sim.vvp",
+      "bytes": 227809,
+      "sha256": "8bb63a55013f2e834a3688a126c61eddb232247ecf20318e00e3104e312c12b3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_stalls/simulation.log",
+      "bytes": 926,
+      "sha256": "f22c1879d6cae13648f2d04e3b08e60aa0042d975a042d496359c9f5242d0855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_stalls/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/pair_stalls/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_continuous/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_continuous/runtime_expected.mem",
+      "bytes": 326400,
+      "sha256": "a0e9d03b5c45b1e41baee015eaaec97e7c9a02e944b8b05951599c6f69442146"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_continuous/runtime_input.mem",
+      "bytes": 195840,
+      "sha256": "9c6b8b79305cd275f0125b500e84c8fc1be5bea67d5c187d7327ee885e2bd5bb"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_continuous/runtime_sizes.mem",
+      "bytes": 192,
+      "sha256": "b37f2fee97cd5894863358302823f25dcf7e111a361651fdf9fe1a9e9ac695d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_continuous/sim.vvp",
+      "bytes": 472132,
+      "sha256": "952245e4595cdcddea40661202e3b21edddd2fc9881319ce39b336a82bb4e6d0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_continuous/simulation.log",
+      "bytes": 3143,
+      "sha256": "a7cc9e63c4b9d6d988e7bb90f39107a96ba38cc4f7882b0756a9bddcd9a8a80f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_continuous/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_continuous/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_stalls/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_stalls/runtime_expected.mem",
+      "bytes": 326400,
+      "sha256": "a0e9d03b5c45b1e41baee015eaaec97e7c9a02e944b8b05951599c6f69442146"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_stalls/runtime_input.mem",
+      "bytes": 195840,
+      "sha256": "9c6b8b79305cd275f0125b500e84c8fc1be5bea67d5c187d7327ee885e2bd5bb"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_stalls/runtime_sizes.mem",
+      "bytes": 192,
+      "sha256": "b37f2fee97cd5894863358302823f25dcf7e111a361651fdf9fe1a9e9ac695d3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_stalls/sim.vvp",
+      "bytes": 472132,
+      "sha256": "c24098085f9bb3c3029948d1818489ca10945b571e43e52c0bf12a0a35272e3d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_stalls/simulation.log",
+      "bytes": 3156,
+      "sha256": "2ec778c857fd6b3cc671dd2b01023b220b68285b9e1491bc11cd68284ab7b10b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_stalls/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/results/tree_stalls/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/rtl_sources.f",
+      "bytes": 1767,
+      "sha256": "7699465b7359e6fafc71918582ea8d107bf6f77d44cb2f61dabdd55b4c8b1525"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/runtime_tree_tb.v",
+      "bytes": 5310,
+      "sha256": "0f994efdeb931fed233deb4ecdf0b5caeba8a26ebe26bf05464d4e2cf480036d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/sim_sources.f",
+      "bytes": 1834,
+      "sha256": "a886d25fbcc449dfc72396b3a3f6ebcb27da00850598652ca3b7de3783ce4b40"
+    },
+    {
+      "path": "working_mfcc_fft_bram/sim/trumpet_pcm16.mem",
+      "bytes": 705606,
+      "sha256": "e31e787e68add26d6accc98c2677fbb046501811d8f18810409d8c54463107ef"
+    },
+    {
+      "path": "working_mfcc_fft_bram/skewdct8_coeff_rom.mem",
+      "bytes": 3696,
+      "sha256": "e825b03d93f94bed0d0c7319dcfc6ecfb01ad6b3df1788f1f96d673fa7439b54"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/dB_LUT.v",
+      "bytes": 133809,
+      "sha256": "f84aa8bf6a1fae8e6d9adaaec59dd36115835ad160af2494e13d3fb7e3f8cdde"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/c64_8_postadd_serial.v",
+      "bytes": 3451,
+      "sha256": "53af7584ba36a5b79d22364a5c538c50185e8560034e5fd5daa41d1dc8cf9f27"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/DCT/butterfly.v",
+      "bytes": 578,
+      "sha256": "52f3b2dbe0d4de94c21dd63bd6ac01f765bd053a0b75e481a847c47e250a6a9b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/DCT/dct8.v",
+      "bytes": 7975,
+      "sha256": "15557e067379275817c9cb79fbc69568c6a65491f88c999f248d1c417dd7d974"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/DCT/signed_mult.v",
+      "bytes": 466,
+      "sha256": "3483c2b917f289d92751cd189c48d55a2ccc3b9ee2775540b09df158600e5bf8"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/dct64_serial.v",
+      "bytes": 6173,
+      "sha256": "2deee9b74b5d266a7ba86f2a7b07858303a7607dbd63ef5116efcd67f0c7fdda"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/dct8_tdm_bank.v",
+      "bytes": 2968,
+      "sha256": "a65d74935e7fe0122d13b8d6a8b97269d1bbb6d86624eb14e7bbab013abd9c5e"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/norm.v",
+      "bytes": 988,
+      "sha256": "179649afa96923e7555ec8e904b1858bb25d7fbb2767d3a5ffb245d0df877948"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/skew_paraller_bufram64.v",
+      "bytes": 771,
+      "sha256": "aace51a43bddc50e21c66eab98a0034a83f652a9cc8c61656dcea5a49fdba3e3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/skewdct8_tdm.v",
+      "bytes": 4682,
+      "sha256": "7a991348ebefe7adcd93882516a4332f3c8f8bc08e599dae1e035b7a585992b7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT40_64/skewdct_8.v",
+      "bytes": 12954,
+      "sha256": "477ded916cd3bc98bb7fc227edede5abbf631a0a1aa313cf6db857d0e969788f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT64_matrix/dct64_coeff_rom.v",
+      "bytes": 482,
+      "sha256": "fa8b0ee65535f2bb10f944b6f3014454dea6706f6d2bdf5ae105a2f624c25d66"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT64_matrix/dct64_matrix.v",
+      "bytes": 2959,
+      "sha256": "a8c3b18810ab5c3bd679fb85cf4f769cab42121ac770d521e91cbfd94efa6b0b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT64_matrix/dct64_matrix_ctrl.v",
+      "bytes": 3136,
+      "sha256": "bc350b20ce9b57b9f3b38e6fa92635c86e30814dd3f6e8a2ce324bc84b4e6c7c"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT64_matrix/dct64_matrix_datapath.v",
+      "bytes": 2832,
+      "sha256": "7ac90d8b542a57c2431f039bc93fe9a37174ce5434a3a25542380e5e67056f5d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/DCT64_matrix/dct64_ram64.v",
+      "bytes": 502,
+      "sha256": "8b53dad286b62933c32a3f3719790cef8df9943eecfe9a33f6a5909455e97f99"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/fft256_1024.v",
+      "bytes": 6375,
+      "sha256": "3f4c7f806419a81c93d42dc456dd541b0000b548f1f574b37a0ada8d53ce206b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/fft2x.v",
+      "bytes": 4429,
+      "sha256": "b41c1aa02eb438ff2064634be872edaa37948d7def34fd1766a95e77b00ced53"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/fft512.v",
+      "bytes": 1234,
+      "sha256": "1d090d191e98966518ace40ae111eddb86f0f28fc1a9fecca61805cffb59808b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/fft64_bram_legacy.v",
+      "bytes": 1517,
+      "sha256": "945f7bb7b559940e51d6c2211d9d0633dcd807cd6b47c91d5a84d87cbc84b692"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/fft_16_64.v",
+      "bytes": 6651,
+      "sha256": "783db9af117ee7f7199e0d3505a9c27a7b3dbf9083be1870549f64084c4f292f"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/fft_bram_1w1r.v",
+      "bytes": 557,
+      "sha256": "8d61a712997ddf6ea28b8a938ffcd89f96a4d8c0e47090974c5e55a471303d88"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/fft_tree_bram_engine.v",
+      "bytes": 9818,
+      "sha256": "0fd8a47f2a0d3f87efe9ce40df439df872e3e8484f80f3437cc0365aebb380b3"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/fft_tree_runtime_bram.v",
+      "bytes": 1341,
+      "sha256": "a5df538718e998eb9d185415a09550088abfce24600611a2200b944637ea6c9c"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix2_4_core/complex_twiddle_mul.v",
+      "bytes": 1591,
+      "sha256": "520861f2c5b2f9966382813becb0f4c361e8af04642d1229af4b311abd392d95"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix2_4_core/fft_merge_kernel.v",
+      "bytes": 5975,
+      "sha256": "171262d476bf26d2ac14363b0f1b57cd6b836e3999ad46b905988b7f737ad9f7"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix2_4_core/radix2_merge_stage.v",
+      "bytes": 4570,
+      "sha256": "6cffa9f26bc0fc8253ea32a09e4a550471ae39acc735b020e7010f7a8dbfca73"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix2_4_core/radix4_merge_stage.v",
+      "bytes": 4757,
+      "sha256": "7a9a3d555b90eb7c5bfeb4af51324dc0bc9d8949e5664b4e55315ec33ae43bbe"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_256_core/bufram256c.v",
+      "bytes": 1150,
+      "sha256": "c95cdb9cf174d95bf1a3296dbfdb748733bf307b4101f8e5dd4a76ceee6e0645"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_256_core/cnorm.v",
+      "bytes": 1429,
+      "sha256": "638f72e98c7f0f23d395e74dbb0e1aed82cdf46dccaa102f1865f9da6b6b7d97"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_256_core/fft256.v",
+      "bytes": 2843,
+      "sha256": "669f257f2494c421b0c76166da89a3a723321883f07672469f9d99a273b6706a"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_256_core/fft256_config.v",
+      "bytes": 84,
+      "sha256": "1a9e717633077561d268dd6e12cf3674f87ecaeac19fba5845a738e86e92b557"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_256_core/ram256.v",
+      "bytes": 476,
+      "sha256": "89c09a65b54d0b1431c0a8ab51dad43dcabd465d5e3604a7a9da7929ced8846e"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_256_core/ram2x256.v",
+      "bytes": 1049,
+      "sha256": "32627cfe698f1e1e83f34f87ee9d2bef6540a2c62d6afb039acf3e13e53e1b22"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_256_core/rotator256_v.v",
+      "bytes": 2138,
+      "sha256": "c4ca55e4d673a7f59172ceb3b0926d612a1e366b6b9d9c465617cef47c6e2fb5"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_core/fft16.v",
+      "bytes": 15883,
+      "sha256": "fb1db3082e9c25c4f97645d948d332c8d1e170b739503a1849fc58942eca21df"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_core/mpuc1307.v",
+      "bytes": 1309,
+      "sha256": "c391c3ee6c33b2cf6a2ae06cf63203416b6b6b0992aff346c2f16b71974b8c67"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_core/mpuc541.v",
+      "bytes": 1321,
+      "sha256": "0188c9bb8d4771358936e031d7e35b903deb7412f8a8954c4ff9a2e9ec278088"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_core/mpuc707.v",
+      "bytes": 1235,
+      "sha256": "4885f46567bd79ff425b59fa4b82fe0ff6552d7c8af6825a50684526c87a088d"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/radix_16_core/mpuc924_383.v",
+      "bytes": 1563,
+      "sha256": "30e1250ede16cb305a77fd7ef1f6947631cf9206aaa102f5b16358df79e91019"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/FFT512/WROM2048.v",
+      "bytes": 730,
+      "sha256": "07b3c42ff0bffa3be1c604d6dd99f8de95a944ba8c229f347ad0ed64368b1720"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/filter_bank.v",
+      "bytes": 4271,
+      "sha256": "c80e1399e0cfd3795a60e18bfb100300712628023f1c3aa1f99e9c6fd061e2fd"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/hamming.v",
+      "bytes": 1948,
+      "sha256": "c9ef7f75c5fdd9ba8f4e7f97234829a78ed41f0aa1798484c14068ce69f5e138"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/mfcc.v",
+      "bytes": 1810,
+      "sha256": "0d653e8a83cfbe3da9a0270cfb10d739c93926e4f30007a72eb4af2cbfd181de"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/mfcc_core.v",
+      "bytes": 5674,
+      "sha256": "3c7a6059603295a92b906b90f06264603c37ee3f102c04b000703d437f9d735b"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/power_spectrum.v",
+      "bytes": 1024,
+      "sha256": "f21cc8168c91e8596827420e4f4528fa4c10b1d1aec41ac41978571e9dc8b8c5"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/prepare_input.v",
+      "bytes": 2517,
+      "sha256": "fcc0ebd08b266d8e6cad007c35100c4091ead4bcf8585fd61a1bdce7cd716857"
+    },
+    {
+      "path": "working_mfcc_fft_bram/src/work/reshape_output.v",
+      "bytes": 2606,
+      "sha256": "d0a4608958c1d534cc5430b7dcf13ea58cb2f897436644301ee00b039d4bf6fc"
+    },
+    {
+      "path": "working_mfcc_fft_bram/WROM2048_cos.mem",
+      "bytes": 12288,
+      "sha256": "a4a6637caa5aaecb4b7465dea2f192720f7420ac5f2b74ac70a2af47cb114b84"
+    },
+    {
+      "path": "working_mfcc_fft_bram/WROM2048_sin.mem",
+      "bytes": 12288,
+      "sha256": "573abeddd5b772b3bdd7cefc566d82c63a153194525f8cb809dffe27b008cfe0"
+    }
+  ]
+}

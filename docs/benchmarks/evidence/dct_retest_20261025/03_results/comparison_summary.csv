@@ -1,0 +1,3 @@
+﻿variant,cycles_4frames,time_us_4frames_50mhz,average_us_per_frame_50mhz,rmse,snr_db,wns_ns,whs_ns,mfcc_lut,mfcc_ff,mfcc_bram36eq,mfcc_dsp,dct_lut,dct_ff,dct_bram36eq,dct_dsp
+skewdct,39498,789.96,197.49,12.491626143691276,16.04861456305623,9.282,0.010,31943,50689,6.5,123,4589,9817,0.0,105
+matrixdct,43687,873.74,218.435,12.490109975036418,16.049668875179485,8.254,0.010,30188,41987,9.0,19,647,1098,2.5,1

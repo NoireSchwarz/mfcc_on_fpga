@@ -1,0 +1,7 @@
+git_commit=9be89af18ca9cf42e6f47990d7d1b781afb47615
+architecture=fft512_to_fft_tree_bram_engine_to_fft2x
+frequency_hz=150000000
+WNS_ns=0.731
+WHS_ns=0.011
+synthesis_status=synth_design Complete!
+implementation_status=route_design Complete!

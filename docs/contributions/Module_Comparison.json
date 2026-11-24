@@ -1,0 +1,250 @@
+{
+  "title": "Module comparison: original Mel Filter Bank and final SkewDCT branch",
+  "date": "2026-11-20",
+  "upstream_repository": "https://github.com/lxschwalb/fpga_mel_filter_bank",
+  "upstream_commit": "0148cd8f4927b6a125a5869b8aa16796e065ab27",
+  "project_repository": "https://github.com/NoireSchwarz/mfcc_on_fpga",
+  "project_source_commit": "5ecd9f6deb4fe015f0a65183b809a80ae9dc9e57",
+  "branch": "optimization/skewdct8-recursive-pipeline",
+  "headers": [
+    "Processing stage",
+    "Functional module",
+    "Original Mel Filter Bank",
+    "Our SkewDCT branch",
+    "Improvements / Notes"
+  ],
+  "rows": [
+    {
+      "id": "B01",
+      "stage": "Pre-processing",
+      "module": "Input preparation / pre-emphasis (prepare_input)",
+      "original": "Custom RTL first-order pre-emphasis and shift-register framing. A coefficient is assigned inside the module.",
+      "current": "Reworked custom RTL with parameterized Q15 pre-emphasis, previous accepted raw sample, signed arithmetic and PCM16 saturation.",
+      "notes": "Modified upstream stage. Sample history advances on accepted input. Frame output holds under backpressure. The input frame remains register-based.",
+      "files": [
+        "src/work/prepare_input.v"
+      ],
+      "classification": "Rewritten upstream stage",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/prepare_input.sv"
+    },
+    {
+      "id": "B02",
+      "stage": "Pre-processing",
+      "module": "Hamming window (hamming)",
+      "original": "Custom RTL multiply with an embedded N-word cyclic coefficient register. Changing N requires regenerated source coefficients.",
+      "current": "Custom RTL Q14 window multiplication. A coefficient file supplies eight length-dependent rows, selected for N=16..2048.",
+      "notes": "Extended upstream window stage to all eight lengths and deterministic reload. Active coefficients still rotate in registers; this stage is not described as fully BRAM-based.",
+      "files": [
+        "src/work/hamming.v"
+      ],
+      "classification": "Extended upstream stage",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/hamming.sv"
+    },
+    {
+      "id": "B03",
+      "stage": "Power Spectrum",
+      "module": "FFT16 core",
+      "original": "FFT arithmetic is internal to XFFT IP. No standalone FFT16 RTL root is provided in upstream.",
+      "current": "Integrated custom RTL FFT16 arithmetic root with registered fixed-angle operations. It forms the 16-point root family and is also reused inside FFT256.",
+      "notes": "Custom RTL integration/adaptation. The shared FFT system supports 16/32/64/128/256/512/1024/2048. Size scheduling, twiddle lookup, buffers and control are implementation details, not extra counted modules.",
+      "files": [
+        "src/work/FFT512/WROM2048.v",
+        "src/work/FFT512/fft512.v",
+        "src/work/FFT512/fft_bram_1w1r.v",
+        "src/work/FFT512/fft_tree_bram_engine.v",
+        "src/work/FFT512/fft_tree_runtime_bram.v",
+        "src/work/FFT512/radix2_4_core/fft_merge_kernel.v",
+        "src/work/FFT512/radix_16_256_core/rotator256_v.v",
+        "src/work/FFT512/radix_16_core/fft16.v",
+        "src/work/FFT512/radix_16_core/mpuc1307.v",
+        "src/work/FFT512/radix_16_core/mpuc541.v",
+        "src/work/FFT512/radix_16_core/mpuc707.v",
+        "src/work/FFT512/radix_16_core/mpuc924_383.v"
+      ],
+      "classification": "Integrated / adapted RTL",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/power_spectrum.sv"
+    },
+    {
+      "id": "B04",
+      "stage": "Power Spectrum",
+      "module": "FFT256 core",
+      "original": "No standalone FFT256 RTL root. Transform stages are implemented inside XFFT IP.",
+      "current": "Integrated custom RTL two-pass FFT16-based FFT256 transform, including its intermediate rotation and fixed-point scaling.",
+      "notes": "Reused for 256/512/1024/2048 processing. Root-local buffers, CNORM, the shared radix-4 merge and point-selection wrappers are included here or in FFT2x remarks rather than counted separately.",
+      "files": [
+        "src/work/FFT512/WROM2048.v",
+        "src/work/FFT512/fft256_1024.v",
+        "src/work/FFT512/fft512.v",
+        "src/work/FFT512/fft_bram_1w1r.v",
+        "src/work/FFT512/fft_tree_bram_engine.v",
+        "src/work/FFT512/fft_tree_runtime_bram.v",
+        "src/work/FFT512/radix2_4_core/fft_merge_kernel.v",
+        "src/work/FFT512/radix_16_256_core/bufram256c.v",
+        "src/work/FFT512/radix_16_256_core/cnorm.v",
+        "src/work/FFT512/radix_16_256_core/fft256.v",
+        "src/work/FFT512/radix_16_256_core/fft256_config.v",
+        "src/work/FFT512/radix_16_256_core/ram256.v",
+        "src/work/FFT512/radix_16_256_core/ram2x256.v",
+        "src/work/FFT512/radix_16_256_core/rotator256_v.v"
+      ],
+      "classification": "Integrated / adapted RTL",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/power_spectrum.sv"
+    },
+    {
+      "id": "B05",
+      "stage": "Power Spectrum",
+      "module": "FFT2x real-input extension",
+      "original": "No custom real/imaginary packing and reconstruction module. Real data is supplied to the configured complex XFFT IP.",
+      "current": "Custom RTL real/imaginary packing, conjugate-pair splitting and spectrum reconstruction around the shared complex FFT result.",
+      "notes": "Handles 32/128/512/2048 real-point extensions. Cache RAMs and the shared radix-2 merge belong to this block. AMD Radix-4 Burst I/O starts at 64 points; other XFFT architectures also support 16/32 [S2].",
+      "files": [
+        "src/work/FFT512/WROM2048.v",
+        "src/work/FFT512/fft2x.v",
+        "src/work/FFT512/fft512.v",
+        "src/work/FFT512/fft_bram_1w1r.v",
+        "src/work/FFT512/fft_tree_bram_engine.v",
+        "src/work/FFT512/fft_tree_runtime_bram.v",
+        "src/work/FFT512/radix2_4_core/fft_merge_kernel.v",
+        "src/work/FFT512/radix_16_256_core/rotator256_v.v"
+      ],
+      "classification": "Added custom RTL",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/power_spectrum.sv"
+    },
+    {
+      "id": "B06",
+      "stage": "Power Spectrum",
+      "module": "Power-spectrum magnitude calculation",
+      "original": "RTL wrapper around XFFT IP and two mult_gen_0 multiplier IP instances. The packaged square multipliers have seven pipeline stages.",
+      "current": "Custom RTL real/imaginary square products followed by a registered magnitude sum, with aligned valid/last signals.",
+      "notes": "Replaced mult_gen_0 multiplier IP with pipelined RTL arithmetic. The surrounding FFT stream wrapper is not counted. In the MFCC top, N is fixed at elaboration; the standalone FFT top supports runtime size selection.",
+      "files": [
+        "src/work/power_spectrum.v"
+      ],
+      "classification": "Replaced IP-backed stage",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/power_spectrum.sv"
+    },
+    {
+      "id": "B07",
+      "stage": "Mel Filtering and Logarithm",
+      "module": "Mel filter bank (filter_bank)",
+      "original": "40 Mel outputs, a cyclic coefficient register, ascending/descending accumulation and one mult_gen_1 multiplier IP.",
+      "current": "Rewritten custom RTL 64-band sparse lookup. Each frequency-bin entry contains up to two band IDs and Q15 weights. Two 48-bit products feed 64-bit energy sums.",
+      "notes": "Replaced multiplier IP and coefficient rollover logic. Registered operand selection, products and accumulation align tags. Invalid-band sentinel 127 suppresses writes; short FFTs can leave empty bands.",
+      "files": [
+        "src/work/filter_bank.v"
+      ],
+      "classification": "Rewritten upstream stage",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/filter_bank.sv"
+    },
+    {
+      "id": "B08",
+      "stage": "Mel Filtering and Logarithm",
+      "module": "Mel logarithm conversion",
+      "original": "Custom dB_LUT uses a large combinational casex table and integer dB outputs. It is not an IP core.",
+      "current": "Custom RTL floor clamp, leading-one detection, normalized mantissa lookup in a 1024-entry Q20 ROM, exponent correction and Q8 output conversion.",
+      "notes": "Replaced the active integer dB case table with a 1024-entry Q20 mantissa lookup, exponent correction and Q8 output. Added a floor and size-aware scaling. Tagged arithmetic stages improve timing; controllers and lookup storage are not separate rows.",
+      "files": [
+        "src/work/filter_bank.v"
+      ],
+      "classification": "Replaced logarithm implementation",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/dB_LUT.sv"
+    },
+    {
+      "id": "B09",
+      "stage": "DCT",
+      "module": "SkewDCT8 transform",
+      "original": "Absent. There is no custom or IP-based DCT core in the original project.",
+      "current": "Custom RTL recursive 8-to-4-to-2 skew transform for eight coefficient families, with Q21 constants and a 13-stage tagged pipeline. One shared core handles eight groups.",
+      "notes": "Combines the skew arithmetic core and its TDM use. Input permutation, the 3-bit family selector, normalization, registers and scheduling are included. The factorized expression uses 12 real products and 29 add/subtract operations, not 12 measured DSPs.",
+      "files": [
+        "src/work/DCT40_64/dct64_serial.v",
+        "src/work/DCT40_64/norm.v",
+        "src/work/DCT40_64/skew_paraller_bufram64.v",
+        "src/work/DCT40_64/skewdct8_tdm.v",
+        "src/work/DCT40_64/skewdct_8.v"
+      ],
+      "classification": "Added and optimized custom RTL",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/mfcc.sv"
+    },
+    {
+      "id": "B10",
+      "stage": "DCT",
+      "module": "DCT8 TDM transform (dct8_tdm_bank)",
+      "original": "Absent. No ordinary DCT8 bank is present.",
+      "current": "Custom RTL ordinary DCT8 transform shared across eight groups. Its factorized arithmetic core uses a nine-stage tagged pipeline.",
+      "notes": "DCT8 arithmetic, TDM scheduling, normalization and result reordering are one block in this table. Multiplication and add/subtract stages are registered separately; buffers and controllers are not additional modules.",
+      "files": [
+        "src/work/DCT40_64/DCT/dct8.v",
+        "src/work/DCT40_64/dct64_serial.v",
+        "src/work/DCT40_64/dct8_tdm_bank.v",
+        "src/work/DCT40_64/norm.v"
+      ],
+      "classification": "Added custom RTL",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/mfcc.sv"
+    },
+    {
+      "id": "B11",
+      "stage": "DCT",
+      "module": "C64 output combination / post-add",
+      "original": "Absent. There is no DCT post-processing or cepstral output ordering stage.",
+      "current": "Custom RTL arithmetic combines and reorders the eight-point transform results into the 64-point DCT output.",
+      "notes": "Includes the pipelined operand selection, optional compensation product and final post-add. These are stages of one arithmetic block. Together with SkewDCT8 and DCT8 TDM, it implements the 64-point DCT.",
+      "files": [
+        "src/work/DCT40_64/c64_8_postadd_serial.v",
+        "src/work/DCT40_64/dct64_serial.v"
+      ],
+      "classification": "Added and pipelined custom RTL",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/mfcc.sv"
+    },
+    {
+      "id": "B12",
+      "stage": "Output",
+      "module": "Output formatting / serialization",
+      "original": "Custom RTL output packing for 40 16-bit Mel values, with OUT_WIDTH dividing 40.",
+      "current": "Adapted RTL gathers and formats 64 cepstral coefficients, 26 bits each at default precision, for serial or parallel output.",
+      "notes": "Changed 40 Mel outputs to 64 DCT coefficients. MFCC integration, coefficient assembly, lane selection and ready/valid/TLAST control are included, without separate wrapper or controller rows.",
+      "files": [
+        "src/work/mfcc.v",
+        "src/work/mfcc_core.v",
+        "src/work/reshape_output.v"
+      ],
+      "classification": "Extended upstream stage",
+      "optional": false,
+      "baseline_source": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/srcs/sources_1/new/reshape_output.sv"
+    }
+  ],
+  "granularity": "12 major algorithm/processing blocks. FFT16/FFT256/FFT2x/SkewDCT8/DCT8 TDM define the minimum transform granularity. Wrappers, memories and controllers are folded into notes.",
+  "stage_counts": {
+    "Pre-processing": 2,
+    "Power Spectrum": 4,
+    "Mel Filtering and Logarithm": 2,
+    "DCT": 3,
+    "Output": 1
+  },
+  "rtl_files": 48,
+  "sources": {
+    "S1": "https://github.com/lxschwalb/fpga_mel_filter_bank/blob/0148cd8f4927b6a125a5869b8aa16796e065ab27/README.md",
+    "S2": "https://docs.amd.com/r/en-US/pg109-xfft/Configuration-Tab",
+    "S3": "https://spiral.ece.cmu.edu/pub-smart/pubfile/paper_16.pdf"
+  },
+  "ip_note": "Custom RTL means no packaged XFFT, DCT or multiplier IP in the production datapath; DSP/BRAM primitive inference is still allowed.",
+  "excluded_from_count": [
+    "Wrappers and top-level integration",
+    "Memory and buffer templates",
+    "Controllers and schedulers",
+    "Intermediate normalization helpers",
+    "Optional MatrixDCT reference backend",
+    "Retained compatibility helpers"
+  ]
+}

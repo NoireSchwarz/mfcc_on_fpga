@@ -1,0 +1,13 @@
+input_checkpoint=D:/KV260_MFCC/17_mfcc_ver2_20261025/04_frequency_runs/mfcc_N1024_150MHz/mfcc_N1024_150MHz_post_route.dcp
+directive=Explore
+before_WNS_ns=-0.031
+before_WHS_ns=0.010
+before_setup_failing_paths=6
+before_hold_failing_paths=0
+after_WNS_ns=0.001
+after_WHS_ns=0.010
+after_setup_failing_paths=0
+after_hold_failing_paths=0
+physopt_seconds=313.429
+original_checkpoint_retained=true
+rtl_modified=false
